@@ -1,0 +1,20 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# Node (in case any exists outside ihsan-academy-app)
+node_modules/
+dist/
+dist-ssr/
+*.local
+*.log
+
+# Env secrets
+.env
+.env.local

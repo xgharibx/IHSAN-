@@ -1,0 +1,45 @@
+{
+  "id": "week1",
+  "number": 1,
+  "title": "الأسبوع الأول — تأسيس الخلافة بالإحسان",
+  "subtitle": "إحسان · تفسير · سيرة · فقه · نفس · صحابة",
+  "bigIdea": "هذا الأسبوع يضع اللبنة الأولى في فهم الإنسان كخليفة لله في الأرض، يتعامل مع الحياة بالإحسان، ويبني علاقة مع الله ومع الذات ومع الناس قائمة على الحضور والقصد والرحمة. كل الدورات التسع تخدم هذه الفكرة الجامعة من زوايا مختلفة.",
+  "orderedCourseIds": [
+    "ihsan-soul",
+    "tafsir",
+    "seerah",
+    "sahaba",
+    "sahabiyyat",
+    "contemporary",
+    "seerah-app",
+    "fiqh-rules",
+    "soul-app",
+    "positive-psych"
+  ],
+  "themes": [
+    {
+      "id": "khaleefah",
+      "title": "الخليفة والعقد",
+      "description": "فهم الإنسان كخليفة لله، عقد الخلافة، والأمانة المحمّلة.",
+      "courseIds": ["ihsan-soul", "seerah", "tafsir"]
+    },
+    {
+      "id": "ihsan",
+      "title": "الإحسان منهج حياة",
+      "description": "الإحسان في العبادة والذات والناس والحياة.",
+      "courseIds": ["ihsan-soul", "positive-psych", "soul-app", "tafsir"]
+    },
+    {
+      "id": "prophetic-model",
+      "title": "النموذج النبوي والصحابي",
+      "description": "النبي ﷺ والمخلوق الأعظم، وقدوة الصحابة في تطبيق الإسلام.",
+      "courseIds": ["seerah", "seerah-app", "sahaba", "sahabiyyat", "contemporary"]
+    },
+    {
+      "id": "purification",
+      "title": "التزكية والنية",
+      "description": "تطهير القلب من الأمراض، ضبط النية، منهج التغيير.",
+      "courseIds": ["soul-app", "fiqh-rules", "positive-psych"]
+    }
+  ]
+}

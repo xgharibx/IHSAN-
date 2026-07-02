@@ -1,0 +1,156 @@
+{
+  "id": "week1-knowledge-map",
+  "title": "خريطة المعرفة للأسبوع الأول",
+  "description": "روابط بين الدورات والمفاهيم. انقر على أي عقدة لاستكشافها.",
+  "nodes": [
+    {
+      "id": "ihsan-soul",
+      "label": "الإحسان ومنازل الروح",
+      "type": "course",
+      "x": 0.5,
+      "y": 0.15,
+      "color": "#2f9e64"
+    },
+    {
+      "id": "tafsir",
+      "label": "التفسير",
+      "type": "course",
+      "x": 0.85,
+      "y": 0.3,
+      "color": "#1aa084"
+    },
+    {
+      "id": "seerah",
+      "label": "السيرة النبوية",
+      "type": "course",
+      "x": 0.15,
+      "y": 0.3,
+      "color": "#e25d8d"
+    },
+    {
+      "id": "sahaba",
+      "label": "أبو بكر",
+      "type": "course",
+      "x": 0.2,
+      "y": 0.55,
+      "color": "#c084fc"
+    },
+    {
+      "id": "sahabiyyat",
+      "label": "خديجة",
+      "type": "course",
+      "x": 0.05,
+      "y": 0.45,
+      "color": "#ec4899"
+    },
+    {
+      "id": "contemporary",
+      "label": "القضايا المعاصرة",
+      "type": "course",
+      "x": 0.85,
+      "y": 0.55,
+      "color": "#f97316"
+    },
+    {
+      "id": "seerah-app",
+      "label": "تطبيقات السيرة",
+      "type": "course",
+      "x": 0.35,
+      "y": 0.7,
+      "color": "#60a5fa"
+    },
+    {
+      "id": "fiqh-rules",
+      "label": "القواعد الفقهية",
+      "type": "course",
+      "x": 0.65,
+      "y": 0.7,
+      "color": "#a78bfa"
+    },
+    {
+      "id": "soul-app",
+      "label": "تطبيقات الروح",
+      "type": "course",
+      "x": 0.5,
+      "y": 0.85,
+      "color": "#f87171"
+    },
+    {
+      "id": "positive-psych",
+      "label": "علم النفس الإيجابي",
+      "type": "course",
+      "x": 0.5,
+      "y": 0.95,
+      "color": "#22d3ee"
+    },
+    {
+      "id": "khaleefah",
+      "label": "الخليفة",
+      "type": "concept",
+      "x": 0.5,
+      "y": 0.05,
+      "color": "#ffd166"
+    },
+    {
+      "id": "ihsan",
+      "label": "الإحسان",
+      "type": "concept",
+      "x": 0.78,
+      "y": 0.18,
+      "color": "#ffd166"
+    },
+    {
+      "id": "niyyah",
+      "label": "النية",
+      "type": "concept",
+      "x": 0.65,
+      "y": 0.6,
+      "color": "#ffd166"
+    },
+    {
+      "id": "tawbah",
+      "label": "التوبة",
+      "type": "concept",
+      "x": 0.5,
+      "y": 0.75,
+      "color": "#ffd166"
+    },
+    {
+      "id": "siddiq",
+      "label": "الصديقية",
+      "type": "concept",
+      "x": 0.18,
+      "y": 0.42,
+      "color": "#ffd166"
+    },
+    {
+      "id": "fath",
+      "label": "الفتح",
+      "type": "concept",
+      "x": 0.92,
+      "y": 0.45,
+      "color": "#ffd166"
+    }
+  ],
+  "edges": [
+    { "from": "khaleefah", "to": "ihsan-soul", "label": "يؤسس" },
+    { "from": "khaleefah", "to": "seerah", "label": "يربط" },
+    { "from": "khaleefah", "to": "tafsir", "label": "يوضح" },
+    { "from": "ihsan", "to": "ihsan-soul", "label": "تعريف" },
+    { "from": "ihsan", "to": "tafsir", "label": "تطبيق" },
+    { "from": "ihsan", "to": "positive-psych", "label": "بُعد" },
+    { "from": "ihsan", "to": "soul-app", "label": "شرط" },
+    { "from": "niyyah", "to": "fiqh-rules", "label": "أساس" },
+    { "from": "niyyah", "to": "ihsan-soul", "label": "روح" },
+    { "from": "tawbah", "to": "soul-app", "label": "منهج" },
+    { "from": "tawbah", "to": "ihsan-soul", "label": "تجديد" },
+    { "from": "siddiq", "to": "sahaba", "label": "لقب" },
+    { "from": "siddiq", "to": "seerah", "label": "تجلّي" },
+    { "from": "fath", "to": "contemporary", "label": "تعريف" },
+    { "from": "fath", "to": "seerah-app", "label": "تطبيق" },
+    { "from": "seerah-app", "to": "seerah", "label": "تطبيق" },
+    { "from": "seerah-app", "to": "sahaba", "label": "نموذج" },
+    { "from": "sahabiyyat", "to": "seerah", "label": "نموذج" },
+    { "from": "sahabiyyat", "to": "sahaba", "label": "قرين" }
+  ]
+}

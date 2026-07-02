@@ -1,0 +1,660 @@
+[
+  {
+    "id": "q-ihsan-1",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["ihsan"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "تعريف الإحسان",
+    "prompt": "ما تعريف الإحسان في حديث جبريل؟",
+    "options": [
+      { "id": "a", "text": "أن تعبد الله كأنك تراه" },
+      { "id": "b", "text": "إتقان العمل فقط" },
+      { "id": "c", "text": "كثرة العبادة" },
+      { "id": "d", "text": "الزهد في الدنيا" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "الإحسان في حديث جبريل: 'أن تعبد الله كأنك تراه، فإن لم تكن تراه فإنه يراك'.",
+    "whyWrong": {
+      "b": "الإتقان جزء من الإحسان لكن الإحسان أعمق (مراقبة الله لا مراقبة الجودة).",
+      "c": "كثرة العبادة دون إحسان قد تكون عادة لا عبادة.",
+      "d": "الزهد ليس تعريفًا للإحسان."
+    }
+  },
+  {
+    "id": "q-ihsan-2",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["khaleefah"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "مفهوم الخليفة",
+    "prompt": "ماذا تعني كلمة 'خليفة' في القرآن (إني جاعل في الأرض خليفة)؟",
+    "options": [
+      { "id": "a", "text": "ملك يحكم الناس" },
+      { "id": "b", "text": "موظف من الله لإصلاح الأرض على مراده" },
+      { "id": "c", "text": "نبي مرسل" },
+      { "id": "d", "text": "عالم دين فقط" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الخلافة: موظف من الله لإصلاح الأرض على مراده وعلى قدر إمكانياته. كل إنسان خليفة في مكانه.",
+    "whyWrong": {
+      "a": "الخليفة ليس بالضرورة ملكًا.",
+      "c": "النبي أعلى مرتبة، والخليفة وظيفة لكل مسلم.",
+      "d": "كل مسلم خليفة في عمله، ليس فقط العلماء."
+    }
+  },
+  {
+    "id": "q-ihsan-3",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["khaleefah"],
+    "difficulty": "hard",
+    "estimatedSeconds": 120,
+    "learningObjective": "العبادة بُعدان",
+    "prompt": "العبادة في الإسلام لها معنيان. ما هما؟",
+    "options": [
+      { "id": "a", "text": "الصلاة والصيام فقط" },
+      { "id": "b", "text": "عبادة تقديس (صلاة وصوم) وعبادة تعمير (إصلاح في الأرض)" },
+      { "id": "c", "text": "الذكر والدعاء" },
+      { "id": "d", "text": "الحج والعمرة" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "العبادة في اللغة: تقديس (صلاة، صوم، ذكر) وتعمير (إصلاح في الأرض). أنت خليفة عابد.",
+    "whyWrong": {
+      "a": "العبادة أوسع من الصلاة والصيام.",
+      "c": "الذكر والدعاء من العبادات لكن ليس المعنى الكامل.",
+      "d": "الحج والعمرة عبادات جزئية."
+    }
+  },
+  {
+    "id": "tf-ihsan-1",
+    "type": "tf",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["ihsan"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "learningObjective": "الإحسان والاتقان",
+    "prompt": "الإحسان هو مجرد الإتقان المهني في العمل.",
+    "correctAnswer": "false",
+    "explanation": "الإحسان أعمق من الإتقان. الإتقان مراقبة جودة، أما الإحسان فهو مراقبة الله. الإحسان: إحساس عميق بالله."
+  },
+  {
+    "id": "tf-ihsan-2",
+    "type": "tf",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["khaleefah"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "learningObjective": "الفراغ الوجودي",
+    "prompt": "الفراغ الوجودي شعور طبيعي لا يحتاج لعلاج.",
+    "correctAnswer": "false",
+    "explanation": "الفراغ الوجودي شعور ناتج عن جهل الإنسان لدوره كخليفة، ويُعالج ببناء الجانب الرسالي."
+  },
+  {
+    "id": "rf-ihsan-1",
+    "type": "reflect",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["ihsan"],
+    "difficulty": "medium",
+    "estimatedSeconds": 300,
+    "learningObjective": "تطبيق الإحسان",
+    "prompt": "اكتب 3 مواقف يومية يمكنك تحويلها إلى عبادة بالإحسان.",
+    "correctAnswer": "مثال: ركوب السيارة → استحضار مراقبة الله. التعامل مع الزوجة → نية عبادة. العمل → استحضار أنك خليفة.",
+    "explanation": "كل عمل يتحول إلى عبادة بنيّة الإحسان. المطلوب: مثالان أو ثلاثة من واقع حياتك."
+  },
+  {
+    "id": "q-tafsir-1",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": ["maqasid"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "مقاصد القرآن في الفاتحة",
+    "prompt": "لماذا سميت الفاتحة 'أم القرآن'؟",
+    "options": [
+      { "id": "a", "text": "لأنها أطول سورة" },
+      { "id": "b", "text": "لأنها جمعت مقاصد القرآن الخمسة" },
+      { "id": "c", "text": "لأنها نزلت أولًا" },
+      { "id": "d", "text": "لأنها تُقرأ في الصلاة" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "أم القرآن لأنها جامعة لمقاصد القرآن الخمسة: معرفة الله، الكون، الأسماء، يوم الجزاء، قصص السابقين.",
+    "whyWrong": {
+      "a": "ليست الأطول بل من أقصر السور.",
+      "c": "ليست أول سورة نزلت.",
+      "d": "تُقرأ في الصلاة لكن هذا ليس سبب التسمية."
+    }
+  },
+  {
+    "id": "q-tafsir-2",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": ["maqasid"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "شروط استجابة الدعاء",
+    "prompt": "ما شروط استجابة الدعاء المذكورة في المحاضرة؟",
+    "options": [
+      { "id": "a", "text": "أن يكون الدعاء صباحًا فقط" },
+      { "id": "b", "text": "الثناء على الله، الصلاة على النبي، اليقين، حضور القلب" },
+      { "id": "c", "text": "قراءة الفاتحة 7 مرات" },
+      { "id": "d", "text": "الصيام قبل الدعاء" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الشروط الأربعة: (1) الثناء على الله والصلاة على النبي ﷺ. (2) اليقين بالإجابة. (3) حضور القلب. (4) الجدّ في الطلب.",
+    "whyWrong": {
+      "a": "الدعاء مستجاب في كل وقت.",
+      "c": "قراءة الفاتحة 7 مرات ليست شرطًا.",
+      "d": "الصيام نافذ لكن ليس شرطًا في الاستجابة."
+    }
+  },
+  {
+    "id": "tf-tafsir-1",
+    "type": "tf",
+    "courseId": "tafsir",
+    "conceptIds": ["maqasid"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "learningObjective": "الفاتحة أسماء",
+    "prompt": "الفاتحة لها 20 اسمًا عند الإمام السيوطي.",
+    "correctAnswer": "true",
+    "explanation": "نعم، الفاتحة لها 20 اسمًا عند الإمام السيوطي منها: الفاتحة، أم القرآن، السبع المثاني، سورة الصلاة."
+  },
+  {
+    "id": "fb-tafsir-1",
+    "type": "fitb",
+    "courseId": "tafsir",
+    "conceptIds": ["maqasid"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "الفاتحة أسماء",
+    "prompt": "الفاتحة تسمى السبع ____ لأنها تتكرر في كل صلاة.",
+    "correctAnswer": "المثاني",
+    "explanation": "السبع المثاني: لأنها تُثنى (تتكرر) في كل صلاة، 17 مرة في اليوم والليلة."
+  },
+  {
+    "id": "q-seerah-1",
+    "type": "mcq",
+    "courseId": "seerah",
+    "conceptIds": ["shirk"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "المخلوق الأعظم",
+    "prompt": "من هو المخلوق الأعظم في الإسلام؟",
+    "options": [
+      { "id": "a", "text": "العرش" },
+      { "id": "b", "text": "الملائكة" },
+      { "id": "c", "text": "النبي محمد ﷺ" },
+      { "id": "d", "text": "الإنسان العادي" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "النبي محمد ﷺ هو المخلوق الأعظم، أعظم من العرش والقلم واللوح والجنة.",
+    "whyWrong": {
+      "a": "العرش أعظم المخلوقات لكنه مخلوق للنبي ﷺ.",
+      "b": "الملائكة مكرمون لكن النبي ﷺ أعظم.",
+      "d": "الإنسان العادي مكرم لكن النبي ﷺ أعلى مرتبة."
+    }
+  },
+  {
+    "id": "q-seerah-2",
+    "type": "mcq",
+    "courseId": "seerah",
+    "conceptIds": ["shirk"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "عمرو بن لحي",
+    "prompt": "من أول من أدخل عبادة الأصنام في العرب؟",
+    "options": [
+      { "id": "a", "text": "أبو جهل" },
+      { "id": "b", "text": "أمية بن خلف" },
+      { "id": "c", "text": "عمرو بن لحي" },
+      { "id": "d", "text": "النبي ﷺ نفسه" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "عمرو بن لحي، قائد خزاعة، أخذ صنم 'هبل' من الشام وجعله في مكة. النبي ﷺ شفّع شفاعته أنه رآه يجر أمعاءه في النار.",
+    "whyWrong": {
+      "a": "أبو جهل عادى الإسلام ولم يكن أول من أدخل الشرك.",
+      "b": "أمية بن خلف من أعداء الإسلام لكن ليس أول من أدخل الشرك.",
+      "d": "النبي ﷺ جاء محاربًا للشرك."
+    }
+  },
+  {
+    "id": "tf-seerah-1",
+    "type": "tf",
+    "courseId": "seerah",
+    "conceptIds": [],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "learningObjective": "بداية السيرة",
+    "prompt": "السيرة النبوية بدأت مع مولد النبي ﷺ.",
+    "correctAnswer": "false",
+    "explanation": "السيرة بدأت منذ أن كان آدم بين الروح والجسد. العالم بأكمله كان يتجهز لمولد النبي ﷺ."
+  },
+  {
+    "id": "q-fiqh-1",
+    "type": "mcq",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["niyyah"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "حديث الأعمال بالنيات",
+    "prompt": "ما هو الحديث الذي يُعدّ أساس القاعدة الفقهية؟",
+    "options": [
+      { "id": "a", "text": "إنما الأعمال بالنيات" },
+      { "id": "b", "text": "الدين النصيحة" },
+      { "id": "c", "text": "من غشنا فليس منا" },
+      { "id": "d", "text": "الحلال بيّن والحرام بيّن" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "حديث 'إنما الأعمال بالنيات، وإنما لكل امرئ ما نوى' أساس القواعد الفقهية.",
+    "whyWrong": {
+      "b": "الدين النصيحة حديث عن النصيحة.",
+      "c": "حديث عن الغش في البيع.",
+      "d": "حديث عن الحلال والحرام."
+    }
+  },
+  {
+    "id": "q-fiqh-2",
+    "type": "mcq",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["niyyah"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "مفسدات النية",
+    "prompt": "ما هي مفسدات النية؟",
+    "options": [
+      { "id": "a", "text": "القطع، التردد، العزم على القطع" },
+      { "id": "b", "text": "النوم، الأكل، الشرب" },
+      { "id": "c", "text": "السفر، العمل، العبادة" },
+      { "id": "d", "text": "الفرح، الحزن، الغضب" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "مفسدات النية: (1) القطع. (2) التردد. (3) العزم على القطع.",
+    "whyWrong": {
+      "b": "النوم والأكل والشرب ليست مفسدات.",
+      "c": "السفر والعمل والعبادة من العبادات لا المفسدات.",
+      "d": "المشاعر ليست مفسدات."
+    }
+  },
+  {
+    "id": "tf-fiqh-1",
+    "type": "tf",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["niyyah"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "learningObjective": "محل النية",
+    "prompt": "محل النية اللسان لا القلب.",
+    "correctAnswer": "false",
+    "explanation": "محل النية القلب. التلفظ بها جائز لكن الأصل القلب."
+  },
+  {
+    "id": "fb-fiqh-1",
+    "type": "fitb",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["niyyah"],
+    "difficulty": "medium",
+    "estimatedSeconds": 60,
+    "learningObjective": "قاعدة المقاصد",
+    "prompt": "العبرة في العقود للمعاني لا للألفاظ والمباني، وتحكمها قاعدة: الأمور بـ ____.",
+    "correctAnswer": "مقاصدها",
+    "explanation": "الأمور بمقاصدها: أحكام الأقوال والأفعال مرتبطة بالنيّات."
+  },
+  {
+    "id": "q-cont-1",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": ["jihad"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "تعريف الغزوة",
+    "prompt": "ما الفرق بين الغزوة والسرية؟",
+    "options": [
+      { "id": "a", "text": "الغزوة ما بعثه النبي ﷺ، السرية ما قصده بنفسه" },
+      { "id": "b", "text": "الغزوة ما قصده النبي ﷺ بنفسه، السرية ما بعثه ولم يحضره" },
+      { "id": "c", "text": "كلاهما نفس الشيء" },
+      { "id": "d", "text": "الغزوة في البحر، السرية في البر" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الغزوة: ما قصده النبي ﷺ بنفسه. السرية: ما بعثه ولم يحضره.",
+    "whyWrong": {
+      "a": "عكس الصحيح.",
+      "c": "مختلفان في الاصطلاح.",
+      "d": "ليس لهما علاقة بالبحر والبر."
+    }
+  },
+  {
+    "id": "q-cont-2",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": ["fath"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "الفتح",
+    "prompt": "ما القاعدة الجامعة بين الفتح والغزوة؟",
+    "options": [
+      { "id": "a", "text": "كل غزوة فتح" },
+      { "id": "b", "text": "كل فتح غزوة وليس كل غزوة فتحًا" },
+      { "id": "c", "text": "لا علاقة بينهما" },
+      { "id": "d", "text": "كلاهما ردّ عدوان" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "كل فتح غزوة (لأن الفتح يستلزم غزوة)، وليس كل غزوة فتحًا (لأن الغزوة قد تنتهي بدون استقرار).",
+    "whyWrong": {
+      "a": "ليست كل غزوة فتحًا.",
+      "c": "بينهما علاقة عموم وخصوص.",
+      "d": "الفتح أوسع من ردّ العدوان."
+    }
+  },
+  {
+    "id": "tf-cont-1",
+    "type": "tf",
+    "courseId": "contemporary",
+    "conceptIds": ["fath"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "learningObjective": "الفتح",
+    "prompt": "فتح مكة يسمى فتحًا لا غزوة.",
+    "correctAnswer": "true",
+    "explanation": "نعم، قيل 'فتح مكة' لا 'غزوة مكة' لأن النبي ﷺ استقر فيها."
+  },
+  {
+    "id": "tf-cont-2",
+    "type": "tf",
+    "courseId": "contemporary",
+    "conceptIds": ["jihad"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "learningObjective": "ثلثا العالم فتح",
+    "prompt": "ثلثا العالم الإسلامي فُتح بالحرب.",
+    "correctAnswer": "false",
+    "explanation": "ثلثا العالم فُتح سلمًا وصلحًا (إفريقيا، إندونيسيا، جزر الهند). الثلث فقط بالحرب."
+  },
+  {
+    "id": "m-cont-1",
+    "type": "match",
+    "courseId": "contemporary",
+    "conceptIds": ["jihad"],
+    "difficulty": "medium",
+    "estimatedSeconds": 120,
+    "learningObjective": "المصطلحات العسكرية",
+    "prompt": "طابق بين كل مصطلح وتعريفه:",
+    "pairs": [
+      { "left": "الغزوة", "right": "ما قصده النبي ﷺ بنفسه" },
+      { "left": "السرية", "right": "ما بعثه النبي ﷺ ولم يحضره" },
+      { "left": "الفتح", "right": "افتتاح + استقرار + رحمة" },
+      { "left": "المعركة", "right": "احتكاك قتالي بدون النبي ﷺ" }
+    ],
+    "correctAnswer": "1-أ 2-ب 3-ج 4-د",
+    "explanation": "كل مصطلح له تعريف دقيق في علم السيرة."
+  },
+  {
+    "id": "q-sah-1",
+    "type": "mcq",
+    "courseId": "sahaba",
+    "conceptIds": ["siddiq"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "لماذا سمي الصديق",
+    "prompt": "لماذا سُمي أبو بكر بالصديق؟",
+    "options": [
+      { "id": "a", "text": "لصدق لهجته فقط" },
+      { "id": "b", "text": "لتصديقه النبي ﷺ في الإسراء والمعراج دون تردد" },
+      { "id": "c", "text": "لأنّه أول من أسلم" },
+      { "id": "d", "text": "لأنّه صادق في تجارته" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "سُمي الصديق لتصديقه النبي ﷺ في حادثة الإسراء والمعراج دون تردد، بينما ارتاب المشركون.",
+    "whyWrong": {
+      "a": "ليست صدق لهجة بل تصديق مطلق.",
+      "c": "هو أول من أسلم من الرجال لكن سبب التسمية هو التصديق.",
+      "d": "صدق التجارة وصف لكنه ليس سبب اللقب."
+    }
+  },
+  {
+    "id": "q-sah-2",
+    "type": "mcq",
+    "courseId": "sahaba",
+    "conceptIds": ["siddiq"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "إنفاق أبي بكر",
+    "prompt": "كم كانت ثروة أبي بكر في بداية الدعوة وكم بقيت عند الهجرة؟",
+    "options": [
+      { "id": "a", "text": "100,000 → 10,000" },
+      { "id": "b", "text": "40,000 → 5,000 درهم" },
+      { "id": "c", "text": "10,000 → 1,000" },
+      { "id": "d", "text": "20,000 → 4,000" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ثروته بدأت بـ 40,000 وانتهت بـ 5,000 درهم أنفقها كلها في سبيل الله.",
+    "whyWrong": {
+      "a": "غير صحيح.",
+      "c": "غير صحيح.",
+      "d": "غير صحيح."
+    }
+  },
+  {
+    "id": "tf-sah-1",
+    "type": "tf",
+    "courseId": "sahaba",
+    "conceptIds": [],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "learningObjective": "أول خليفة",
+    "prompt": "عمر بن الخطاب هو أول خليفة في الإسلام.",
+    "correctAnswer": "false",
+    "explanation": "أبو بكر الصديق هو أول خليفة في الإسلام. عمر ثاني الخلفاء الراشدين."
+  },
+  {
+    "id": "q-sahb-1",
+    "type": "mcq",
+    "courseId": "sahabiyyat",
+    "conceptIds": ["sabr"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "خديجة",
+    "prompt": "من أول من آمن من المسلمين جميعًا؟",
+    "options": [
+      { "id": "a", "text": "أبو بكر الصديق" },
+      { "id": "b", "text": "علي بن أبي طالب" },
+      { "id": "c", "text": "خديجة بنت خويلد" },
+      { "id": "d", "text": "عثمان بن عفان" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "خديجة بنت خويلد أول من آمن من المسلمين جميعًا، قبل أبي بكر.",
+    "whyWrong": {
+      "a": "أبو بكر أول من أسلم من الرجال، لكن خديجة قبله.",
+      "b": "علي من أوائل المسلمين لكن ليس الأول.",
+      "d": "عثمان أسلم متأخرًا."
+    }
+  },
+  {
+    "id": "q-sahb-2",
+    "type": "mcq",
+    "courseId": "sahabiyyat",
+    "conceptIds": ["sabr"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "حصار بني هاشم",
+    "prompt": "كم استمر حصار شعب بني هاشم؟",
+    "options": [
+      { "id": "a", "text": "سنة واحدة" },
+      { "id": "b", "text": "ثلاث سنوات" },
+      { "id": "c", "text": "خمس سنوات" },
+      { "id": "d", "text": "عشر سنوات" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الحصار استمر ثلاث سنوات، حتى كانت النساء والأطفال يأكلون أوراق الشجر من الجوع.",
+    "whyWrong": {
+      "a": "قليل جدًا.",
+      "c": "طويل جدًا.",
+      "d": "غير صحيح."
+    }
+  },
+  {
+    "id": "tf-sahb-1",
+    "type": "tf",
+    "courseId": "sahabiyyat",
+    "conceptIds": [],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "learningObjective": "وفاة خديجة",
+    "prompt": "تُوفيت خديجة قبل وفاة أبي طالب.",
+    "correctAnswer": "false",
+    "explanation": "تُوفي أبو طالب أولًا، ثم بعده بثلاثة أيام تُوفيت خديجة. سُمِّي هذا العام 'عام الحزن'."
+  },
+  {
+    "id": "q-soul-1",
+    "type": "mcq",
+    "courseId": "soul-app",
+    "conceptIds": ["tawbah"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "خطوات التوبة",
+    "prompt": "ما هي خطوات التوبة الحقيقية؟",
+    "options": [
+      { "id": "a", "text": "الندم فقط" },
+      { "id": "b", "text": "التوقف، التطهير، التغيير" },
+      { "id": "c", "text": "الاستغفار فقط" },
+      { "id": "d", "text": "البكاء فقط" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "التوبة ثلاث خطوات: (1) التوقف عن الذنب. (2) التطهير (استغفار، رد المظالم). (3) التغيير الفعلي.",
+    "whyWrong": {
+      "a": "الندم شعور، التوبة تحول كامل.",
+      "c": "الاستغفار جزء من التطهير فقط.",
+      "d": "البكاء جزء من التطهير فقط."
+    }
+  },
+  {
+    "id": "q-soul-2",
+    "type": "mcq",
+    "courseId": "soul-app",
+    "conceptIds": ["tawbah"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "طلب المساعدة",
+    "prompt": "ما حكم طلب المساعدة النفسية المتخصصة في الإسلام؟",
+    "options": [
+      { "id": "a", "text": "مكروه" },
+      { "id": "b", "text": "حرام" },
+      { "id": "c", "text": "جائز وقد يكون واجبًا، لا حياء في طلبها" },
+      { "id": "d", "text": "لا فائدة منها" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "الإسلام يجمع بين الإصلاح الروحي والعلاج العملي. طلب المساعدة من معالج مؤمن متخصص جائز بل قد يكون واجبًا.",
+    "whyWrong": {
+      "a": "ليس مكروهًا بل مطلوب أحيانًا.",
+      "b": "ليس حرامًا.",
+      "d": "له فائدة كبيرة."
+    }
+  },
+  {
+    "id": "sc-soul-1",
+    "type": "scenario",
+    "courseId": "soul-app",
+    "conceptIds": ["tawbah"],
+    "difficulty": "hard",
+    "estimatedSeconds": 300,
+    "learningObjective": "تطبيق التوبة",
+    "prompt": "شخص يعاني من الحقد على زميل له منذ سنوات. كيف تساعده في تطبيق التوبة؟",
+    "correctAnswer": "يبدأ بـ: (1) التوقف عن تذكّر الأذى. (2) التطهير: استغفار، دعاء للزميل. (3) التغيير: بناء علاقة جديدة، الإحسان للزميل. يمكنه أيضًا طلب المساعدة النفسية المتخصصة.",
+    "explanation": "التطبيق العملي للتوبة يبدأ بقرار ويستمر بالفعل."
+  },
+  {
+    "id": "q-pp-1",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": [],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "اختبار جلب",
+    "prompt": "كم عدد نقاط القوة في اختبار جلب (VIA)؟",
+    "options": [
+      { "id": "a", "text": "12" },
+      { "id": "b", "text": "24" },
+      { "id": "c", "text": "36" },
+      { "id": "d", "text": "48" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "اختبار جلب يكشف نقاط القوة الخمس العليا من 24 نقطة قوة.",
+    "whyWrong": {
+      "a": "قليل جدًا.",
+      "c": "كثير جدًا.",
+      "d": "كثير جدًا."
+    }
+  },
+  {
+    "id": "q-pp-2",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": [],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "الإحسان مع الذات",
+    "prompt": "ما هي الأبعاد الأربعة للإحسان؟",
+    "options": [
+      { "id": "a", "text": "الصلاة، الصيام، الزكاة، الحج" },
+      { "id": "b", "text": "مع الله، مع الذات، مع الناس، مع الحياة" },
+      { "id": "c", "text": "العلم، العمل، المال، الأولاد" },
+      { "id": "d", "text": "الإيمان، الإسلام، الإحسان، الصدق" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الأبعاد الأربعة: مع الله (عبادة)، مع الذات (نقاط القوة)، مع الناس (أخلاق)، مع الحياة (إتقان).",
+    "whyWrong": {
+      "a": "أركان الإسلام لا أبعاد الإحسان.",
+      "c": "عناصر الدنيا لا أبعاد الإحسان.",
+      "d": "ليس تصنيفًا صحيحًا."
+    }
+  },
+  {
+    "id": "tf-pp-1",
+    "type": "tf",
+    "courseId": "positive-psych",
+    "conceptIds": [],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "learningObjective": "التوكل",
+    "prompt": "التوكل في الإسلام يعني ترك العمل والاعتماد الكلي على الله.",
+    "correctAnswer": "false",
+    "explanation": "التوكل الصحيح: اعتماد القلب على الله مع الأخذ بالأسباب. التوكل ليس عجزًا بل قوة مع تواضع."
+  },
+  {
+    "id": "q-sapp-1",
+    "type": "mcq",
+    "courseId": "seerah-app",
+    "conceptIds": [],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "تطبيقات السيرة",
+    "prompt": "ما الدرس المستفاد من غزوة الخندق؟",
+    "options": [
+      { "id": "a", "text": "القوة في العدد" },
+      { "id": "b", "text": "المشاورة باب الحكمة" },
+      { "id": "c", "text": "السرعة في القتال" },
+      { "id": "d", "text": "الاعتزال عن الناس" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "النبي ﷺ استشار سلمان الفارسي في حفر الخندق. المشاورة باب الحكمة.",
+    "whyWrong": {
+      "a": "القوة في المشاورة لا في العدد.",
+      "c": "ليس درس الخندق.",
+      "d": "الخندق جمع لا فرقّق."
+    }
+  },
+  {
+    "id": "sc-sapp-1",
+    "type": "scenario",
+    "courseId": "seerah-app",
+    "conceptIds": [],
+    "difficulty": "hard",
+    "estimatedSeconds": 300,
+    "learningObjective": "تطبيق السيرة",
+    "prompt": "رائد أعمال يواجه أزمة في مشروعه. ما الدروس من السيرة التي تساعده؟",
+    "correctAnswer": "الهجرة (التخطيط)، بدر (التوكل بالقلة)، الخندق (المشاورة)، الفتح (الرحمة بعد النصر)، الصحابة (الصبر والثبات).",
+    "explanation": "كل حدث في السيرة يحمل درسًا تطبيقيًا يمكن استخدامه في ريادة الأعمال."
+  }
+]

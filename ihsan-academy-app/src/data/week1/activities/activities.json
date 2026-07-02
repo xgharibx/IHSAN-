@@ -1,0 +1,110 @@
+[
+  {
+    "id": "act-ihsan-1",
+    "courseId": "ihsan-soul",
+    "type": "individual",
+    "title": "تأمل عقد الخلافة",
+    "prompt": "اكتب في دفترك: ما وظيفتي كخليفة في مجالي؟ ما المهام التي أنا موظف بها من الله؟ ما الجانب الذي ينقصني: التقديس أم التعمير؟",
+    "duration": "20 دقيقة",
+    "reward": "badge:contract-signed"
+  },
+  {
+    "id": "act-ihsan-2",
+    "courseId": "ihsan-soul",
+    "type": "practical",
+    "title": "خريطة الإحسان اليومي",
+    "prompt": "اختر 3 أنشطة يومية (قيادة السيارة، التعامل مع الزوجة، العمل) واكتب كيف تحولها إلى عبادة بإحسان.",
+    "duration": "30 دقيقة",
+    "reward": "badge:ihsan-applied"
+  },
+  {
+    "id": "act-tafsir-1",
+    "courseId": "tafsir",
+    "type": "reflection",
+    "title": "تدبر الفاتحة أسبوعًا",
+    "prompt": "كل يوم من أيام الأسبوع اقرأ معنى آية من الفاتحة. اكتب كيف طبقتها في يومك.",
+    "duration": "7 أيام",
+    "reward": "badge:fatiha-mujtabir"
+  },
+  {
+    "id": "act-seerah-1",
+    "courseId": "seerah",
+    "type": "individual",
+    "title": "حفظ اسم النبي ﷺ",
+    "prompt": "احفظ اسم النبي ﷺ الكامل: محمد بن عبد الله بن عبد المطلب. أضف نسبه في كل مرة تذكره فيها.",
+    "duration": "3 أيام",
+    "reward": "badge:name-memorized"
+  },
+  {
+    "id": "act-sah-1",
+    "courseId": "sahaba",
+    "type": "discussion",
+    "title": "مجلس أبي بكر",
+    "prompt": "اجلس مع أصدقائك أو أهلك وتشاركوا: أي مواقف أبي بكر تشبه مواقفكم اليوم؟",
+    "duration": "45 دقيقة",
+    "reward": "badge:sahaba-discussion"
+  },
+  {
+    "id": "act-sahb-1",
+    "courseId": "sahabiyyat",
+    "type": "reflection",
+    "title": "دعاء خديجة",
+    "prompt": "تأمل موقف خديجة مع النبي ﷺ عند نزول الوحي. اكتب ما الذي يمنعك من الثقة المطلقة بمن حولك.",
+    "duration": "20 دقيقة",
+    "reward": "badge:khadijah-trust"
+  },
+  {
+    "id": "act-cont-1",
+    "courseId": "contemporary",
+    "type": "discussion",
+    "title": "حوار الشبهة",
+    "prompt": "اختر شبهة من شبهات السيرة واكتب ردًا علميًا عليها باستخدام المصطلحات التي تعلمتها (غزوة، سرية، فتح، ...).",
+    "duration": "45 دقيقة",
+    "reward": "badge:shubha-refuter"
+  },
+  {
+    "id": "act-fiqh-1",
+    "courseId": "fiqh-rules",
+    "type": "practical",
+    "title": "تطبيق نية 7 أيام",
+    "prompt": "كل عمل يومي هذا الأسبوع، ابدأه بنيّة واضحة لله. سجّل ملاحظاتك في دفتر النيات.",
+    "duration": "7 أيام",
+    "reward": "badge:niyyah-practitioner"
+  },
+  {
+    "id": "act-soul-1",
+    "courseId": "soul-app",
+    "type": "individual",
+    "title": "مبايعة مع الله",
+    "prompt": "اختر ذنبًا تريد التوبة منه. بايع الله على التوقف عنه لمدة شهر. اكتب العَهد وراجع نفسك أسبوعيًا.",
+    "duration": "30 يوم",
+    "reward": "badge:bay'ah-signed"
+  },
+  {
+    "id": "act-soul-2",
+    "courseId": "soul-app",
+    "type": "practical",
+    "title": "مصحف التوبة",
+    "prompt": "كل يوم اكتب ذنبًا تبت منه وكيف غيّرت سلوكك. في نهاية الشهر سترى تحولًا.",
+    "duration": "30 يوم",
+    "reward": "badge:tawbah-diary"
+  },
+  {
+    "id": "act-pp-1",
+    "courseId": "positive-psych",
+    "type": "practical",
+    "title": "اكتشف نقاط قوتك",
+    "prompt": "أجرِ اختبار جلب (VIA) واحفظ نقاط قوتك الخمس العليا. كيف تستثمرها في عملك وحياتك هذا الأسبوع؟",
+    "duration": "60 دقيقة",
+    "reward": "badge:via-discoverer"
+  },
+  {
+    "id": "act-sapp-1",
+    "courseId": "seerah-app",
+    "type": "discussion",
+    "title": "حلقة تطبيق السيرة",
+    "prompt": "اجتمع مع 3 من زملائك. كل واحد يختار حدثًا من السيرة ويقدمه كتطبيق عملي لمشكلته الحالية.",
+    "duration": "60 دقيقة",
+    "reward": "badge:sirah-applied"
+  }
+]

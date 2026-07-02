@@ -1,0 +1,87 @@
+[
+  {
+    "id": "first-course-started",
+    "title": "بذرة البداية",
+    "description": "بدأت رحلتك في أكاديمية الإحسان",
+    "iconKey": "sprout",
+    "criteria": "افتح أي درس",
+    "unlockedByDefault": true
+  },
+  {
+    "id": "first-course-completed",
+    "title": "إنجاز الدورة الأولى",
+    "description": "أكملت أول دورة من دورات الأسبوع الأول",
+    "iconKey": "trophy",
+    "criteria": "أكمل قراءة جميع أقسام دورة واحدة"
+  },
+  {
+    "id": "all-courses-completed",
+    "title": "جامع الدورات",
+    "description": "أكملت دورات الأسبوع الأول كاملة",
+    "iconKey": "crown",
+    "criteria": "أكمل قراءة جميع الدورات التسع"
+  },
+  {
+    "id": "flashcard-explorer",
+    "title": "مستكشف البطاقات",
+    "description": "راجعت 10 بطاقات مراجعة على الأقل",
+    "iconKey": "cards",
+    "criteria": "راجع 10 بطاقات"
+  },
+  {
+    "id": "flashcard-master",
+    "title": "سيد المراجعة",
+    "description": "راجعت 50 بطاقة مراجعة",
+    "iconKey": "graduation",
+    "criteria": "راجع 50 بطاقة"
+  },
+  {
+    "id": "deep-learner",
+    "title": "متعلم عميق",
+    "description": "أكملت دراسة عميقة لدورتين على الأقل",
+    "iconKey": "book",
+    "criteria": "اقرأ وضع 'دراسة عميقة' لدورتين"
+  },
+  {
+    "id": "reflection-completed",
+    "title": "المتأمل",
+    "description": "أكملت تأملًا أو نشاطًا تطبيقيًا",
+    "iconKey": "moon",
+    "criteria": "أكمل نشاطًا أو تأملًا"
+  },
+  {
+    "id": "quiz-passed",
+    "title": "ناجح في الاختبار",
+    "description": "أجبت بشكل صحيح عن 5 أسئلة في الاختبارات",
+    "iconKey": "check",
+    "criteria": "أجب عن 5 أسئلة بشكل صحيح"
+  },
+  {
+    "id": "quiz-master",
+    "title": "بطل الاختبارات",
+    "description": "أجبت بشكل صحيح عن 20 سؤال",
+    "iconKey": "star",
+    "criteria": "أجب عن 20 سؤال بشكل صحيح"
+  },
+  {
+    "id": "all-courses-connected",
+    "title": "رابط الأفكار",
+    "description": "استكشفت شجرة المعرفة ووصلك بين 3 دورات على الأقل",
+    "iconKey": "network",
+    "criteria": "افتح شجرة المعرفة ووصّل بين 3 دورات"
+  },
+  {
+    "id": "week1-synthesizer",
+    "title": "موحد الأسبوع",
+    "description": "قرأت التركيب النهائي للأسبوع الأول",
+    "iconKey": "diamond",
+    "criteria": "اقرأ صفحة التركيب"
+  },
+  {
+    "id": "ready-for-week2",
+    "title": "جاهز للأسبوع الثاني",
+    "description": "أكملت كل دورات الأسبوع الأول + التركيب + شجرة المعرفة",
+    "iconKey": "rocket",
+    "criteria": "أكمل كل متطلبات الأسبوع الأول"
+  }
+]

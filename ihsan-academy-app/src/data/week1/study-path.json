@@ -1,0 +1,67 @@
+{
+  "id": "week1-path",
+  "weekId": "week1",
+  "recommended": "true",
+  "steps": [
+    {
+      "order": 1,
+      "courseId": "ihsan-soul",
+      "objective": "تأسيس مفهوم الخلافة والإحسان",
+      "estimatedMinutes": 60
+    },
+    {
+      "order": 2,
+      "courseId": "tafsir",
+      "objective": "ربط القرآن بالإحسان في الفاتحة",
+      "estimatedMinutes": 45
+    },
+    {
+      "order": 3,
+      "courseId": "seerah",
+      "objective": "معرفة النبي ﷺ حق المعرفة",
+      "estimatedMinutes": 60
+    },
+    {
+      "order": 4,
+      "courseId": "sahaba",
+      "objective": "الاقتداء بأبي بكر",
+      "estimatedMinutes": 45
+    },
+    {
+      "order": 5,
+      "courseId": "sahabiyyat",
+      "objective": "الاقتداء بخديجة",
+      "estimatedMinutes": 30
+    },
+    {
+      "order": 6,
+      "courseId": "contemporary",
+      "objective": "الرد على شبهات السيرة",
+      "estimatedMinutes": 45
+    },
+    {
+      "order": 7,
+      "courseId": "seerah-app",
+      "objective": "تطبيق السيرة على الحياة",
+      "estimatedMinutes": 45
+    },
+    {
+      "order": 8,
+      "courseId": "fiqh-rules",
+      "objective": "تأسيس منهج الفقه في الحياة",
+      "estimatedMinutes": 45
+    },
+    {
+      "order": 9,
+      "courseId": "soul-app",
+      "objective": "تزكية النفس",
+      "estimatedMinutes": 60
+    },
+    {
+      "order": 10,
+      "courseId": "positive-psych",
+      "objective": "تطبيق علم النفس الإيجابي",
+      "estimatedMinutes": 45
+    }
+  ]
+}
