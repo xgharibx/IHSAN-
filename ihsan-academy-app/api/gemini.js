@@ -9,6 +9,17 @@ function toSsePayload(text) {
   }
 }
 
+function getGeminiApiKey() {
+  return (
+    process.env.GEMINI_API_KEY ||
+    process.env.VITEGEMINIAPI_KEY ||
+    process.env.VITE_GEMINIAPI_KEY ||
+    process.env.VITE_GEMINI_API_KEY ||
+    process.env.GOOGLE_API_KEY ||
+    process.env.GOOGLE_GENERATIVE_AI_API_KEY
+  );
+}
+
 async function postToGemini(url, body) {
   let lastError;
   for (let attempt = 1; attempt <= 2; attempt += 1) {
@@ -34,7 +45,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = getGeminiApiKey();
   if (!apiKey) {
     return res.status(500).json({ error: "GEMINI_API_KEY is not configured" });
   }

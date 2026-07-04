@@ -42,7 +42,7 @@ export interface TutorMessage {
 export interface TutorResult {
   ok: boolean;
   text: string;
-  source: "gemini" | "error";
+  source: "gemini" | "local-knowledge" | "error";
   citations?: { courseId: string; conceptIds?: string[] }[];
   confidence?: number;
   suggestedFollowUps?: string[];
@@ -304,6 +304,121 @@ const buildKnowledgeWindow = (ctx: TutorContext, latestQuestion: string): string
   ].join("\n");
 };
 
+const getLatestUserText = (history: TutorMessage[]): string =>
+  history.filter((message) => message.role === "user").slice(-1)[0]?.text ?? "";
+
+const cleanChoiceLine = (line: string): string =>
+  line
+    .replace(/^[\s\-–—•*]+/, "")
+    .replace(/^[\s\d٠-٩]+[.)\-:ـ]\s*/, "")
+    .replace(/^[أابجدهوزحطىيكلمنسعفصقرشتثخذضظغ]\s*[.)\-:ـ]\s*/i, "")
+    .trim();
+
+const extractMultipleChoiceOptions = (question: string): string[] => {
+  const lines = question
+    .split(/\r?\n/)
+    .map((line) => cleanChoiceLine(line))
+    .filter((line) => line.length > 2);
+
+  const optionLike = lines.filter((line) => {
+    const normalized = normalizeSearchText(line);
+    if (normalized.endsWith("?") || normalized.includes("؟")) return false;
+    if (normalized.includes("اي تعريف") || normalized.includes("السؤال")) return false;
+    return line.length <= 180;
+  });
+
+  return optionLike.slice(-6).filter((line, index, arr) => arr.indexOf(line) === index);
+};
+
+const courseCorpus = (course: Course): string =>
+  [
+    course.title,
+    course.subtitle,
+    course.tagline,
+    course.summary,
+    course.knowledgeBaseText,
+    course.mustUnderstand.join(" "),
+    course.keyTerms.map((term) => `${term.term} ${term.definition} ${term.deepMeaning}`).join(" "),
+  ].join("\n");
+
+const stopTokens = new Set([
+  "هذا",
+  "هذه",
+  "التي",
+  "الذي",
+  "على",
+  "الى",
+  "إلى",
+  "انه",
+  "انك",
+  "كانك",
+  "لانك",
+  "في",
+  "من",
+  "عن",
+  "مع",
+  "هو",
+  "هي",
+  "او",
+  "أن",
+  "ان",
+  "كما",
+]);
+
+const scoreChoiceAgainstCorpus = (choice: string, corpus: string): number => {
+  const normalizedChoice = normalizeSearchText(choice);
+  const normalizedCorpus = normalizeSearchText(corpus);
+  const tokens = tokenizeSearch(choice).filter((token) => !stopTokens.has(token));
+  let score = normalizedCorpus.includes(normalizedChoice) ? 35 : 0;
+
+  for (const token of tokens) {
+    if (normalizedCorpus.includes(token)) score += token.length > 5 ? 4 : 2;
+  }
+
+  for (let index = 0; index < tokens.length - 1; index += 1) {
+    const phrase = `${tokens[index]} ${tokens[index + 1]}`;
+    if (normalizedCorpus.includes(phrase)) score += 5;
+  }
+
+  return score;
+};
+
+const buildLocalExamAnswer = (history: TutorMessage[], ctx: TutorContext): TutorResult | null => {
+  const latest = getLatestUserText(history);
+  const options = extractMultipleChoiceOptions(latest);
+  if (options.length < 2) return null;
+
+  const questionTokens = tokenizeSearch(latest);
+  const relevantCourses = ctx.courses
+    .map((course) => ({ course, score: scoreCourseForQuestion(course, latest, questionTokens) }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 8);
+
+  const coursesToSearch = relevantCourses.some((entry) => entry.score > 0)
+    ? relevantCourses.map((entry) => entry.course)
+    : ctx.courses;
+  const corpus = coursesToSearch.map(courseCorpus).join("\n\n");
+
+  const ranked = options
+    .map((option) => ({ option, score: scoreChoiceAgainstCorpus(option, corpus) }))
+    .sort((a, b) => b.score - a.score);
+  const best = ranked[0];
+  const second = ranked[1]?.score ?? 0;
+  if (!best || best.score < 6 || best.score - second < 2) return null;
+
+  const sourceCourse = relevantCourses.find((entry) => entry.score > 0)?.course ?? coursesToSearch[0];
+  const reason = sourceCourse
+    ? `السبب: هذا الاختيار هو الأقرب لنصوص الأكاديمية في "${sourceCourse.title}"؛ لأنه يطابق المعنى لا مجرد اللفظ، ويربط المفهوم بأثره العملي في النفس والسلوك.`
+    : "السبب: هذا الاختيار هو الأكثر تطابقًا مع ألفاظ السؤال ومعاني محتوى الأكاديمية.";
+
+  return {
+    ok: true,
+    source: "local-knowledge",
+    text: `الإجابة: ${best.option}\n\n${reason}`,
+    confidence: Math.min(0.9, Math.max(0.55, best.score / 60)),
+  };
+};
+
 const buildSystemPrompt = (mode: TutorMode, ctx: TutorContext, latestQuestion: string) => {
   return [
     BASE_SYSTEM_PROMPT,
@@ -340,7 +455,7 @@ const callGemini = async (
 ): Promise<{ text: string; citations?: { courseId: string; conceptIds?: string[] }[]; confidence?: number; suggestedFollowUps?: string[] }> => {
   const model = getModel();
 
-  const latestUserText = history.filter((message) => message.role === "user").slice(-1)[0]?.text ?? "";
+  const latestUserText = getLatestUserText(history);
   const systemPrompt = buildSystemPrompt(mode, ctx, latestUserText);
 
   // Build Gemini contents array
@@ -484,6 +599,11 @@ export const sendToTutor = async (
     };
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown error";
+    const localExamAnswer = buildLocalExamAnswer(history, ctx);
+    if (localExamAnswer) {
+      onChunk?.(localExamAnswer.text);
+      return localExamAnswer;
+    }
     const text =
       "تعذّر الاتصال بالذكاء الاصطناعي الآن. لم أقدّم إجابة محلية أو قالباً بديلاً حتى لا تظهر إجابات غير مولّدة من Gemini. قد يكون السبب حدّ استخدام Gemini المجاني أو إعداد الخادم؛ انتظر قليلًا ثم أعد المحاولة.";
     onChunk?.(text);

@@ -13,6 +13,17 @@ function toSsePayload(text: string): string {
   }
 }
 
+function getGeminiApiKey(env: Record<string, string>): string | undefined {
+  return (
+    env.GEMINI_API_KEY ||
+    env.VITEGEMINIAPI_KEY ||
+    env.VITE_GEMINIAPI_KEY ||
+    env.VITE_GEMINI_API_KEY ||
+    env.GOOGLE_API_KEY ||
+    env.GOOGLE_GENERATIVE_AI_API_KEY
+  );
+}
+
 async function postToGemini(url: string, body: string): Promise<Response> {
   let lastError: unknown;
   for (let attempt = 1; attempt <= 2; attempt += 1) {
@@ -34,7 +45,7 @@ async function postToGemini(url: string, body: string): Promise<Response> {
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
-  const geminiApiKey = env.GEMINI_API_KEY;
+  const geminiApiKey = getGeminiApiKey(env);
   const geminiEndpoint = env.GEMINI_ENDPOINT || DEFAULT_GEMINI_ENDPOINT;
   const geminiModel = env.GEMINI_MODEL || DEFAULT_GEMINI_MODEL;
 
