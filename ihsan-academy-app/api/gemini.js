@@ -1,5 +1,5 @@
 const DEFAULT_ENDPOINT = "https://generativelanguage.googleapis.com";
-const DEFAULT_MODEL = "gemini-2.5-flash";
+const DEFAULT_MODEL = "gemini-2.5-flash-lite";
 
 function toSsePayload(text) {
   try {

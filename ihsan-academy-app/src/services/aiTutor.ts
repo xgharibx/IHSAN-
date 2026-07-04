@@ -173,19 +173,25 @@ const buildCourseAwarenessSection = (ctx: TutorContext) => {
 };
 
 const buildCitationInstruction = () => `
-# الإسناد (citations) — ميزة مهمة:
-في نهاية كل إجابة، ضمِن كتلة JSON مخفية بعلامة [CITATIONS] بصيغة:
-[CITATIONS]{"citations":[{"courseId":"<id>","conceptIds":["<id>"]}],"confidence":0.0-1.0,"suggestedFollowUps":["سؤال 1","سؤال 2","سؤال 3"]}[/CITATIONS]
-حيث:
-- citations: قائمة الدورات والمفاهيم التي استشهدت بها
-- confidence: رقم بين 0 و 1 (1 = واثق جدًا، 0.5 = متوسط، 0 = تخمين)
-- suggestedFollowUps: 3 أسئلة متابعة مقترحة للمتعلم
-
-هذه العلامة لن تظهر للمستخدم، بل ستُستخرَج برمجيًا. يجب أن تظهر **دائمًا** في نهاية الإجابة.`;
+# تنسيق الإخراج:
+- لا تكتب أي JSON أو وسوم تقنية مثل [CITATIONS] أو [/CITATIONS].
+- أجب للمستخدم فقط بنص عربي واضح ومنسق.
+- إذا أردت اقتراح أسئلة متابعة، اكتبها طبيعيًا داخل الإجابة عند الحاجة، لا داخل كتل مخفية.`;
 
 const trimText = (text: string | undefined, max = 1200): string => {
   const clean = (text ?? "").replace(/\s+/g, " ").trim();
   return clean.length > max ? `${clean.slice(0, max)}...` : clean;
+};
+
+const stripCitationBlocks = (text: string): string =>
+  text
+    .replace(/\[CITATIONS\][\s\S]*?\[\/CITATIONS\]/g, "")
+    .replace(/\[CITATIONS\][\s\S]*$/g, "")
+    .trim();
+
+const extractCitationJson = (text: string): string | null => {
+  const match = text.match(/\[CITATIONS\]([\s\S]*?)\[\/CITATIONS\]/);
+  return match?.[1]?.trim() ?? null;
 };
 
 const normalizeSearchText = (text: string): string =>
@@ -311,13 +317,13 @@ const buildSystemPrompt = (mode: TutorMode, ctx: TutorContext, latestQuestion: s
     "# سياق الدورة المُختارة:",
     ctx.courseContext,
     "",
-    "# ذاكرة المتعلّم:",
-    chatMemory.getMemorySummary(),
+    "# قاعدة مهمة عن الذاكرة والسياق:",
+    "لا تبدأ إجابتك بعبارات مثل: بما أنك زرت الأسبوع كذا، ولا تفترض أسبوعًا سابقًا من الذاكرة. اجعل سؤال المتعلم الحالي هو الحاكم الأول. الذاكرة لا تُستخدم إلا إذا طلب المتعلم متابعة محادثة سابقة صراحة.",
   ].join("\n");
 };
 
 const getModel = (): string =>
-  (import.meta.env.VITE_GEMINI_MODEL as string | undefined) || "gemini-2.5-flash";
+  (import.meta.env.VITE_GEMINI_MODEL as string | undefined) || "gemini-2.5-flash-lite";
 
 const getProxyUrl = (): string =>
   (import.meta.env.VITE_GEMINI_PROXY_URL as string | undefined) || "/api/gemini";
@@ -357,9 +363,9 @@ const callGemini = async (
   }
 
   const generationConfig = {
-    temperature: 0.65,
+    temperature: 0.55,
     topP: 0.95,
-    maxOutputTokens: 4096,
+    maxOutputTokens: 2048,
   };
 
   const proxyUrl = getProxyUrl();
@@ -409,7 +415,7 @@ const callGemini = async (
         const chunkText = parsed.candidates?.[0]?.content?.parts?.[0]?.text;
         if (chunkText) {
           fullText += chunkText;
-          onChunk?.(fullText);
+          onChunk?.(stripCitationBlocks(fullText));
         }
       } catch {
         // Ignore partial SSE lines
@@ -419,22 +425,21 @@ const callGemini = async (
 
   if (!fullText) throw new Error("Empty response from Gemini");
 
-  // Extract citations from response
-  const citationsMatch = fullText.match(/\[CITATIONS\](.*?)\[\/CITATIONS\]/s);
+  // Strip any legacy/accidental hidden citation block from visible text.
+  const citationJson = extractCitationJson(fullText);
   let citations: { courseId: string; conceptIds?: string[] }[] | undefined;
   let confidence: number | undefined;
   let suggestedFollowUps: string[] | undefined;
 
-  if (citationsMatch) {
+  if (citationJson) {
     try {
-      const parsed = JSON.parse(citationsMatch[1].trim());
-      citations = parsed.citations;
-      confidence = parsed.confidence;
-      suggestedFollowUps = parsed.suggestedFollowUps;
-      // Strip citations from visible text
-      fullText = fullText.replace(/\[CITATIONS\].*?\[\/CITATIONS\]/s, "").trim();
+      const parsed = JSON.parse(citationJson);
+      citations = Array.isArray(parsed.citations) ? parsed.citations : undefined;
+      confidence = typeof parsed.confidence === "number" ? parsed.confidence : undefined;
+      suggestedFollowUps = Array.isArray(parsed.suggestedFollowUps) ? parsed.suggestedFollowUps : undefined;
     } catch {}
   }
+  fullText = stripCitationBlocks(fullText);
 
   return { text: fullText, citations, confidence, suggestedFollowUps };
 };
@@ -474,7 +479,7 @@ export const sendToTutor = async (
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown error";
     const text =
-      "تعذّر الاتصال بالذكاء الاصطناعي الآن. لم أقدّم إجابة محلية أو قالباً بديلاً حتى لا تظهر إجابات غير مولّدة من Gemini. راجع إعداد GEMINI_API_KEY على الخادم ثم أعد المحاولة.";
+      "تعذّر الاتصال بالذكاء الاصطناعي الآن. لم أقدّم إجابة محلية أو قالباً بديلاً حتى لا تظهر إجابات غير مولّدة من Gemini. قد يكون السبب حدّ استخدام Gemini المجاني أو إعداد الخادم؛ انتظر قليلًا ثم أعد المحاولة.";
     onChunk?.(text);
     return { ok: false, text, source: "error", error: message };
   }

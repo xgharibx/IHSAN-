@@ -32,6 +32,15 @@ export default function AiTutor() {
     [],
   );
   const courses = useMemo(() => courseEntries.map((entry) => entry.course), [courseEntries]);
+  const coursesByWeek = useMemo(
+    () =>
+      Object.values(data.weeks).map((bundle) => ({
+        weekNumber: bundle.meta.number,
+        weekTitle: bundle.meta.title,
+        courses: bundle.courses,
+      })),
+    [],
+  );
   const initialCourseValue =
     (initialCourse &&
       (currentWeekCourses.find((c) => c.id === initialCourse || c.slug === initialCourse)?.slug ??
@@ -183,6 +192,29 @@ export default function AiTutor() {
         <p className="mt-1.5 max-w-3xl text-sm text-sand-100/60">
           10 أوضاع تعليمية، 3 مَرَاتب يَقين، ذاكرة دائمة، 9 دورات، 165 سؤالاً، 804 بطاقة، 428 مفهوم.
         </p>
+      </div>
+
+      <div className="mb-4 rounded-2xl border border-white/10 bg-white/[0.03] p-3">
+        <label className="mb-2 block text-xs text-sand-100/55" htmlFor="academy-scope">
+          نطاق المعلّم
+        </label>
+        <select
+          id="academy-scope"
+          value={courseId}
+          onChange={(e) => setCourseId(e.target.value)}
+          className="w-full rounded-xl border border-white/10 bg-ink-900/90 px-3 py-2 text-sm text-sand-100"
+        >
+          <option value={ACADEMY_SCOPE}>كل الأكاديمية - كل الأسابيع والمحاضرات</option>
+          {coursesByWeek.map((weekGroup) => (
+            <optgroup key={weekGroup.weekNumber} label={`الأسبوع ${weekGroup.weekNumber} - ${weekGroup.weekTitle}`}>
+              {weekGroup.courses.map((c) => (
+                <option key={`${weekGroup.weekNumber}-${c.slug}`} value={c.slug}>
+                  {c.title}
+                </option>
+              ))}
+            </optgroup>
+          ))}
+        </select>
       </div>
 
       {!hasKey && (
@@ -363,10 +395,14 @@ export default function AiTutor() {
               className="mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-2 py-1.5 text-xs text-sand-100"
             >
               <option value={ACADEMY_SCOPE}>كل الأكاديمية - كل الأسابيع والمحاضرات</option>
-              {courseEntries.map(({ course: c, weekNumber }) => (
-                <option key={`${weekNumber}-${c.slug}`} value={c.slug}>
-                  {`الأسبوع ${weekNumber} - ${c.title}`}
-                </option>
+              {coursesByWeek.map((weekGroup) => (
+                <optgroup key={weekGroup.weekNumber} label={`الأسبوع ${weekGroup.weekNumber} - ${weekGroup.weekTitle}`}>
+                  {weekGroup.courses.map((c) => (
+                    <option key={`${weekGroup.weekNumber}-${c.slug}`} value={c.slug}>
+                      {c.title}
+                    </option>
+                  ))}
+                </optgroup>
               ))}
             </select>
           </div>

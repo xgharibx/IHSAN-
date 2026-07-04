@@ -164,7 +164,7 @@ export default function CourseDetail() {
               <p className="cd-fade mt-3 text-xl text-sand-100/70">{course.subtitle}</p>
               <p className="cd-fade mt-4 text-base text-sand-100/60">{course.tagline}</p>
               <div className="cd-fade mt-6 flex flex-wrap items-center gap-3">
-                <Link to={`/tutor?course=${course.id}`} className="btn btn-outline">
+                <Link to="/tutor" className="btn btn-outline">
                   <span className="text-gold-300">✦</span> المعلّم الذكي
                 </Link>
               </div>
