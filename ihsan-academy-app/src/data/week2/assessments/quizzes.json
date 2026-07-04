@@ -1,0 +1,1107 @@
+[
+  {
+    "id": "q-ihsan-w2-1",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": [
+      "manazil-ruh"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "منازل الروح السبعة",
+    "prompt": "كم عدد منازل الروح السبعة الموصلة للإحسان كما رتّبها د. عمرو خالد؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "5"
+      },
+      {
+        "id": "b",
+        "text": "7"
+      },
+      {
+        "id": "c",
+        "text": "10"
+      },
+      {
+        "id": "d",
+        "text": "100"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "د. عمرو خالد اختار 7 منازل من أصل 100 منزل في كتاب «منازل السائرين» وفق 4 معايير: الشمول، الشعبية، الغنى بالقرآن، الربط بالإحسان."
+  },
+  {
+    "id": "q-ihsan-w2-2",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": [
+      "taqwa"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "تعريف التقوى القابل للقياس",
+    "prompt": "ما تعريف التقوى القابل للقياس كما قدّمه د. عمرو خالد؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "الخوف من الله في كل لحظة"
+      },
+      {
+        "id": "b",
+        "text": "أن يجدك الله حيث أمرك ولا يجدك حيث نهاك"
+      },
+      {
+        "id": "c",
+        "text": "الزهد في الدنيا"
+      },
+      {
+        "id": "d",
+        "text": "كثرة العبادة"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "التعريف القابل للقياس: «أن يجدك الله حيث أمرك ولا يجدك حيث نهاك». من القرآن «فاتقوا الله ما استطعتم». الحسن البصري فسّر «ما استطعتم» بأنها أن يغلب على يومك وشهرك وسنتك."
+  },
+  {
+    "id": "q-ihsan-w2-3",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "اختبار اليقين",
+    "prompt": "في أي ثلاثة أشياء يُختبر اليقين؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "الصحة، المال، الأبناء"
+      },
+      {
+        "id": "b",
+        "text": "الرزق، الخير والعطاء، الإحسان"
+      },
+      {
+        "id": "c",
+        "text": "الصلاة، الصوم، الزكاة"
+      },
+      {
+        "id": "d",
+        "text": "الدعاء، الذكر، الاستغفار"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "اليقين يُختبر في ثلاثة: الرزق، الخير والعطاء، والإحسان. «إنّا لا نُضيع أجر من أحسن عملاً»."
+  },
+  {
+    "id": "tf-ihsan-w2-1",
+    "type": "tf",
+    "courseId": "ihsan-soul",
+    "conceptIds": [
+      "manazil-ruh"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "المنازل الروح السبعة هي مراتب متعاقبة، يجب إتقان السابقة قبل الانتقال إلى اللاحقة.",
+    "correctAnswer": "false",
+    "explanation": "ليست مراتب متعاقبة. هي «منازل» ترانزيت دائريّة، كل واحدة متاحة في أي وقت. «مَن ذا الذي يقول: خلصت التقوى؟ هذا كلام مثالي»."
+  },
+  {
+    "id": "tf-ihsan-w2-2",
+    "type": "tf",
+    "courseId": "ihsan-soul",
+    "conceptIds": [
+      "tawakkul"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "التوكل يعني ترك الأسباب والاعتماد الكامل على الله.",
+    "correctAnswer": "false",
+    "explanation": "التوكل ليس ترك الأسباب. هو عقد مع الله: الأخذ بالأسباب + الاعتماد على الله. قال تعالى: «ومن يتوكل على الله فهو حسبه» مع التخطيط والأخذ بالأسباب."
+  },
+  {
+    "id": "rf-ihsan-w2-1",
+    "type": "reflect",
+    "courseId": "ihsan-soul",
+    "conceptIds": [
+      "manazil-ruh"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "learningObjective": "تطبيق عملي",
+    "prompt": "اكتب مواقف من حياتك هذا الأسبوع تستدعي كل منزلة من السبع. حدّد لكل موقف: ما المنزل، وما الذكر المناسب، وما الإجراء.",
+    "correctAnswer": "تأمل شخصي. مثال: «في مشاجرة مع زوجتي → منزلة التقوى. الذكر: 100 استغفار. الإجراء: أسمعها قبل أن أرد. في قلق على مستقبلي → منزلة التوكل. الذكر: حسبي الله. الإجراء: أحدد الخطوة الأولى وأمضي.»",
+    "explanation": "التأمل الشخصي. الكتابة المنتظمة أسلوب علني معترف به في علاج القلق وبناء المرونة."
+  },
+  {
+    "id": "rf-ihsan-w2-2",
+    "type": "reflect",
+    "courseId": "ihsan-soul",
+    "conceptIds": [
+      "taqwa"
+    ],
+    "difficulty": "hard",
+    "estimatedSeconds": 300,
+    "prompt": "في ضوء تعريف التقوى: «أن يجدك الله حيث أمرك ولا يجدك حيث نهاك»، اكتب عن آخر يوم شعرت فيه بأنك كنت من المتقين. ثم اكتب عن يوم لم تكن فيه كذلك، وكيف ترجع.",
+    "correctAnswer": "تأمل شخصي. المعيار: ليس الكمال بل الأغلبية. «ما استطعتم»: أن يغلب على يومك. والعودة: الاستغفار يُعيدك.",
+    "explanation": "التوبة والاستغفار: في كل لحظة تندم فيها، ترجع إلى دائرة المتقين."
+  },
+  {
+    "id": "q-tafsir-w2-1",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": [
+      "nasr"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "سورة النصر",
+    "prompt": "ما السورة التي نزلت آخرًا كاملة على النبي ﷺ؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "سورة البقرة"
+      },
+      {
+        "id": "b",
+        "text": "سورة النصر"
+      },
+      {
+        "id": "c",
+        "text": "سورة الفاتحة"
+      },
+      {
+        "id": "d",
+        "text": "سورة الإخلاص"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "سورة النصر آخر سورة نزلت كاملة على النبي ﷺ. نزلت بعد صلح الحديبية الذي كان فتحًا مبينًا."
+  },
+  {
+    "id": "q-tafsir-w2-2",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": [
+      "fath"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "معنى الفتح في القرآن",
+    "prompt": "ماذا قال النبي ﷺ في فتح مكة للأعداء؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "«اذهبوا فأنتم الطلقاء»"
+      },
+      {
+        "id": "b",
+        "text": "«اعبدوا الأصنام»"
+      },
+      {
+        "id": "c",
+        "text": "«ادفعوا الجزية»"
+      },
+      {
+        "id": "d",
+        "text": "«أطيعوا قريشًا»"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "قال النبي ﷺ في فتح مكة: «اذهبوا فأنتم الطلقاء»، وقال: «من دخل دار أبي سفيان فهو آمن». هذا نموذج الرحمة في النصر."
+  },
+  {
+    "id": "tf-tafsir-w2-1",
+    "type": "tf",
+    "courseId": "tafsir",
+    "conceptIds": [
+      "nasr"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "النصر في القرآن يعني دائمًا انتصارًا عسكريًا على الأعداء.",
+    "correctAnswer": "false",
+    "explanation": "النصر في القرآن: العون والمدد. بعض العلماء فسّره بنصرك على نفسك فتحك قلبك، فصرت تتلقى من ربك. قال تعالى: «فمن يرد الله أن يهديه يشرح صدره للإسلام»."
+  },
+  {
+    "id": "rf-tafsir-w2-1",
+    "type": "reflect",
+    "courseId": "tafsir",
+    "conceptIds": [
+      "tawbah"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "تأمل: ما آخر فرَجٍ مرّ بك بعد أزمة؟ كيف عاملته؟ هل نزّهت الله واستغفرت أم حسبت أنك استحققت؟",
+    "correctAnswer": "تأمل شخصي. الرسالة: عند الفرَج، اشكر بحمد الله ولا تعجب بالنصر.",
+    "explanation": "القرآن بدأ بـ«الحمد لله» وختم بـ«التوبة». مفتاح الحياة الحمد، ونهايتها الرجوع إلى الله."
+  },
+  {
+    "id": "q-seerah-w2-1",
+    "type": "mcq",
+    "courseId": "seerah",
+    "conceptIds": [
+      "sirr"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "نسب النبي ﷺ",
+    "prompt": "في أي عام وُلد النبي ﷺ؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "عام الفيل (570 م)"
+      },
+      {
+        "id": "b",
+        "text": "610 م"
+      },
+      {
+        "id": "c",
+        "text": "622 م"
+      },
+      {
+        "id": "d",
+        "text": "630 م"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "وُلد النبي ﷺ يوم 12 ربيع الأول 570 م، عام الفيل. سماه جده عبد المطلب «محمد» لأن أباه مات قبل ولادته."
+  },
+  {
+    "id": "q-seerah-w2-2",
+    "type": "mcq",
+    "courseId": "seerah",
+    "conceptIds": [
+      "imam"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "حادثة الحجر الأسود",
+    "prompt": "ما الحكمة التي استعملها النبي ﷺ لحل خلاف القبائل على وضع الحجر الأسود؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "استعمل سيفه ليحسم الخلاف"
+      },
+      {
+        "id": "b",
+        "text": "وضع الحجر على قماش وطلب من كل قبيلة أن تحمل طرفًا"
+      },
+      {
+        "id": "c",
+        "text": "أعطاه لأكبر قبيلة"
+      },
+      {
+        "id": "d",
+        "text": "تركه على الأرض حتى يختاره الله"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "طلب النبي ﷺ قماشًا كبيرًا، ووضع الحجر في وسطه، وأرسل مندوبًا من كل قبيلة ليحمل طرفًا. ثم وضعه بيده. هكذا حلّ خلافاً كان سيتحول إلى حرب."
+  },
+  {
+    "id": "q-seerah-w2-3",
+    "type": "mcq",
+    "courseId": "seerah",
+    "conceptIds": [
+      "ihtifal"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "الزواج من خديجة",
+    "prompt": "كم استمر زواج النبي ﷺ من السيدة خديجة؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "10 سنوات"
+      },
+      {
+        "id": "b",
+        "text": "15 سنة"
+      },
+      {
+        "id": "c",
+        "text": "25 سنة"
+      },
+      {
+        "id": "d",
+        "text": "30 سنة"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "استمر الزواج 25 سنة (15 قبل البعثة و10 بعدها). أنجبا 4 بنات (زينب، رقية، أم كلثوم، فاطمة) وولدين توفيا صغارًا (القاسم وعبد الله)."
+  },
+  {
+    "id": "tf-seerah-w2-1",
+    "type": "tf",
+    "courseId": "seerah",
+    "conceptIds": [
+      "sirr"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "النبي ﷺ بدأ رعي الغنم في سن العشرين.",
+    "correctAnswer": "false",
+    "explanation": "بدأ النبي ﷺ رعي الغنم في سن الثامنة بعد موت جده. انتقل لبيت عمه أبي طالب (10 أولاد) وطلب العمل. «ما بُعث الله نبيًّا حتى رعى الغنم»."
+  },
+  {
+    "id": "tf-seerah-w2-2",
+    "type": "tf",
+    "courseId": "seerah",
+    "conceptIds": [
+      "imam"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "الحجر الأسود وضعه النبي ﷺ بيديه الشريفة دون مساعدة.",
+    "correctAnswer": "false",
+    "explanation": "وضع النبي ﷺ الحجر على قماش، وطلب من كل قبيلة أن تحمل طرفًا. ثم وضعه بيده. هذا نموذج حلّ الأزمات بالحكمة."
+  },
+  {
+    "id": "rf-seerah-w2-1",
+    "type": "reflect",
+    "courseId": "seerah",
+    "conceptIds": [
+      "sirr"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "ما الدرس من السيرة قبل البعثة الذي تحتاجه في حياتك العملية (صبر، تخطيط، قيادة، رحمة)؟",
+    "correctAnswer": "تأمل شخصي. مثال: «أحتاج صبر رعي الغنم في عملي، أو حكمة الحجر الأسود في خلاف عائلي».",
+    "explanation": "السيرة منهج حياة. كل مرحلة قبل البعثة كانت إعدادًا."
+  },
+  {
+    "id": "q-cont-w2-1",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": [
+      "fath"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "كلمة السيف في القرآن",
+    "prompt": "كم مرة وردت كلمة «السيف» في القرآن؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "مرة واحدة"
+      },
+      {
+        "id": "b",
+        "text": "7 مرات"
+      },
+      {
+        "id": "c",
+        "text": "صفر مرة"
+      },
+      {
+        "id": "d",
+        "text": "12 مرة"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "كلمة «السيف» لم ترد في القرآن ولا مرة واحدة، رغم أن لها أكثر من 1000 مرادف في العربية. هذه دلالة واضحة على أن الإسلام ليس دين سيف."
+  },
+  {
+    "id": "q-cont-w2-2",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": [
+      "fath"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "عدد ضحايا الفتوحات",
+    "prompt": "كم عدد الشهداء في الفتوحات الإسلامية كلها خلال 10 سنوات من الهجرة إلى وفاة النبي ﷺ؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "نحو 70,000"
+      },
+      {
+        "id": "b",
+        "text": "نحو 1,284"
+      },
+      {
+        "id": "c",
+        "text": "نحو 100,000"
+      },
+      {
+        "id": "d",
+        "text": "نحو 1,000"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "خلال 10 سنوات من الفتوحات: 1284 شهيدًا (262 من المسلمين و1022 من الأعداء). مقارنة بمجزرة بيت المقدس في الحملة الصليبية الأولى (70,000 في 3 أيام)."
+  },
+  {
+    "id": "tf-cont-w2-1",
+    "type": "tf",
+    "courseId": "contemporary",
+    "conceptIds": [
+      "fath"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "كلمة «الحرب» ذكرت في القرآن 186 مرة.",
+    "correctAnswer": "false",
+    "explanation": "كلمة «الحرب» ذكرت 6 مرات فقط، بينما «السلام» 186 مرة. هذا يدل على أن لغة القرآن تميل للسلام."
+  },
+  {
+    "id": "tf-cont-w2-2",
+    "type": "tf",
+    "courseId": "contemporary",
+    "conceptIds": [
+      "rahma"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "المستشرقة الألمانية زغريت هونكا اعترفت بأن الإسلام لم يُفرض بالسيف.",
+    "correctAnswer": "true",
+    "explanation": "هونكا قالت: «لم يفرض العرب على الشعوب المغلوبة الدخول في الدين الإسلامي، بل المسيحيون والزرادشتيون واليهود هم الذين لاقوا أبشع الأمثلة في التعصب الديني من إخوانهم قبل الإسلام»."
+  },
+  {
+    "id": "rf-cont-w2-1",
+    "type": "reflect",
+    "courseId": "contemporary",
+    "conceptIds": [
+      "rahma"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "تأمل: ما أكثر شبهات الإسلام التي صادفتك؟ وكيف يمكنك الرد عليها بالأدلة القرآنية والتاريخية؟",
+    "correctAnswer": "تأمل شخصي. الأدلة: عدم ورود السيف، عدد الضحايا المحدود، شهادة هونكا وجيبون وهارت.",
+    "explanation": "الرد بالشواهد أقوى من الجدل اللفظي."
+  },
+  {
+    "id": "q-fiqh-w2-1",
+    "type": "mcq",
+    "courseId": "fiqh-rules",
+    "conceptIds": [
+      "niyyah"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "حديث الأعمال بالنيات",
+    "prompt": "ما نص حديث «إنما الأعمال بالنيات»؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "إنما الأعمال بالنيات، وإنما لكل امرئ ما نوى"
+      },
+      {
+        "id": "b",
+        "text": "إنما الأعمال بالأقوال"
+      },
+      {
+        "id": "c",
+        "text": "إنما الأعمال بالأخلاق"
+      },
+      {
+        "id": "d",
+        "text": "إنما الأعمال بالأفعال"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "حديث عمر بن الخطاب: «سمعت رسول الله ﷺ يقول: إنما الأعمال بالنيات، وإنما لكل امرئ ما نوى». رواه البخاري ومسلم."
+  },
+  {
+    "id": "q-fiqh-w2-2",
+    "type": "mcq",
+    "courseId": "fiqh-rules",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "قاعدة اليقين لا يزول بالشك",
+    "prompt": "توضأت ثم سرت وشككت هل انتقض وضوؤك. ما الحكم؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "إعادة الوضوء احتياطًا"
+      },
+      {
+        "id": "b",
+        "text": "إتمام الوضوء وصلاة الفرض"
+      },
+      {
+        "id": "c",
+        "text": "الانتظار حتى يزول الشك"
+      },
+      {
+        "id": "d",
+        "text": "الاغتسال بدلًا من الوضوء"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "«اليقين لا يزول بالشك». اليقين: أنك متوضئ. الشك لا قيمة له. ابقَ على يقينك. «لا يتوضأ من الشك حتى يتيقن»."
+  },
+  {
+    "id": "q-fiqh-w2-3",
+    "type": "mcq",
+    "courseId": "fiqh-rules",
+    "conceptIds": [
+      "niyyah"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "تشريك النية",
+    "prompt": "صمت يوم الإثنين بقضاء رمضان مع نية الست من شوال. ما الحكم؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "يجوز لأنهما من جنس واحد (صيام)"
+      },
+      {
+        "id": "b",
+        "text": "لا يجوز لأنهما عبادتان مختلفتان"
+      },
+      {
+        "id": "c",
+        "text": "لا يجوز إلا بصيام يومين"
+      },
+      {
+        "id": "d",
+        "text": "يجب نية مستقلة لكل عبادة"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "تشريك النية جائز بشرط وحدة الجنس. صيام القضاء مع الست من شوال — كلاهما صيام، فضيلة. تشترط نية القضاء بالليل."
+  },
+  {
+    "id": "tf-fiqh-w2-1",
+    "type": "tf",
+    "courseId": "fiqh-rules",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "لو شككت في عدد ركعات الصلاة، تبني على الأكثر ثم تسجد للسهو.",
+    "correctAnswer": "false",
+    "explanation": "تبني على الأقل (الأكثر يقينًا) ثم تُكمل الصلاة ثم تسجد سهوًا. «فليبنِ على اليقين ثم ليسجد سهوًا»."
+  },
+  {
+    "id": "tf-fiqh-w2-2",
+    "type": "tf",
+    "courseId": "fiqh-rules",
+    "conceptIds": [
+      "niyyah"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "تشريك النية جائز بين كل العبادات دون ضابط.",
+    "correctAnswer": "false",
+    "explanation": "تشريك النية جائز بشرط وحدة الجنس (تحية المسجد + الفريضة، غسل الجمعة + الجنابة). لا يجوز بين عبادتين مختلفتي الجنس."
+  },
+  {
+    "id": "sc-fiqh-w2-1",
+    "type": "scenario",
+    "courseId": "fiqh-rules",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "hard",
+    "estimatedSeconds": 180,
+    "learningObjective": "تطبيق قاعدة اليقين في الصيام",
+    "prompt": "صائم في نهار رمضان، وفي الساعة 5:00 صبّح أكل، ثم سأل: هل الفجر في التوقيت الرسمي 4:50 أو 5:00؟ كيف تطبّق قاعدة اليقين؟",
+    "correctAnswer": "لأن الشك قائم ولم يوجد مرجّح، ابقَ على يقينك الأصلي: الصيام صحيح. ولا يلزم القضاء، لأنه لم يتيقن أنه أكل بعد الفجر.",
+    "explanation": "قاعدة اليقين لا يزول بالشك. الأصل بقاء ما كان على ما كان. والمرجّح الأول (الساعة 4:50) لو وُجد، يُبني على المرجّح. لكن لو استوى الأمران (توقيت 5:00)، يبقى اليقين الأصلي."
+  },
+  {
+    "id": "q-sapp-w2-1",
+    "type": "mcq",
+    "courseId": "seerah-app",
+    "conceptIds": [
+      "nuqt-quwa"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "نقاط القوة الست في أزمة الحجر الأسود",
+    "prompt": "ما هي نقطة القوة التي أظهرها النبي ﷺ في حلّ مشكلة الحجر الأسود (حل القماش)؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "القوة البدنية"
+      },
+      {
+        "id": "b",
+        "text": "الإبداع/المبتكر (Innovator)"
+      },
+      {
+        "id": "c",
+        "text": "الشجاعة في القتال"
+      },
+      {
+        "id": "d",
+        "text": "الحكمة القضائية فقط"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "نقطة قوة المبتكر (Innovator / Creativity) في الـ 24 نقطة قوة لـ VIA. حلّ خارج الصندوق: وضع الحجر على قماش، كل قبيلة تحمل طرفًا."
+  },
+  {
+    "id": "q-sapp-w2-2",
+    "type": "mcq",
+    "courseId": "seerah-app",
+    "conceptIds": [
+      "responsibility"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "عقليّة المسؤول",
+    "prompt": "ما الذي يمنع الإنسان من الانزلاق في «عقليّة الضحيّة» بعد فقد الوالدين مبكرًا؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "الثروة المادية"
+      },
+      {
+        "id": "b",
+        "text": "وجود من يزرع فيه الحب والوفاء مبكرًا"
+      },
+      {
+        "id": "c",
+        "text": "التعليم الأكاديمي"
+      },
+      {
+        "id": "d",
+        "text": "تجنّب الناس"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "في حالة النبي ﷺ، أمه آمنة زرعت فيه الحنان سنتين، وأم أيمن وفّرت له الحب والوفاء. ومن لم يجد هذا الزرع المبكر، قد ينزلق في عقليّة الضحيّة."
+  },
+  {
+    "id": "tf-sapp-w2-1",
+    "type": "tf",
+    "courseId": "seerah-app",
+    "conceptIds": [
+      "responsibility"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "النبي ﷺ نزل عليه الوحي في كل تفاصيل حياته حتى نومه وأكله.",
+    "correctAnswer": "false",
+    "explanation": "الوحي لم ينزل في كل تفاصيل حياته. كثير من قرارات النبي ﷺ كانت بشخصيته الفريدة كنبي بشري ربّاه الله على مكارم الأخلاق."
+  },
+  {
+    "id": "sc-sapp-w2-1",
+    "type": "scenario",
+    "courseId": "seerah-app",
+    "conceptIds": [
+      "nuqt-quwa"
+    ],
+    "difficulty": "hard",
+    "estimatedSeconds": 300,
+    "learningObjective": "تطبيق نقاط القوة الست",
+    "prompt": "اختر موقفًا في حياتك يقع فيه خلاف بين فريقين (في العمل، العائلة، أو الدراسة). طبّق عليه ست نقاط القوة (المبتكر، حل المشاكل، التواصل، الثقة بالنفس، التناغم، الاحتواء) كما فعل النبي ﷺ في أزمة الحجر الأسود.",
+    "correctAnswer": "إجابة شخصية. المعيار: اختيار فكر خارج الصندوق (المبتكر)، حلّ يحفظ حقوق الجميع (الاحتواء)، مخاطبة كل طرف بلغة يفهمها (التواصل)، ثقة في الفكرة المطروحة (الثقة)، تناغم اجتماعي (عدم إهانة أحد)، إشراك الجميع في الحل (احتواء).",
+    "explanation": "نقاط القوة الست تُطبَّق في كل مرة تظهر فيها مشكلة. كما في الحجر الأسود: حلّ القماش."
+  },
+  {
+    "id": "q-soul-w2-1",
+    "type": "mcq",
+    "courseId": "soul-app",
+    "conceptIds": [
+      "dhikr"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "أنواع الذكر",
+    "prompt": "ما أنواع الذكر الثلاثة؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "القلب، اللسان، العمل"
+      },
+      {
+        "id": "b",
+        "text": "السر، العلن، الجماعة"
+      },
+      {
+        "id": "c",
+        "text": "الصبح، المساء، الليل"
+      },
+      {
+        "id": "d",
+        "text": "الفردي، الجماعي، المكتوب"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "الذكر ثلاثة: (1) ذكر القلب — التفكر في خلق الله. (2) ذكر اللسان — التسبيح والاستغفار. (3) ذكر العمل — التقوى وفعل الواجبات."
+  },
+  {
+    "id": "q-soul-w2-2",
+    "type": "mcq",
+    "courseId": "soul-app",
+    "conceptIds": [
+      "qiyam"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "قيام الليل",
+    "prompt": "ما أفضل وقت لقيام الليل؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "أول الليل"
+      },
+      {
+        "id": "b",
+        "text": "وسط الليل"
+      },
+      {
+        "id": "c",
+        "text": "الثلث الأخير من الليل"
+      },
+      {
+        "id": "d",
+        "text": "قبل الفجر بساعة"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "الثلث الأخير من الليل قبل الفجر. قال تعالى: «إن ناشئة الليل هي أشد وطئًا وأقوم قيلًا». وفي هذا الوقت تنزل الملائكة وتُستجاب الدعوات."
+  },
+  {
+    "id": "tf-soul-w2-1",
+    "type": "tf",
+    "courseId": "soul-app",
+    "conceptIds": [
+      "dua"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "الدعاء ليس من العبادات في الإسلام، إنما هو مجرد طلب.",
+    "correctAnswer": "false",
+    "explanation": "الدعاء أمّ العبادة. قال النبي ﷺ: «ليس شيء أكرم على الله من الدعاء». وربنا يدربك على الدعاء 17 مرة يوميًا في الفاتحة."
+  },
+  {
+    "id": "rf-soul-w2-1",
+    "type": "reflect",
+    "courseId": "soul-app",
+    "conceptIds": [
+      "dhikr"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "جرّب ورد الذكر اليومي (15–20 دقيقة) لمدة أسبوع. سجّل تأثيره على صفاء ذهنك وقلبك. أي أنواع الذكر كان أعمق فيك؟",
+    "correctAnswer": "تأمل شخصي. المقياس: صفاء الذهن، اطمئنان القلب، انخفاض التوتر.",
+    "explanation": "التجربة المباشرة أفضل من القراءة."
+  },
+  {
+    "id": "q-sah-w2-1",
+    "type": "mcq",
+    "courseId": "sahaba",
+    "conceptIds": [
+      "ali"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "ليلة الهجرة",
+    "prompt": "ما دور عليّ بن أبي طالب ليلة الهجرة؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "هاجر مع النبي ﷺ"
+      },
+      {
+        "id": "b",
+        "text": "نام في فراش النبي ﷺ لِيُضلّل المشركين"
+      },
+      {
+        "id": "c",
+        "text": "بقي في مكة دون أي دور"
+      },
+      {
+        "id": "d",
+        "text": "ذهب إلى يثرب قبل النبي ﷺ"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "نام عليّ في فراش النبي ﷺ لِيُضلّل المشركين، وأمّن الطريق لردّ الودائع، ثم لحق النبي ﷺ في قباء بعد 3 أيام."
+  },
+  {
+    "id": "q-sah-w2-2",
+    "type": "mcq",
+    "courseId": "sahaba",
+    "conceptIds": [
+      "ali"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "باب خيبر",
+    "prompt": "في غزوة خيبر، كم عدد الصحابة الذين لم يستطيعوا رفع الباب الذي حمله عليّ؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "3"
+      },
+      {
+        "id": "b",
+        "text": "5"
+      },
+      {
+        "id": "c",
+        "text": "8"
+      },
+      {
+        "id": "d",
+        "text": "12"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ثمانية من الصحابة لم يستطيعوا رفع الباب من الأرض بعد أن رمى به عليّ. آية من الله في قوة عليّ وعونه."
+  },
+  {
+    "id": "tf-sah-w2-1",
+    "type": "tf",
+    "courseId": "sahaba",
+    "conceptIds": [
+      "ali"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "عليّ بن أبي طالب استُشهد في معركة صفين.",
+    "correctAnswer": "false",
+    "explanation": "استُشهد عليّ في 17 رمضان 40 هـ على يد ابن ملجم الخارجي. كان خارجًا لصلاة الفجر فضُرب على رأسه بسيف."
+  },
+  {
+    "id": "rf-sah-w2-1",
+    "type": "reflect",
+    "courseId": "sahaba",
+    "conceptIds": [
+      "ali"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "تأمل: لو كنت مكان عليّ ليلة الهجرة، هل كنت ستنام في فراش النبي ﷺ؟ ما الذي يجعلك تتردد، وما الذي يجعلك تُقدِم؟",
+    "correctAnswer": "تأمل شخصي. المعيار: الإيثار والثقة بوعد الله.",
+    "explanation": "الإيثار درس عظيم. عليّ لم يتردد لأنه واثق من وعد الله: «لن يصيبك سوء»."
+  },
+  {
+    "id": "q-sahb-w2-1",
+    "type": "mcq",
+    "courseId": "sahabiyyat",
+    "conceptIds": [
+      "umm-ayman"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "هوية أم أيمن",
+    "prompt": "من هي أم أيمن؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "زوجة النبي ﷺ"
+      },
+      {
+        "id": "b",
+        "text": "حاضنة النبي ﷺ ومربيته"
+      },
+      {
+        "id": "c",
+        "text": "ابنة النبي ﷺ"
+      },
+      {
+        "id": "d",
+        "text": "أخت النبي ﷺ"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "أم أيمن بركة بنت ثعلبة الحبشية، حاضنة النبي ﷺ ومربيته منذ ولادته. قال عنها النبي: «هي أمّي بعد أمّي، هي بقية أهل بيتي»."
+  },
+  {
+    "id": "q-sahb-w2-2",
+    "type": "mcq",
+    "courseId": "sahabiyyat",
+    "conceptIds": [
+      "umm-ayman"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "استشهاد أيمن",
+    "prompt": "في أي معركة استُشهد ابن أم أيمن (أيمن)؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "بدر"
+      },
+      {
+        "id": "b",
+        "text": "أحد"
+      },
+      {
+        "id": "c",
+        "text": "حنين"
+      },
+      {
+        "id": "d",
+        "text": "خيبر"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "استُشهد أيمن في يوم حنين، وهو ثابت مع النبي ﷺ. أم أيمن بقيت ثابتة تنادي وترتجز."
+  },
+  {
+    "id": "tf-sahb-w2-1",
+    "type": "tf",
+    "courseId": "sahabiyyat",
+    "conceptIds": [
+      "umm-ayman"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "أم أيمن هاجرت مع المسلمين إلى الحبشة ثم إلى المدينة.",
+    "correctAnswer": "true",
+    "explanation": "هاجرت أم أيمن إلى الحبشة ثم إلى المدينة المنورة مع من هاجر. شهدت يوم أحد تداوي الجرحى."
+  },
+  {
+    "id": "rf-sahb-w2-1",
+    "type": "reflect",
+    "courseId": "sahabiyyat",
+    "conceptIds": [
+      "umm-ayman"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "ما الذي يميّز أم أيمن كقدوة للمرأة المسلمة في الحاضر؟ كيف تحاكيها في حياتك اليومية؟",
+    "correctAnswer": "تأمل شخصي. المعيار: الخدمة في سبيل الله مع الثبات والشجاعة. أم أيمن: حاضنة ومربية ومجاهدة.",
+    "explanation": "أم أيمن نموذج للأم العاملة في خدمة الإسلام."
+  },
+  {
+    "id": "q-ps-w2-1",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": [
+      "VIA"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "VIA",
+    "prompt": "كم عدد نقاط القوة في اختبار VIA؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "12"
+      },
+      {
+        "id": "b",
+        "text": "24"
+      },
+      {
+        "id": "c",
+        "text": "34"
+      },
+      {
+        "id": "d",
+        "text": "100"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "اختبار VIA يحدد 24 نقطة قوة موزعة على 6 فضائل. وقد ذكر كوتش كريم أن الإسلام يضيف 10 خصال أخرى، لتصبح 34."
+  },
+  {
+    "id": "q-ps-w2-2",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": [
+      "hudur"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "الحضور",
+    "prompt": "ما المحاور الثلاثة للحضور؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "النوم، الأكل، الحركة"
+      },
+      {
+        "id": "b",
+        "text": "الجسد، المشاعر، الأفكار"
+      },
+      {
+        "id": "c",
+        "text": "العمل، الراحة، اللعب"
+      },
+      {
+        "id": "d",
+        "text": "الماضي، الحاضر، المستقبل"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الحضور على ثلاث محاور: (1) الجسد — الإحساس الجسدي. (2) المشاعر — تسميتها. (3) الأفكار — ملاحظة أنها تتكرر. قبل النوم: لاحظ جسدك، سمّ شعورك، لاحظ أفكارك."
+  },
+  {
+    "id": "tf-ps-w2-1",
+    "type": "tf",
+    "courseId": "positive-psych",
+    "conceptIds": [
+      "VIA"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "التركيز المثالي هو على نقاط الضعف لمحاولة إصلاحها.",
+    "correctAnswer": "false",
+    "explanation": "الأصح هو بناء نقاط القوة. التركيز على نقاط الضعف يستهلك الطاقة في محاولة إصلاح ما لا يُقهر، بينما بناء نقاط القوة يحقق نتائج ملموسة."
+  },
+  {
+    "id": "rf-ps-w2-1",
+    "type": "reflect",
+    "courseId": "positive-psych",
+    "conceptIds": [
+      "hudur"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "تدرب على الحضور لمدة أسبوع: قبل النوم، لاحظ جسدك (5 دقائق)، سمّ شعورك (5 دقائق)، لاحظ أفكارك (5 دقائق). سجّل ملاحظاتك.",
+    "correctAnswer": "تأمل شخصي. المعيار: صفاء الذهن، انخفاض التوتر، تسمية المشاعر بدلًا من الانغماس فيها.",
+    "explanation": "الحضور عضلة قابلة للتدريب. 15 دقيقة يوميًا تكفي."
+  },
+  {
+    "id": "rf-is-w2-2",
+    "courseId": "ihsan-soul",
+    "type": "reflect",
+    "conceptIds": [
+      "hudur"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "learningObjective": "تأمل شخصي",
+    "prompt": "ما الذي تَستفيده من علم المنازل في حياتك؟",
+    "correctAnswer": "تأمل شخصي.",
+    "explanation": "المنازل 7 أدوات."
+  },
+  {
+    "id": "rf-pp-w2-1",
+    "courseId": "positive-psych",
+    "type": "reflect",
+    "conceptIds": [
+      "hudur"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "learningObjective": "الحضور",
+    "prompt": "ما الذي يمنعك من الحضور التام؟",
+    "correctAnswer": "تأمل شخصي.",
+    "explanation": "الحضور 47% شارد."
+  },
+  {
+    "id": "tf-tafsir-w2-2",
+    "courseId": "tafsir",
+    "type": "tf",
+    "conceptIds": [
+      "ahad"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "«أحد» = فرد مطلق.",
+    "correctAnswer": "true",
+    "explanation": "«أحد» = فرد مطلق."
+  }
+]

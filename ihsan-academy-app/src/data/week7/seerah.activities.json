@@ -1,0 +1,30 @@
+{
+  "id": "seerah-activities",
+  "courseId": "seerah",
+  "activities": [
+    {
+      "id": "act-w7-seerah-001",
+      "courseId": "seerah",
+      "type": "individual",
+      "title": "خريطة مراحل الإيذاء",
+      "purpose": "تحديد المراحل الخمس لإيذاء قُريش للنبي ﷺ، وربط كل مرحلة بآية الردّ.",
+      "instructions": "اِرْسم خَريطة مَرحَلة الإيذاء الخمس في وَرقة. في كلِّ مرحَلة اكتب: وَصف المرحَلة، مَثال تَاريخي، آية الردّ، الدَّرس المُسْتفاد.",
+      "estimatedTime": "45 دقيقة",
+      "outputExpected": "خَريطة 5 مراحل مَع آيات الرَّدّ.",
+      "relatedConcepts": "w7-concept-tashkik, w7-concept-istihzaa",
+      "completionCriteria": "خريطة 5 مراحل مُكتمِلة."
+    },
+    {
+      "id": "act-w7-seerah-002",
+      "courseId": "seerah",
+      "type": "reflection",
+      "title": "أيُّ مَرحلة تَتعرض لها اليوم؟",
+      "purpose": "رَبط المُعَاناة الحَالية بمراحل الإيذاء في السِّيرة.",
+      "instructions": "كاتب خمسة أَسئلة: ما الإيذاء الذي تَتعرض له؟ مَن الفاعل؟ ما أُسلوب المُواجهة؟ ما الدُّعاء المُناسب؟ ما آية الرَّد في القرآن؟ اِبحث في القرآن عن سُورة تُطَمْئنك.",
+      "estimatedTime": "30 دقيقة",
+      "outputExpected": "5 إجابات مُحدَّدة بآيات.",
+      "relatedConcepts": "w7-concept-aya-nafsiya",
+      "completionCriteria": "5 إجابات بآيات."
+    }
+  ]
+}

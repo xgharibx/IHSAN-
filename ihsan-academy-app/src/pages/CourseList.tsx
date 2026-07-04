@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
-import { data } from "@/data";
+import { useCourses, useFlashcards, useActivities, useWeekMeta } from "@/hooks/useWeekHooks";
 import { useStore, computeCourseProgressPercent } from "@/store/useStore";
 import { CourseIcon } from "@/components/Icons";
 
 export default function CourseList() {
+  const courses = useCourses();
+  const flashcards = useFlashcards();
+  const activities = useActivities();
+  const meta = useWeekMeta();
   const cp = useStore((s) => s.courseProgress);
-  const filter = (id: string) => {
-    const c = data.week1.courses.find((x) => x.id === id);
-    return c;
-  };
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
       <div className="mb-8">
-        <div className="pill mb-3">دورات الأسبوع</div>
+        <div className="pill mb-3">دورات {meta.title}</div>
         <h1 className="font-display text-4xl text-sand-50">جميع الدورات</h1>
         <p className="mt-2 max-w-2xl text-sand-100/60">
           اختر دورة لبدء الدراسة. تقدّمك محفوظ تلقائيًا.
@@ -21,9 +21,9 @@ export default function CourseList() {
       </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {data.week1.courses.map((c) => {
-          const totalFC = data.week1.flashcards.filter((f) => f.courseId === c.id).length;
-          const totalAct = data.week1.activities.filter((a) => a.courseId === c.id).length;
+        {courses.map((c) => {
+          const totalFC = flashcards.filter((f) => f.courseId === c.id).length;
+          const totalAct = activities.filter((a) => a.courseId === c.id).length;
           const pct = computeCourseProgressPercent(cp[c.id], c.sections.length, totalFC, totalAct);
           return (
             <Link

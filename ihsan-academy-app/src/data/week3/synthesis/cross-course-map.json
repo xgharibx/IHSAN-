@@ -1,0 +1,117 @@
+{
+  "id": "week3-knowledge-map",
+  "title": "خريطة المعرفة للأسبوع الثالث",
+  "description": "روابط بين دورات الأسبوع الثالث ومفاهيمه. انقر على أي عقدة لاستكشافها.",
+  "nodes": [
+    {
+      "id": "ihsan-soul",
+      "label": "الإحسان والحضور",
+      "type": "course",
+      "x": 0.5,
+      "y": 0.08,
+      "color": "#2f9e64"
+    },
+    {
+      "id": "tafsir",
+      "label": "سورة الإخلاص",
+      "type": "course",
+      "x": 0.85,
+      "y": 0.25,
+      "color": "#1aa084"
+    },
+    {
+      "id": "seerah-app",
+      "label": "أعظم قصة حب",
+      "type": "course",
+      "x": 0.15,
+      "y": 0.25,
+      "color": "#60a5fa"
+    },
+    {
+      "id": "fiqh-rules",
+      "label": "اليقين لا يزول بالشك",
+      "type": "course",
+      "x": 0.78,
+      "y": 0.5,
+      "color": "#a78bfa"
+    },
+    {
+      "id": "soul-app",
+      "label": "اليقين: السر",
+      "type": "course",
+      "x": 0.22,
+      "y": 0.5,
+      "color": "#f87171"
+    },
+    {
+      "id": "sahaba",
+      "label": "زيد بن حارثة",
+      "type": "course",
+      "x": 0.5,
+      "y": 0.6,
+      "color": "#c084fc"
+    },
+    {
+      "id": "sahabiyyat",
+      "label": "السيدة سمية",
+      "type": "course",
+      "x": 0.85,
+      "y": 0.78,
+      "color": "#ec4899"
+    },
+    {
+      "id": "contemporary",
+      "label": "بناء السلطة والملك",
+      "type": "course",
+      "x": 0.15,
+      "y": 0.78,
+      "color": "#f97316"
+    },
+    {
+      "id": "positive-psych",
+      "label": "الحضور المتزن",
+      "type": "course",
+      "x": 0.5,
+      "y": 0.95,
+      "color": "#22d3ee"
+    },
+    {
+      "id": "hudur",
+      "label": "الحضور الرباني",
+      "type": "concept",
+      "x": 0.4,
+      "y": 0.04,
+      "color": "#ffd166"
+    },
+    {
+      "id": "yaqin",
+      "label": "اليقين",
+      "type": "concept",
+      "x": 0.6,
+      "y": 0.4,
+      "color": "#ffd166"
+    },
+    {
+      "id": "ahad",
+      "label": "أحد",
+      "type": "concept",
+      "x": 0.92,
+      "y": 0.4,
+      "color": "#ffd166"
+    }
+  ],
+  "edges": [
+    { "from": "hudur", "to": "ihsan-soul", "label": "يُؤسِّس" },
+    { "from": "hudur", "to": "soul-app", "label": "يُعَزِّز" },
+    { "from": "hudur", "to": "positive-psych", "label": "يَطبَّق" },
+    { "from": "yaqin", "to": "soul-app", "label": "سِرّ" },
+    { "from": "yaqin", "to": "fiqh-rules", "label": "قمة" },
+    { "from": "ahad", "to": "tafsir", "label": "تَوحيد" },
+    { "from": "seerah-app", "to": "sahabiyyat", "label": "صحبة" },
+    { "from": "sahaba", "to": "tafsir", "label": "ذكر في القرآن" },
+    { "from": "sahaba", "to": "seerah-app", "label": "صحابي" },
+    { "from": "sahabiyyat", "to": "soul-app", "label": "صبر" },
+    { "from": "contemporary", "to": "seerah-app", "label": "ردّ" },
+    { "from": "ihsan-soul", "to": "tafsir", "label": "تَوحيد" }
+  ]
+}

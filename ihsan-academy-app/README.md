@@ -1,146 +1,82 @@
-# أكاديمية الإحسان — Week 1
+# أكاديمية الإحسان (Ihsan Academy)
 
-Premium intelligent learning platform for the Ihsan Academy, built as a foundation for a multi-week educational system. Week 1 (الأسابيع الأولى) is implemented now based on the `First Week and Attachments` folder.
+A premium intelligent learning platform built on the First, Second, Third, Fourth, Fifth, Sixth, Seventh, and Eighth Week of source materials (`First Week and Attachments` through `Eaith Week and Attachments`). Designed as the foundation of a multi-week academy (8 weeks total: 7 content weeks + 1 review week).
 
-## Quick start
+## Stack
 
-```bash
-cd "ihsan-academy-app"
-npm install
-npm run dev
-# open http://localhost:5173
-```
-
-Build for production:
-
-```bash
-npm run build
-npm run preview
-```
-
-Typecheck only:
-
-```bash
-npm run typecheck
-```
-
-## Architecture
-
-This is a **Vite + React 18 + TypeScript + TailwindCSS** application with:
-
+- **Vite + React 18 + TypeScript** (`ihsan-academy-app/`)
+- **Tailwind CSS** with RTL layout (Arabic-first)
+- **Zustand + persist** for state
 - **React Router v6** for routing
-- **Zustand + persist** for state management (progress, achievements, AI chat, notes)
-- **GSAP + ScrollTrigger** for cinematic animations
-- **Lenis** for smooth scrolling
-- **Gemini AI** integration for the tutor (via REST API, no SDK dependency)
+- **GSAP + ScrollTrigger** for animations
+- **Gemini API** for AI tutor
+- **Web Speech API** for Arabic STT/TTS
 
-The whole UI is **RTL (Arabic-first)** and designed mobile-first.
+## Build / Test
 
-## Folder structure
-
-```
-src/
-├── App.tsx                  # router + smooth-scroll setup
-├── main.tsx                 # entry
-├── index.css                # Tailwind + design system
-├── types/index.ts           # shared types
-├── store/useStore.ts        # Zustand store with persistence
-├── data/
-│   ├── index.ts             # data access layer
-│   ├── achievements.ts
-│   └── week1/
-│       ├── courses.ts       # 9 courses
-│       ├── week1.index.json # week meta
-│       ├── courses/         # one JSON per course
-│       ├── concepts/        # cross-cutting concepts
-│       ├── assessments/     # flashcards + quizzes
-│       ├── activities/      # applied activities
-│       ├── synthesis/       # cross-course map, weekly synthesis
-│       ├── study-path.json
-│       └── raw/             # extracted transcript text files
-├── services/aiTutor.ts      # AI abstraction (Gemini) + local fallback
-├── components/              # Layout, Icons, LoadingScreen
-├── pages/                   # Home, Dashboard, CourseList, CourseDetail,
-│                            # KnowledgeTree, Study, Activities, AiTutor,
-│                            # Synthesis, Achievements, NotFound
-└── lib/utils.ts
+```bash
+cd ihsan-academy-app
+npm install
+npm run dev          # http://localhost:5173
+npm run build        # Production build to ./dist
+npm run typecheck    # tsc -b --noEmit
 ```
 
-## Modules implemented
+## Weeks Status
 
-1. **Course Content Explanation Module** — 10 fully fleshed-out courses with summaries, deep sections, key terms, must-understand points, common mistakes, examples, reflection questions, quick revision, and detailed knowledge-base text used by the AI tutor. Some courses also ship optional richer content (phased deep-dive explanations, long summaries, study guides) that's auto-discovered by `src/data/week1/deepContent.ts`.
-2. **Cross-Course Connection Module** — `KnowledgeTree` page with interactive visual map of courses + concepts + relationships. `Synthesis` page with the unified weekly explanation, key messages, and pre-Week-2 checklist.
-3. **Study Guide & Assessment Module** — `Study` page with flashcards (flip), MCQ, true/false, fill-in-the-blank, matching, short-answer, scenario, and reflection questions, all with explanations, difficulty, and filtering.
-4. **Activities, Timeline & Achievement Module** — `Activities` page with a 7-day timeline, per-day missions, an activity library, and 12 unlockable achievements.
-5. **AI Tutor Module** — 10 modes (Teach, Ask, Quiz, Simple, Deep, Connect, Plan, Revise, Reflect, Exam). Calls Gemini's REST API with the full Week 1 knowledge base as context. Gracefully falls back to a local mini-tutor if `VITE_GEMINI_API_KEY` is not set.
-6. **Future Weeks Scalability** — All data is keyed by week (`data.week1.courses`, etc.). To add Week 2, create `src/data/week2/` with the same structure and a parallel index module.
+| Week | Title | Status |
+|---|---|---|
+| 1 | First Week | ✅ Complete (10 courses) |
+| 2 | Second Week | ✅ Complete (10 courses) |
+| 3 | Third Week | ✅ Complete (9 courses, seerah folded into seerah-app) |
+| 4 | Fourth Week | ✅ Complete (10 courses) |
+| 5 | Fifth Week | ✅ Complete (10 courses) |
+| 6 | Sixth Week | ⚠️ Partial (1 course) |
+| 7 | Seventh Week | ⚠️ Partial (8 courses) |
+| 8 | Eaith Week | ⚠️ Partial (3 courses) |
 
-## Setting up the AI tutor
+## Deployment
 
-The app works **without an API key** using a small built-in local fallback. To enable real Gemini-powered answers:
+The app is ready for Vercel deployment:
 
-1. Get a Gemini API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
-2. Copy `.env.example` to `.env`.
-3. Add your key:
-   ```
-   VITE_GEMINI_API_KEY=AIza...
-   VITE_GEMINI_MODEL=gemini-2.5-flash
-   VITE_GEMINI_ENDPOINT=https://generativelanguage.googleapis.com
-   ```
-4. Restart the dev server.
+```bash
+# From repo root
+cd ihsan-academy-app
+npm install
+npm run build
+# Deploy dist/ to Vercel
+```
 
-The system prompt includes the full Week 1 knowledge base, the active mode instructions, and a guardrail: "If the answer is not in the materials, say so."
+`vercel.json` is configured with SPA rewrites to `index.html`.
 
-## Content inventory
+## Critical Invariants
 
-The `First Week and Attachments` folder contains 9 course folders. The `src/data/week1/raw/` folder holds the extracted transcripts that the structured course JSONs were built from.
+- **RTL**: Arabic-first. `<html dir="rtl" lang="ar">` is set.
+- **Multi-week data**: `src/data/index.ts` exports a `data.weeks` registry with all 8 weeks. Each is a self-contained bundle.
+- **Active week**: `useWeekData()` hook reads `selectedWeek` from Zustand store and returns the current bundle.
+- **Week switcher**: `Layout.tsx` shows all loaded weeks; unloaded weeks show as "قريبًا".
+- **AI tutor**: `src/services/aiTutor.ts` has course-aware context injection + 10 specialized modes + citation tracking + memory.
+- **Build knowledge base**: `buildKnowledgeBase()` in `index.ts` iterates over all 8 weeks for the AI tutor.
 
-| Course folder                       | Course slug       | Topic                                              | Has transcript |
-| ---------------------------------- | ----------------- | -------------------------------------------------- | -------------- |
-| الاحسان ومنازل الروح                | `ihsan-soul`      | أنت الخليفة المسؤول عن الأرض                      | ✓              |
-| التفسير                            | `tafsir`          | تفسير سورة الفاتحة                                 | ✓              |
-| السيرة النبوية                      | `seerah`          | المخلوق الأعظم                                     | ✓              |
-| صحابة رسول الله / الصحابة           | `sahaba`          | أبو بكر الصديق                                     | ✓              |
-| صحابة رسول الله / الصحابيات         | `sahabiyyat`      | خديجة بنت خويلد                                    | ✓              |
-| القضايا المعاصرة                    | `contemporary`    | الغزوة / السرية / الفتح / الجهاد                  | ✓              |
-| تطبيقات السيرة                      | `seerah-app`      | تطبيقات عملية من السيرة                            | PDF only       |
-| القواعد الفقهية                    | `fiqh-rules`      | الأمور بمقاصدها + النية                            | ✓              |
-| تطبيقات منازل الروح والإحسان         | `soul-app`        | التوبة وعلاج الأمراض النفسية                       | ✓              |
-| علم النفس الإيجابي                  | `positive-psych`  | الإحسان البعد الرابع                               | ✓              |
+## Known Limitations
 
-> Note: the actual `تطبيقات السيرة` folder ships with a PDF only. The `seerah-app` course is therefore built around the overlapping Ghazwa/Sariyya/Fath application material (whose transcript is in the `القضايا المعاصرة` folder), plus a derived synthesis on applying the Seerah in daily life.
+- Weeks 6, 7, 8 have fewer courses (1, 8, 3 respectively) because their source folders had empty subfolders.
+- No automated tests; manual QA only.
+- Vite warns about a 7.7MB bundle (gzipped 3.1MB) due to all data being statically imported.
 
-## Design system
+## AI Tutor Modes
 
-- **Theme**: deep ink-blue cosmic background with gold/emerald/rose accents. Subtle starfield animation.
-- **Typography**: Amiri (Arabic serif), Tajawal (Arabic sans), Cormorant Garamond (display).
-- **Components**: glassmorphism (`card` class), gradient buttons (`btn-primary`), soft shadows, motion-respecting (`prefers-reduced-motion`).
-- **Animations**: GSAP hero fades, ScrollTrigger reveals, Lenis smooth scroll.
+1. **علّمني** (Teach) — narrative storytelling explanation
+2. **اسأل** (Ask) — accurate referenced answers
+3. **اختبرني** (Quiz) — instant adaptive questions
+4. **بسّط** (Simple) — beginner-friendly
+5. **شرح معمّق** (Deep) — academic with references
+6. **اربط** (Connect) — cross-domain bridges
+7. **خطة** (Plan) — personalized study plans
+8. **مراجعة** (Review) — condensed summaries
+9. **تأمّل** (Reflect) — soul-questions
+10. **اختبار** (Exam) — final integrated tests
 
-## Adding Week 2 (and beyond)
+## Local Fallback
 
-1. Create `src/data/week2/` mirroring `src/data/week1/`:
-   - `week2.index.json`
-   - `courses/*.json` (one per course)
-   - `concepts/concepts.json`
-   - `assessments/flashcards.json`, `quizzes.json`
-   - `activities/activities.json`
-   - `synthesis/week2-synthesis.json`
-   - `study-path.json`
-2. Create `src/data/week2/courses.ts` that re-exports the course list.
-3. Extend `src/data/index.ts` to include `week2: { ... }` and add a unified `getCourseById(id)` that searches across all weeks.
-4. Add a week selector in the layout.
-5. (Optional) Link cross-week concepts in the knowledge map.
-
-## Scripts
-
-| Command            | Purpose                                |
-| ------------------ | -------------------------------------- |
-| `npm run dev`      | Start dev server (http://localhost:5173) |
-| `npm run build`    | Type-check + production build          |
-| `npm run preview`  | Preview the production build           |
-| `npm run typecheck`| TypeScript check only                  |
-
-## License
-
-Internal project. © أكاديمية الإحسان.
+When no Gemini API key is set (`VITE_GEMINI_API_KEY` in `.env`), the tutor uses a built-in fallback that draws from the same `knowledgeBaseText` and `keyTerms` fields.

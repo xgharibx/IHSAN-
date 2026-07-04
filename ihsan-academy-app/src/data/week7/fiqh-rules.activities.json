@@ -1,0 +1,30 @@
+{
+  "id": "fiqh-rules-activities",
+  "courseId": "fiqh-rules",
+  "activities": [
+    {
+      "id": "act-w7-fiqh-rules-001",
+      "courseId": "fiqh-rules",
+      "type": "individual",
+      "title": "خريطة العُرف في حياتي",
+      "purpose": "تنظيم العُرف في الفِقه الإسلامي وفَهْم حدوده.",
+      "instructions": "اِرسم خريطة العُرف: تَعرِيف، أَدلَّة، أَنْواع، شُروط، تَطبيقات. ضَع كل عُمْر في قَسمه المناسب.",
+      "estimatedTime": "60 دقيقة",
+      "outputExpected": "خَريطة كاملة.",
+      "relatedConcepts": "w7-concept-urf-mujtama, w7-concept-urf-qawli",
+      "completionCriteria": "خريطة كاملة."
+    },
+    {
+      "id": "act-w7-fiqh-rules-002",
+      "courseId": "fiqh-rules",
+      "type": "practical",
+      "title": "تحليل عُرف عَامّ",
+      "purpose": "تطبيق شُروط القاعدة على عُرف عَامّ.",
+      "instructions": "اختَر عُرفًا شائعًا في مَجْتمعك (زواج، بيع، إشهار). حَلِّل في 5 نِقاط: 1) هل مُطَّرِد؟ 2) هل قائم؟ 3) هل يُخالف نَصًّا؟ 4) هل يُتماشى مَع نَصّ ضمني؟ 5) الحُكم.",
+      "estimatedTime": "45 دقيقة",
+      "outputExpected": "تَحليل 5 نِقاط.",
+      "relatedConcepts": "w7-concept-urf-mujtama, w7-concept-urf-fasid",
+      "completionCriteria": "تحليل مُكتمَل."
+    }
+  ]
+}

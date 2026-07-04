@@ -1,0 +1,17 @@
+{
+  "id": "week4-path",
+  "weekId": "week4",
+  "recommended": "true",
+  "steps": [
+    { "order": 1, "courseId": "ihsan-soul", "objective": "الوعي والسعي: «وأن ليس للإنسان إلا ما سعى»", "estimatedMinutes": 70 },
+    { "order": 2, "courseId": "tafsir", "objective": "تفسير سورة الكوثر - أكثر سورة في القرآن", "estimatedMinutes": 50 },
+    { "order": 3, "courseId": "seerah", "objective": "نزول الوحي - رحلة 40 سنة إعداد", "estimatedMinutes": 75 },
+    { "order": 4, "courseId": "sahaba", "objective": "عثمان بن عفان - ذو النورين", "estimatedMinutes": 55 },
+    { "order": 5, "courseId": "sahabiyyat", "objective": "السيدة أسماء بنت أبي بكر - ذات النطاقين", "estimatedMinutes": 40 },
+    { "order": 6, "courseId": "contemporary", "objective": "الرد على شبهة قتل بني قريظة", "estimatedMinutes": 50 },
+    { "order": 7, "courseId": "seerah-app", "objective": "تدبر وتحليل السيرة - إقرأ", "estimatedMinutes": 60 },
+    { "order": 8, "courseId": "fiqh-rules", "objective": "القاعدة 3: لا ضرر ولا ضرار", "estimatedMinutes": 70 },
+    { "order": 9, "courseId": "soul-app", "objective": "كيف تمتلك قلباً سليماً", "estimatedMinutes": 75 },
+    { "order": 10, "courseId": "positive-psych", "objective": "اعرف نفسك + معادلة التميز", "estimatedMinutes": 75 }
+  ]
+}

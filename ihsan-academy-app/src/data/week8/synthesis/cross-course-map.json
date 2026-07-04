@@ -1,0 +1,119 @@
+{
+  "id": "week8-knowledge-map",
+  "title": "خريطة المعرفة لأسبوع الإيمان — الأسبوع الثامن",
+  "description": "روابط بين دورات الأسبوع الثامن ومفاهيمه. انقر على أي عقدة لاستكشافها.",
+  "nodes": [
+    {
+      "id": "tafsir",
+      "label": "سورة العصر",
+      "type": "course",
+      "x": 0.5,
+      "y": 0.12,
+      "color": "#1aa084"
+    },
+    {
+      "id": "contemporary",
+      "label": "رد شبهة القسوة",
+      "type": "course",
+      "x": 0.18,
+      "y": 0.5,
+      "color": "#f97316"
+    },
+    {
+      "id": "positive-psych",
+      "label": "جبل الجليد + الصمود",
+      "type": "course",
+      "x": 0.82,
+      "y": 0.5,
+      "color": "#22d3ee"
+    },
+    {
+      "id": "w8-concept-asr-surah",
+      "label": "العصر",
+      "type": "concept",
+      "x": 0.5,
+      "y": 0.04,
+      "color": "#ffd166"
+    },
+    {
+      "id": "w8-concept-khusr",
+      "label": "الخسر",
+      "type": "concept",
+      "x": 0.32,
+      "y": 0.2,
+      "color": "#ffd166"
+    },
+    {
+      "id": "w8-concept-tawasi-haqq",
+      "label": "التواصي بالحق",
+      "type": "concept",
+      "x": 0.68,
+      "y": 0.2,
+      "color": "#ffd166"
+    },
+    {
+      "id": "w8-concept-asra-badr",
+      "label": "أسرى بدر",
+      "type": "concept",
+      "x": 0.05,
+      "y": 0.45,
+      "color": "#ffd166"
+    },
+    {
+      "id": "w8-concept-ihsan-asir",
+      "label": "الإحسان للأسير",
+      "type": "concept",
+      "x": 0.3,
+      "y": 0.75,
+      "color": "#ffd166"
+    },
+    {
+      "id": "w8-concept-iceberg",
+      "label": "نموذج الجليد",
+      "type": "concept",
+      "x": 0.95,
+      "y": 0.25,
+      "color": "#ffd166"
+    },
+    {
+      "id": "w8-concept-resilience",
+      "label": "Resilience",
+      "type": "concept",
+      "x": 0.95,
+      "y": 0.75,
+      "color": "#ffd166"
+    },
+    {
+      "id": "w8-concept-three-rules",
+      "label": "القواعد الثلاث",
+      "type": "concept",
+      "x": 0.18,
+      "y": 0.92,
+      "color": "#ffd166"
+    },
+    {
+      "id": "w8-concept-five-rules",
+      "label": "خمس قواعد",
+      "type": "concept",
+      "x": 0.85,
+      "y": 0.92,
+      "color": "#ffd166"
+    }
+  ],
+  "edges": [
+    { "from": "w8-concept-asr-surah", "to": "tafsir", "label": "يؤسس" },
+    { "from": "w8-concept-khusr", "to": "tafsir", "label": "استثناء" },
+    { "from": "w8-concept-tawasi-haqq", "to": "tafsir", "label": "صفة النجاة" },
+    { "from": "w8-concept-asra-badr", "to": "contemporary", "label": "محور" },
+    { "from": "w8-concept-ihsan-asir", "to": "contemporary", "label": "قاعدة" },
+    { "from": "w8-concept-three-rules", "to": "contemporary", "label": "خلاصة" },
+    { "from": "w8-concept-iceberg", "to": "positive-psych", "label": "أداة" },
+    { "from": "w8-concept-resilience", "to": "positive-psych", "label": "نتيجة" },
+    { "from": "w8-concept-five-rules", "to": "positive-psych", "label": "تطبيق" },
+    { "from": "tafsir", "to": "contemporary", "label": "رحمة النبي" },
+    { "from": "tafsir", "to": "positive-psych", "label": "إدارة العمر" },
+    { "from": "contemporary", "to": "positive-psych", "label": "إحسان × مرونة" },
+    { "from": "w8-concept-tawasi-haqq", "to": "positive-psych", "label": "صمود اجتماعي" },
+    { "from": "w8-concept-resilience", "to": "w8-concept-ihsan-asir", "label": "تطبيق" }
+  ]
+}

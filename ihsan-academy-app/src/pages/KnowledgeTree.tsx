@@ -1,15 +1,23 @@
 import { useEffect, useRef, useState } from "react";
-import { data } from "@/data";
+import { useWeekData } from "@/hooks/useWeekData";
 import { useStore } from "@/store/useStore";
 import { CourseIcon, Icons } from "@/components/Icons";
 
-type Node = (typeof data.week1.knowledgeMap.nodes)[number];
+type Node = {
+  id: string;
+  label: string;
+  type: "course" | "concept";
+  x: number;
+  y: number;
+  color: string;
+};
 
 // Keep every node comfortably inside the container regardless of aspect ratio
 // (mobile's narrower 4:5 box was clipping nodes placed near the raw 0%/100% edges).
 const pad = (v: number) => 8 + v * 84;
 
 export default function KnowledgeTree() {
+  const week = useWeekData();
   const [selected, setSelected] = useState<Node | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const markStarted = useStore((s) => s.markStarted);
@@ -23,10 +31,10 @@ export default function KnowledgeTree() {
   }, [selected, markStarted, setRecent]);
 
   const course = selected?.type === "course"
-    ? data.week1.courses.find((c) => c.id === selected.id)
+    ? week.courses.find((c) => c.id === selected.id)
     : null;
   const concept = selected?.type === "concept"
-    ? data.week1.concepts.find((c) => c.id === selected.id)
+    ? week.concepts.find((c) => c.id === selected.id)
     : null;
 
   return (
@@ -35,7 +43,7 @@ export default function KnowledgeTree() {
         <div className="pill mx-auto mb-3">ربط الدورات</div>
         <h1 className="font-display text-4xl text-sand-50">شجرة المعرفة</h1>
         <p className="mt-2 text-sand-100/60">
-          خريطة بصرية توضح الروابط بين دورات الأسبوع الأول ومفاهيمه.
+          {week.knowledgeMap.description ?? "خريطة بصرية توضح الروابط بين دورات الأسبوع ومفاهيمه."}
         </p>
       </div>
 
@@ -47,9 +55,9 @@ export default function KnowledgeTree() {
             preserveAspectRatio="none"
             className="absolute inset-0 h-full w-full"
           >
-            {data.week1.knowledgeMap.edges.map((e, i) => {
-              const from = data.week1.knowledgeMap.nodes.find((n) => n.id === e.from);
-              const to = data.week1.knowledgeMap.nodes.find((n) => n.id === e.to);
+            {week.knowledgeMap.edges.map((e: any, i: number) => {
+              const from = week.knowledgeMap.nodes.find((n: any) => n.id === e.from);
+              const to = week.knowledgeMap.nodes.find((n: any) => n.id === e.to);
               if (!from || !to) return null;
               return (
                 <g key={i}>
@@ -68,7 +76,7 @@ export default function KnowledgeTree() {
           </svg>
 
           {/* Nodes */}
-          {data.week1.knowledgeMap.nodes.map((n) => {
+          {week.knowledgeMap.nodes.map((n: any) => {
             const isSelected = selected?.id === n.id;
             return (
               <button
@@ -91,7 +99,7 @@ export default function KnowledgeTree() {
                 title={n.label}
               >
                 {n.type === "course" ? (
-                  <CourseIcon name={data.week1.courses.find((c) => c.id === n.id)?.iconKey ?? "sparkles"} size={22} />
+                  <CourseIcon name={week.courses.find((c) => c.id === n.id)?.iconKey ?? "sparkles"} size={22} />
                 ) : (
                   <Icons.Diamond size={18} />
                 )}
@@ -100,7 +108,7 @@ export default function KnowledgeTree() {
           })}
 
           {/* Node labels */}
-          {data.week1.knowledgeMap.nodes.map((n) => (
+          {week.knowledgeMap.nodes.map((n: any) => (
             <div
               key={`l-${n.id}`}
               className="pointer-events-none absolute -translate-x-1/2 transform text-center text-[10px] font-medium sm:text-xs"
@@ -177,7 +185,7 @@ export default function KnowledgeTree() {
                   <div className="mb-1 text-sand-100/70">دورات مرتبطة:</div>
                   <div className="flex flex-wrap gap-1">
                     {concept.relatedCourseIds.map((id) => {
-                      const rc = data.week1.courses.find((c) => c.id === id);
+                      const rc = week.courses.find((c) => c.id === id);
                       if (!rc) return null;
                       return (
                         <span
@@ -212,7 +220,7 @@ export default function KnowledgeTree() {
           <span className="mr-2 inline-block h-3 w-3 rounded-full bg-rose-glow/60 align-middle" /> دورة
         </div>
         <div className="card p-3 text-center text-xs text-sand-100/60">
-          <span className="mr-2 inline-block h-1 w-6 align-middle bg-gold-300/30" /> علاقة
+          <span className="mr-2 inline-block h-3 w-1/4 align-middle bg-gold-300/30" /> علاقة
         </div>
       </div>
     </div>

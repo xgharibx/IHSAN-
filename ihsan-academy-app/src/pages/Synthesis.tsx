@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
-import { data } from "@/data";
+import { useSynthesis, useWeekMeta } from "@/hooks/useWeekHooks";
 import { Icons } from "@/components/Icons";
 
 export default function Synthesis() {
+  const synthesis = useSynthesis();
+  const meta = useWeekMeta();
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
       <div className="mb-8 text-center">
         <div className="pill mx-auto mb-3">التركيب الموحّد</div>
         <h1 className="font-display text-4xl text-sand-50 sm:text-5xl">
-          {data.week1.synthesis.title}
+          {synthesis.title}
         </h1>
-        <p className="mt-3 text-lg text-sand-100/60">{data.week1.synthesis.subtitle}</p>
+        <p className="mt-3 text-lg text-sand-100/60">{synthesis.subtitle}</p>
       </div>
 
       <section className="card relative overflow-hidden p-8 sm:p-10">
@@ -18,7 +21,7 @@ export default function Synthesis() {
         <div className="relative">
           <h2 className="font-display text-2xl text-gold-200">الفكرة الجامعة</h2>
           <p className="mt-4 text-lg leading-loose text-sand-100/90">
-            {data.week1.synthesis.bigIdea}
+            {synthesis.bigIdea}
           </p>
         </div>
       </section>
@@ -26,7 +29,7 @@ export default function Synthesis() {
       <section className="card mt-6 p-8 sm:p-10">
         <h2 className="font-display text-2xl text-sand-50">التفسير المتكامل</h2>
         <div className="prose-arabic mt-4 max-w-none">
-          {data.week1.synthesis.integratedExplanation.split("\n\n").map((p, i) => (
+          {synthesis.integratedExplanation.split("\n\n").map((p: string, i: number) => (
             <p key={i}>{p}</p>
           ))}
         </div>
@@ -35,7 +38,7 @@ export default function Synthesis() {
       <section className="card mt-6 p-8 sm:p-10">
         <h2 className="font-display text-2xl text-sand-50">الرسائل الأساسية</h2>
         <ul className="mt-4 space-y-3">
-          {data.week1.synthesis.keyMessages.map((m, i) => (
+          {synthesis.keyMessages.map((m: string, i: number) => (
             <li
               key={i}
               className="flex items-start gap-3 rounded-2xl border border-white/5 bg-white/[0.02] p-4"
@@ -50,9 +53,15 @@ export default function Synthesis() {
       </section>
 
       <section className="card mt-6 p-8 sm:p-10">
-        <h2 className="font-display text-2xl text-sand-50">قائمة ما قبل الأسبوع الثاني</h2>
+        <h2 className="font-display text-2xl text-sand-50">
+          {(synthesis.beforeNextWeek ?? []).length > 0
+            ? meta.number === 8
+              ? "قائمة ما قبل التخرّج"
+              : "قائمة ما قبل الأسبوع التالي"
+            : "قائمة الجاهزية"}
+        </h2>
         <ul className="mt-4 space-y-2">
-          {data.week1.synthesis.beforeWeek2.map((item) => {
+          {(synthesis.beforeNextWeek ?? synthesis.beforeWeek2 ?? []).map((item: string) => {
             const done = item.startsWith("✓");
             return (
               <li key={item} className="flex items-start gap-3">

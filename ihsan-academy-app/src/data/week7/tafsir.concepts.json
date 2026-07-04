@@ -1,0 +1,62 @@
+[
+  {
+    "id": "w7-concept-ahsani-taqweem",
+    "name": "أَحسن تَقويم",
+    "arabicName": "أحسن تقويم",
+    "domain": "tafsir",
+    "simpleDefinition": "صيغة تَكامل صُورة الإنسان في الخَلق الإلهي.",
+    "deepExplanation": "تشمل كُلَّ جنس الإنسان من حيث الصُّورة والصفات، لِأنها تَكريم مَبدئي قبل استحقاق الإنسان.",
+    "whyItMatters": "تَعليم الإحسان الشَّامل لِجميع البشر.",
+    "example": "كلُّ إنسان في الأصل في أَحسن تقويم، فأَحسِن للجميع.",
+    "relatedConceptIds": ["w7-concept-ihsan-la-yatajazza"],
+    "revisionNote": "أحسن = شُكر."
+  },
+  {
+    "id": "w7-concept-hifz-jawarih",
+    "name": "حفظ الجوارح",
+    "arabicName": "حفظ الجوارح",
+    "domain": "tafsir",
+    "simpleDefinition": "صَوْن العَين والأُذن واللِّسان واليَد عن المَعصية.",
+    "deepExplanation": "الجوارح أَمانات من الله. مَن حَفِظها في الصِّغر حَفِظها الله في الكِبَر.",
+    "whyItMatters": "كثير من الذُّنوب بسبب إهمال الجوارح.",
+    "example": "صَوْن البَصَر عن الحرام، واللِّسان عن الكَذب.",
+    "relatedConceptIds": ["w7-concept-ahsani-taqweem"],
+    "revisionNote": "حفظ الجوارح = حِراسة الإيمان."
+  },
+  {
+    "id": "w7-concept-ihsan-la-yatajazza",
+    "name": "الإحسان لا يَتَجزأ",
+    "arabicName": "الإحسان لا يتجزأ",
+    "domain": "tafsir",
+    "simpleDefinition": "الإحسان يُوجَّه لِجميع الخَلق دون استثناء.",
+    "deepExplanation": "كَما أَحْسَن الله لِجميع النَّاس، يَجب أن يُحسِن المُسلم لِلإنسان والحَيَوان والنَّبات والجَماد.",
+    "whyItMatters": "تَكسير الحاجز العُنصري في الإحسان.",
+    "example": "قول النبي ﷺ للجذع: «أما ترضى أن تسكت وأن تكون معي في الجنَّة». هذا إحسان للجَماد.",
+    "relatedConceptIds": ["w7-concept-ahsani-taqweem", "w7-concept-ahkam-alhakimeen"],
+    "revisionNote": "إحسان للكل."
+  },
+  {
+    "id": "w7-concept-ahkam-alhakimeen",
+    "name": "أَحكم الحاكمين",
+    "arabicName": "أحكم الحاكمين",
+    "domain": "tafsir",
+    "simpleDefinition": "صِفة الله سُبحانه بالحُكم العادل.",
+    "deepExplanation": "كُلُّ ظُلم في الدنيا سَيُحسَب يوم القِيامة. الإحسان الإلهي يَأخذ الحَقّ للمَظلوم.",
+    "whyItMatters": "تَسلية المُظلوم، تَذكير الظالم.",
+    "example": "حين يَظلمك أحد، اِذْكر: «حسبي الله».",
+    "relatedConceptIds": ["w7-concept-ihsan-la-yatajazza"],
+    "revisionNote": "حُكم الله مَاض."
+  },
+  {
+    "id": "w7-concept-tawazun",
+    "name": "التَّوازن في العبادة",
+    "arabicName": "التوازن في العبادة",
+    "domain": "tafsir",
+    "simpleDefinition": "العِبادة بِحَدٍّ معقول يُصان به الجَسد.",
+    "deepExplanation": " «إن لبدنك عليك حَقًّا». الإفراط في الصَّوم والقِيَام يُؤذي.",
+    "whyItMatters": "كثير يَتْركون الحياة بِسَبب الإفراط.",
+    "example": " «ومَن رَغِب عن سُنَّتي فلَيس مِنِّي».",
+    "relatedConceptIds": ["w7-concept-hifz-jawarih"],
+    "revisionNote": "سُنَّة = تَوازن."
+  }
+]

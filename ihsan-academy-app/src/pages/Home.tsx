@@ -1,12 +1,20 @@
 import { Link } from "react-router-dom";
-import { data, getCourseById } from "@/data";
+import { getCourseById, data } from "@/data";
 import { useStore, computeCourseProgressPercent } from "@/store/useStore";
 import { CourseIcon, Icons } from "@/components/Icons";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useCourses, useFlashcards, useQuizzes, useConcepts, useWeekMeta, useSynthesis, useActivities } from "@/hooks/useWeekHooks";
 
 export default function Home() {
+  const courses = useCourses();
+  const flashcards = useFlashcards();
+  const quizzes = useQuizzes();
+  const activities = useActivities();
+  const concepts = useConcepts();
+  const meta = useWeekMeta();
+  const synthesis = useSynthesis();
   const courseProgress = useStore((s) => s.courseProgress);
   const markStarted = useStore((s) => s.markStarted);
   const setRecent = useStore((s) => s.setRecent);
@@ -53,7 +61,7 @@ export default function Home() {
       }
     });
     return () => ctx.revert();
-  }, []);
+  }, [meta.id]);
 
   return (
     <div>
@@ -68,7 +76,7 @@ export default function Home() {
           <div className="hero-fade flex flex-col items-start gap-2">
             <span className="pill">
               <span className="pulse-dot" />
-              <span>الأسبوع الأول — التأسيس</span>
+              <span>{meta.title}</span>
             </span>
           </div>
           <h1 className="hero-fade mt-6 max-w-4xl font-display text-5xl leading-[1.05] sm:text-6xl md:text-7xl">
@@ -81,7 +89,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="hero-fade mt-8 max-w-2xl text-lg leading-loose text-sand-100/70">
-            {data.week1.synthesis.bigIdea} تصفّح الدورات التسع، استكشف شجرة المعرفة،
+            {synthesis.bigIdea} تصفّح الدورات، استكشف شجرة المعرفة،
             راجِع البطاقات، خُض الاختبارات، تحدّث مع المعلّم الذكي، واحتفل بكل إنجاز.
           </p>
           <div className="hero-fade mt-10 flex flex-wrap items-center gap-3">
@@ -99,10 +107,10 @@ export default function Home() {
 
           {/* Hero stats */}
           <div className="hero-fade mt-16 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <StatCard label="دورة" value={data.week1.courses.length.toString()} />
-            <StatCard label="بطاقة" value={data.week1.flashcards.length.toString()} />
-            <StatCard label="سؤال" value={data.week1.quizzes.length.toString()} />
-            <StatCard label="مفهوم" value={data.week1.concepts.length.toString()} />
+            <StatCard label="دورة" value={courses.length.toString()} />
+            <StatCard label="بطاقة" value={flashcards.length.toString()} />
+            <StatCard label="سؤال" value={quizzes.length.toString()} />
+            <StatCard label="مفهوم" value={concepts.length.toString()} />
           </div>
         </div>
       </section>
@@ -112,9 +120,9 @@ export default function Home() {
         <div className="mb-10 flex items-end justify-between gap-4">
           <div>
             <div className="pill mb-3">الدورات</div>
-            <h2 className="font-display text-4xl text-sand-50">دورات الأسبوع الأول</h2>
+            <h2 className="font-display text-4xl text-sand-50">دورات {meta.title}</h2>
             <p className="mt-2 max-w-2xl text-sand-100/60">
-              {data.week1.courses.length} دورات تغطّي الإحسان، التفسير، السيرة، الفقه، النفس، الصحابة.
+              {courses.length} دورات تغطّي محاور هذا الأسبوع.
             </p>
           </div>
           <Link to="/courses" className="hidden sm:inline-flex btn btn-outline">
@@ -123,10 +131,10 @@ export default function Home() {
           </Link>
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {data.week1.courses.map((c) => {
+          {courses.map((c) => {
             const cp = courseProgress[c.id];
-            const totalFC = data.week1.flashcards.filter((f) => f.courseId === c.id).length;
-            const totalAct = data.week1.activities.filter((a) => a.courseId === c.id).length;
+            const totalFC = flashcards.filter((f) => f.courseId === c.id).length;
+            const totalAct = activities.filter((a) => a.courseId === c.id).length;
             const pct = computeCourseProgressPercent(cp, c.sections.length, totalFC, totalAct);
             return (
               <Link
@@ -214,13 +222,13 @@ export default function Home() {
             },
             {
               title: "المعلّم الذكي",
-              desc: "ذكاء اصطناعي يفهم مواد الأسبوع الأول ويشرح لك بحرفية.",
+              desc: `ذكاء اصطناعي يفهم مواد ${meta.title} ويشرح لك بحرفية.`,
               to: "/tutor",
               color: "#a78bfa",
             },
             {
               title: "التركيب الموحّد",
-              desc: "الفكرة الجامعة، قبل الأسبوع الثاني، ومن أنت بعد هذا الأسبوع.",
+              desc: "الفكرة الجامعة، وقبل الأسبوع التالي، ومن أنت بعد هذا الأسبوع.",
               to: "/synthesis",
               color: "#f97316",
             },

@@ -1,0 +1,61 @@
+[
+  {
+    "id": "w7-concept-i3tizal-amal",
+    "name": "اعتزل تَطبيقي",
+    "arabicName": "اعتزل تطبيقي",
+    "domain": "soul-app",
+    "simpleDefinition": "تَطبيق «اعتزل» على ثَلاث فئات: الإدمان، التَّوتر، الخَوف.",
+    "deepExplanation": " لَيْس هَرَبًا من المسؤولية، بل صَون نَفْس من مُؤذياتها الحَقيقيَّة.",
+    "whyItMatters": "تَعْليم الفَرْق بين التَّطبيق الصَّحيح والاعتزال الذي يَتحول إلى هَرَب.",
+    "example": "اعتزال مَجلس غيبة كلَّ أسبُوع.",
+    "relatedConceptIds": ["w7-concept-fi'at-shilt", "w7-concept-i'tizal-khawf"],
+    "revisionNote": "اعتزل = صون نَفْس."
+  },
+  {
+    "id": "w7-concept-fi'at-shilt",
+    "name": "الفِئات الثَّلاث المُزاحَة",
+    "arabicName": "الفئات الثلاث",
+    "domain": "soul-app",
+    "simpleDefinition": "الإدمان، التَّوتر، الخَوف.",
+    "deepExplanation": "تَستحق الاعتزال لإيذائها الحَقيقي، مع بَقاء المسؤوليات الاجتماعية.",
+    "whyItMatters": "تَحديد نِطاق الاعتزال.",
+    "example": "اِجعل مَجلس الغيبة المُتكرر دَرجة ثَالثة من حياتك.",
+    "relatedConceptIds": ["w7-concept-i3tizal-amal"],
+    "revisionNote": "ثلاث فئات."
+  },
+  {
+    "id": "w7-concept-i'tizal-khawf",
+    "name": "الخَوف المَرَضي",
+    "arabicName": "الخوف المرضي",
+    "domain": "soul-app",
+    "simpleDefinition": "خَوف لا أَساس له يَعيق الحياة.",
+    "deepExplanation": "يَبدأ صَغيرًا ويَتضخم حتى يمنع صَاحبه من القرار. يُعالَج بالذِّكر والتَّدريب.",
+    "example": "الخَوف من ركوب الطَّائرة.",
+    "relatedConceptIds": ["w7-concept-taqwa-dir"],
+    "revisionNote": "خَوف مرضي = مَرَض."
+  },
+  {
+    "id": "w7-concept-taqwa-dir",
+    "name": "التَّقوى دَرجَع",
+    "arabicName": "التقوى درع",
+    "domain": "soul-app",
+    "simpleDefinition": "دِرْع حِماية من الإيذاء.",
+    "deepExplanation": " «ومَن يَتَّقِ الله يَجْعَل له مَخرجًا». التَّقوى لا تَمنع الفَرح، ولا تَمنع اعتزال الضَّرَر.",
+    "whyItMatters": "تَعْليم المُسلم أَنَّ التَّقوى تَحمي.",
+    "example": "حين تَعْتزل، خُذ التَّقوى مَعك لِتَجتاز.",
+    "relatedConceptIds": ["w7-concept-i3tizal-amal"],
+    "revisionNote": "دِرْع."
+  },
+  {
+    "id": "w7-concept-jawarih-amanah",
+    "name": "الجوارح أَمانات",
+    "arabicName": "الجوارح أمانات",
+    "domain": "soul-app",
+    "simpleDefinition": "الجوارح أَمانات من الله سُبحانه، يَستودعها لِلعَبد.",
+    "deepExplanation": " «إنّ الله يَظلّ عبده ما كان العبد في صَلاة أَو أَخيه». الحِفظ ركن الإيمان.",
+    "whyItMatters": "تَعْليم تَقدير الجوارح.",
+    "example": " «اللهم احفظ لساني».",
+    "relatedConceptIds": ["w7-concept-taqwa-dir"],
+    "revisionNote": "الجوارح أمانات."
+  }
+]

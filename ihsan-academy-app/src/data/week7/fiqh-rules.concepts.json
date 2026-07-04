@@ -1,0 +1,49 @@
+[
+  {
+    "id": "w7-concept-urf-mujtama",
+    "name": "العُرف",
+    "arabicName": "العرف",
+    "domain": "fiqh",
+    "simpleDefinition": "ما تَعارَف عليه مَجموعة من الأَشْخاص في زَمان ومَكان وحَال.",
+    "deepExplanation": "مَصدر تَشريعي تَكميلي في الفِقه، له أَربعة مُكوِّنات (الأشْخاص، الزَّمان، المَكان، الأَحوال).",
+    "whyItMatters": "تَوصيل الفِقه لِاختلاف البِيئات والأَزمنة.",
+    "example": "زواج، بيع، مَهر، إشهار.",
+    "relatedConceptIds": ["w7-concept-urf-qawli", "w7-concept-urf-amali"],
+    "revisionNote": "العُرف لا يَتَجزأ."
+  },
+  {
+    "id": "w7-concept-urf-qawli",
+    "name": "العُرف القَولي",
+    "arabicName": "العرف القولي",
+    "domain": "fiqh",
+    "simpleDefinition": "ما تَعَارف عليه النَّاس مِن أَلْفاظ تُفيد مَعنى مُحدَّد.",
+    "deepExplanation": "مثل «أعطيتُك» في البيع، أو «وهبتُ» في الهِبَة.",
+    "whyItMatters": "تَفسير النُّصوص الفِقهيَّة.",
+    "example": " «أَعْطَيتُك واشْتريت» ينعقد به البيع.",
+    "relatedConceptIds": ["w7-concept-urf-mujtama"],
+    "revisionNote": "أَلْفاظ = عُرف قَولي."
+  },
+  {
+    "id": "w7-concept-urf-amali",
+    "name": "العُرف الفِعلي",
+    "arabicName": "العرف الفعلي",
+    "domain": "fiqh",
+    "simpleDefinition": "ما تَعَارف عليه النَّاس من الأَفْعال في المُعَاملات.",
+    "deepExplanation": "مثل وُضُوع الجَريدة على الباب صباحًا تُفيد تَسليمًا.",
+    "whyItMatters": "فَهم البيع المُعاصر والإيجار.",
+    "example": "حين تَجد الجريدة قد اخْتفَت، فلا تَتظلَّم.",
+    "relatedConceptIds": ["w7-concept-urf-qawli"],
+    "revisionNote": "فِعْل = عُرف فعلي."
+  },
+  {
+    "id": "w7-concept-urf-fasid",
+    "name": "العُرف الفَاسد",
+    "arabicName": "العرف الفاسد",
+    "domain": "fiqh",
+    "simpleDefinition": "ما يُخالف نَصًّا شَرْعيًّا أو يَنْفِر مِنه الطَّبع.",
+    "deepExplanation": "لا قيمة له في الفِقه.",
+    "example": "استغلال الفَقير في البيع، الإحتكار، الرِّبا المُسَتَّر.",
+    "relatedConceptIds": ["w7-concept-urf-mujtama"],
+    "revisionNote": "فَاسد = مَرْفوض شَرعًا."
+  }
+]

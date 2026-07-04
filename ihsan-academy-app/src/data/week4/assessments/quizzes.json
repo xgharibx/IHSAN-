@@ -1,0 +1,612 @@
+[
+  {
+    "id": "q-is-w4-1",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["w4-concept-hudur"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "مفهوم الوعي والسعي",
+    "prompt": "ما هي مراتب الوعي الثلاث بحسب المحاضرة؟",
+    "options": [
+      { "id": "a", "text": "وعي النفس، وعي الحق، وعي الكون" },
+      { "id": "b", "text": "وعي الماضي، وعي الحاضر، وعي المستقبل" },
+      { "id": "c", "text": "وعي المادي، وعي الروحي، وعي الفكري" },
+      { "id": "d", "text": "وعي الذاتي، وعي الموضوعي، وعي الكوني" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "3 مراحل للوعي: وعي النفس (من أنا؟) + وعي الحق (ما الذي يربطني بالله؟) + وعي الكون (ما مهمتي فيه)."
+  },
+  {
+    "id": "q-is-w4-2",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["w4-concept-juhd"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "مفهوم السعي",
+    "prompt": "كم سنة قضاها النبي ﷺ قبل البعثة في الإعداد؟",
+    "options": [
+      { "id": "a", "text": "20 سنة" },
+      { "id": "b", "text": "30 سنة" },
+      { "id": "c", "text": "40 سنة" },
+      { "id": "d", "text": "50 سنة" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "40 سنة إعداد: 10 تربية، 10 خلافة (في قريش)، 10 شعب (مكة بعد الإسلام)، 10 جهاد (المدينة)."
+  },
+  {
+    "id": "q-tf-w4-1",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": ["w4-concept-kawthar"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "أكثر سورة",
+    "prompt": "ما هي أكثر سورة في القرآن؟",
+    "options": [
+      { "id": "a", "text": "سورة الفاتحة" },
+      { "id": "b", "text": "سورة الكوثر" },
+      { "id": "c", "text": "سورة الإخلاص" },
+      { "id": "d", "text": "سورة العصر" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "سورة الكوثر = أكثر سورة في القرآن (3 آيات، 4 كلمات: 'إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ')."
+  },
+  {
+    "id": "q-tf-w4-2",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": ["w4-concept-kawthar"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "معنى الصمد",
+    "prompt": "ما معنى «الصمد» في سورة الكوثر؟",
+    "options": [
+      { "id": "a", "text": "الأول" },
+      { "id": "b", "text": "المقصود في الحوائج، السيد المعظم" },
+      { "id": "c", "text": "النور" },
+      { "id": "d", "text": "العليم" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الصمد = السيد المعظم الذي تصمد إليه الخلائق في حوائجها. المقصود في كل حاجة."
+  },
+  {
+    "id": "q-tf-w4-3",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": ["w4-concept-kawthar"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "سبب النزول",
+    "prompt": "سبب نزول سورة الكوثر؟",
+    "options": [
+      { "id": "a", "text": "رداً على العاص بن وائل الذي سب النبي ﷺ وقال إنه الأبتر" },
+      { "id": "b", "text": "في غزوة بدر" },
+      { "id": "c", "text": "في صلح الحديبية" },
+      { "id": "d", "text": "في فتح مكة" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "نزلت رداً على العاص بن وائل الذي قال عن النبي ﷺ إنه «أبتر» (لا عقب له). السورة ردت: «شَانِئَكَ هُوَ الْأَبْتَرُ»."
+  },
+  {
+    "id": "tf-tf-w4-1",
+    "type": "tf",
+    "courseId": "tafsir",
+    "conceptIds": ["w4-concept-kawthar"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "سورة الكوثر = 3 آيات فقط.",
+    "correctAnswer": "true",
+    "explanation": "سورة الكوثر أقصر سورة في القرآن (3 آيات، 4 كلمات)."
+  },
+  {
+    "id": "q-se-w4-1",
+    "type": "mcq",
+    "courseId": "seerah",
+    "conceptIds": ["w4-concept-wahy"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "تمهيدات النبوة",
+    "prompt": "ما هي التمهيدات الأربع لنزول الوحي بحسب المحاضرة؟",
+    "options": [
+      { "id": "a", "text": "انقطاع الشياطين، سلام الحجر، حبب إليه الخلاء، الرؤى الصادقة" },
+      { "id": "b", "text": "الصلاة، الصوم، الحج، الزكاة" },
+      { "id": "c", "text": "الإيمان، الإحسان، الإسلام، الهجرة" },
+      { "id": "d", "text": "العلم، الحلم، الشجاعة، الكرم" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "4 تمهيدات قبل النبوة: (1) انقطاع الشياطين. (2) سلام الحجر. (3) حبب إليه الخلاء. (4) الرؤى الصادقة (آخر 6 أشهر)."
+  },
+  {
+    "id": "q-se-w4-2",
+    "type": "mcq",
+    "courseId": "seerah",
+    "conceptIds": ["w4-concept-wahy"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "نزول الوحي",
+    "prompt": "ماذا قال جبريل للنبي ﷺ في ليلة القدر؟",
+    "options": [
+      { "id": "a", "text": "اسجد لربك" },
+      { "id": "b", "text": "اقْرَأْ باسم رَبِّكَ الَّذِي خَلَقَ" },
+      { "id": "c", "text": "سبح اسم ربك الأعلى" },
+      { "id": "d", "text": "والضحى والليل إذا سجى" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "«اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ • خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ • اقْرَأْ وَرَبُّكَ الْأَكْرَمُ • الَّذِي عَلَّمَ بِالْقَلَمِ • عَلَّمَ الْإِنسَانَ مَا لَمْ يَعْلَمْ» (العلق 1-5)."
+  },
+  {
+    "id": "q-se-w4-3",
+    "type": "mcq",
+    "courseId": "seerah",
+    "conceptIds": ["w4-concept-wahy"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "ورقة بن نوفل",
+    "prompt": "مَن هو ورقة بن نوفل؟",
+    "options": [
+      { "id": "a", "text": "عم النبي ﷺ" },
+      { "id": "b", "text": "ابن عم خديجة، عالم مسيحي كبير 90 سنة، أعمى" },
+      { "id": "c", "text": "صديق أبي بكر" },
+      { "id": "d", "text": "تاجر قريش" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ورقة بن نوفل = ابن عم خديجة، عالم مسيحي كبير (90 سنة، أعمى)، يقرأ التوراة والإنجيل بالعبرية. قال: «والذي نفسي بيده، إنه لنبي هذه الأمة»."
+  },
+  {
+    "id": "tf-se-w4-1",
+    "type": "tf",
+    "courseId": "seerah",
+    "conceptIds": ["w4-concept-wahy"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "فترة الوحي بعد نزول الآيات الأولى = 3 أشهر.",
+    "correctAnswer": "true",
+    "explanation": "فترة الوحي 3 أشهر (بين العلق والمدثر). نزلت بعدها ﴿يَا أَيُّهَا الْمُدَّثِّرُ﴾ وعمره 40."
+  },
+  {
+    "id": "q-sh-w4-1",
+    "type": "mcq",
+    "courseId": "sahaba",
+    "conceptIds": ["w4-concept-uthman"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "عثمان بن عفان",
+    "prompt": "ما لقب عثمان بن عفان؟",
+    "options": [
+      { "id": "a", "text": "ذو النورين" },
+      { "id": "b", "text": "ذو النطاقين" },
+      { "id": "c", "text": "ذو النور" },
+      { "id": "d", "text": "الزاهد" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "عثمان = ذو النورين (تزوج رقية ثم أم كلثوم، ابنتي النبي ﷺ). أسماء = ذات النطاقين (نطاق ليلة الهجرة)."
+  },
+  {
+    "id": "q-sh-w4-2",
+    "type": "mcq",
+    "courseId": "sahaba",
+    "conceptIds": ["w4-concept-uthman"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "بئر رومة",
+    "prompt": "ماذا اشترى عثمان بن عفان وجعله وقفاً للمسلمين؟",
+    "options": [
+      { "id": "a", "text": "بئر رومة" },
+      { "id": "b", "text": "دار الأرقم" },
+      { "id": "c", "text": "مسجد قباء" },
+      { "id": "d", "text": "المسجد النبوي" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "بئر رومة = بئر ماء كان يملكه يهودي. اشتراه عثمان بماله وجعله وقفاً للمسلمين."
+  },
+  {
+    "id": "q-sh-w4-3",
+    "type": "mcq",
+    "courseId": "sahaba",
+    "conceptIds": ["w4-concept-uthman"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "جمع القرآن",
+    "prompt": "كم نسخة من القرآن جمع عثمان بن عفان في خلافته؟",
+    "options": [
+      { "id": "a", "text": "2 نسخ" },
+      { "id": "b", "text": "4 نسخ" },
+      { "id": "c", "text": "7 نسخ" },
+      { "id": "d", "text": "12 نسخة" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "4 نسخ من مصحف حفصة، أرسلها عثمان إلى مكة والشام واليمن والبصرة، وأمر بإحراق ما عداها."
+  },
+  {
+    "id": "tf-sh-w4-1",
+    "type": "tf",
+    "courseId": "sahaba",
+    "conceptIds": ["w4-concept-uthman"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "استُشهد عثمان بن عفان في 17 رمضان 35 هـ.",
+    "correctAnswer": "true",
+    "explanation": "استُشهد عثمان بن عفان في 17 رمضان سنة 35 هـ على يد ابن ملجم الخارجي."
+  },
+  {
+    "id": "q-sb-w4-1",
+    "type": "mcq",
+    "courseId": "sahabiyyat",
+    "conceptIds": ["w4-concept-asma"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "السيدة أسماء",
+    "prompt": "ما لقب السيدة أسماء بنت أبي بكر؟",
+    "options": [
+      { "id": "a", "text": "ذات النطاقين" },
+      { "id": "b", "text": "ذات النورين" },
+      { "id": "c", "text": "ذات الحجاب" },
+      { "id": "d", "text": "ذات الخمار" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "السيدة أسماء = ذات النطاقين (شقت نطاقها نصفين ليلة الهجرة). عثمان = ذو النورين (تزوج بنتي النبي)."
+  },
+  {
+    "id": "q-sb-w4-2",
+    "type": "mcq",
+    "courseId": "sahabiyyat",
+    "conceptIds": ["w4-concept-asma"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "ليلة الهجرة",
+    "prompt": "ماذا فعلت أسماء ليلة الهجرة حين لم تجد ما تربط به الطعام؟",
+    "options": [
+      { "id": "a", "text": "ربطت الطعام بيديها" },
+      { "id": "b", "text": "قسمت نطاقها نصفين" },
+      { "id": "c", "text": "طلبت من الجيران طعاماً" },
+      { "id": "d", "text": "تركت الطعام بدون ربط" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "شقت نطاقها نصفين: ربطت الطعام بنصف، وارتدت النصف الآخر. قال النبي ﷺ: «أبدلك الله بِطاقٍ بِنطاقٍ في الجنة»."
+  },
+  {
+    "id": "q-sb-w4-3",
+    "type": "mcq",
+    "courseId": "sahabiyyat",
+    "conceptIds": ["w4-concept-asma"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "عبد الله بن الزبير",
+    "prompt": "أين وضعت أسماء ابنها عبد الله بن الزبير؟",
+    "options": [
+      { "id": "a", "text": "المدينة المنورة" },
+      { "id": "b", "text": "مكة المكرمة" },
+      { "id": "c", "text": "قُباء (قبل دخول المدينة)" },
+      { "id": "d", "text": "بدر" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "هاجرت أسماء وهي حامل في شهرها الأخير. وضعت عبد الله بن الزبير في قُباء قبل دخول المدينة. كان أول مولود للمسلمين بعد الهجرة."
+  },
+  {
+    "id": "tf-sb-w4-1",
+    "type": "tf",
+    "courseId": "sahabiyyat",
+    "conceptIds": ["w4-concept-asma"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "توفيت السيدة أسماء عن عمر 100 سنة.",
+    "correctAnswer": "true",
+    "explanation": "توفيت بعد ابنها عبد الله بأيام عن عمر 100 سنة. روت 58 حديث في البخاري ومسلم."
+  },
+  {
+    "id": "q-fq-w4-1",
+    "type": "mcq",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["w4-concept-darar"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "لا ضرر ولا ضرار",
+    "prompt": "ما الفرق بين 'ضرر' و'ضرار' في القاعدة الفقهية؟",
+    "options": [
+      { "id": "a", "text": "ضرر = تضره لتنتفع. ضرار = تضره لتضر غيره" },
+      { "id": "b", "text": "ضرر = ضرر مادي. ضرار = ضرر معنوي" },
+      { "id": "c", "text": "ضرر = ضرر ظاهر. ضرار = ضرر باطن" },
+      { "id": "d", "text": "لا فرق بينهما" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ضرر = أن تضره لينتفع هو (كالذي يضع شركًا ليمسك غيره). ضرار = أن تضره ليضر غيره (كالذي يضر جاره ليضر جاره)."
+  },
+  {
+    "id": "q-fq-w4-2",
+    "type": "mcq",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["w4-concept-darar"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "خيار المجلس",
+    "prompt": "ما معنى 'خيار المجلس' في البيع؟",
+    "options": [
+      { "id": "a", "text": "أن يَختار البائع والمشتري فسخ العقد بعد التَّفرق" },
+      { "id": "b", "text": "أن يَختار البائع السلعة" },
+      { "id": "c", "text": "أن يَختار المشتري السلعة" },
+      { "id": "d", "text": "أن يَلغي العقد تلقائيا" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "خيار المجلس: «البائع بالخيار ما لم يَتفرقا». كل واحد منهما له حق فسخ العقد ما داما في مجلس العقد. تطبيق لقاعدة 'لا ضرر'."
+  },
+  {
+    "id": "q-fq-w4-3",
+    "type": "mcq",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["w4-concept-darar"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "الشفعة",
+    "prompt": "ما معنى 'الشفعة'؟",
+    "options": [
+      { "id": "a", "text": "حق الجار في الشراء قبل الغريب" },
+      { "id": "b", "text": "حق البائع في بيع سلعته" },
+      { "id": "c", "text": "حق المشتري في إعادة السلعة" },
+      { "id": "d", "text": "حق الدولة في مصادرة الملكية" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "الشفعة = حق الجار في الشراء قبل الغريب. سُنَّة شرعية. تطبيق لقاعدة 'لا ضرار' (لمنع ضرر الجار بالجار الجديد)."
+  },
+  {
+    "id": "tf-fq-w4-1",
+    "type": "tf",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["w4-concept-darar"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "إماطة الأذى عن الطريق = من أعلى شعب الإيمان.",
+    "correctAnswer": "false",
+    "explanation": "«الإيمان بضع وسبعون شعبة، أفضلها لا إله إلا الله، وأدناها إماطة الأذى عن الطريق». إماطة الأذى = أدنى شعب الإيمان (لا أعلى)."
+  },
+  {
+    "id": "q-ct-w4-1",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": ["w4-concept-shubha"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "بني قريظة",
+    "prompt": "ما هي الشبهة التي يرد عليها د. كرم الديب في محاضرة الأسبوع الرابع؟",
+    "options": [
+      { "id": "a", "text": "أن محمداً قتل يهود بني قريظة بلا رحمة" },
+      { "id": "b", "text": "أن الإسلام انتشر بالسيف" },
+      { "id": "c", "text": "أن المسلمين أرغموا الناس على الدخول في الإسلام" },
+      { "id": "d", "text": "أن النبي حارب القبائل العربية" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "الشبهة: أن محمداً ﷺ قتل يهود بني قريظة بلا رحمة ولا شفقة. الرد: بنو قريظة خانوا في وقت الحرب، واختاروا حكمهم (سعد بن معاذ) الذي حكم بِالتوراة."
+  },
+  {
+    "id": "q-ct-w4-2",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": ["w4-concept-shubha"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "صحيفة المدينة",
+    "prompt": "ماذا فعل النبي ﷺ لتَأليف يهود بني قريظة قبل غزوة الأحزاب؟",
+    "options": [
+      { "id": "a", "text": "حاصرهم في حصونهم" },
+      { "id": "b", "text": "صام عاشوراء كما صاموا، وصلى نحو بيت المقدس 16-17 شهراً" },
+      { "id": "c", "text": "قَطع صِلَتهم" },
+      { "id": "d", "text": "حاربهم مباشرة" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "النبي ﷺ حاول التَّألف 16-17 شهراً: صام عاشوراء كما صاموا، وصلى نحو بيت المقدس. كما ضمنت صحيفة المدينة حقوقهم."
+  },
+  {
+    "id": "q-ct-w4-3",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": ["w4-concept-shubha"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "سعد بن معاذ",
+    "prompt": "مَن هو القاضي الذي اختاره بنو قريظة؟",
+    "options": [
+      { "id": "a", "text": "أبو بكر الصديق" },
+      { "id": "b", "text": "عمر بن الخطاب" },
+      { "id": "c", "text": "سعد بن معاذ" },
+      { "id": "d", "text": "علي بن أبي طالب" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "سعد بن معاذ = حَكَم يهودي الأصل (أموله عندهم)، كان أمينا عندهم. لما حكَّم النبي ﷺ بينه وبينهم، اختاروه هم ليحكم بينهم."
+  },
+  {
+    "id": "tf-ct-w4-1",
+    "type": "tf",
+    "courseId": "contemporary",
+    "conceptIds": ["w4-concept-shubha"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "النبي ﷺ هو الذي حَكَم في أمر بني قريظة، ولم يسألهم اختيار حَكَم.",
+    "correctAnswer": "false",
+    "explanation": "النبي ﷺ لم يحكم بل طلب منهم اختيار حَكَم: «مَن تحكمون؟» قالوا: «سعد بن معاذ» (حَكَم يهودي الأصل)."
+  },
+  {
+    "id": "q-sl-w4-1",
+    "type": "mcq",
+    "courseId": "soul-app",
+    "conceptIds": ["w4-concept-qalb-saleem"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "القلب السليم",
+    "prompt": "ما هي السورة التي تذكر «القلب السليم»؟",
+    "options": [
+      { "id": "a", "text": "البقرة" },
+      { "id": "b", "text": "الشعراء" },
+      { "id": "c", "text": "يوسف" },
+      { "id": "d", "text": "النجم" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "«إِلَّا مَنْ أَتَى اللَّهَ بِقَلْبٍ سَلِيمٍ» (الشعراء 89). الشعراء = سورة القلب السليم."
+  },
+  {
+    "id": "q-sl-w4-2",
+    "type": "mcq",
+    "courseId": "soul-app",
+    "conceptIds": ["w4-concept-qulub"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "أمراض القلوب",
+    "prompt": "ما هي الأمراض الخمسة للقلوب بحسب المحاضرة؟",
+    "options": [
+      { "id": "a", "text": "الغلو، الشهوة، الحسد، الخوف، الغضب" },
+      { "id": "b", "text": "الكسل، الجبن، البخل، الكذب، الغيبة" },
+      { "id": "c", "text": "الرياء، العُجب، الحسد، الغيبة، النميمة" },
+      { "id": "d", "text": "الشك، اليأس، القنوط، الكِبر، الحسد" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "5 أمراض للقلوب: (1) الغلو. (2) الشهوة. (3) الحسد. (4) الخوف. (5) الغضب. علاجها: الوضوء + الدعاء + تغيير الوضع + 'أعوذ بالله' + 'لا تَغضب ولك الجنة'."
+  },
+  {
+    "id": "q-sl-w4-3",
+    "type": "mcq",
+    "courseId": "soul-app",
+    "conceptIds": ["w4-concept-qalb-saleem"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "الصفات الست",
+    "prompt": "ما هي الصفات الست للقلب السليم؟",
+    "options": [
+      { "id": "a", "text": "موحد، مسارع، مؤمن، تائب، مهيب، صادق" },
+      { "id": "b", "text": "حليم، صبور، شجاع، كريم، حليم، زاهد" },
+      { "id": "c", "text": "عالم، عامل، زاهد، عابد، صادق، صبور" },
+      { "id": "d", "text": "متواضع، رحيم، شجاع، صادق، كريم، صبور" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "6 صفات للقلب السليم: (1) موحد (لا إله إلا الله). (2) مسارع في الخيرات. (3) مؤمن. (4) تائب منيب. (5) مهيب وقور. (6) صادق في محبة الله ورسوله."
+  },
+  {
+    "id": "tf-sl-w4-1",
+    "type": "tf",
+    "courseId": "soul-app",
+    "conceptIds": ["w4-concept-shukr"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "«لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ» - الشكر = زيادة النعم.",
+    "correctAnswer": "true",
+    "explanation": "«لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ وَلَئِن كَفَرْتُمْ إِنَّ عَذَابِي لَشَدِيدٌ» (إبراهيم 7). الشكر = زيادة النعم."
+  },
+  {
+    "id": "q-pp-w4-1",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": ["w4-concept-self-know"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "اعرف نفسك",
+    "prompt": "ما هي القيم الخمس في 'اعرف نفسك' بحسب د. نهى إسماعيل؟",
+    "options": [
+      { "id": "a", "text": "الأمل، السعادة، الصدق، الخوف، الغضب" },
+      { "id": "b", "text": "العلم، العمل، الإخلاص، التوكل، الصبر" },
+      { "id": "c", "text": "الصلاة، الصوم، الزكاة، الحج، الدعاء" },
+      { "id": "d", "text": "التفكر، التأمل، التذكر، التحقق، التدبر" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "5 قيم في 'اعرف نفسك': (1) الأمل والتفاؤل. (2) السعادة والامتنان. (3) الصدق مع النفس. (4) الخوف من المستقبل. (5) الغضب."
+  },
+  {
+    "id": "q-pp-w4-2",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": ["w4-concept-self-know"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "FOMO",
+    "prompt": "ما هو FOMO؟",
+    "options": [
+      { "id": "a", "text": "Fear Of Missing Out - الخوف من فوات الفرصة" },
+      { "id": "b", "text": "Feeling Of Massive Overload - الشعور بالإرهاق" },
+      { "id": "c", "text": "Feeling Of Mediocre Outcomes - الشعور بنتائج متواضعة" },
+      { "id": "d", "text": "Focus On Meaningful Objectives - التركيز على أهداف ذات معنى" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "FOMO = Fear Of Missing Out (الخوف من فوات الفرصة). مَرض نفسي مَعاصر يَنْشأ عن السوشيال ميديا. علاجه: التَّركيز + التَّوكل + 'لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا'."
+  },
+  {
+    "id": "q-pp-w4-3",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": ["w4-concept-self-know"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "الشخصية الإلكترونية",
+    "prompt": "ما هي الشخصية الإلكترونية (Persona)؟",
+    "options": [
+      { "id": "a", "text": "الوجه الذي تَعرضه على السوشيال ميديا" },
+      { "id": "b", "text": "الشخصية الحقيقية في كل شيء" },
+      { "id": "c", "text": "شخصية العمل المهنية" },
+      { "id": "d", "text": "شخصية الأسرة" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "الشخصية الإلكترونية = الوجه الذي تَعرضه على السوشيال ميديا. 5 فروق عن الحقيقية: المثالي، الصورة، مُتَحَكم، مُسلية، مَحدودة."
+  },
+  {
+    "id": "rf-pp-w4-1",
+    "type": "reflect",
+    "courseId": "positive-psych",
+    "conceptIds": ["w4-concept-self-know"],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "ما الذي تَستمتع به في خريطة نفسك الحقيقية؟",
+    "correctAnswer": "تأمل شخصي. ركِّز على 5 نقاط قوة و 5 نقاط تَحَسُّن.",
+    "explanation": "خريطة النفس = 5 نقاط قوة و 5 نقاط تَحَسُّن."
+  },
+  {
+    "id": "q-sa-w4-1",
+    "type": "mcq",
+    "courseId": "seerah-app",
+    "conceptIds": ["w4-concept-muharrir"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "إقرأ",
+    "prompt": "ما معنى 'اقرأ' في أول آيات الوحي؟",
+    "options": [
+      { "id": "a", "text": "اقرأ كتاباً" },
+      { "id": "b", "text": "اقرأ باسم ربك الذي خلق. خلق الإنسان من علق" },
+      { "id": "c", "text": "اقرأ على الملأ" },
+      { "id": "d", "text": "اقرأ القرآن" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "«اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ • خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ • اقْرَأْ وَرَبُّكَ الْأَكْرَمُ • الَّذِي عَلَّمَ بِالْقَلَمِ • عَلَّمَ الْإِنسَانَ مَا لَمْ يَعْلَمْ» (العلق 1-5). 'اقرأ' = منهجية الأمة (العلم)."
+  },
+  {
+    "id": "q-sa-w4-2",
+    "type": "mcq",
+    "courseId": "seerah-app",
+    "conceptIds": ["w4-concept-muharrir"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "الحضن",
+    "prompt": "ما معنى الحضن الذي ضمّ فيه جبريل النبي ﷺ في ليلة الوحي؟",
+    "options": [
+      { "id": "a", "text": "احتواء وقوة ورحمة" },
+      { "id": "b", "text": "تخويف وتنبيه" },
+      { "id": "c", "text": "امتحان للرسول" },
+      { "id": "d", "text": "إشارة للنبوة فقط" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "الحضن = رمز الاحتواء والقوة والرحمة في نفس الوقت. ضمّ جبريلُ النبي ﷺ حتى بلغ منه الجهد، ثم أرسله. «ضمّ هو حضن احتواء وحضن حنان، لكن في نفس الوقت قوي جدًا»."
+  },
+  {
+    "id": "q-sa-w4-3",
+    "type": "mcq",
+    "courseId": "seerah-app",
+    "conceptIds": ["w4-concept-muharrir"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "آل ياسر",
+    "prompt": "من هم آل ياسر في المحاضرة؟",
+    "options": [
+      { "id": "a", "text": "زيد، أسامة، الخديجة، أسماء" },
+      { "id": "b", "text": "أبو بكر، عمر، عثمان، علي" },
+      { "id": "c", "text": "بلال، خباب، صهيب، عمار" },
+      { "id": "d", "text": "حمزة، العباس، علي، جعفر" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "4 آل ياسر: (1) زيد بن حارثة. (2) أسامة بن زيد. (3) خديجة بنت خويلد. (4) أسماء بنت أبي بكر. نماذج للتَّضحية والإخلاص."
+  }
+]

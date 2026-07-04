@@ -1,0 +1,78 @@
+{
+  "id": "soul-app-flashcards",
+  "courseId": "soul-app",
+  "cards": [
+    {
+      "id": "fc-w7-soul-app-001",
+      "term": "اعتزل صَحيح",
+      "front": "ما مَعنى «اعتزل» الصَّحيح؟",
+      "back": "اعتزال الإدمان والتَّوتر والخَوف، بدون هَرَب من المسؤولية.",
+      "simpleAnswer": "تَجَنُّب ثَلاث فئات.",
+      "deepAnswer": "تَربية الأَولاد، الأَمَانة الزوجيَّة، بِرُّ الوالدين - لا تَتَرك.",
+      "example": "اعتزال مَجلس غيبة، دون هَجْر الأهل.",
+      "relatedConcept": "w7-concept-i3tizal-amal",
+      "difficulty": "easy",
+      "memoryHook": "اعتزل = صَون."
+    },
+    {
+      "id": "fc-w7-soul-app-002",
+      "term": "الإدمان المَعنوي",
+      "front": "هل الإدمان المَادي فَقط؟",
+      "back": "لَا، الإدمان المَعنوي كالغيبة والنَّميمة أَخْطَر.",
+      "simpleAnswer": "مَعنوي ومادي.",
+      "deepAnswer": "الإدمان المَعنوي أَعْقد، يَجبرك على تَكرار.",
+      "example": "حين تَتَابع سِيَر المُؤْتَثَرين بِشكل مُفرِط.",
+      "relatedConcept": "w7-concept-fi'at-shilt",
+      "difficulty": "medium",
+      "memoryHook": "إدمان مَعنوي."
+    },
+    {
+      "id": "fc-w7-soul-app-003",
+      "term": "الخَوف المَرضي",
+      "front": "ما الخَوف المَرضي؟",
+      "back": "خَوف لا أَساس لَه يُعَيق الحياة.",
+      "simpleAnswer": "خَوف يُعَيق.",
+      "deepAnswer": "يَبدأ صغيرًا ويَتَضخم، يُعالج بالذِّكر والتَّدريب.",
+      "example": "الخَوف من ركوب الطَّائرة.",
+      "relatedConcept": "w7-concept-i'tizal-khawf",
+      "difficulty": "medium",
+      "memoryHook": "خَوف مَرضي = خَوف بلا سبب."
+    },
+    {
+      "id": "fc-w7-soul-app-004",
+      "term": "التَّقوى دَرجَع",
+      "front": "ما التَّقوى في حِياتنا؟",
+      "back": "دِرْع حِماية، يُخرِج من الفِتَن.",
+      "simpleAnswer": "حِماية.",
+      "deepAnswer": " «ومَن يَتَّقِ الله يَجْعَل لَه مَخرجًا».",
+      "example": "حين تَخاف، ذَكِّر التَّقوى.",
+      "relatedConcept": "w7-concept-taqwa-dir",
+      "difficulty": "easy",
+      "memoryHook": "دِرْع."
+    },
+    {
+      "id": "fc-w7-soul-app-005",
+      "term": "الجوارح أَمانات",
+      "front": "كيف نَحفظ الجوارح؟",
+      "back": "إِحْكام السَّلوك، حِفظ العَين، اللِّسان، الأُذن، اليَد.",
+      "simpleAnswer": "حِفظ سُلوكي.",
+      "deepAnswer": " «يا مُقلِّبَ القُلُوب ثَبِّت قلبي على دِينك».",
+      "example": "حين تَسمع غيبة، اظْهر بِحُضور قَلْب.",
+      "relatedConcept": "w7-concept-jawarih-amanah",
+      "difficulty": "easy",
+      "memoryHook": "أَمانات."
+    },
+    {
+      "id": "fc-w7-soul-app-006",
+      "term": "حدود الاعتزال",
+      "front": "ما المسؤوليات التي لا تَتَرك بالاعتزال؟",
+      "back": "تربية الأولاد، الأَمَانة الزوجيَّة، بِرُّ الوالدين، العَمل الصَّالح.",
+      "simpleAnswer": "الأَمَانة الأَسَاسيَّة.",
+      "deepAnswer": "السِّيرة تُعَلِّم أَنَّ المُسلم لا يَترك التزامات.",
+      "example": "حين تَشعر بضيق، ارجع لِمسؤولياتك أَوَّلاً.",
+      "relatedConcept": "w7-concept-i3tizal-amal",
+      "difficulty": "medium",
+      "memoryHook": "حدود = مَسؤولية."
+    }
+  ]
+}

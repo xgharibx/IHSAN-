@@ -1,0 +1,30 @@
+{
+  "id": "seerah-app-activities",
+  "courseId": "seerah-app",
+  "activities": [
+    {
+      "id": "act-w7-seerah-app-001",
+      "courseId": "seerah-app",
+      "type": "individual",
+      "title": "خريطة رُدُود الفعْل الأربعة",
+      "purpose": "تَحديد الأَدْوار المُختلفة في مَوقف واحِد.",
+      "instructions": "حدّد في وَرقة 4 أَدْوار: 1) من يَحمي، 2) من يُحارب، 3) من يتأخر، 4) من يسبق. ضَع أسماء أَشخاص حقيقيِّين في حَياتك لكلِّ دَور.",
+      "estimatedTime": "45 دقيقة",
+      "outputExpected": "خريطة 4 أَشخاص.",
+      "relatedConcepts": "w7-concept-fasdaa, w7-concept-aliyy-ikhtiyar",
+      "completionCriteria": "4 أَشخاص في 4 أَدْوار."
+    },
+    {
+      "id": "act-w7-seerah-app-002",
+      "courseId": "seerah-app",
+      "type": "practical",
+      "title": "عَزومة تَطبيقية",
+      "purpose": "تَطبيق الذَّكاء الاجتماعي في الدعوة.",
+      "instructions": "اِخْتر شخصًا مِن أَقاربك. ادْعُه لِعَزومة خَفيفة، ثُمَّ نَاقِشْه في مَوْضوع ديني بِحكمة واحترام.",
+      "estimatedTime": "60 دقيقة",
+      "outputExpected": "تَقرير مُلاحظات.",
+      "relatedConcepts": "w7-concept-urbud-daiya",
+      "completionCriteria": "عَزومة ناجِحَة 1."
+    }
+  ]
+}

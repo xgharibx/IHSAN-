@@ -1,0 +1,236 @@
+[
+  {
+    "id": "act-ihsan-w2-001",
+    "courseId": "ihsan-soul",
+    "type": "individual",
+    "title": "خريطة المنازل في حياتك",
+    "prompt": "ارسم خريطة لحياتك: ضع كل احتياج في منزلة. ما منزلة التقوى الآن؟ ما منزلة التوكل؟ ما منزلة الرضا؟ حدّد لكل منزلة ذكر يومي تلتزم به لمدة أسبوع.",
+    "duration": "45 دقيقة",
+    "reward": "badge:manazil-mapped"
+  },
+  {
+    "id": "act-ihsan-w2-002",
+    "courseId": "ihsan-soul",
+    "type": "practical",
+    "title": "ورد الذكر اليومي 7 أيام",
+    "prompt": "طبّق ورد الذكر اليومي (100 استغفار + 100 تسبيح + 100 تهليل + 100 تكبير + 100 لا حول ولا قوة إلا بالله + 100 حسبي الله + 100 صلاة على النبي) لمدة 7 أيام. سجّل تأثيره على صفاء قلبك.",
+    "duration": "7 أيام",
+    "reward": "badge:wird-7days"
+  },
+  {
+    "id": "act-ihsan-w2-003",
+    "courseId": "ihsan-soul",
+    "type": "reflection",
+    "title": "محاولة الإحسان إحسان",
+    "prompt": "في كل عمل يومي، دوّن: «هل أنا محسن؟»، «هل أحاول الإحسان؟»، «ما الخطوة التالية للتحسن؟». اعتمد قاعدة محاولة الإحسان إحسان، وكُن لائقًا بالطريق.",
+    "duration": "10 أيام",
+    "reward": "badge:trying-is-ihsan"
+  },
+  {
+    "id": "act-ihsan-w2-004",
+    "courseId": "ihsan-soul",
+    "type": "individual",
+    "title": "محاسبة على منزلة واحدة",
+    "prompt": "اختر منزلة واحدة (التوكل مثلًا) وراقب نفسك فيها لمدة 3 أيام. متى تنزل فيها؟ متى تحتاجها؟ ما الذكر الذي يقوّيها؟",
+    "duration": "3 أيام",
+    "reward": "badge:manzil-muraqaba"
+  },
+  {
+    "id": "act-tafsir-w2-001",
+    "courseId": "tafsir",
+    "type": "individual",
+    "title": "تدبر سورة النصر أسبوعيًا",
+    "prompt": "اقرأ سورة النصر كل يوم لمدة 7 أيام، مع تفسير سعد عبد الدايم. سجّل: ما الرسالة اليومية التي لامست قلبك؟",
+    "duration": "7 أيام",
+    "reward": "badge:nasr-mujtabir"
+  },
+  {
+    "id": "act-tafsir-w2-002",
+    "courseId": "tafsir",
+    "type": "reflection",
+    "title": "خريطة ما بعد النصر",
+    "prompt": "اكتب موقفًا في حياتك كان فيه «نصر» بعد محنة. طبّق عليه آيات سورة النصر: «فسبّح بحمد ربك واستغفره». كيف كان رد فعلك وقتها؟",
+    "duration": "30 دقيقة",
+    "reward": "badge:post-nasr"
+  },
+  {
+    "id": "act-seerah-w2-001",
+    "courseId": "seerah",
+    "type": "individual",
+    "title": "حفظ الاسم الكامل",
+    "prompt": "احفظ اسم النبي ﷺ: محمد بن عبد الله بن عبد المطلب بن هاشم بن عبد مناف بن قصي. أضفه في صلاتك كل يوم لمدة شهر.",
+    "duration": "30 يوم",
+    "reward": "badge:name-memorized"
+  },
+  {
+    "id": "act-seerah-w2-002",
+    "courseId": "seerah",
+    "type": "reflection",
+    "title": "الإعداد الإلهي في حياتك",
+    "prompt": "حدّد 3 تجارب من حياتك تشبه تجارب النبي ﷺ قبل البعثة: رعي الغنم، التجارة، حرب الفجار، حلف الفضول، إعادة بناء الكعبة. ما الدرس من كل تجربة؟",
+    "duration": "45 دقيقة",
+    "reward": "badge:i3dad-i7la7i"
+  },
+  {
+    "id": "act-seerah-w2-003",
+    "courseId": "seerah",
+    "type": "practical",
+    "title": "حل مشكلة بحكمة الحجر الأسود",
+    "prompt": "اختر خلافًا في حياتك (عمل، عائلة، دراسة). طبّق حلّ الحجر الأسود: ابحث عن فكرة خارج الصندوق تحفظ حق الجميع. شاركها مع طرف آخر.",
+    "duration": "60 دقيقة",
+    "reward": "badge:stone-wisdom"
+  },
+  {
+    "id": "act-cont-w2-001",
+    "courseId": "contemporary",
+    "type": "discussion",
+    "title": "حوار شبهات",
+    "prompt": "اختر شبهة من شبهات الإسلام (السيف، حقوق المرأة، الجزية.). اكتب ردًا علميًا عليها بالأدلة القرآنية والتاريخية. شاركها مع صديق أو في حلقة نقاش.",
+    "duration": "60 دقيقة",
+    "reward": "badge:shubha-refuter"
+  },
+  {
+    "id": "act-cont-w2-002",
+    "courseId": "contemporary",
+    "type": "individual",
+    "title": "إحصائية الفتوحات مقابل الصليبيين",
+    "prompt": "ارسم جدولًا يقارن: 1284 شهيدًا في 10 سنوات (الفتوحات) مقابل 70,000 في 3 أيام (بيت المقدس). اختم بتحليل ما يعنيه هذا لمفهوم «الإسلام بالسيف».",
+    "duration": "30 دقيقة",
+    "reward": "badge:crusade-fact"
+  },
+  {
+    "id": "act-fiqh-w2-001",
+    "courseId": "fiqh-rules",
+    "type": "practical",
+    "title": "تطبيق النية 7 أيام",
+    "prompt": "كل عمل يومي هذا الأسبوع، ابدأه بنيّة واضحة لله. سجّل ملاحظاتك: متى تذكّرت النية، متى نسيت. كيف تحوّل العادة إلى عبادة؟",
+    "duration": "7 أيام",
+    "reward": "badge:niyyah-practitioner"
+  },
+  {
+    "id": "act-fiqh-w2-002",
+    "courseId": "fiqh-rules",
+    "type": "individual",
+    "title": "تطبيق قاعدة اليقين",
+    "prompt": "تتبّع شكوكك في الطهارة والصلاة والصيام لمدة أسبوع. طبّق قاعدة «اليقين لا يزول بالشك». سجّل الحالات التي نجحت فيها.",
+    "duration": "7 أيام",
+    "reward": "badge:yaqin-applier"
+  },
+  {
+    "id": "act-fiqh-w2-003",
+    "courseId": "fiqh-rules",
+    "type": "reflection",
+    "title": "تشريك النية في رمضان",
+    "prompt": "في رمضان: هل يمكنك تشريك نية القضاء مع الست من شوال؟ اكتب خطة لربط النيات في عباداتك اليومية (صلاة، صيام، ذكر).",
+    "duration": "20 دقيقة",
+    "reward": "badge:tashriq-niyyah"
+  },
+  {
+    "id": "act-sapp-w2-001",
+    "courseId": "seerah-app",
+    "type": "individual",
+    "title": "اكتشف نقاط قوتك",
+    "prompt": "افعل اختبار الـ VIA (Values in Action). حدّد نقاط قوتك الخمس الأولى. كيف ستستثمرها في حياتك العملية والشخصية؟",
+    "duration": "45 دقيقة",
+    "reward": "badge:via-top5"
+  },
+  {
+    "id": "act-sapp-w2-002",
+    "courseId": "seerah-app",
+    "type": "discussion",
+    "title": "حل أزمة بنقاط القوة الست",
+    "prompt": "اختر أزمة حقيقية في حياتك (عمل، عائلة، دراسة). طبّق عليها ست نقاط قوة: المبتكر، حل المشاكل، التواصل، الثقة بالنفس، التناغم، الاحتواء. شارك خطة الحل مع صديق.",
+    "duration": "60 دقيقة",
+    "reward": "badge:six-strengths"
+  },
+  {
+    "id": "act-soul-w2-001",
+    "courseId": "soul-app",
+    "type": "practical",
+    "title": "ركعتا قيام الليل",
+    "prompt": "قم بصلاة ركعتين قبل الفجر (في الثلث الأخير من الليل) لمدة 7 أيام. سجّل: متى أسهل؟ متى أصعب؟ ما أثرها على يومك؟",
+    "duration": "7 أيام",
+    "reward": "badge:qiyam-7days"
+  },
+  {
+    "id": "act-soul-w2-002",
+    "courseId": "soul-app",
+    "type": "reflection",
+    "title": "دعاء التذلل والافتقار",
+    "prompt": "في كل ليلة، ادعُ بلسان الافتقار: «اللهم إني خرجت من حولي وقوتي إلى حولك وقوتك». سجّل مشاعرك قبل الدعاء وبعده لمدة أسبوع.",
+    "duration": "7 أيام",
+    "reward": "badge:tadhalul-dua"
+  },
+  {
+    "id": "act-soul-w2-003",
+    "courseId": "soul-app",
+    "type": "individual",
+    "title": "ورد الذكر 15 دقيقة",
+    "prompt": "التزم بورد الذكر اليومي (15-20 دقيقة) لمدة 7 أيام. قس صفاء ذهنك قبل الورد وبعده من 1-10.",
+    "duration": "7 أيام",
+    "reward": "badge:wird-stable"
+  },
+  {
+    "id": "act-sah-w2-001",
+    "courseId": "sahaba",
+    "type": "discussion",
+    "title": "مجلس علي بن أبي طالب",
+    "prompt": "اجلس مع أهلك أو أصدقائك وتشاركوا: أي مواقف عليّ تشبه مواقفكم اليوم؟ استخرج دروسًا من ليلة الهجرة، بدر، الخندق، خيبر، التبوك.",
+    "duration": "60 دقيقة",
+    "reward": "badge:ali-discussion"
+  },
+  {
+    "id": "act-sah-w2-002",
+    "courseId": "sahaba",
+    "type": "reflection",
+    "title": "منزلة هارون في حياتك",
+    "prompt": "ما معنى «أنت مني بمنزلة هارون» في حياتك اليومية؟ كيف تكون نائبًا لمن تحب في المسؤولية؟",
+    "duration": "30 دقيقة",
+    "reward": "badge:harun-role"
+  },
+  {
+    "id": "act-sahb-w2-001",
+    "courseId": "sahabiyyat",
+    "type": "individual",
+    "title": "دعاء أم أيمن",
+    "prompt": "اقرأ سيرة أم أيمن. حدّد ثلاث صفات فيها تعجبك (الإيثار، الأمومة، الثبات). ادعُ الله أن يهبك مثلها.",
+    "duration": "30 دقيقة",
+    "reward": "badge:umm-ayman-dua"
+  },
+  {
+    "id": "act-sahb-w2-002",
+    "courseId": "sahabiyyat",
+    "type": "practical",
+    "title": "حاضنة في حياتك",
+    "prompt": "اذكر اسم شخص ربّاك أو ربّى غيرك. قدّره بكلمة أو رسالة. أم أيمن قالت لزوجها «فصدّق نبيّك» — أنت من تذكّر بمن ربّاك؟",
+    "duration": "20 دقيقة",
+    "reward": "badge:tarbia-acknowledged"
+  },
+  {
+    "id": "act-ps-w2-001",
+    "courseId": "positive-psych",
+    "type": "individual",
+    "title": "اختبار VIA",
+    "prompt": "افعل اختبار الـ VIA (Values in Action) كاملاً. راجع نقاط قوتك الفريدة. اكتب خطة: كيف ستعيش كل نقطة منها هذا الأسبوع؟",
+    "duration": "60 دقيقة",
+    "reward": "badge:via-tested"
+  },
+  {
+    "id": "act-ps-w2-002",
+    "courseId": "positive-psych",
+    "type": "practical",
+    "title": "تدريب الحضور 7 أيام",
+    "prompt": "قبل النوم بـ 5 دقائق كل ليلة: لاحظ جسدك، سمّ شعورك، لاحظ أفكارك. سجّل يوميًا: ما الذي لاحظته؟ ما الذي تغيّر؟",
+    "duration": "7 أيام",
+    "reward": "badge:hudur-7days"
+  },
+  {
+    "id": "act-ps-w2-003",
+    "courseId": "positive-psych",
+    "type": "reflection",
+    "title": "الإحسان = الحضور",
+    "prompt": "حدّد لحظة في يومك عشت فيها الإحسان: كأنك ترى الله. ما الذي جعلها مختلفة؟ كيف يمكنك تكرارها؟",
+    "duration": "20 دقيقة",
+    "reward": "badge:ihsan-moment"
+  }
+]

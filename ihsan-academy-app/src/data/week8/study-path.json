@@ -1,0 +1,10 @@
+{
+  "id": "week8-path",
+  "weekId": "week8",
+  "recommended": "true",
+  "steps": [
+    { "order": 1, "courseId": "tafsir", "objective": "فهم سورة العصر كخريطة لإدارة العمر والنجاة من الخسر", "estimatedMinutes": 60 },
+    { "order": 2, "courseId": "contemporary", "objective": "الرد العلمي على شبهة القسوة في معاملة أسرى بدر", "estimatedMinutes": 55 },
+    { "order": 3, "courseId": "positive-psych", "objective": "تطبيق أداة جبل الجليد + خطة المرونة والصمود النفسي", "estimatedMinutes": 80 }
+  ]
+}

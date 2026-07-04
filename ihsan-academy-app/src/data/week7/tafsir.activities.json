@@ -1,0 +1,30 @@
+{
+  "id": "tafsir-activities",
+  "courseId": "tafsir",
+  "activities": [
+    {
+      "id": "act-w7-tafsir-001",
+      "courseId": "tafsir",
+      "type": "individual",
+      "title": "سورة التين في صلاة العِشاء",
+      "purpose": "تَطبيق سُنَّة النبي ﷺ في قراءة سورة التِّين بصوت حَسَن.",
+      "instructions": "صَلِّ صلاة العشاء بصوت جَهْر معتدل، واقرأ سورة التين بِخَشوع. حاول تَخفيف القراءة بحيث تَعيش الآيات.",
+      "estimatedTime": "15 دقيقة",
+      "outputExpected": "صلاة العشاء بِسُنَّة النَّبي ﷺ في قراءة التِّين.",
+      "relatedConcepts": "w7-concept-ahsani-taqweem",
+      "completionCriteria": "المداومة على قراءتها في العشاء لمدة 7 أيام."
+    },
+    {
+      "id": "act-w7-tafsir-002",
+      "courseId": "tafsir",
+      "type": "practical",
+      "title": "تَطبيق الإحسان الشَّامل 7 أيَّام",
+      "purpose": "تَحويل الإحسان اللِّفظي إلى فعل يومي.",
+      "instructions": "في كلِّ يوم، إحسان لِإنسان، وحَيوان، ونَبات، وجَماد. سَجِّل في دفتر: متى كان الإحسان وكيف أَثَّر فيك.",
+      "estimatedTime": "7 أيام × 15 دقيقة",
+      "outputExpected": "دفتر فيه 4 إحسانات يومية لمدة 7 أيام.",
+      "relatedConcepts": "w7-concept-ihsan-la-yatajazza",
+      "completionCriteria": "7 أيَّام مُتَتَالية، 4 إحسانات مختلفة."
+    }
+  ]
+}

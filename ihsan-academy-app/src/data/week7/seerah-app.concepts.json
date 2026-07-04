@@ -1,0 +1,62 @@
+[
+  {
+    "id": "w7-concept-fasdaa",
+    "name": "فَاصْدَع",
+    "arabicName": "فاصدع بما تؤمر",
+    "domain": "seerah-app",
+    "simpleDefinition": "أَمْر ربَّاني بِالجَهر بالدَّعوة.",
+    "deepExplanation": " «فَاصْدَعْ بما تُؤمَر وأَعْرِض عن المشركين»",
+    "whyItMatters": "تَعْليم انتقال مَراحل الدَّعوة.",
+    "example": "حين تَرى أَمرا بِالحقِّ، ابْدأ الجَهر.",
+    "relatedConceptIds": ["w7-concept-thabat-akhlaqi", "w7-concept-aliyy-ikhtiyar"],
+    "revisionNote": "فَاصْدَعْ = أَعْلِن."
+  },
+  {
+    "id": "w7-concept-thabat-akhlaqi",
+    "name": "الثَّبات الأَخلاقي",
+    "arabicName": "الثبات الأخلاقي",
+    "domain": "seerah-app",
+    "simpleDefinition": "اسْتمرار الوَجه الأَخلاقي في مَواجهة الإيذاء.",
+    "deepExplanation": "النَّبي ﷺ ثَابت في ضغوط قُريش، حَفظ السَّكينة، وكان الإيذاء يُلَقِّن الصَّبر.",
+    "whyItMatters": "تَعليم المُسلم الصَّبر في مَواجهة الإيذاء.",
+    "example": "حين يَشْتمك أَحَد، ثَبت.",
+    "relatedConceptIds": ["w7-concept-fasdaa"],
+    "revisionNote": "ثَبات + صبر."
+  },
+  {
+    "id": "w7-concept-aliyy-ikhtiyar",
+    "name": "اخْتِيار عَليّ رضي الله عنه",
+    "arabicName": "اختيار علي",
+    "domain": "seerah-app",
+    "simpleDefinition": "صَبيٌّ صَادق اختار الإِسلام نَصْرة لِنَبيِّه.",
+    "deepExplanation": "في لَحظة اجتماع مَهيب، قَام عَليّ رضي الله عنه قَبل الكِبار. هذا الاخْتِيار غَيَّر التَّاريخ.",
+    "whyItMatters": "تَعْليم أَنَّ الاختِيار الفردي يَصْنَع.",
+    "example": "حين تَجِد نَفْسك في مَوقف يُفرِّق، اخْتر بِقُوَّة.",
+    "relatedConceptIds": ["w7-concept-fasdaa", "w7-concept-urbud-daiya"],
+    "revisionNote": "عليّ = اخْتيار صَغير."
+  },
+  {
+    "id": "w7-concept-urbud-daiya",
+    "name": "الذَّكاء الاجتماعي للدَّاعية",
+    "arabicName": "الذكاء الاجتماعي للداعية",
+    "domain": "seerah-app",
+    "simpleDefinition": "قدرة الدَّاعية على قراءة الشخصيَّة والاستجابة بحكمة.",
+    "deepExplanation": "النَّبي ﷺ اخْتار العَزومة لِأَنها تُلِين القَلوب وتُسْهِل القَبول.",
+    "whyItMatters": "تَعليم الدَّاعية المُعاصر.",
+    "example": "حين تَقْترح، اخْتر مَكانًا مُريحًا.",
+    "relatedConceptIds": ["w7-concept-fasdaa"],
+    "revisionNote": "ذَكاء + لِين."
+  },
+  {
+    "id": "w7-concept-madrasah-jawhariyyah",
+    "name": "المَدْرَسَة الجَوهريَّة",
+    "arabicName": "المدرسة الجوهري",
+    "domain": "seerah-app",
+    "simpleDefinition": "التَّركيز على الجَوْهر لِلاختيار لا الشَّكْل.",
+    "deepExplanation": "عَليّ رضي الله عنه عَلِّم أَنَّ الاختِيار أَهم مِن الجَاه. المُسلمون الأوائل لَم يَكن عندهم سُلطة لكن اختاروا.",
+    "whyItMatters": "تَعليم الشباب القِيَم على الأَعْراض.",
+    "example": "حين تَختار زَميلا، خُذ الاخْتِيار على القِيَم لا الجَاه.",
+    "relatedConceptIds": ["w7-concept-aliyy-ikhtiyar"],
+    "revisionNote": "جَوهر."
+  }
+]

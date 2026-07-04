@@ -1,0 +1,51 @@
+{
+  "id": "week2",
+  "number": 2,
+  "title": "الأسبوع الثاني — التعمّق في الإحسان",
+  "subtitle": "منازل الروح · تفسير · سيرة · فقه · نفس · صحابة",
+  "bigIdea": "الأسبوع الثاني ينتقل من التأسيس إلى التعمّق: نتعلم الفهم العميق لمنازل الروح السبعة كأدوات لإدارة الحياة، ونتدبّر سورة النصر وسيرة المولد والإعداد، ونفكّك شبهة فرض الإسلام بالسيف، ونطبّق قاعدتي النية واليقين، ونكتشف نقاط القوة في السيرة وفي أنفسنا، ونتأمل حياة عليّ وأم أيمن.",
+  "orderedCourseIds": [
+    "ihsan-soul",
+    "tafsir",
+    "seerah",
+    "sahaba",
+    "sahabiyyat",
+    "contemporary",
+    "seerah-app",
+    "fiqh-rules",
+    "soul-app",
+    "positive-psych"
+  ],
+  "themes": [
+    {
+      "id": "manazil-toolat",
+      "title": "منازل الروح كأدوات",
+      "description": "الفهم العميق للمنازل السبعة: ليست مراتب بل أدوات ترانزيت لكل احتياج في الحياة.",
+      "courseIds": ["ihsan-soul", "soul-app"]
+    },
+    {
+      "id": "sira-and-tafsir",
+      "title": "السير والقرآن",
+      "description": "مولد النبي وإعداده للرسالة، وقراءة سورة النصر بوصفها خريطة ما بعد النصر.",
+      "courseIds": ["seerah", "tafsir", "seerah-app"]
+    },
+    {
+      "id": "fiqh-life",
+      "title": "الفقه في الحياة",
+      "description": "قاعدتا النية واليقين تحوّلان العادة إلى عبادة، وتُبعدان وساوس الشيطان.",
+      "courseIds": ["fiqh-rules"]
+    },
+    {
+      "id": "sahaba-models",
+      "title": "النماذج الصحابية",
+      "description": "عليّ وأم أيمن: نِعمُ الله في الولاء للمؤمنين.",
+      "courseIds": ["sahaba", "sahabiyyat"]
+    },
+    {
+      "id": "strength-mindfulness",
+      "title": "نقاط القوة والحضور",
+      "description": "فك شفرة نقاط القوة وتطبيق الحضور في الحياة اليومية.",
+      "courseIds": ["positive-psych", "seerah-app"]
+    }
+  ]
+}

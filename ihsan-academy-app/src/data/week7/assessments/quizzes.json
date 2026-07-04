@@ -1,0 +1,726 @@
+[
+  {
+    "id": "q-ihsan-soul-w7-1",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["w7-concept-shaytan-stations"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "صفة الشيطان الرئيسية",
+    "prompt": "ما الصفة الأساسية للشيطان التي تعني أنه لا يَيْأس بسرعة؟",
+    "options": [
+      { "id": "a", "text": "كَذّاب" },
+      { "id": "b", "text": "مُلحّاح بطيء اليأس" },
+      { "id": "c", "text": "غاضب" },
+      { "id": "d", "text": "كريم" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الشيطان مُلحّاح وبطيء اليأس، يَنتقل بين المَحطات."
+  },
+  {
+    "id": "q-ihsan-soul-w7-2",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["w7-concept-istighfar-shield"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "سِلاح الكبائر",
+    "prompt": "ما المنزلة وذِكرها الذي يُقابِل مَحطة الكبائر والإسراف في الصَّغائر؟",
+    "options": [
+      { "id": "a", "text": "اليَقين + لا إله إلا الله" },
+      { "id": "b", "text": "التَّقوى + الاسْتغفار" },
+      { "id": "c", "text": "التَّوكُّل + حسبي الله" },
+      { "id": "d", "text": "التَّسليم + لا حَول ولا قُوَّة" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الاسْتغفار يُسقط الكبائر، قال تعالى: «وما كان الله ليعذبهم وهم يستغفرون»."
+  },
+  {
+    "id": "q-ihsan-soul-w7-3",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["w7-concept-tawakkul-amal"],
+    "difficulty": "medium",
+    "estimatedSeconds": 75,
+    "learningObjective": "سِلاح الهمّ",
+    "prompt": "ما الذِّكر الذي يُسقط سُلاسل الهمّ والقلق من النبي ﷺ؟",
+    "options": [
+      { "id": "a", "text": " «سبحان الله وبحمده»" },
+      { "id": "b", "text": " «لا إله إلا الله»" },
+      { "id": "c", "text": " «حسبي الله لا إله إلا هو عليه توكَّلت وهو ربُّ العرش العظيم» سَبْعًا" },
+      { "id": "d", "text": " «استغفر الله»" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "النَّبي ﷺ رَتَّب هذا الذِّكر 7 كُلَّ صَباح لِتوكيل الله."
+  },
+  {
+    "id": "q-ihsan-soul-w7-4",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["w7-concept-shaytan-stations"],
+    "difficulty": "medium",
+    "estimatedSeconds": 75,
+    "learningObjective": "هدف الشَّيطان",
+    "prompt": "ما هدف الشَّيطان الحقيقي من إغوائه؟",
+    "options": [
+      { "id": "a", "text": "إدخال النَّار فَحسْب" },
+      { "id": "b", "text": "تَحطيم الإنسان نَفسيًّا ولو دَخَل الجنَّة" },
+      { "id": "c", "text": "إضعاف الإيمان" },
+      { "id": "d", "text": "إبعاد النَّاس عن المساجد" }
+    ],
+    "correctAnswer": "b",
+    "explanation": " «لأحتنكن ذريته إلا قليلًا»: الهدَم النَّفسي ولو بَعْد الإيمان."
+  },
+  {
+    "id": "tf-ihsan-soul-w7-1",
+    "type": "tf",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["w7-concept-shaytan-stations"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "الشيطان يَبدأ الكبائر ولا يَنْتَقل إلى مَحطات أخرى.",
+    "correctAnswer": "false",
+    "explanation": "ينتقل من محطة لأخرى إن لم تُفْلح واحدة."
+  },
+  {
+    "id": "tf-ihsan-soul-w7-2",
+    "type": "tf",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["w7-concept-taqwa-as-umm"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "التَّقوى أمُّ المنازل لِأن مَن فاتَتْه لا يَستطيع إكمال البَاقي.",
+    "correctAnswer": "true",
+    "explanation": "ابن القيم: «لن تَدخُل إلى الله إلا من باب التَّقوى»."
+  },
+  {
+    "id": "rf-ihsan-soul-w7-1",
+    "type": "reflect",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["w7-concept-shaytan-stations"],
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "prompt": "فَكِّر في مَحطَّة من محطات الشَّيطان تَهاجمك. اذكرها، وما الذي يُعالجها من مَنازل الروح؟",
+    "explanation": "الخَطْوة الأولى في العلاج: الوعي بالمَحطة."
+  },
+  {
+    "id": "q-tafsir-w7-1",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": ["w7-concept-ahsani-taqweem"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "القَسَم في القرآن",
+    "prompt": "ما الغَرَضان للقَسَم في القرآن الكريم؟",
+    "options": [
+      { "id": "a", "text": "بيان عَظَمة المُقسَم به والتَّشويق" },
+      { "id": "b", "text": "تَعْليم الكلام" },
+      { "id": "c", "text": "إعلام فقط" },
+      { "id": "d", "text": "تَكرار الكلام" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "القسم في القرآن: (1) عَظَمة المُقسَم، (2) تشويق السَّامع."
+  },
+  {
+    "id": "q-tafsir-w7-2",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": ["w7-concept-ihsan-la-yatajazza"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "شُمول الإحسان",
+    "prompt": "ماذا تَعْني عبارة «الإحسان لا يَتَجزأ»؟",
+    "options": [
+      { "id": "a", "text": "الإحسان لِلمُسلمين فقط" },
+      { "id": "b", "text": "الإحسان لِجميع الخَلْق: الإنسان والحيوان والنبات والجَماد" },
+      { "id": "c", "text": "الإحسان لِلأَقارب فقط" },
+      { "id": "d", "text": "الإحسان مَع حُضور النِّية" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الإحسان الإلهي شامل، فإحسان العَبد يَجب أن يَكون كذلك."
+  },
+  {
+    "id": "q-tafsir-w7-3",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": ["w7-concept-hifz-jawarih"],
+    "difficulty": "medium",
+    "estimatedSeconds": 60,
+    "learningObjective": "جوارح أَمانات",
+    "prompt": "ما دعاء النبي ﷺ في حِفظ الجمال الحِسِّي والجمال البَاطني؟",
+    "options": [
+      { "id": "a", "text": " «رَبِّ اشرح لي صدري»" },
+      { "id": "b", "text": " «اللهم كما حَسَّنتَ خلْقي فحَسِّن خُلُقي»" },
+      { "id": "c", "text": " «رَبَّنا آتِنَا في الدنيا حسنة»" },
+      { "id": "d", "text": " «اللهم إني أَعُوذ بك من الهمّ»" }
+    ],
+    "correctAnswer": "b",
+    "explanation": " «اللهم كما حسَّنتَ خَلْقي فحَسِّن خُلُقي»: جمال ظاهر وباطن."
+  },
+  {
+    "id": "tf-tafsir-w7-1",
+    "type": "tf",
+    "courseId": "tafsir",
+    "conceptIds": ["w7-concept-tawazun"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "الإفراط في العبادة هو السُّنَّة المُثْلَى، حتى لو أَضْعَف الجسد.",
+    "correctAnswer": "false",
+    "explanation": "النَّبي ﷺ قَال: «ومَن رَغِب عن سُنَّتي فلَيْس مِنِّي». التَّوازن هو السُّنَّة."
+  },
+  {
+    "id": "tf-tafsir-w7-2",
+    "type": "tf",
+    "courseId": "tafsir",
+    "conceptIds": ["w7-concept-ahkam-alhakimeen"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": " «أليس الله بأحكم الحاكمين» في سُورة التِّين تَسلية للمَظلوم.",
+    "correctAnswer": "true",
+    "explanation": " «أليس الله بأحكم الحاكمين»: تَسلية وتَذكير."
+  },
+  {
+    "id": "rf-tafsir-w7-1",
+    "type": "reflect",
+    "courseId": "tafsir",
+    "conceptIds": ["w7-concept-hifz-jawarih"],
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "prompt": "ما الجَارحة التي تَستحق حِفظًا أكبر في حياتك هذا الأسبوع؟",
+    "explanation": "الخَطْوة الأولى: الوعي بالجارحة."
+  },
+  {
+    "id": "q-seerah-w7-1",
+    "type": "mcq",
+    "courseId": "seerah",
+    "conceptIds": ["w7-concept-shahada-ukhra"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "شَهيدة الإسلام",
+    "prompt": "مَن أَوَّل شَهيدة في الإسلام؟",
+    "options": [
+      { "id": "a", "text": "السيدة فاطمة" },
+      { "id": "b", "text": "سَميَّة بنت خَيّاط" },
+      { "id": "c", "text": "بِلال بن رباح" },
+      { "id": "d", "text": "السيدة خديجة" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "سَميَّة بنت الخَيّاط أَوَّل شَهيدة في الإسلام."
+  },
+  {
+    "id": "q-seerah-w7-2",
+    "type": "mcq",
+    "courseId": "seerah",
+    "conceptIds": ["w7-concept-aya-nafsiya"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "رَدّ الإيذاء النَّفسي",
+    "prompt": "ما السُّورة التي رَدَّت على اتِّهام قُريش للنبي ﷺ بأنَّه «أَبتر»؟",
+    "options": [
+      { "id": "a", "text": "سُورة الفتْح" },
+      { "id": "b", "text": "سُورة الكوثر" },
+      { "id": "c", "text": "سُورة المُسد" },
+      { "id": "d", "text": "سُورة الشرح" }
+    ],
+    "correctAnswer": "b",
+    "explanation": " «إنا أَعْطَيناك الكوثر ... إنَّ شانئك هو الأَبتر»."
+  },
+  {
+    "id": "q-seerah-w7-3",
+    "type": "mcq",
+    "courseId": "seerah",
+    "conceptIds": ["w7-concept-fatima-rescue"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "حِماية فاطمة",
+    "prompt": "من أَزالَ المُزبلة عن ظهر النَّبي ﷺ ساجدًا في الصَّفا؟",
+    "options": [
+      { "id": "a", "text": "عُقبة بن أبي مُعيط" },
+      { "id": "b", "text": "أَبو جَهل" },
+      { "id": "c", "text": "فاطمة بنت النَّبي ﷺ" },
+      { "id": "d", "text": "عَليّ رضي الله عنه" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "فاطمة بنت النَّبي ﷺ رَفَعَت المُزبلة عن أَبيها."
+  },
+  {
+    "id": "tf-seerah-w7-1",
+    "type": "tf",
+    "courseId": "seerah",
+    "conceptIds": ["w7-concept-shahada-ukhra"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "النبي ﷺ قال لآل يَاسر: «صَبراً آل يَاسر، إنَّ مَوْعِدَكم الجَنَّة».",
+    "correctAnswer": "true",
+    "explanation": "من أَقواله ﷺ لآل يَاسر بعد اسْتِشهاد سَميَّة."
+  },
+  {
+    "id": "tf-seerah-w7-2",
+    "type": "tf",
+    "courseId": "seerah",
+    "conceptIds": ["w7-concept-aya-nafsiya"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "قُريش اتَّهمت النبي ﷺ بأنه «شاعر» في سُورة المُسد.",
+    "correctAnswer": "false",
+    "explanation": " «المسد» تَتحدَّث عن أَبي لَهب بسبب مُحاربته النبي ﷺ."
+  },
+  {
+    "id": "rf-seerah-w7-1",
+    "type": "reflect",
+    "courseId": "seerah",
+    "conceptIds": ["w7-concept-shahada-ukhra"],
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "prompt": "ما المَوضع من المَراحل الخمس لإيذاء قُريش الذي يَشبه تجربتك الحديثة؟",
+    "explanation": "تَوصيل المَاضي بالحاضر."
+  },
+  {
+    "id": "q-contemporary-w7-1",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": ["w7-concept-ashhur-alharam"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "الأشهر الحُرُم",
+    "prompt": "ما الأشهر الحُرُم الأربعة التي تَحْرُم فيها القِتال في الإسلام؟",
+    "options": [
+      { "id": "a", "text": "محرَّم، صفر، ربيع الأول، ربيع الآخر" },
+      { "id": "b", "text": "ذو القَعدة، ذو الحِجَّة، المُحَرَّم، رجَب" },
+      { "id": "c", "text": "رمضان، شوال، ذو القعدة، ذو الحجة" },
+      { "id": "d", "text": "كل الأشهر" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ذو القَعدة، ذو الحِجَّة، المُحَرَّم، رَجَب."
+  },
+  {
+    "id": "q-contemporary-w7-2",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": ["w7-concept-naskh-ul-ashhur"],
+    "difficulty": "medium",
+    "estimatedSeconds": 60,
+    "learningObjective": "نَسخ التشريع",
+    "prompt": "ما آيات البَراءة في أوَّل سُورة التوبة؟",
+    "options": [
+      { "id": "a", "text": " «فسيحوا في الأرض أربعة أشهر واعلموا أنكم غير معجزي الله»" },
+      { "id": "b", "text": " «اقرأ باسم ربك الذي خلق»" },
+      { "id": "c", "text": " «والفتنة أكبر من القتل»" },
+      { "id": "d", "text": " «والعصر إن الإنسان لفي خسر»" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "آيات براءة 1-5 في أوَّل سُورة التُّوبة تَعطي 4 أشهر مُهادنة، ثُمَّ القِتال لمن يُحارب."
+  },
+  {
+    "id": "q-contemporary-w7-3",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": ["w7-concept-fitna-kubra"],
+    "difficulty": "medium",
+    "estimatedSeconds": 60,
+    "learningObjective": "قُريش هي المعتدية",
+    "prompt": "ما الذي يَدلّ على أَنَّ المسلمين لَم يَبدأوا القِتال؟",
+    "options": [
+      { "id": "a", "text": "قُريش تَعَذَّبت للمسلمين وأَخرجتهم من مَكَّة" },
+      { "id": "b", "text": "النبي ﷺ قَتَلَ أَعداءَه في الحِصار" },
+      { "id": "c", "text": "قُريش تَعَذَّبت للمسلمين وأَخراجهم من مَكَّة" },
+      { "id": "d", "text": "النَّبي ﷺ ردَّ على قُريش بالقَتل" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "قُريش قَتلت سَميَّة، أَخرجت المسلمين من ديارهم، حاصَرت بني هاشم."
+  },
+  {
+    "id": "tf-contemporary-w7-1",
+    "type": "tf",
+    "courseId": "contemporary",
+    "conceptIds": ["w7-concept-sariyyat-jahsh"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "النبي ﷺ قَبِل غَنائم سَريَّة عَبد الله بن جَحش في نَخلة.",
+    "correctAnswer": "false",
+    "explanation": "رَفَضها لأنها كانت في آخِر رَجَب، وقَتْل فُرْادي."
+  },
+  {
+    "id": "tf-contemporary-w7-2",
+    "type": "tf",
+    "courseId": "contemporary",
+    "conceptIds": ["w7-concept-fitna-kubra"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": " «والفتنة أكبر من القَتل» تَعني أنَّ الإسلام يَحُضُّ على القتال.",
+    "correctAnswer": "false",
+    "explanation": " «الفِتنة» تَعْني الإكراه في الدِّين."
+  },
+  {
+    "id": "rf-contemporary-w7-1",
+    "type": "reflect",
+    "courseId": "contemporary",
+    "conceptIds": ["w7-concept-urf-mujtama"],
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "prompt": "ما ردَّك لو واجهك شُبهة عن الإسلام؟ اذكر آية أو حديثًا.",
+    "explanation": "تَدريب على الدِّفاع بالقرآن."
+  },
+  {
+    "id": "q-fiqh-rules-w7-1",
+    "type": "mcq",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["w7-concept-urf-mujtama"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "تَعريف العُرف",
+    "prompt": "ما تَعريف العُرف عند الفقهاء؟",
+    "options": [
+      { "id": "a", "text": "ما تَعارَف عليه مَجموعة من الأَشخاص في زَمان ومَكان وحال" },
+      { "id": "b", "text": "ما اشْتَهر عند الفرد" },
+      { "id": "c", "text": "ما يَقوله العُلَماء فقط" },
+      { "id": "d", "text": "ما يَرَاه الآباء" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "العُرف له أَربعة مُكوِّنات."
+  },
+  {
+    "id": "q-fiqh-rules-w7-2",
+    "type": "mcq",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["w7-concept-urf-qawli"],
+    "difficulty": "medium",
+    "estimatedSeconds": 60,
+    "learningObjective": "العُرف القَولي والفِعلي",
+    "prompt": "ما الفَرْق بين العُرف القَولي والعُرف الفِعلي؟",
+    "options": [
+      { "id": "a", "text": "القَولي من أَلْفاظ، الفِعلي من أَفْعال" },
+      { "id": "b", "text": "القَولي من فِعل، الفِعلي من لَفظ" },
+      { "id": "c", "text": "كِلتاهما من القرآن" },
+      { "id": "d", "text": "لا فَرْق" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "القَولي يَعتمد على الأَلْفاظ، الفِعلي يَعتمد على التَّصرُّفات."
+  },
+  {
+    "id": "q-fiqh-rules-w7-3",
+    "type": "mcq",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["w7-concept-urf-fasid"],
+    "difficulty": "medium",
+    "estimatedSeconds": 60,
+    "learningObjective": "حُدود العُرف",
+    "prompt": "ما أَيُّ عُرف يُعتبر فَاسدًا في الإسلام؟",
+    "options": [
+      { "id": "a", "text": "بيْع الاسْتِصناع" },
+      { "id": "b", "text": "الإحتكار" },
+      { "id": "c", "text": "مُقَدَّم الصَّداق قبل البناء" },
+      { "id": "d", "text": "الإشهار في الزَّفاف" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الإحتكار عُرف فَاسد مُخالف للنَّصّ والقَانون."
+  },
+  {
+    "id": "tf-fiqh-rules-w7-1",
+    "type": "tf",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["w7-concept-urf-mujtama"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "النَّبي ﷺ أَنكر عُرف قَوم الضَّبّ وقَال: «لا أُجِده في أَرض قومي».",
+    "correctAnswer": "false",
+    "explanation": "لم يُنكر العُرف، بل اعتذَر بلُطف."
+  },
+  {
+    "id": "tf-fiqh-rules-w7-2",
+    "type": "tf",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["w7-concept-urf-amali"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "وَضع الجَريدة على الباب صَباحًا يَعني تَسليمها وفق العُرف الفِعلي.",
+    "correctAnswer": "true",
+    "explanation": "العُرف الفِعلي يَعتمد على السُّلوكيات."
+  },
+  {
+    "id": "rf-fiqh-rules-w7-1",
+    "type": "reflect",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["w7-concept-urf-mujtama"],
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "prompt": "حَدِّد عُرفًا في حياتك. هل هو مُطَّرِد، قائم، لا يُخالف النَّص؟",
+    "explanation": "تَطبيق الشُّروط على عُرف عَينى."
+  },
+  {
+    "id": "q-seerah-app-w7-1",
+    "type": "mcq",
+    "courseId": "seerah-app",
+    "conceptIds": ["w7-concept-fasdaa"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "مَراحل الدَّعوة",
+    "prompt": "ما الآية التي تَأمُر النَّبي ﷺ بِالجَهر بالدَّعوة؟",
+    "options": [
+      { "id": "a", "text": " «اقرأ باسم رَبِّك الذي خلق»" },
+      { "id": "b", "text": " «فَاصْدَعْ بما تُؤمَر وأَعْرض عن المشركين»" },
+      { "id": "c", "text": " «يا أيها النَّبي جاهد الكفار»" },
+      { "id": "d", "text": " «ومَن يَتقِ الله»" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "سُورة الحِجْر."
+  },
+  {
+    "id": "q-seerah-app-w7-2",
+    "type": "mcq",
+    "courseId": "seerah-app",
+    "conceptIds": ["w7-concept-aliyy-ikhtiyar"],
+    "difficulty": "medium",
+    "estimatedSeconds": 60,
+    "learningObjective": "اختِيار عَليّ",
+    "prompt": "ما الدَّرس من اختيار عَليّ رضي الله عنه في اجتماع العَزومة؟",
+    "options": [
+      { "id": "a", "text": "الإيمان يحتاج كِبار" },
+      { "id": "b", "text": "الاخْتِيار الفردي الصَّادق يُؤَثِّر دون الانتظار" },
+      { "id": "c", "text": "الإيمان فطرة كِبَار فقط" },
+      { "id": "d", "text": "الإيمان لا يَتَغَيَّر" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "عَليّ رضي الله عنه اخْتار الإسلام نَصْرة لِنَبيِّه."
+  },
+  {
+    "id": "q-seerah-app-w7-3",
+    "type": "mcq",
+    "courseId": "seerah-app",
+    "conceptIds": ["w7-concept-urbud-daiya"],
+    "difficulty": "medium",
+    "estimatedSeconds": 60,
+    "learningObjective": "الذَّكاء الاجتماعي",
+    "prompt": "لماذا اختار النَّبي ﷺ العَزومة قبل الخِطابة؟",
+    "options": [
+      { "id": "a", "text": "للإطعام فقط" },
+      { "id": "b", "text": "للذَّكاء الاجتماعي: لِين القُلوب" },
+      { "id": "c", "text": "لِتَجميع الأهل" },
+      { "id": "d", "text": "لِيَكون احتفالًا" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "العَزومة تُلِين القُلوب وتُسَهِّل القَبُول."
+  },
+  {
+    "id": "tf-seerah-app-w7-1",
+    "type": "tf",
+    "courseId": "seerah-app",
+    "conceptIds": ["w7-concept-fasdaa"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "ثَلاث سنوات الدَّعوة السِّرية، ثَلاث سنوات الجَهر، عَشر سنوات المَدَنية.",
+    "correctAnswer": "true",
+    "explanation": " هذه هي مَراحل الدَّعوة."
+  },
+  {
+    "id": "tf-seerah-app-w7-2",
+    "type": "tf",
+    "courseId": "seerah-app",
+    "conceptIds": ["w7-concept-thabat-akhlaqi"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "النَّبي ﷺ رَدّ بِغَضَب على قَطْع أَبي لَهب في العَزومة.",
+    "correctAnswer": "false",
+    "explanation": "حَفِظ ثَباتَه الأَخلاقي وأَعَاد العَزومة."
+  },
+  {
+    "id": "rf-seerah-app-w7-1",
+    "type": "reflect",
+    "courseId": "seerah-app",
+    "conceptIds": ["w7-concept-fasdaa"],
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "prompt": "حدّد 4 رُدود فِعْل متوقعة لِأَفْراد محفوفة بفكرة جديدة. ما الذَّكاء الاجتماعي لِكُلٍّ منها؟",
+    "explanation": "تَطبيق ذَكاء اجتماعي."
+  },
+  {
+    "id": "q-soul-app-w7-1",
+    "type": "mcq",
+    "courseId": "soul-app",
+    "conceptIds": ["w7-concept-fi'at-shilt"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "الفئات الثَّلاث",
+    "prompt": "ما الفِئات الثَّلاث التي تَستحق اعتزالًا في حَياتك؟",
+    "options": [
+      { "id": "a", "text": "الإدمان، التَّوتر، الخَوف" },
+      { "id": "b", "text": "الأكْل، النَّوم، العَمل" },
+      { "id": "c", "text": "الأهل، الأصدقاء، الزُّمَلاء" },
+      { "id": "d", "text": "الصَّلاة، الصَّوم، الزَّكاة" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "هذه الفِئات تَستحق اعتزالًا حَقيقيًّا."
+  },
+  {
+    "id": "q-soul-app-w7-2",
+    "type": "mcq",
+    "courseId": "soul-app",
+    "conceptIds": ["w7-concept-jawarih-amanah"],
+    "difficulty": "medium",
+    "estimatedSeconds": 60,
+    "learningObjective": "الجوارح أَمانات",
+    "prompt": "ما مَعنى «الجوارح أَمانات»؟",
+    "options": [
+      { "id": "a", "text": "الجوارح مُتَلفَّة" },
+      { "id": "b", "text": "الجوارح أَمانات من الله، يَستودعها لِلعَبد" },
+      { "id": "c", "text": "الجوارح ضِدّ الإيمان" },
+      { "id": "d", "text": "الجوارح لا أُهمِّيَّة لها" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الجوارح أَمانات تَحتاج حِفظًا."
+  },
+  {
+    "id": "q-soul-app-w7-3",
+    "type": "mcq",
+    "courseId": "soul-app",
+    "conceptIds": ["w7-concept-taqwa-dir"],
+    "difficulty": "medium",
+    "estimatedSeconds": 60,
+    "learningObjective": "التَّقوى دَرجَع",
+    "prompt": "ما الذِّكر الذي يَفتح المُخْرج لِتَجاوز الإيذاء؟",
+    "options": [
+      { "id": "a", "text": " «سبحان الله»" },
+      { "id": "b", "text": " «ومَن يَتَّقِ الله يَجْعَل له مَخرجًا»" },
+      { "id": "c", "text": " «حسبي الله ونعم الوكيل»" },
+      { "id": "d", "text": " «لا حَول ولا قُوَّة إلا بالله»" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الآية تُعد مَخرجًا من كلِّ فِتنة."
+  },
+  {
+    "id": "tf-soul-app-w7-1",
+    "type": "tf",
+    "courseId": "soul-app",
+    "conceptIds": ["w7-concept-i3tizal-amal"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": " «اعتزل» يَعني دائمًا الهَرَب من المسؤوليات.",
+    "correctAnswer": "false",
+    "explanation": "الاعتزال الصَّحيح صَون النفس، لا هَرَب."
+  },
+  {
+    "id": "tf-soul-app-w7-2",
+    "type": "tf",
+    "courseId": "soul-app",
+    "conceptIds": ["w7-concept-jawarih-amanah"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "العَين واللِّسان من الجوارح التي يَجب حِفظها.",
+    "correctAnswer": "true",
+    "explanation": "كلُّ جارحة أمانة تَحفظ."
+  },
+  {
+    "id": "rf-soul-app-w7-1",
+    "type": "reflect",
+    "courseId": "soul-app",
+    "conceptIds": ["w7-concept-i3tizal-amal"],
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "prompt": "ما الفئة من الثَّلاث التي تَستحق اعتزالًا مَع الحِفاظ على مَسؤولياتك؟",
+    "explanation": "تَطبيق الفَرق بين الاعتزال والهَرَب."
+  },
+  {
+    "id": "q-positive-psych-w7-1",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": ["w7-concept-johari"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "جو هاري ويندو",
+    "prompt": "في جو هاري ويندو، أيُّ مَربع يَعني ما يعرفه الآخَرون عَنك دون أن تَعْرفه؟",
+    "options": [
+      { "id": "a", "text": "Open" },
+      { "id": "b", "text": "Blind" },
+      { "id": "c", "text": "Hidden" },
+      { "id": "d", "text": "Unknown" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Blind: معلوم للآخَرون، مَجهول لَك."
+  },
+  {
+    "id": "q-positive-psych-w7-2",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": ["w7-concept-ego"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "تَعريف الإِيغو",
+    "prompt": "ما الإِيغو في علم النَّفس الإيجابي؟",
+    "options": [
+      { "id": "a", "text": "الثِّقة بالنَّفس" },
+      { "id": "b", "text": "البِرمجيَّة الداخلية التي تَفرض صورة معيَّنة" },
+      { "id": "c", "text": "كِبر الثَّقافة" },
+      { "id": "d", "text": "الذَّكر الطَّيِّب" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الإِيغو هو الذَّات الزَّائفة."
+  },
+  {
+    "id": "q-positive-psych-w7-3",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": ["w7-concept-drama-tri"],
+    "difficulty": "medium",
+    "estimatedSeconds": 60,
+    "learningObjective": "أَدوار مُثلث الدَّراما",
+    "prompt": "في مُثلث الدَّراما، ما الدَّور الذي يَطلب تَعاطفًا لِتَعفي نَفسه من المسؤوليَّة؟",
+    "options": [
+      { "id": "a", "text": "الجَلاَد" },
+      { "id": "b", "text": "الضَّحيَّة" },
+      { "id": "c", "text": "المُنقذ" },
+      { "id": "d", "text": "الشَّاهد" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الضَّحيَّة تَطلب التَّعاطف لِتَعفي نَفسها."
+  },
+  {
+    "id": "q-positive-psych-w7-4",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": ["w7-concept-drama-tri"],
+    "difficulty": "hard",
+    "estimatedSeconds": 75,
+    "learningObjective": "تَحويل الأدوار",
+    "prompt": "ما تَحويل الجَلاَد في مُثلث الدَّراما؟",
+    "options": [
+      { "id": "a", "text": "مُنقذ" },
+      { "id": "b", "text": "مُسؤول" },
+      { "id": "c", "text": "مُتحدٍّ" },
+      { "id": "d", "text": "مُوجِّه" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "الجَلاَد يَتَحول إلى مُتحدٍّ ينتقد الفعل لا الشخص."
+  },
+  {
+    "id": "tf-positive-psych-w7-1",
+    "type": "tf",
+    "courseId": "positive-psych",
+    "conceptIds": ["w7-concept-karama"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "كل احترام للنَّفس هو إِيغو.",
+    "correctAnswer": "false",
+    "explanation": "كرامة ≠ إِيغو. الكرامة عَمَل، الإِيغو دَعوى."
+  },
+  {
+    "id": "tf-positive-psych-w7-2",
+    "type": "tf",
+    "courseId": "positive-psych",
+    "conceptIds": ["w7-concept-yusuf-karama"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "سيدنا يُوسف نموذج للكرامة المُتَصدِّية لِلإِيغو.",
+    "correctAnswer": "true",
+    "explanation": "يُوسف عاش مَحنة البِئر بِكَوْنِه مُسؤولاً لا ضَحيَّة."
+  },
+  {
+    "id": "rf-positive-psych-w7-1",
+    "type": "reflect",
+    "courseId": "positive-psych",
+    "conceptIds": ["w7-concept-drama-tri"],
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "prompt": "ارسم مُثلث الدَّراما في عَلاقة حالية. ما دَورك فيها؟ كيف تَتَوَلَّى المَسؤولية؟",
+    "explanation": "تَطبيق مُثلث الدَّراما."
+  }
+]

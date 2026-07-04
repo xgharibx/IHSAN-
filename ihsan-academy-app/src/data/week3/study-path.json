@@ -1,0 +1,16 @@
+{
+  "id": "week3-path",
+  "weekId": "week3",
+  "recommended": "true",
+  "steps": [
+    { "order": 1, "courseId": "ihsan-soul", "objective": "الإحسان كحضور رباني: المعنى الثاني للإحسان", "estimatedMinutes": 75 },
+    { "order": 2, "courseId": "tafsir", "objective": "تفسير سورة الإخلاص: أحد + صمد = لا إله إلا الله", "estimatedMinutes": 50 },
+    { "order": 3, "courseId": "seerah-app", "objective": "أعظم قصة حب: النبي والسيدة خديجة", "estimatedMinutes": 75 },
+    { "order": 4, "courseId": "fiqh-rules", "objective": "اليقين لا يزول بالشك: قمة الحضور الرباني", "estimatedMinutes": 70 },
+    { "order": 5, "courseId": "soul-app", "objective": "اليقين: السِّر الذي يُغيِّر كل شيء", "estimatedMinutes": 65 },
+    { "order": 6, "courseId": "sahaba", "objective": "زيد بن حارثة: الصحابي الوحيد في القرآن", "estimatedMinutes": 50 },
+    { "order": 7, "courseId": "sahabiyyat", "objective": "السيدة سمية: أول شهيدة في الإسلام", "estimatedMinutes": 35 },
+    { "order": 8, "courseId": "contemporary", "objective": "الرد على شبهة بناء السلطة والملك", "estimatedMinutes": 60 },
+    { "order": 9, "courseId": "positive-psych", "objective": "الحضور: معادلة الحضور المتزن", "estimatedMinutes": 70 }
+  ]
+}

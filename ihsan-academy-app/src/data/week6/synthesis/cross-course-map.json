@@ -1,0 +1,101 @@
+{
+  "id": "week6-knowledge-map",
+  "title": "خريطة المعرفة للأسبوع السادس",
+  "description": "روابط بين دورة الأسبوع السادس ومفاهيمها. انقر على أي عقدة لاستكشافها.",
+  "nodes": [
+    {
+      "id": "positive-psych",
+      "label": "اختبار القيم",
+      "type": "course",
+      "x": 0.5,
+      "y": 0.15,
+      "color": "#22d3ee"
+    },
+    {
+      "id": "w6-concept-qima",
+      "label": "القيمة",
+      "type": "concept",
+      "x": 0.18,
+      "y": 0.32,
+      "color": "#ffd166"
+    },
+    {
+      "id": "w6-concept-alam",
+      "label": "الألم والمعاناة",
+      "type": "concept",
+      "x": 0.42,
+      "y": 0.32,
+      "color": "#ffd166"
+    },
+    {
+      "id": "w6-concept-sanna3",
+      "label": "صنّاع المعجزات",
+      "type": "concept",
+      "x": 0.7,
+      "y": 0.32,
+      "color": "#ffd166"
+    },
+    {
+      "id": "w6-concept-7-mahatat",
+      "label": "محطات الشيطان",
+      "type": "concept",
+      "x": 0.18,
+      "y": 0.55,
+      "color": "#ffd166"
+    },
+    {
+      "id": "w6-concept-5-asliha",
+      "label": "الأسلحة الخمسة",
+      "type": "concept",
+      "x": 0.42,
+      "y": 0.55,
+      "color": "#ffd166"
+    },
+    {
+      "id": "w6-concept-johari",
+      "label": "نافذة جوهاري",
+      "type": "concept",
+      "x": 0.7,
+      "y": 0.55,
+      "color": "#ffd166"
+    },
+    {
+      "id": "w6-concept-dayayer",
+      "label": "دوائر التحكم",
+      "type": "concept",
+      "x": 0.3,
+      "y": 0.78,
+      "color": "#ffd166"
+    },
+    {
+      "id": "w6-concept-5-qiyam",
+      "label": "تمرين القيم الخمس",
+      "type": "concept",
+      "x": 0.62,
+      "y": 0.78,
+      "color": "#ffd166"
+    },
+    {
+      "id": "w6-concept-i3tibar",
+      "label": "اختبار القيم",
+      "type": "concept",
+      "x": 0.5,
+      "y": 0.93,
+      "color": "#ffd166"
+    }
+  ],
+  "edges": [
+    { "from": "w6-concept-qima", "to": "positive-psych", "label": "مركز" },
+    { "from": "w6-concept-i3tibar", "to": "w6-concept-qima", "label": "يكشف" },
+    { "from": "w6-concept-i3tibar", "to": "positive-psych", "label": "جوهر" },
+    { "from": "w6-concept-alam", "to": "positive-psych", "label": "تأطير" },
+    { "from": "w6-concept-sanna3", "to": "positive-psych", "label": "نماذج" },
+    { "from": "w6-concept-7-mahatat", "to": "positive-psych", "label": "تحدّي" },
+    { "from": "w6-concept-5-asliha", "to": "positive-psych", "label": "حصانة" },
+    { "from": "w6-concept-5-asliha", "to": "w6-concept-7-mahatat", "label": "مواجهة" },
+    { "from": "w6-concept-johari", "to": "positive-psych", "label": "وعي" },
+    { "from": "w6-concept-dayayer", "to": "positive-psych", "label": "إطار" },
+    { "from": "w6-concept-5-qiyam", "to": "w6-concept-qima", "label": "تطبيق" },
+    { "from": "w6-concept-sanna3", "to": "w6-concept-i3tibar", "label": "نتيجة" }
+  ]
+}

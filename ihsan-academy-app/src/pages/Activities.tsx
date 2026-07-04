@@ -1,16 +1,18 @@
 import { useState } from "react";
-import { data } from "@/data";
+import { useCourses, useActivities, useWeekMeta } from "@/hooks/useWeekHooks";
 import { useStore } from "@/store/useStore";
 import { Icons } from "@/components/Icons";
 
 export default function Activities() {
+  const courses = useCourses();
+  const allActivities = useActivities();
+  const meta = useWeekMeta();
   const [day, setDay] = useState(1);
   const markActivity = useStore((s) => s.markActivity);
   const cp = useStore((s) => s.courseProgress);
 
-  const dayActivities = data.week1.activities.filter((a) => {
-    // Spread activities across the week in round-robin
-    const idx = data.week1.activities.indexOf(a);
+  const dayActivities = allActivities.filter((a) => {
+    const idx = allActivities.indexOf(a);
     return idx % 7 === (day - 1);
   });
 
@@ -18,7 +20,7 @@ export default function Activities() {
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
       <div className="mb-8">
         <div className="pill mb-3">الأنشطة والجدول</div>
-        <h1 className="font-display text-4xl text-sand-50">رحلة الأسبوع</h1>
+        <h1 className="font-display text-4xl text-sand-50">رحلة {meta.title}</h1>
         <p className="mt-2 max-w-2xl text-sand-100/60">
           أنشطة تطبيقية، جدول زمني، وإنجازات قابلة للفتح. اختر يومًا من الأسبوع.
         </p>
@@ -74,7 +76,7 @@ export default function Activities() {
           </div>
         ) : (
           dayActivities.map((a) => {
-            const course = data.week1.courses.find((c) => c.id === a.courseId);
+            const course = courses.find((c) => c.id === a.courseId);
             const done = cp[a.courseId]?.activitiesCompleted.includes(a.id);
             return (
               <div key={a.id} className="card p-6">
@@ -122,8 +124,8 @@ export default function Activities() {
       <div className="mt-10">
         <h2 className="mb-4 font-display text-2xl text-sand-50">جميع أنشطة الأسبوع</h2>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {data.week1.activities.map((a) => {
-            const c = data.week1.courses.find((cc) => cc.id === a.courseId);
+          {allActivities.map((a) => {
+            const c = courses.find((cc) => cc.id === a.courseId);
             const done = cp[a.courseId]?.activitiesCompleted.includes(a.id);
             return (
               <div

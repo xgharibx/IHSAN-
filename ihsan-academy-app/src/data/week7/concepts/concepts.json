@@ -1,0 +1,134 @@
+[
+  {
+    "id": "w7-concept-ihsan-la-yatajazza",
+    "name": "الإحسان الشَّامل",
+    "arabicName": "الإحسان لا يتجزأ",
+    "domain": "tafsir",
+    "definition": "الإحسان لِجميع الخَلق.",
+    "deepExplanation": "الله يُحسِن لِلمُحسِن والمسيء، فالمُسلم مُلزم بالإحسان للجميع.",
+    "example": "النَّبي ﷺ قَال للجذع: «تَكُن مَعي في الجَنَّة». إحسان للجَماد.",
+    "relatedCourseIds": ["tafsir", "ihsan-soul"],
+    "relatedConceptIds": ["w7-concept-hifz-jawarih"]
+  },
+  {
+    "id": "w7-concept-shaytan-mudkhal",
+    "name": "مَداخل الشَّيطان",
+    "arabicName": "مداخل الشيطان",
+    "domain": "spiritual",
+    "definition": "سَبْع مَداخل للشيطان: كبائر، غفلة، همّ، يأس، طمع، شكل عن جَوهر، تسليح.",
+    "deepExplanation": "الإسلام لا يُعامل الشَّيطان بِعَصبية، بل يُحَيد مَداخله بمنازل الرَّوح.",
+    "example": "حين تَشعر بِالهمّ، فَكِّر في مَحطة الهمّ.",
+    "relatedCourseIds": ["ihsan-soul", "positive-psych"],
+    "relatedConceptIds": ["w7-concept-istighfar-shield", "w7-concept-yaqin-against-ghafla"]
+  },
+  {
+    "id": "w7-concept-jawarih-amanah",
+    "name": "الجوارح أَمانات",
+    "arabicName": "الجوارح أمانات",
+    "domain": "spiritual",
+    "definition": "كلُّ جارحة أمانة من الله.",
+    "deepExplanation": "حفظ الجوارح فَرض، وحِفظها في الصِّغر يَحفظها في الكِبَر.",
+    "example": "الإمام أَبو شُجاع 160 سنة.",
+    "relatedCourseIds": ["tafsir", "soul-app"],
+    "relatedConceptIds": ["w7-concept-hifz-jawarih"]
+  },
+  {
+    "id": "w7-concept-fitna-kubra",
+    "name": "الفِتنة الكُبرَى",
+    "arabicName": "الفتنة الكبرى",
+    "domain": "contemporary",
+    "definition": "الإكراه على ترك الإيمان.",
+    "deepExplanation": " «والفتنة أكبر من القَتل».",
+    "example": "إخراج المسلمين من مَكَّة فِتنة.",
+    "relatedCourseIds": ["contemporary"],
+    "relatedConceptIds": ["w7-concept-ashhur-alharam", "w7-concept-naskh-ul-ashhur"]
+  },
+  {
+    "id": "w7-concept-drama-tri",
+    "name": "مُثلث الدَّراما",
+    "arabicName": "مثلث الدراما",
+    "domain": "positive-psych",
+    "definition": "3 أدوار في العلاقات: ضحيَّة، جلاد، مُنقذ.",
+    "deepExplanation": "نَموذج كَاربن 1968. كلمة السِّر: المَسؤوليَّة.",
+    "example": "حين تَشتُم، اسْأل في أيِّ دَور.",
+    "relatedCourseIds": ["positive-psych"],
+    "relatedConceptIds": ["w7-concept-karama", "w7-concept-yusuf-karama"]
+  },
+  {
+    "id": "w7-concept-ego",
+    "name": "الإِيغو",
+    "arabicName": "الإيغو",
+    "domain": "positive-psych",
+    "definition": "البِرْمجيَّة الدَّاخلية للذَّات.",
+    "deepExplanation": "يَمنع التَّعلُّم ويُحطِّم العَلاقات.",
+    "example": " «اللهم أَصلِح شَأْني ولا تَكلني إلى نَفسي».",
+    "relatedCourseIds": ["positive-psych", "ihsan-soul"],
+    "relatedConceptIds": ["w7-concept-fitnat-qalb"]
+  },
+  {
+    "id": "w7-concept-taqwa-as-umm",
+    "name": "التَّقوى أمُّ المَنازل",
+    "arabicName": "التقوى أم المنازل",
+    "domain": "spiritual",
+    "definition": "أساس كلِّ مَنازل الرَّوح.",
+    "deepExplanation": " «لن تَدخُل إلى الله إلا مِن باب التَّقوى».",
+    "example": "ابن القَيِّم.",
+    "relatedCourseIds": ["ihsan-soul"],
+    "relatedConceptIds": ["w7-concept-istighfar-shield"]
+  },
+  {
+    "id": "w7-concept-johari",
+    "name": "جو هاري ويندو",
+    "arabicName": "أداة جو هاري",
+    "domain": "positive-psych",
+    "definition": "أَداة لِتربيع الذَّات: Open، Blind، Hidden، Unknown.",
+    "deepExplanation": "أَربَع مَربعات لِتَحديد مَنطقة التَّطوير.",
+    "example": "اسأل 3 أصدِقاء عن Blind.",
+    "relatedCourseIds": ["positive-psych"],
+    "relatedConceptIds": ["w7-concept-ego"]
+  },
+  {
+    "id": "w7-concept-urf-mujtama",
+    "name": "العُرف في الإسلام",
+    "arabicName": "العرف",
+    "domain": "fiqh",
+    "definition": "ما تَعارف عليه النَّاس في المُعاملة.",
+    "deepExplanation": "مُعتَبَر ما لم يُخالف نَصًّا.",
+    "example": "حديث الضَّبّ.",
+    "relatedCourseIds": ["fiqh-rules", "contemporary"],
+    "relatedConceptIds": ["w7-concept-urf-qawli", "w7-concept-urf-amali"]
+  },
+  {
+    "id": "w7-concept-shahada-ukhra",
+    "name": "سَميَّة بنت الخَيّاط",
+    "arabicName": "شهادة سمية",
+    "domain": "seerah",
+    "definition": "أَوَّل شَهيدة في الإسلام.",
+    "deepExplanation": " «صَبرًا آل يَاسر».",
+    "example": "حين تَتعرَّض لظلم، اِحفظ حديث آل يَاسر.",
+    "relatedCourseIds": ["seerah", "contemporary"],
+    "relatedConceptIds": ["w7-concept-fatima-rescue"]
+  },
+  {
+    "id": "w7-concept-yusuf-karama",
+    "name": "يُوسف نَموذج الكرامة",
+    "arabicName": "يوسف والكرامة",
+    "domain": "seerah",
+    "definition": "نَموذج سَلامة الذَّات في مَواجهة الإِيغو.",
+    "deepExplanation": "يُوسف عاش في البِئر والسِّجن والنِّسيان، لَم يَتحوَّل لِضحية.",
+    "example": "حين تَتعرَّض لِمَصيبة، اِتْبع سُنَّة يُوسف.",
+    "relatedCourseIds": ["seerah", "positive-psych"],
+    "relatedConceptIds": ["w7-concept-karama"]
+  },
+  {
+    "id": "w7-concept-4-rudood",
+    "name": "رُدود الفِعْل الأربعة",
+    "arabicName": "أربعة ردود فعل",
+    "domain": "seerah-app",
+    "definition": "حَامٍ، مُحارب، مُتَأخر، سَابق.",
+    "deepExplanation": "في العَزومة، النَّبي ﷺ رأى 4 رُدود فِعْل: أَبُو طالب حَامٍ، أَبُو لَهب مُحارب، العَبَّاس مُتأخر، عَليّ سَابق.",
+    "example": "حين تُقترح فكرة، تَوقَّع 4 رُدود.",
+    "relatedCourseIds": ["seerah-app"],
+    "relatedConceptIds": ["w7-concept-aliyy-ikhtiyar", "w7-concept-fasdaa"]
+  }
+]

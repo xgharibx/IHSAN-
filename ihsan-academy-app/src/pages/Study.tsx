@@ -1,12 +1,13 @@
 import { useState, useMemo } from "react";
-import { data } from "@/data";
+import { useCourses, useFlashcards, useQuizzes } from "@/hooks/useWeekHooks";
 import { useStore } from "@/store/useStore";
 import { Icons } from "@/components/Icons";
-import type { Flashcard, AnyQuestion } from "@/types";
+import type { AnyQuestion } from "@/types";
 
 type Tab = "flashcards" | "mcq" | "tf" | "fitb" | "match" | "short" | "reflect" | "scenario";
 
 export default function Study() {
+  const courses = useCourses();
   const [tab, setTab] = useState<Tab>("flashcards");
   const [courseFilter, setCourseFilter] = useState<string>("all");
   const [difficultyFilter, setDifficultyFilter] = useState<string>("all");
@@ -53,7 +54,7 @@ export default function Study() {
             className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-sand-100"
           >
             <option value="all">الكل</option>
-            {data.week1.courses.map((c) => (
+            {courses.map((c) => (
               <option key={c.id} value={c.id}>
                 {c.title}
               </option>
@@ -93,16 +94,15 @@ function FlashcardDeck({ courseFilter }: { courseFilter: string }) {
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const markFlashcard = useStore((s) => s.markFlashcard);
-  const cards = useMemo(() => {
-    return data.week1.flashcards.filter(
-      (c) => courseFilter === "all" || c.courseId === courseFilter,
-    );
-  }, [courseFilter]);
+  const cards = useFlashcards();
+  const visibleCards = useMemo(() => {
+    return cards.filter((c) => courseFilter === "all" || c.courseId === courseFilter);
+  }, [cards, courseFilter]);
 
-  if (cards.length === 0)
+  if (visibleCards.length === 0)
     return <div className="card p-6 text-center text-sand-100/60">لا توجد بطاقات</div>;
 
-  const card = cards[index];
+  const card = visibleCards[index];
 
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr_280px]">
@@ -137,12 +137,12 @@ function FlashcardDeck({ courseFilter }: { courseFilter: string }) {
           <div className="text-xs text-sand-100/50">تقدّم</div>
           <div className="mt-1 font-display text-2xl text-sand-50">
             {index + 1}
-            <span className="text-sm text-sand-100/40"> / {cards.length}</span>
+            <span className="text-sm text-sand-100/40"> / {visibleCards.length}</span>
           </div>
           <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/5">
             <div
               className="h-full rounded-full bg-gold-300"
-              style={{ width: `${((index + 1) / cards.length) * 100}%` }}
+              style={{ width: `${((index + 1) / visibleCards.length) * 100}%` }}
             />
           </div>
         </div>
@@ -159,9 +159,9 @@ function FlashcardDeck({ courseFilter }: { courseFilter: string }) {
           </button>
           <button
             className="btn btn-primary flex-1"
-            disabled={index >= cards.length - 1}
+            disabled={index >= visibleCards.length - 1}
             onClick={() => {
-              setIndex((i) => Math.min(cards.length - 1, i + 1));
+              setIndex((i) => Math.min(visibleCards.length - 1, i + 1));
               setFlipped(false);
             }}
           >
@@ -191,29 +191,30 @@ function QuizPanel({
   courseFilter: string;
   difficultyFilter: string;
 }) {
-  const questions = useMemo(() => {
-    return data.week1.quizzes.filter((q) => {
+  const questions = useQuizzes();
+  const courses = useCourses();
+  const visible = useMemo(() => {
+    return questions.filter((q) => {
       if (q.type !== tab) return false;
       if (courseFilter !== "all" && q.courseId !== courseFilter) return false;
       if (difficultyFilter !== "all" && q.difficulty !== difficultyFilter) return false;
       return true;
     });
-  }, [tab, courseFilter, difficultyFilter]);
+  }, [questions, tab, courseFilter, difficultyFilter]);
 
   const [i, setI] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const recordQuiz = useStore((s) => s.recordQuizAnswer);
-  const cp = useStore((s) => s.courseProgress);
 
-  if (questions.length === 0)
+  if (visible.length === 0)
     return (
       <div className="card p-6 text-center text-sand-100/60">
         لا توجد أسئلة بهذه المعايير. جرّب دورة أو مستوى آخر.
       </div>
     );
 
-  const q = questions[i];
-  const course = data.week1.courses.find((c) => c.id === q.courseId);
+  const q = visible[i];
+  const course = courses.find((c) => c.id === q.courseId);
 
   return (
     <div>
@@ -226,7 +227,7 @@ function QuizPanel({
             <span>{q.difficulty === "easy" ? "سهل" : q.difficulty === "medium" ? "متوسط" : "صعب"}</span>
           </div>
           <div>
-            سؤال {i + 1} / {questions.length}
+            سؤال {i + 1} / {visible.length}
           </div>
         </div>
         <h2 className="mt-4 font-display text-2xl text-sand-50">{q.prompt}</h2>
@@ -332,7 +333,7 @@ function QuizPanel({
         <div className="mt-6 flex justify-end">
           <button
             onClick={() => {
-              setI((x) => (x + 1) % questions.length);
+              setI((x) => (x + 1) % visible.length);
               setPicked(null);
             }}
             className="btn btn-primary"

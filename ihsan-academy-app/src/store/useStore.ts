@@ -18,6 +18,16 @@ export type CourseProgress = {
   lastVisited: number;
 };
 
+export interface ChatSession {
+  id: string;
+  title: string;
+  courseId: string | null;
+  mode: string;
+  createdAt: number;
+  lastMessageAt: number;
+  pinned: boolean;
+}
+
 interface State {
   // Progress
   courseProgress: Record<string, CourseProgress>;
@@ -27,9 +37,11 @@ interface State {
   recentCourseId?: string;
   // Selected week (for future multi-week support)
   selectedWeek: number;
-  // AI chat history per session
+  // AI chat history per session (legacy field — use chatSessions for new code)
   aiSessions: Record<string, { role: "user" | "model"; text: string; ts: number }[]>;
-  // AI settings
+  // AI multi-session: list of sessions and current
+  chatSessions: ChatSession[];
+  activeSessionId: string;
   aiModel: string;
   // Personal notes
   notes: Record<string, string>;
@@ -48,6 +60,12 @@ interface State {
   resetAi: (sessionId: string) => void;
   setNote: (courseId: string, text: string) => void;
   setSelectedWeek: (week: number) => void;
+  // Chat session management
+  createChatSession: (courseId: string | null, mode: string, title?: string) => string;
+  switchChatSession: (sessionId: string) => void;
+  deleteChatSession: (sessionId: string) => void;
+  renameChatSession: (sessionId: string, title: string) => void;
+  pinChatSession: (sessionId: string) => void;
   resetAll: () => void;
 }
 
@@ -60,6 +78,8 @@ export const useStore = create<State>()(
       unlockedAchievements: ["first-course-started"],
       selectedWeek: 1,
       aiSessions: {},
+      chatSessions: [],
+      activeSessionId: "default",
       aiModel: "gemini-2.5-flash",
       notes: {},
       markStarted: (courseId) => {
@@ -199,19 +219,72 @@ export const useStore = create<State>()(
         set((s) => {
           const copy = { ...s.aiSessions };
           delete copy[sessionId];
-          return { aiSessions: copy };
+          // Also remove the session from chatSessions list
+          const newChatSessions = s.chatSessions.filter(cs => cs.id !== sessionId);
+          const newActive = s.activeSessionId === sessionId
+            ? (newChatSessions[0]?.id ?? "default")
+            : s.activeSessionId;
+          return { aiSessions: copy, chatSessions: newChatSessions, activeSessionId: newActive };
         });
       },
       setNote: (courseId, text) => {
         set((s) => ({ notes: { ...s.notes, [courseId]: text } }));
       },
       setSelectedWeek: (week) => set({ selectedWeek: week }),
+      createChatSession: (courseId, mode, title) => {
+        const id = `session-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
+        const session: ChatSession = {
+          id,
+          title: title || `محادثة ${new Date().toLocaleDateString("ar-EG")}`,
+          courseId,
+          mode,
+          createdAt: Date.now(),
+          lastMessageAt: Date.now(),
+          pinned: false,
+        };
+        set((s) => ({
+          chatSessions: [session, ...s.chatSessions],
+          activeSessionId: id,
+          aiSessions: { ...s.aiSessions, [id]: [] },
+        }));
+        return id;
+      },
+      switchChatSession: (sessionId) => {
+        set({ activeSessionId: sessionId });
+      },
+      deleteChatSession: (sessionId) => {
+        set((s) => {
+          const newChatSessions = s.chatSessions.filter(cs => cs.id !== sessionId);
+          const newAiSessions = { ...s.aiSessions };
+          delete newAiSessions[sessionId];
+          const newActive = s.activeSessionId === sessionId
+            ? (newChatSessions[0]?.id ?? "default")
+            : s.activeSessionId;
+          return {
+            chatSessions: newChatSessions,
+            aiSessions: newAiSessions,
+            activeSessionId: newActive,
+          };
+        });
+      },
+      renameChatSession: (sessionId, title) => {
+        set((s) => ({
+          chatSessions: s.chatSessions.map(cs => cs.id === sessionId ? { ...cs, title } : cs),
+        }));
+      },
+      pinChatSession: (sessionId) => {
+        set((s) => ({
+          chatSessions: s.chatSessions.map(cs => cs.id === sessionId ? { ...cs, pinned: !cs.pinned } : cs),
+        }));
+      },
       resetAll: () => {
         set({
           courseProgress: {},
           unlockedAchievements: ["first-course-started"],
           recentCourseId: undefined,
           aiSessions: {},
+          chatSessions: [],
+          activeSessionId: "default",
           notes: {},
         });
       },
@@ -225,6 +298,8 @@ export const useStore = create<State>()(
         recentCourseId: s.recentCourseId,
         selectedWeek: s.selectedWeek,
         aiSessions: s.aiSessions,
+        chatSessions: s.chatSessions,
+        activeSessionId: s.activeSessionId,
         aiModel: s.aiModel,
         notes: s.notes,
       }),

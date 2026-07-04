@@ -1,0 +1,35 @@
+{
+  "id": "week4-knowledge-map",
+  "title": "خريطة المعرفة للأسبوع الرابع",
+  "description": "روابط بين دورات الأسبوع الرابع ومفاهيمه. انقر على أي عقدة لاستكشافها.",
+  "nodes": [
+    { "id": "ihsan-soul", "label": "الوعي والسعي", "type": "course", "x": 0.5, "y": 0.08, "color": "#2f9e64" },
+    { "id": "tafsir", "label": "سورة الكوثر", "type": "course", "x": 0.85, "y": 0.25, "color": "#1aa084" },
+    { "id": "seerah", "label": "نزول الوحي", "type": "course", "x": 0.15, "y": 0.25, "color": "#e25d8d" },
+    { "id": "sahaba", "label": "عثمان بن عفان", "type": "course", "x": 0.85, "y": 0.5, "color": "#c084fc" },
+    { "id": "sahabiyyat", "label": "أسماء بنت أبي بكر", "type": "course", "x": 0.15, "y": 0.5, "color": "#ec4899" },
+    { "id": "contemporary", "label": "بني قريظة", "type": "course", "x": 0.85, "y": 0.75, "color": "#f97316" },
+    { "id": "seerah-app", "label": "تدبر السيرة - إقرأ", "type": "course", "x": 0.5, "y": 0.5, "color": "#60a5fa" },
+    { "id": "fiqh-rules", "label": "لا ضرر ولا ضرار", "type": "course", "x": 0.15, "y": 0.75, "color": "#a78bfa" },
+    { "id": "soul-app", "label": "القلب السليم", "type": "course", "x": 0.5, "y": 0.92, "color": "#f87171" },
+    { "id": "positive-psych", "label": "اعرف نفسك", "type": "course", "x": 0.5, "y": 0.78, "color": "#22d3ee" },
+    { "id": "hudur", "label": "الوعي", "type": "concept", "x": 0.4, "y": 0.04, "color": "#ffd166" },
+    { "id": "yaqin", "label": "السعي", "type": "concept", "x": 0.6, "y": 0.04, "color": "#ffd166" }
+  ],
+  "edges": [
+    { "from": "hudur", "to": "ihsan-soul", "label": "يُؤسِّس" },
+    { "from": "hudur", "to": "soul-app", "label": "يُعَزِّز" },
+    { "from": "yaqin", "to": "ihsan-soul", "label": "يَنبني" },
+    { "from": "ihsan-soul", "to": "tafsir", "label": "توحيد" },
+    { "from": "ihsan-soul", "to": "soul-app", "label": "قلب" },
+    { "from": "seerah", "to": "seerah-app", "label": "إكمال" },
+    { "from": "sahaba", "to": "sahabiyyat", "label": "صحبة" },
+    { "from": "sahaba", "to": "tafsir", "label": "تجميع القرآن" },
+    { "from": "sahabiyyat", "to": "seerah", "label": "هجرة" },
+    { "from": "contemporary", "to": "seerah", "label": "رد" },
+    { "from": "contemporary", "to": "fiqh-rules", "label": "قواعد" },
+    { "from": "fiqh-rules", "to": "soul-app", "label": "قلب سليم" },
+    { "from": "positive-psych", "to": "ihsan-soul", "label": "وعي" },
+    { "from": "positive-psych", "to": "seerah-app", "label": "تَحَسُّن" }
+  ]
+}

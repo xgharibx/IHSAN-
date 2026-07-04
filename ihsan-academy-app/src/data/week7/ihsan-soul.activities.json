@@ -1,0 +1,30 @@
+{
+  "id": "ihsan-soul-activities",
+  "courseId": "ihsan-soul",
+  "activities": [
+    {
+      "id": "act-w7-ihsan-soul-001",
+      "courseId": "ihsan-soul",
+      "type": "individual",
+      "title": "خريطة المحطات السبع في حياتك",
+      "purpose": "تحديد أيِّ محطة من محطات الشيطان تُهاجم كلَّ متعلم وربطها بالمنزلة المُناسبة.",
+      "instructions": "ارسم خريطة 7×7، اسم محطة في كلِّ صف، ومنزلة في كلِّ عمود. حدِّد لكلِّ صف: ما موقفك الحالي، ما المنزلة التي تحتاجها، ما الذِّكر المُناسب. ضع الخريطة في مكان تَراه يَوميًّا.",
+      "estimatedTime": "60 دقيقة",
+      "outputExpected": "خريطة 7×7 محدَّدة ومحدَّدة الأذكار.",
+      "relatedConcepts": "w7-concept-shaytan-stations, w7-concept-taqwa-as-umm",
+      "completionCriteria": "خريطة مكتملة مع موقف واحد على الأقل لكلِّ محطة."
+    },
+    {
+      "id": "act-w7-ihsan-soul-002",
+      "courseId": "ihsan-soul",
+      "type": "practical",
+      "title": "ورد الاستغفار والذكر اليومي 7 أيام",
+      "purpose": "بناء عادة يومية من الاستغفار، لا إله إلا الله، أذكار التوكُّل، تسبيح، الحمد.",
+      "instructions": "كل صباح لمدة 7 أيام: 100 استغفار، 100 لا إله إلا الله، 100 حسبي الله، 100 لا حول ولا قوة، 100 الحمد لله. أضف ساعة ذكر قبل النوم مع قراءة سورة الكوثر والمعوِّذات.",
+      "estimatedTime": "20 دقيقة × 7 أيام",
+      "outputExpected": "دفتر تسجيل يومي.",
+      "relatedConcepts": "w7-concept-istighfar-shield, w7-concept-tawakkul-amal",
+      "completionCriteria": "7 أيام متتالية."
+    }
+  ]
+}

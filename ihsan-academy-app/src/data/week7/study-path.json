@@ -1,0 +1,15 @@
+{
+  "id": "week7-path",
+  "weekId": "week7",
+  "recommended": "true",
+  "steps": [
+    { "order": 1, "courseId": "ihsan-soul", "objective": "فَهْم سَبْع مَحطات للشيطان وكل مَنزلة تُسقطها.", "estimatedMinutes": 45 },
+    { "order": 2, "courseId": "tafsir", "objective": "احْتفال القَسَم في سورة التِّين، الإحسان الشَّامل، حِفظ الجَوارح.", "estimatedMinutes": 45 },
+    { "order": 3, "courseId": "seerah", "objective": "تَفكيك مَراحل الإيذاء الخمس لِقُريش وثَبات النَّبي.", "estimatedMinutes": 45 },
+    { "order": 4, "courseId": "contemporary", "objective": "رَدّ شُبهة الأشهر الحُرُم وفَهم سِياق السِّيرة.", "estimatedMinutes": 45 },
+    { "order": 5, "courseId": "fiqh-rules", "objective": "القاعدة الرَّابعة: العُرف مُعتبَر.", "estimatedMinutes": 35 },
+    { "order": 6, "courseId": "seerah-app", "objective": "الجَهر بالدَّعوة: ذَكاء اجتماعي، 4 رُدود فِعْل.", "estimatedMinutes": 50 },
+    { "order": 7, "courseId": "soul-app", "objective": "اعتزل ثَلاث فئات بِحَكمة، التَّقوى دَرجَع.", "estimatedMinutes": 40 },
+    { "order": 8, "courseId": "positive-psych", "objective": "جو هاري ويندو، الإِيغو، مُثلث الدَّراما.", "estimatedMinutes": 60 }
+  ]
+}

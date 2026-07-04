@@ -1,0 +1,8 @@
+{
+  "id": "week6-path",
+  "weekId": "week6",
+  "recommended": "true",
+  "steps": [
+    { "order": 1, "courseId": "positive-psych", "objective": "اكتشاف معنى اختبار القيم، والفرق بين الألم والمعاناة، وخريطة الأربعين سنة للنبي ﷺ، وصنّاع المعجزات، ومحطات الشيطان، والأسلحة الخمسة", "estimatedMinutes": 75 }
+  ]
+}

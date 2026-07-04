@@ -1,8 +1,20 @@
-// AI Tutor service — abstraction layer that can be plugged into Gemini, OpenAI, or a local model.
-// For now: calls Gemini's REST API directly (browser fetch) so the user only needs to set VITE_GEMINI_API_KEY.
-// If no key is set, the tutor gracefully returns a clear "no key" state and uses a small built-in local fallback.
+// AI Tutor service — world-class multi-mode Islamic learning companion.
+// Features:
+//  - 10 specialized teaching modes with deep personas
+//  - Course-aware context injection (selected course's full content is primary context)
+//  - Citation tracking: every response tag which course/concept it grounded on
+//  - Confidence score: model self-assesses
+//  - Memory: tracks learned concepts + weak areas per session
+//  - Smart context windowing
+//  - Arabic-first responses
+//  - Multi-modal: image input support
+//  - Rich local fallback that uses actual course content (not just hardcoded facts)
 
-import { buildKnowledgeBase } from "@/data";
+import {
+  type Course,
+} from "@/types";
+import { chatMemory } from "./chatMemory";
+import { buildCourseContext, pickRelevantConcepts, generateSmartSuggestions } from "./smartSuggestions";
 
 export type TutorMode =
   | "teach"
@@ -16,47 +28,177 @@ export type TutorMode =
   | "reflect"
   | "exam";
 
-const MODE_PROMPTS: Record<TutorMode, string> = {
-  teach:
-    "أنت معلّم أكاديمية الإحسان. علّم المتعلم بأسلوب قصصي بسيط وروحي. ابدأ بالتعريف ثم التطبيق ثم المثال.",
-  ask:
-    "أنت مساعد ذكي يجيب عن أسئلة المتعلم بدقّة وبالاعتماد على مواد الأسبوع الأول. إذا لم تجد الإجابة في المواد، قل ذلك بوضوح واعرض تفسيرًا عامًّا محايدًا.",
-  quiz:
-    "أنت مولّد اختبارات. أنشئ سؤالًا واحدًا في كل مرة مع 4 خيارات وصحّح الإجابة. نبّه على مكان الخطأ بلطف.",
-  simple:
-    "أنت مُبسِّط. اشرح المفاهيم بأسلوب سهل وممتع مع مثال من الحياة اليومية.",
-  deep:
-    "أنت محقّق أكاديمي. أعطِ شرحًا عميقًا مع الاستشهاد بالآيات والأحاديث والترقيم الدقيق للمفاهيم.",
-  connect:
-    "أنت موحِّد المعرفة. اربط بين دورات الأسبوع الأول، وأشِر إلى الجسور الفكرية بينها. اعرض العلاقات بأسلوب بصري كلما أمكن.",
-  plan:
-    "أنت مخطط تعلّم. اقترح خطة درس أسبوعية واضحة للمتعلم وفق مستواه وأهدافه.",
-  revise:
-    "أنت مساعد مراجعة. لخّص أهم 5 نقاط من الدورة أو المفهوم واطلب من المتعلم اختبار نفسه.",
-  reflect:
-    "أنت مرشد تأمّلي. اطرح أسئلة تأملية تساعد المتعلم على تحويل المعلومة إلى سلوك.",
-  exam:
-    "أنت ممتحن نهائي. صمّم اختبارًا قصيرًا مكثّفًا عن الدورة المطلوبة، 5 أسئلة متنوعة مع تقييم الإجابات.",
-};
-
-const SYSTEM_BASE = `أنت معلّم ومرشد أكاديمية الإحسان في الأسبوع الأول. مهمتك: تعليم، تبسيط، ربط، مراجعة، تأمل، امتحان. اعتمد على المواد المرفقة (قاعدة المعرفة). إذا سُئلت عن شيء خارج نطاق الأسبوع الأول، قل بوضوح: "هذا خارج نطاق مواد الأسبوع الأول، يمكنني تقديم تفسير عام بحذر"، ثم قدّم تفسيرًا عامًا قصيرًا. لا تختلق معلومات تخصّ النصوص القرآنية أو الأحاديث. استشهد بذكر الآيات والأحاديث كما وردت في قاعدة المعرفة دون اجتهاد إضافي. لا تتكلم بلسان ملكي أو وعظي ثقيل، كن دافئًا ومركّزًا.
-
-أسلوبك في الإجابة: قدّم إجابة كاملة وغير مبتورة أبدًا — لا تختصر أو تقطع الإجابة في المنتصف. كن تفاعليًا وحيويًا: استخدم عناوين فرعية قصيرة وقوائم نقطية وأمثلة واقعية عند الحاجة لتنظيم الإجابة الطويلة. اربط دائمًا بمثال من الحياة اليومية عندما يكون ذلك مناسبًا. اختم الإجابات الطويلة بخلاصة قصيرة أو سؤال تأملي يدفع المتعلم للتفكير أو التطبيق. لا تكرر نفس الجمل الافتتاحية في كل رد.
-
-قاعدة المعرفة المرفقة:
-`;
-
-const buildSystemPrompt = (mode: TutorMode) => {
-  return `${SYSTEM_BASE}\n\n[وضع المعلم]: ${MODE_PROMPTS[mode]}\n\n${buildKnowledgeBase()}`;
-};
-
 export interface TutorMessage {
   role: "user" | "model";
   text: string;
+  // Optional metadata added by model responses
+  citations?: { courseId: string; conceptIds?: string[] }[];
+  confidence?: number; // 0..1
+  suggestedFollowUps?: string[];
+  // image attachment (for multi-modal)
+  imageDataUrl?: string;
 }
 
-const getKey = (): string | undefined => {
-  // Vite injects only env vars prefixed with VITE_ to the client bundle.
+export interface TutorResult {
+  ok: boolean;
+  text: string;
+  source: "gemini" | "local-fallback";
+  citations?: { courseId: string; conceptIds?: string[] }[];
+  confidence?: number;
+  suggestedFollowUps?: string[];
+  error?: string;
+}
+
+export interface TutorContext {
+  weekId: number;
+  courses: Course[];
+  courseId: string | null;
+  // Pre-computed knowledge base
+  knowledgeBase: string;
+  // Pre-computed course-specific context for the selected course
+  courseContext: string;
+  // Relevant concepts for the current conversation
+  relevantConceptIds: string[];
+}
+
+const MODE_PERSONAS: Record<TutorMode, { name: string; greeting: string; style: string; structure: string }> = {
+  teach: {
+    name: "المعلم الراوي",
+    greeting: "هيا نتعلم معًا",
+    style: "أنت معلّم قصصي روحي. تشرح بسلاسة ووضوح، تبدأ بالتعريف ثم المعنى ثم المثال من الحياة اليومية. لا تملّ المتعلم بالتفاصيل الأكاديمية، بل أعطِ الفكرة الأم ثم توسّع عند الطلب.",
+    structure: "1) التعريف، 2) المعنى العميق، 3) مثال يومي، 4) التطبيق العملي، 5) خُلاصة بسؤال تأملي.",
+  },
+  ask: {
+    name: "العالم المجيب",
+    greeting: "اسأل ما بدا لك",
+    style: "أنت عالم يجيب بدقة بالاعتماد على قاعدة المعرفة. إذا لم تجد الإجابة في المواد، اعترف بذلك بوضوح وقدّم تفسيرًا عامًا محايدًا مع التحذير. الدقة أهم من الاستطراد.",
+    structure: "إجابة مباشرة + استشهاد (آية/حديث/ترقيم) + توضيح إضافي إذا لزم + أسئلة متابعة.",
+  },
+  quiz: {
+    name: "الممتحن اللطيف",
+    greeting: "هيا نختبر ما تعلّمت",
+    style: "أنت ممتحن يصمم أسئلة فورية من المواد. تتدرج في الصعوبة، وتصحح بلطف، وتشرح الإجابة الخاطئة. مَن جاوب صح يُنتقل إلى أصعب، مَن أخطأ يُعاد تبسيطه.",
+    structure: "سؤال واحد في كل مرة: نص السؤال + 4 خيارات (أ، ب، ج، د) + عند الإجابة: التصحيح + شرح مختصر + السؤال التالي أو أسهل.",
+  },
+  simple: {
+    name: "المبسّط الحاني",
+    greeting: "نبسّط معًا",
+    style: "أنت مُبسّط ممتاز. تستخدم أمثلة من الحياة اليومية، تشبيهات بسيطة، وكلمات يفهمها أي مبتدئ. لا تستخدم المصطلحات الأكاديمية دون شرح.",
+    structure: "تشبيه + مثال + 3 نقاط رئيسية + دعوة للتأمل.",
+  },
+  deep: {
+    name: "المحقّق الأكاديمي",
+    greeting: "نعمّق معًا",
+    style: "أنت محقق أكاديمي. تعرض تفسيرات عميقة مع الاستشهاد بالآيات والأحاديث وترقيم المصادر. تُميّز بين المتواتر والآحاد. تذكر الخلافات الفقهية إن وُجدت.",
+    structure: "الآية/الحديث (نص+تخريج) + تفسير+دلالات + ربط بموضوعات أخرى + تذييل أكاديمي.",
+  },
+  connect: {
+    name: "موحّد المعرفة",
+    greeting: "نربط بين المعرفة",
+    style: "أنت موحّد يربط بين الدورات والأفكار. تستخدم استعارات بصرية: 'السَّفينة'، 'الشجرة'، 'البناء'، إلخ. تكشف الجسور الفكرية والروحية.",
+    structure: "الدورة 1 + الدورة 2 + الجسر بينهم + خلاصة موحدة + أسئلة للتفكير العابر.",
+  },
+  plan: {
+    name: "المخطط التعليمي",
+    greeting: "نخطط لرحلة",
+    style: "أنت مخطط تعلّم تصمم خطة مخصصة حسب مستوى المتعلم. تجمع بين الدورات والمراجعة والاختبار. تُفصّل الخطة في خطوات عملية قابلة للتطبيق.",
+    structure: "تقييم المستوى + أهداف قصيرة المدى + جدول أسبوعي + نصائح للثبات + طرق قياس التقدم.",
+  },
+  revise: {
+    name: "المُلخّص الحاد",
+    greeting: "نراجع بسرعة",
+    style: "أنت مساعد مراجعة مُلخّص. تستخرج أهم 5-7 نقاط من الدورة وتعرضها مكثفة، ثم تختبر المتعلم بأسئلة سريعة.",
+    structure: "ملخص مكثف + أسئلة مراجعة سريعة + نقاط يجب مراجعتها + خطة للاختبار.",
+  },
+  reflect: {
+    name: "المرشد التأملي",
+    greeting: "نتأمل معًا",
+    style: "أنت مرشد روحي. تطرح أسئلة تأملية عميقة تحوّل المعلومة إلى سلوك. تستشهد بآيات وأحاديث. تستخدم ضمير المتكلم أحيانًا: 'لنتأمل...'، 'تساءل...'، 'كيف لو...'.",
+    structure: "آية/حديث + سؤال تأملي + تذكير بالعمل + دعوة للسكينة.",
+  },
+  exam: {
+    name: "الممتحن النهائي",
+    greeting: "جاهز للاختبار؟",
+    style: "أنت ممتحن نهائي يصمم اختبارًا مكثفًا 5-7 أسئلة متنوعة تغطي الدورة كاملة. يُقيّم الإجابات بدقة، يحتسب الدرجة، ويعطي ملاحظات للتحسين.",
+    structure: "5-7 أسئلة متنوعة (mcq، tf، short_answer، reflect) + تقييم + درجة + ملاحظات + خطة تحسين.",
+  },
+};
+
+const BASE_SYSTEM_PROMPT = `أنت معلّم ومرشد أكاديمية الإحسان. مهمتك: تعليم، تبسيط، ربط، مراجعة، تأمل، امتحان.
+
+# المبادئ التأسيسية (لا تُخِلّ بها أبدًا):
+1) **الدقة في النقل**: اعتمد حصريًا على المواد المرفقة في "قاعدة المعرفة" أدناه. لا تُختلق آيات أو أحاديث أو إحصائيات. إذا لم تجد الإجابة في المواد، قل بوضوح: "هذا خارج نطاق مواد الأكاديمية، يمكنني تقديم تفسير عام بحذر"، ثم قدّم تفسيرًا عامًا قصيرًا مع التحذير.
+2) **الاستشهاد الدقيق**: عند ذكر آية، اذكر السورة ورقم الآية. عند ذكر حديث، اذكر الراوي ودرجة الصحة إن أمكن. لا تنسب حديثًا ضعيفًا أو موضوعًا.
+3) **اللغة العربية الفصحى**: أجب بالعربية الفصحى المبسّطة. تجنّب العامية إلا في نقل حوار. استخدم المصلحات الصحيحة.
+4) **التدرّج في العمق**: ابدأ بالسهل، ثم انتقل للمتوسط، ثم العميق. لا تُسقِط المتعلم في بحر من التفصيلات دون تمهيد.
+5) **التطبيق العملي**: كل مفهوم نظري يجب أن يتبعه مثال يومي أو تطبيق عملي. "اعرف - افهم - اعمل" هو منهجنا.
+6) **الإيجابية والتشجيع**: شجّع المتعلم على الاستمرار. ذكّره بأهمية العلم وأنه عبادة. لا تُحبطه.
+7) **الصدق في حدود المعرفة**: إذا لم تَعرف، قل ذلك بوضوح. أفضل من الاختراع.
+
+# أسلوب الإجابة العام:
+- قدّم إجابة كاملة وغير مبتورة — لا تختصر أو تقطع في المنتصف.
+- نَظِّم الإجابة: عناوين فرعية قصيرة، قوائم نقطية، أمثلة واقعية.
+- اختم الإجابات الطويلة بخلاصة سطرين + سؤال تأملي.
+- اربط دائمًا بمثال من الحياة اليومية إن أمكن.
+- لا تكرر نفس الجملة الافتتاحية في كل رد ("بالتأكيد!"، "سؤال ممتاز!").
+
+# أسلوب الاستشهاد الذكي:
+- استعمل صيغة: «قال الله تعالى: ﴿...﴾ [السورة: رقم]»، «قال النبي ﷺ: "..." (رواه البخاري/مسلم)».
+- إذا لم تذكر مصدرًا، فلا تَدَّعِ أنه منقول عن نص ديني.
+- أَلحق الاستشهاد بفقرة قصيرة تربطه بسؤال المتعلم.
+
+# ما يجب تجنّبه:
+- لا تَدَّعِ علمًا بآيات أو أحاديث لم تُذكر في قاعدة المعرفة.
+- لا تُصدر فتاوى شرعية قاطعة ("واجب"، "حرام") إلا إذا كان النص في قاعدة المعرفة.
+- لا تَستعمل العامية المفرطة، ولا النبرة الوعظية المُتعالية.
+- لا تَختلق "الشيخ فلان قال..." أو "العلامة علان يقول..." - استخدم النص الأصلي.`;
+
+const buildModeInstructions = (mode: TutorMode) => {
+  const persona = MODE_PERSONAS[mode];
+  return `\n# [الوضع الحالي: ${persona.name} - ${persona.greeting}]
+${persona.style}
+
+# بنية الإجابة المقترحة لهذا الوضع:
+${persona.structure}`;
+};
+
+const buildCourseAwarenessSection = (ctx: TutorContext) => {
+  if (!ctx.courseId) return "";
+  return `\n# الدورة المُختارة حاليًا:
+المتعلم ركّز على الدورة بمعرفتها: ${ctx.courseId}.
+استخدم المحتوى التفصيلي لهذه الدورة كمرجع أساسي. أَلحِق كل إجابة بذكر هذه الدورة عند الاقتباس منها.`;
+};
+
+const buildCitationInstruction = () => `
+# الإسناد (citations) — ميزة مهمة:
+في نهاية كل إجابة، ضمِن كتلة JSON مخفية بعلامة [CITATIONS] بصيغة:
+[CITATIONS]{"citations":[{"courseId":"<id>","conceptIds":["<id>"]}],"confidence":0.0-1.0,"suggestedFollowUps":["سؤال 1","سؤال 2","سؤال 3"]}[/CITATIONS]
+حيث:
+- citations: قائمة الدورات والمفاهيم التي استشهدت بها
+- confidence: رقم بين 0 و 1 (1 = واثق جدًا، 0.5 = متوسط، 0 = تخمين)
+- suggestedFollowUps: 3 أسئلة متابعة مقترحة للمتعلم
+
+هذه العلامة لن تظهر للمستخدم، بل ستُستخرَج برمجيًا. يجب أن تظهر **دائمًا** في نهاية الإجابة.`;
+
+const buildSystemPrompt = (mode: TutorMode, ctx: TutorContext) => {
+  return [
+    BASE_SYSTEM_PROMPT,
+    buildModeInstructions(mode),
+    buildCourseAwarenessSection(ctx),
+    buildCitationInstruction(),
+    "",
+    "# قاعدة المعرفة — المواد الكاملة لأكاديمية الإحسان:",
+    ctx.knowledgeBase,
+    "",
+    "# سياق الدورة المُختارة:",
+    ctx.courseContext,
+    "",
+    "# ذاكرة المتعلّم:",
+    chatMemory.getMemorySummary(),
+  ].join("\n");
+};
+
+const getBrowserKey = (): string | undefined => {
   return (import.meta.env.VITE_GEMINI_API_KEY as string | undefined) || undefined;
 };
 
@@ -67,118 +209,179 @@ const getEndpoint = (): string =>
   (import.meta.env.VITE_GEMINI_ENDPOINT as string | undefined) ||
   "https://generativelanguage.googleapis.com";
 
-export const hasApiKey = (): boolean => Boolean(getKey());
+const getProxyUrl = (): string =>
+  (import.meta.env.VITE_GEMINI_PROXY_URL as string | undefined) || "/api/gemini";
 
-export interface TutorResult {
-  ok: boolean;
-  text: string;
-  source: "gemini" | "local-fallback";
-  error?: string;
-}
+export const hasApiKey = (): boolean => Boolean(getBrowserKey()) || Boolean(getProxyUrl());
 
-const localFallback = (mode: TutorMode, history: TutorMessage[]): string => {
+// === Build a local fallback that uses actual course content ===
+const localFallback = (mode: TutorMode, history: TutorMessage[], ctx: TutorContext): string => {
   const last = history.filter((m) => m.role === "user").slice(-1)[0]?.text ?? "";
+  const course = ctx.courses.find((c) => c.id === ctx.courseId);
+
+  // Try to find a relevant concept in the question
+  const relevantConcept = pickRelevantConcepts(last, course, 1);
+  let conceptResponse = "";
+  if (relevantConcept[0]) {
+    const c = relevantConcept[0];
+    conceptResponse = `
+
+📚 من محتوى "${c.name}":
+${c.definition}
+
+${c.deepExplanation?.substring(0, 600) ?? ""}${c.deepExplanation && c.deepExplanation.length > 600 ? "..." : ""}`;
+  }
+
   if (mode === "quiz") {
-    return `سؤال تجريبي (يعمل بدون مفتاح API):
+    return course
+      ? `سؤال تجريبي من "${course.title}":
 
-س: ما تعريف الإحسان في حديث جبريل؟
-أ) الإتقان المهني
-ب) أن تعبد الله كأنك تراه ✅
-ج) كثرة العبادة
-د) الزهد في الدنيا
+س: ما الفكرة الجوهرية في هذه الدورة؟
+أ) البناء الروحي الإيماني ✅
+ب) الخوف من الله
+ج) الثروة المادية
+د) القوة السياسية
 
-الشرح: الإحسان في حديث جبريل: 'أن تعبد الله كأنك تراه، فإن لم تكن تراه فإنه يراك'.`;
+(ملاحظة: هذا رد محلي. أضف VITE_GEMINI_API_KEY في ملف .env للحصول على إجابات مولّدة بالذكاء الاصطناعي وتخصيص كامل.)${conceptResponse}`
+      : "اختر دورة أولاً. ملاحظة: أضف VITE_GEMINI_API_KEY في .env للحصول على إجابات أعمق.";
   }
-  if (mode === "revise") {
-    return `أهم 5 نقاط للإحسان:
-1. الإحسان = حضور + أحسن عمل.
-2. ليس مجرد إتقان مهني بل مراقبة الله.
-3. العبادة بُعدان: تقديس وتعمير.
-4. عقد الخلافة قائم عليك من يوم ولادتك.
-5. الفراغ الوجودي دواؤه الإحسان.
 
-أعِدها بدون النظر وراجع نفسك.`;
-  }
   if (mode === "plan") {
-    return `خطة دراسة مقترحة (بدون مفتاح API):
-1. ابدأ بـ دورة "الإحسان ومنازل الروح" — 60 دقيقة.
-2. ثم "التفسير" — 45 دقيقة.
-3. ثم "السيرة النبوية" — 60 دقيقة.
-4. ثم الدورات التطبيقية (5-9) — 45 دقيقة لكل واحدة.
+    return `خطة دراسة مقترحة:
 
-استخدم بطاقات المراجعة بعد كل دورة.`;
-  }
-  if (last.includes("الفاتحة") || last.includes("أم القرآن")) {
-    return `الفاتحة تسمى "أم القرآن" لأنها جامعة لمقاصد القرآن الخمسة: (1) معرفة الله، (2) الكون الدال على الله، (3) أسماء الله وصفاته، (4) يوم الجزاء، (5) قصص السابقين. سميت "السبع المثاني" لأنها تتكرر 17 مرة في اليوم والليلة. لها عند السيوطي 20 اسمًا.
+📚 الدورات في ${course ? course.title : "الأسبوع"}:
+1) ابدأ بمشاهدة الشرح العميق (45-60 دقيقة).
+2) راجع البطاقات المسردة (20-30 دقيقة).
+3) أجِب اختبارات سريعة على المفاهيم.
+4) طبّق ما تعلّمت في حياتك اليومية.
 
-(ملاحظة: هذا رد محلي. أضف مفتاح VITE_GEMINI_API_KEY في ملف .env للحصول على إجابات أعمق.)`;
-  }
-  if (last.includes("أبو بكر") || last.includes("الصديق")) {
-    return `أبو بكر الصديق: عبد الله بن أبي قحافة، أول من أسلم من الرجال. سُمي الصديق لتصديقه النبي ﷺ في الإسراء والمعراج. أنفق كل ثروته (من 40,000 إلى 5,000 درهم) في سبيل الله. قاتل المرتدين ومانعي الزكاة. جمع القرآن في مصحف واحد. تُوفي سنة 13 هـ.`;
-  }
-  if (last.includes("خديجة")) {
-    return `خديجة بنت خويلد: أم المؤمنين، أول من آمن من المسلمين جميعًا. من سادة قريش وأكبر تجارهم. قالت للنبي ﷺ عند نزول الوحي: 'والله لا يخزيك الله أبدًا'. أنجبت القاسم، زينب، رقية، أم كلثوم، فاطمة، عبد الله. تُوفيت في عام الحزن.`;
-  }
-  if (last.includes("الفتح") || last.includes("الغزوة") || last.includes("الجهاد")) {
-    return `الفرق: الغزوة ما قصده النبي ﷺ بنفسه، السرية ما بعثه ولم يحضره. الفتح افتتاح + استقرار + رحمة. المعركة احتكاك قتالي بدون النبي ﷺ. الجهاد أوسع من القتال — يشمل الأمر بالمعروف والدعوة وتهذيب النفس. كل قتال جهاد وليس كل جهاد قتالًا.`;
-  }
-  return `سؤالك: "${last.slice(0, 200)}"
+💡 نصيحة: ابدأ بدورة واحدة، لا تتشتت. كرّرها حتى تشعر بالاستيعاب.
 
-للحصول على إجابة كاملة مولّدة بالذكاء الاصطناعي، أضف مفتاح VITE_GEMINI_API_KEY في ملف .env.
+(ملاحظة: هذا رد محلي. أضف VITE_GEMINI_API_KEY في .env لتوليد خطة مخصصة كاملة.)`;
+  }
 
-في الوضع الحالي يمكنني مساعدتك في:
-- شرح مفاهيم الأسبوع الأول (الإحسان، التفسير، السيرة، الفقه، ...)
-- توليد اختبارات تجريبية
-- مراجعة سريعة
-- خطة دراسة مقترحة
-- تأملات
+  if (mode === "revise") {
+    if (course) {
+      return `ملخص سريع - ${course.title}:
 
-جرّب سؤالًا محددًا عن دورة من دورات الأسبوع الأول.`;
+📌 أهم 5 محاور:
+${course.mustUnderstand?.slice(0, 5).map((m, i) => `${i + 1}) ${m}`).join("\n") ?? "—"}
+
+💡 أمثلة من الحياة:
+${course.realLifeExamples?.slice(0, 2).map((e) => `• ${e.substring(0, 100)}...`).join("\n") ?? "—"}
+
+أعِدها بدون النظر.${conceptResponse}`;
+    }
+  }
+
+  if (mode === "reflect") {
+    return `تأمّل شخصي:
+${course ? `فكّر في "${course.title}".` : "فكّر في الأسبوع."}
+
+أسئلة تأملية:
+1) ما المفهوم الذي يَترك أثرًا في حياتك الآن؟
+2) كيف تَطبّقه هذا الأسبوع؟
+3) ما الذي يمنعك من تطبيقه فعليًا؟
+
+في الإسلام، العلم بلا عمل وبال، والعمل بغير علم ضلال. التزم بالعلم والعمل معًا.${conceptResponse}`;
+  }
+
+  // Default response for ask / teach / deep / simple
+  if (course) {
+    return `شكرًا لسؤالك.
+
+📚 من "${course.title}":
+${course.summary}
+
+${conceptResponse || (course.keyTerms?.slice(0, 3).map((t) => `• ${t.term}: ${t.definition}`).join("\n") || "")}
+
+(ملاحظة: هذا رد محلي بدون API. أضف VITE_GEMINI_API_KEY في .env للحصول على إجابات مولّدة بالذكاء الاصطناعي ومخصّصة لكل سؤال.)`;
+  }
+
+  return `للسؤال: "${last.slice(0, 200)}"
+
+بدون مفتاح API، يمكنني تقديم محتوى محدود. أضف VITE_GEMINI_API_KEY في .env للحصول على إجابات مولّدة بالذكاء الاصطناعي.`;
 };
 
+// === Main API call to Gemini ===
 const callGemini = async (
   history: TutorMessage[],
   mode: TutorMode,
-  onChunk?: (textSoFar: string) => void,
-): Promise<string> => {
-  const key = getKey();
-  if (!key) throw new Error("NO_API_KEY");
+  ctx: TutorContext,
+  onChunk?: (text: string) => void,
+  imageDataUrl?: string,
+): Promise<{ text: string; citations?: { courseId: string; conceptIds?: string[] }[]; confidence?: number; suggestedFollowUps?: string[] }> => {
   const model = getModel();
   const endpoint = getEndpoint();
 
-  const systemPrompt = buildSystemPrompt(mode);
+  const systemPrompt = buildSystemPrompt(mode, ctx);
 
-  const contents = [
+  // Build Gemini contents array
+  const contents: any[] = [
     { role: "user", parts: [{ text: systemPrompt }] },
-    { role: "model", parts: [{ text: "فهمت. أنا معلّم أكاديمية الإحسان وجاهز للمساعدة." }] },
-    ...history.map((m) => ({
-      role: m.role === "user" ? "user" : "model",
-      parts: [{ text: m.text }],
-    })),
+    { role: "model", parts: [{ text: "فهمت. أنا معلّم أكاديمية الإحسان، جاهز للعمل بالوضع المطلوب: " + mode }] },
   ];
 
-  const body = JSON.stringify({
+  // Add history (with optional images)
+  for (const m of history) {
+    const parts: any[] = [{ text: m.text }];
+    if (m.imageDataUrl) {
+      parts.push({ inline_data: { mime_type: "image/jpeg", data: m.imageDataUrl.split(",")[1] || m.imageDataUrl } });
+    }
+    contents.push({ role: m.role === "user" ? "user" : "model", parts });
+  }
+
+  // Add current user message (with optional image)
+  const userParts: any[] = [{ text: history[history.length - 1]?.text || "" }];
+  if (imageDataUrl) {
+    userParts.push({ inline_data: { mime_type: "image/jpeg", data: imageDataUrl.split(",")[1] || imageDataUrl } });
+  }
+  contents.push({ role: "user", parts: userParts });
+
+  const generationConfig = {
+    temperature: 0.7,
+    maxOutputTokens: 4096,
+    thinkingConfig: { thinkingBudget: 0 },
+  };
+
+  const proxyUrl = getProxyUrl();
+  const browserKey = getBrowserKey();
+  let res: Response;
+
+  const proxyBody = JSON.stringify({
     contents,
-    generationConfig: {
-      temperature: 0.75,
-      maxOutputTokens: 8192,
-      // Gemini 2.5 models spend part of the token budget on invisible internal
-      // "thinking" before producing the visible answer — this alone was the
-      // cause of both slow (~8s) responses AND answers getting cut short
-      // (thinking silently ate most of maxOutputTokens). Disabling it makes
-      // responses both much faster and fully complete.
-      thinkingConfig: { thinkingBudget: 0 },
-    },
+    generationConfig,
+    model,
   });
 
-  // Stream the response so the UI can show text as it's generated, instead of
-  // waiting for the entire answer before displaying anything.
-  const url = `${endpoint}/v1beta/models/${model}:streamGenerateContent?alt=sse&key=${key}`;
-  const res = await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body,
-  });
+  const useLocalDirect = Boolean(browserKey && import.meta.env.DEV && !import.meta.env.VITE_GEMINI_PROXY_URL);
+
+  if (useLocalDirect && browserKey) {
+    const directBody = JSON.stringify({ contents, generationConfig });
+    const url = `${endpoint}/v1beta/models/${model}:streamGenerateContent?alt=sse&key=${browserKey}`;
+    res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: directBody,
+    });
+  } else if (proxyUrl) {
+    res = await fetch(proxyUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: proxyBody,
+    });
+  } else if (browserKey) {
+    const directBody = JSON.stringify({ contents, generationConfig });
+    const url = `${endpoint}/v1beta/models/${model}:streamGenerateContent?alt=sse&key=${browserKey}`;
+    res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: directBody,
+    });
+  } else {
+    throw new Error("NO_API_KEY");
+  }
+
   if (!res.ok || !res.body) {
     const t = await res.text().catch(() => "");
     throw new Error(`Gemini API error ${res.status}: ${t.slice(0, 300)}`);
@@ -194,7 +397,7 @@ const callGemini = async (
     if (done) break;
     buffer += decoder.decode(value, { stream: true });
     const lines = buffer.split("\n");
-    buffer = lines.pop() ?? ""; // last (possibly incomplete) line stays buffered
+    buffer = lines.pop() ?? "";
     for (const line of lines) {
       const trimmed = line.trim();
       if (!trimmed.startsWith("data:")) continue;
@@ -210,57 +413,89 @@ const callGemini = async (
           onChunk?.(fullText);
         }
       } catch {
-        // Ignore partial/malformed SSE lines (can happen mid-chunk-boundary).
+        // Ignore partial SSE lines
       }
     }
   }
 
   if (!fullText) throw new Error("Empty response from Gemini");
-  return fullText;
+
+  // Extract citations from response
+  const citationsMatch = fullText.match(/\[CITATIONS\](.*?)\[\/CITATIONS\]/s);
+  let citations: { courseId: string; conceptIds?: string[] }[] | undefined;
+  let confidence: number | undefined;
+  let suggestedFollowUps: string[] | undefined;
+
+  if (citationsMatch) {
+    try {
+      const parsed = JSON.parse(citationsMatch[1].trim());
+      citations = parsed.citations;
+      confidence = parsed.confidence;
+      suggestedFollowUps = parsed.suggestedFollowUps;
+      // Strip citations from visible text
+      fullText = fullText.replace(/\[CITATIONS\].*?\[\/CITATIONS\]/s, "").trim();
+    } catch {}
+  }
+
+  return { text: fullText, citations, confidence, suggestedFollowUps };
 };
 
+// === Public API ===
 export const sendToTutor = async (
   history: TutorMessage[],
   mode: TutorMode,
-  onChunk?: (textSoFar: string) => void,
+  ctx: TutorContext,
+  onChunk?: (text: string) => void,
+  imageDataUrl?: string,
 ): Promise<TutorResult> => {
+  // Record what was discussed for memory
+  if (ctx.courseId) {
+    const last = history.filter(m => m.role === "user").slice(-1)[0]?.text;
+    if (last) chatMemory.recordTopic(ctx.weekId, ctx.courseId, last.substring(0, 200));
+  }
+
   try {
-    const text = await callGemini(history, mode, onChunk);
-    return { ok: true, text, source: "gemini" };
-  } catch (err) {
-    const message = err instanceof Error ? err.message : "Unknown error";
-    if (message === "NO_API_KEY") {
-      const text = localFallback(mode, history);
-      onChunk?.(text);
-      return {
-        ok: true,
-        text,
-        source: "local-fallback",
-        error: "NO_API_KEY",
-      };
+    const { text, citations, confidence, suggestedFollowUps } = await callGemini(history, mode, ctx, onChunk, imageDataUrl);
+
+    // Generate fallback smart suggestions if model didn't provide any
+    let finalSuggestions = suggestedFollowUps;
+    if (!finalSuggestions || finalSuggestions.length === 0) {
+      const course = ctx.courses.find(c => c.id === ctx.courseId);
+      finalSuggestions = generateSmartSuggestions(text, mode, course);
     }
-    // Network or other error → graceful local fallback
-    const text = localFallback(mode, history) + `\n\n(تعذّر الوصول إلى Gemini: ${message})`;
-    onChunk?.(text);
+
     return {
       ok: true,
       text,
-      source: "local-fallback",
-      error: message,
+      source: "gemini",
+      citations,
+      confidence,
+      suggestedFollowUps: finalSuggestions,
     };
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Unknown error";
+    if (message === "NO_API_KEY") {
+      const text = localFallback(mode, history, ctx);
+      onChunk?.(text);
+      return { ok: true, text, source: "local-fallback", error: "NO_API_KEY" };
+    }
+    // Network error — use local fallback
+    const text = localFallback(mode, history, ctx) + `\n\n(تعذّر الوصول إلى Gemini: ${message})`;
+    onChunk?.(text);
+    return { ok: true, text, source: "local-fallback", error: message };
   }
 };
 
 export const TUTOR_MODES: { id: TutorMode; label: string; description: string; icon: string }[] =
   [
-    { id: "teach", label: "علّمني", description: "يشرح لك المفاهيم بأسلوب قصصي.", icon: "🎓" },
-    { id: "ask", label: "اسأل أي شيء", description: "أجب عن أسئلتك بدقة.", icon: "❓" },
+    { id: "teach", label: "علّمني", description: "يشرح بأسلوب قصصي روحي.", icon: "🎓" },
+    { id: "ask", label: "اسأل", description: "يبدق بالاستشهاد.", icon: "❓" },
     { id: "quiz", label: "اختبرني", description: "يولّد أسئلة فورية.", icon: "📝" },
-    { id: "simple", label: "بسّط لي", description: "تبسيط عميق بكلمات سهلة.", icon: "💧" },
-    { id: "deep", label: "شرح معمّق", description: "تفصيل أكاديمي.", icon: "🔬" },
-    { id: "connect", label: "اربط الدورات", description: "يوضح العلاقات بين الدورات.", icon: "🔗" },
-    { id: "plan", label: "خطة دراسة", description: "يصمم لك خطة مخصصة.", icon: "🗺️" },
-    { id: "revise", label: "مراجعة سريعة", description: "أهم 5 نقاط.", icon: "⚡" },
-    { id: "reflect", label: "تأمّل", description: "أسئلة تأملية تحوّل العلم لسلوك.", icon: "🪞" },
-    { id: "exam", label: "تحضير للاختبار", description: "اختبار نهائي مكثّف.", icon: "🎯" },
+    { id: "simple", label: "بسّط", description: "تبسيط عميق بكلمات سهلة.", icon: "💧" },
+    { id: "deep", label: "شرح معمّق", description: "تفصيل أكاديمي مع التّخريج.", icon: "🔬" },
+    { id: "connect", label: "اربط", description: "يوضّح جسور الدورات.", icon: "🔗" },
+    { id: "plan", label: "خطة", description: "يصمم لك خطة مخصصة.", icon: "🗺️" },
+    { id: "revise", label: "مراجعة", description: "ملخص مكثف.", icon: "⚡" },
+    { id: "reflect", label: "تأمّل", description: "أسئلة تحوّل العلم لسلوك.", icon: "🪞" },
+    { id: "exam", label: "اختبار", description: "اختبار نهائي مكثّف.", icon: "🎯" },
   ];

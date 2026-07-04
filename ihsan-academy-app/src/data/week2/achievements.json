@@ -1,0 +1,79 @@
+[
+  {
+    "id": "week2-manazil-explorer",
+    "title": "مُكتشف المنازل",
+    "description": "حفظ أسماء المنازل السبعة وربطها بأذكار يومية",
+    "iconKey": "moon",
+    "criteria": "احفظ أسماء المنازل السبعة واقرأ قسمها في الفهم العميق"
+  },
+  {
+    "id": "week2-nasr-understood",
+    "title": "فاهم سورة النصر",
+    "description": "أتممت دراسة سورة النصر وعرفت خريطة ما بعد النصر",
+    "iconKey": "book",
+    "criteria": "افتح دورة التفسير واقرأ قسم سبب النزول"
+  },
+  {
+    "id": "week2-seerah-nasab",
+    "title": "حافظ النسب النبوي",
+    "description": "حفظت اسم النبي ﷺ ونسبه بستة أسماء",
+    "iconKey": "star",
+    "criteria": "احفظ الاسم من محمد إلى قصي"
+  },
+  {
+    "id": "week2-shubha-refuter",
+    "title": "رادّ الشبهات",
+    "description": "استوعبت الرد على شبهة فرض الإسلام بالسيف",
+    "iconKey": "shield",
+    "criteria": "افتح دورة القضايا المعاصرة واقرأ قسم المنهج العكسي"
+  },
+  {
+    "id": "week2-niyyah-practitioner",
+    "title": "تطبيق النية",
+    "description": "حوّلت عاداتك اليومية إلى عبادات بالنية",
+    "iconKey": "diamond",
+    "criteria": "أكمل نشاط تطبيق نية 7 أيام"
+  },
+  {
+    "id": "week2-yaqin-applier",
+    "title": "تطبيق اليقين",
+    "description": "استخدمت قاعدة اليقين لا يزول بالشك في وضوئك وصلاتك",
+    "iconKey": "check",
+    "criteria": "اقرأ قسم تطبيقات قاعدة اليقين"
+  },
+  {
+    "id": "week2-strength-decoder",
+    "title": "فاكّ شفرة القوة",
+    "description": "اكتشفت نقاط قوتك الخمسة الأولى من الـ VIA",
+    "iconKey": "trophy",
+    "criteria": "افتح دورة علم النفس الإيجابي واقرأ قسم الـ VIA"
+  },
+  {
+    "id": "week2-ali-lover",
+    "title": "محبّ علي",
+    "description": "استوعبت سيرة علي بن أبي طالب ومنزلته عند النبي ﷺ",
+    "iconKey": "crown",
+    "criteria": "اقرأ قسم ليلة الهجرة في دورة الصحابة"
+  },
+  {
+    "id": "week2-umm-ayman-rememberer",
+    "title": "ذاكر أم أيمن",
+    "description": "عرفت دور أم أيمن في حياة النبي ﷺ قبل البعثة وبعدها",
+    "iconKey": "moon",
+    "criteria": "افتح دورة الصحابيات"
+  },
+  {
+    "id": "week2-synthesis-reader",
+    "title": "موحد الأسبوع",
+    "description": "قرأت التركيب الموحد للأسبوع الثاني",
+    "iconKey": "diamond",
+    "criteria": "افتح صفحة التركيب"
+  },
+  {
+    "id": "week2-ready-for-week3",
+    "title": "جاهز للأسبوع الثالث",
+    "description": "أكملت كل دورات الأسبوع الثاني + التركيب + شجرة المعرفة",
+    "iconKey": "rocket",
+    "criteria": "أكمل كل متطلبات الأسبوع الثاني"
+  }
+]

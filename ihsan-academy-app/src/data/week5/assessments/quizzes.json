@@ -1,0 +1,472 @@
+[
+  {
+    "id": "q-is-w5-1",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["w5-concept-qiyam"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "منظومة القيم",
+    "prompt": "ما هي المراحل الثلاث لاختبار القيم بحسب المحاضرة؟",
+    "options": [
+      { "id": "a", "text": "تلقين، يقين، إحسان" },
+      { "id": "b", "text": "معرفة، تطبيق، شكر" },
+      { "id": "c", "text": "تفكر، عمل، شكر" },
+      { "id": "d", "text": "ذكر، عبادة، دعاء" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "القيم 3 مراحل: (1) التلقين من الوالدين والمجتمع. (2) اليقين بالاختبار والاختيار. (3) الإحسان بالفعل المستمر. الحساب يوم القيامة على القيم المُختبَرة لا على المُلقَّنة."
+  },
+  {
+    "id": "q-is-w5-2",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["w5-concept-qiyam"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "الاختبار",
+    "prompt": "ما هي الـ 5 أنواع من اختبار القيم بحسب المحاضرة؟",
+    "options": [
+      { "id": "a", "text": "المال، العمل، العِلم، الناس، الله" },
+      { "id": "b", "text": "الصبر، الشكر، التوكل، اليقين، الإحسان" },
+      { "id": "c", "text": "الصدق، الأمانة، الحياء، العفو، الصبر" },
+      { "id": "d", "text": "الصلاة، الصوم، الزكاة، الحج، الدعاء" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "5 أنواع: (1) المادة: الحرام/الحلال. (2) البيئة: الملوثة/النظيفة. (3) العلاقات: الثقة/الريبة. (4) المحاسبة: الإصلاح/التبرير. (5) القرب/البعد من الله."
+  },
+  {
+    "id": "tf-is-w5-1",
+    "type": "tf",
+    "courseId": "ihsan-soul",
+    "conceptIds": ["w5-concept-qiyam"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "القيم لا تثبت إلا بالاختبار، والاختبار يَفصل بين العلم والوهم.",
+    "correctAnswer": "true",
+    "explanation": "«إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّى يُغَيِّرُوا مَا بِأَنفُسِهِمْ» (الرعد 11). القيم تمر بتحول من تلقين إلى يقين فقط بالاختبار."
+  },
+  {
+    "id": "q-tf-w5-1",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": ["w5-concept-mu3a2ithat"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "المعوذتان",
+    "prompt": "كم مرة كان النبي ﷺ يقرأ المعوذتين في اليوم؟",
+    "options": [
+      { "id": "a", "text": "5 مرات" },
+      { "id": "b", "text": "11 مرة" },
+      { "id": "c", "text": "18 مرة" },
+      { "id": "d", "text": "25 مرة" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "كان النبي ﷺ يقرأ المعوذتين: (1) 3 بعد الفجر، (2) 3 في أذكار الصباح، (3) 3 في أذكار المساء، (4) 3 قبل النوم، (5) 3 بعد المغرب = 18 مرة يومياً."
+  },
+  {
+    "id": "q-tf-w5-2",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": ["w5-concept-mu3a2ithat"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "الناس في المعوذتين",
+    "prompt": "ما هي الثلاثة الذين تُذكر عن الناس في سورة الناس؟",
+    "options": [
+      { "id": "a", "text": "الرب، الملك، الإله" },
+      { "id": "b", "text": "الخالق، الرازق، المدبر" },
+      { "id": "c", "text": "الأول، الآخر، الظاهر" },
+      { "id": "d", "text": "السلام، المؤمن، المهيمن" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "«قُلْ أَعُوذُ بِرَبِّ النَّاسِ * مَلِكِ النَّاسِ * إِلَٰهِ النَّاسِ» — ثلاثة أركان: الربوبية، الملك، الألوهية."
+  },
+  {
+    "id": "tf-tf-w5-1",
+    "type": "tf",
+    "courseId": "tafsir",
+    "conceptIds": ["w5-concept-mu3a2ithat"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "سبب نزول المعوذتين: السحر الذي سحره لبيد بن الأعصم للنبي ﷺ.",
+    "correctAnswer": "true",
+    "explanation": "اللي بن الأعصم سحر النبي ﷺ في مُشط ومُشاقة، فأنزل الله المعوذتين كعلاج ووقاية."
+  },
+  {
+    "id": "q-se-w5-1",
+    "type": "mcq",
+    "courseId": "seerah",
+    "conceptIds": ["w5-concept-tashakki"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "التشكي",
+    "prompt": "كم سنة قضاها النبي ﷺ في التشكي قبل الوحي؟",
+    "options": [
+      { "id": "a", "text": "سنة" },
+      { "id": "b", "text": "4 سنوات" },
+      { "id": "c", "text": "10 سنوات" },
+      { "id": "d", "text": "13 سنة" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "4 سنوات قضاها النبي ﷺ في التشكي في غار حراء قبل نزول الوحي، قبل الدعوة العلنية."
+  },
+  {
+    "id": "q-se-w5-2",
+    "type": "mcq",
+    "courseId": "seerah",
+    "conceptIds": ["w5-concept-da3wa"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "أوائل المسلمين",
+    "prompt": "مَن هي أَوَّل من آمن من النساء؟",
+    "options": [
+      { "id": "a", "text": "عائشة" },
+      { "id": "b", "text": "خديجة" },
+      { "id": "c", "text": "فاطمة" },
+      { "id": "d", "text": "عائشة بنت أبي بكر" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "خديجة بنت خويلد هي أَوَّل من آمن من النساء، وزوجها أَوَّل من آمن من الرجال، وعلي بن أبي طالب أَوَّل من آمن من الصبيان."
+  },
+  {
+    "id": "tf-se-w5-1",
+    "type": "tf",
+    "courseId": "seerah",
+    "conceptIds": ["w5-concept-da3wa"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "ورقة بن نوفل هو الذي قال: 'والذي نفسي بيده، إنه لنبي هذه الأمة'.",
+    "correctAnswer": "true",
+    "explanation": "ورقة بن نوفل، ابن عم خديجة، عالم مسيحي كبير، عرف الإسلام على الفور، وقال: 'إنه لنبي هذه الأمة'."
+  },
+  {
+    "id": "q-sh-w5-1",
+    "type": "mcq",
+    "courseId": "sahaba",
+    "conceptIds": ["w5-concept-talh"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "طلحة",
+    "prompt": "مَن هو الصحابي الذي قال عنه النبي ﷺ: 'طلحة في الجنة'؟",
+    "options": [
+      { "id": "a", "text": "أبو بكر الصديق" },
+      { "id": "b", "text": "عمر بن الخطاب" },
+      { "id": "c", "text": "طلحة بن عبيد الله" },
+      { "id": "d", "text": "سعد بن أبي وقاص" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "طلحة بن عبيد الله التيمي القرشي، من العشرة المبشرين بالجنة. قال عنه النبي ﷺ: 'طلحة في الجنة، والشهيد الحي'."
+  },
+  {
+    "id": "q-sh-w5-2",
+    "type": "mcq",
+    "courseId": "sahaba",
+    "conceptIds": ["w5-concept-talh"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "الجمل",
+    "prompt": "في أي معركة استُشهد طلحة بن عبيد الله؟",
+    "options": [
+      { "id": "a", "text": "بدر" },
+      { "id": "b", "text": "أحد" },
+      { "id": "c", "text": "الجمل (36 هـ)" },
+      { "id": "d", "text": "حنين" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "استُشهد طلحة في معركة الجمل (36 هـ) دفاعاً عن عائشة رضي الله عنها. مات طبيعياً في منزله، فسُمّي 'الشهيد الحي' لأنه ترك الدنيا ولم يدخل قبره."
+  },
+  {
+    "id": "tf-sh-w5-1",
+    "type": "tf",
+    "courseId": "sahaba",
+    "conceptIds": ["w5-concept-talh"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "طلحة بن عبيد الله هو أوَّل من أسلم بعد أبي بكر الصديق.",
+    "correctAnswer": "true",
+    "explanation": "طلحة بن عبيد الله أسلم في 7 سنين بعد دعوة النبي ﷺ، وكان من العشرة المبشرين بالجنة."
+  },
+  {
+    "id": "q-sb-w5-1",
+    "type": "mcq",
+    "courseId": "sahabiyyat",
+    "conceptIds": ["w5-concept-rumla"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "رملة",
+    "prompt": "مَن هي 'أم حبيبة' (السيدة رملة بنت أبي سفيان)؟",
+    "options": [
+      { "id": "a", "text": "ابنة أبي سفيان بن حرب" },
+      { "id": "b", "text": "ابنة أبي طالب" },
+      { "id": "c", "text": "ابنة الخديجة" },
+      { "id": "d", "text": "ابنة الزبير" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "رملة بنت أبي سفيان بن حرب بن أمية، هاجرت مع زوجها عبيد الله بن جحش إلى الحبشة مرتين، قال عنها النبي ﷺ: 'إنها زوجتي في الدنيا والآخرة'."
+  },
+  {
+    "id": "q-sb-w5-2",
+    "type": "mcq",
+    "courseId": "sahabiyyat",
+    "conceptIds": ["w5-concept-rumla"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "هجرة الحبشة",
+    "prompt": "ماذا حصل لزوجها عبيد الله بن جحش في الحبشة؟",
+    "options": [
+      { "id": "a", "text": "أسلم ومات في المدينة" },
+      { "id": "b", "text": "تنصر ومات في الحبشة" },
+      { "id": "c", "text": "بقى على الإسلام وعاد للحبشة" },
+      { "id": "d", "text": "هاجر إلى المدينة مباشرة" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "عند إسلام عبيد الله بن جحش في الحبشة، قال: 'ما أهل الكتاب يحتاجون إلينا' وتنصر. مات في الحبشة دون إسلام."
+  },
+  {
+    "id": "tf-sb-w5-1",
+    "type": "tf",
+    "courseId": "sahabiyyat",
+    "conceptIds": ["w5-concept-rumla"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "السيدة رملة بنت أبي سفيان هي التي يلقبها الناس 'أم حبيبة'.",
+    "correctAnswer": "true",
+    "explanation": "أم حبيبة = رملة بنت أبي سفيان. هاجرت مرتين إلى الحبشة، وعند إسلامها تنصر زوجها عبيد الله. تزوجها النبي ﷺ في الحبشة."
+  },
+  {
+    "id": "q-ct-w5-1",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": ["w5-concept-harb"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "كود النبي الأخلاقي",
+    "prompt": "كم عدد الغزوات النبوية الموثقة في السيرة؟",
+    "options": [
+      { "id": "a", "text": "8 غزوات" },
+      { "id": "b", "text": "17 غزوة" },
+      { "id": "c", "text": "28 غزوة" },
+      { "id": "d", "text": "39 غزوة" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "28 غزوة موثقة في السيرة النبوية: ماضية (لَقي العدو) + غير ماضية (لم يلق العدو) + السرايا (دون لواء)."
+  },
+  {
+    "id": "q-ct-w5-2",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": ["w5-concept-harb"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "الغنائم",
+    "prompt": "ما هي الـ 5 أجزاء من الغنائم بحسب المحاضرة؟",
+    "options": [
+      { "id": "a", "text": "لله، للرسول، للفقراء، لركب الإبل، لليتيم" },
+      { "id": "b", "text": "للمسلمين، للأغنياء، للقادة، للمجاهدين، للأيتام" },
+      { "id": "c", "text": "للنبي، للصحابة، للفقراء، للمسلمين، للأيتام" },
+      { "id": "d", "text": "للقادة، للجيش، للفقراء، للصحابة، للعلماء" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "5 أجزاء: (1) لله (مصالح المسلمين). (2) لرسول الله ﷺ. (3) للفقراء والمساكين. (4) لركب الإبل (المقاتلة). (5) لليتيم."
+  },
+  {
+    "id": "tf-ct-w5-1",
+    "type": "tf",
+    "courseId": "contemporary",
+    "conceptIds": ["w5-concept-harb"],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "النبي ﷺ لم يقتل طفلًا أو امرأة أو عجوزًا في حروبه.",
+    "correctAnswer": "true",
+    "explanation": "الكود الأخلاقي: لم يقتل طفلاً، امرأة، عجوزًا، مريضًا، راهبًا في صومعته. لم يحرق زرعًا، لم يقطع شجرة، لم يقطع نحلًا."
+  },
+  {
+    "id": "q-fq-w5-1",
+    "type": "mcq",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["w5-concept-la-darar"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "الضرر والضرار",
+    "prompt": "ما الفرق بين الضرر والضرار بحسب الحديث؟",
+    "options": [
+      { "id": "a", "text": "ضرر = تضره لتنتفع. ضرار = تضره لتضر غيره" },
+      { "id": "b", "text": "ضرر = مادي. ضرار = معنوي" },
+      { "id": "c", "text": "ضرر = متعمد. ضرار = غير متعمد" },
+      { "id": "d", "text": "لا فرق بينهما" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "الحديث: 'لا ضرر ولا ضرار'. الفرق: ضرر = تضره لتنتفع (كالشرك). ضرار = تضره لتضر غيره (كإيذاء الجار)."
+  },
+  {
+    "id": "q-fq-w5-2",
+    "type": "mcq",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["w5-concept-la-darar"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "تطبيقات",
+    "prompt": "ما هي الـ 2 مكونات لقاعدة 'لا ضرر ولا ضرار' في التطبيق؟",
+    "options": [
+      { "id": "a", "text": "سعي دون ضرر، وعي يحمي من الضرار" },
+      { "id": "b", "text": "عمل الخير، ترك الشر" },
+      { "id": "c", "text": "الصدق، الأمانة" },
+      { "id": "d", "text": "الإيمان، الإحسان" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "2 مكونات: (1) سعي دون ضرر = العمل على الأرض بخطط طويلة المدى دون إيذاء. (2) وعي يحمي من الضرار = مراقبة السلوك والحكم. الوعي يحمي لأن الضرر قد يتعمد، الضرار قد يكون غير مقصود."
+  },
+  {
+    "id": "rf-fq-w5-1",
+    "type": "reflect",
+    "courseId": "fiqh-rules",
+    "conceptIds": ["w5-concept-la-darar"],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "طبّق قاعدة 'لا ضرر ولا ضرار' على حياتك العملية. ما هي 3 مواقف فيها أضررت بشخص؟ وكيف أصلحها؟",
+    "correctAnswer": "تأمل شخصي. أمثلة: (1) حرمان الجار من منفعة. (2) إهمال مسؤولية بيئية. (3) إيذاء طفل بقسوة.",
+    "explanation": "التطبيق العملي: 3 مواقف (حرمان الجار، الإهمال البيئي، إيذاء الطفل) والبدء في الإصلاح."
+  },
+  {
+    "id": "q-sl-w5-1",
+    "type": "mcq",
+    "courseId": "soul-app",
+    "conceptIds": ["w5-concept-janna"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "كبر الهدف",
+    "prompt": "ما هو مبدأ 'كبر الهدف يصغر الحدث' بحسب المحاضرة؟",
+    "options": [
+      { "id": "a", "text": "كلما كَبُرَ هدفك، صَغُر كل ما عداه" },
+      { "id": "b", "text": "اجعل هدفك صغيرًا ليصغر كل شيء آخر" },
+      { "id": "c", "text": "اجعل هدفك متوسطًا" },
+      { "id": "d", "text": "لا تَعِش بالهدف" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "«كبر الهدف يصغر الحدث»: كلما كَبُرَ هدفك (الجنة)، صَغُر كل ما عداه (المال، المشاكل، الابتلاء). اختبار القيم: المادة، البيئة، العلاقات، المحاسبة، القرب/البعد من الله."
+  },
+  {
+    "id": "q-sl-w5-2",
+    "type": "mcq",
+    "courseId": "soul-app",
+    "conceptIds": ["w5-concept-janna"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "5 محطات في حياة محمد",
+    "prompt": "ما هي الـ 5 محطات في حياة محمد ﷺ بحسب المحاضرة؟",
+    "options": [
+      { "id": "a", "text": "7 سنين مكة + 3 تشكي + 4 خندق + 5 الشام + 10 بعد الفتح" },
+      { "id": "b", "text": "3 مكية + 4 مدنية + 13 مكية + 10 دولة + 1 حجة" },
+      { "id": "c", "text": "5 في الجاهلية + 10 في الإسلام + 13 في الخلافة" },
+      { "id": "d", "text": "10 قبل الوحي + 13 بعد الوحي + 1 حجة" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "5 محطات: (1) 7 سنين في مكة. (2) 3 سنين التشكي في حراء. (3) 4 سنين الخندق. (4) 5 سنين في الشام. (5) 10 سنين بعد الفتح."
+  },
+  {
+    "id": "rf-sl-w5-1",
+    "type": "reflect",
+    "courseId": "soul-app",
+    "conceptIds": ["w5-concept-janna"],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "ما هو هدفك الأكبر في الحياة؟ وكيف ينعكس على صغرك للحوادث اليومية؟",
+    "correctAnswer": "تأمل شخصي. الجواب المرجعي: الهدف الأكبر = الجنة، وأي حدث آخر يصغر عنده.",
+    "explanation": "كبر الهدف يصغر الحدث. 5 محطات في حياة محمد ﷺ. 5 اختبارات القيم."
+  },
+  {
+    "id": "q-pp-w5-1",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": ["w5-concept-mu3taqad"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "المعتقد",
+    "prompt": "ما هو تأثير المعتقدات الأساسية (Core Beliefs) بحسب المحاضرة؟",
+    "options": [
+      { "id": "a", "text": "المعتقد = الجذر، الشعور = الوتر، السلوك = الثمرة" },
+      { "id": "b", "text": "المعتقد = السلوك، الشعور = الجذر، السلوك = الثمرة" },
+      { "id": "c", "text": "المعتقد = الجذر، الشعور = الثمرة، السلوك = الوتر" },
+      { "id": "d", "text": "المعتقد = الثمرة، الشعور = الجذر، السلوك = الوتر" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "المعتقد = الجذر (root). الشعور = الوتر (stem). السلوك = الثمرة (fruit). فكّر = الحدث ← الفكرة ← الشعور ← السلوك."
+  },
+  {
+    "id": "q-pp-w5-2",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": ["w5-concept-mu3taqad"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "تغيير المعتقد",
+    "prompt": "ما هي الـ 3 خطوات لتغيير المعتقد بحسب المحاضرة؟",
+    "options": [
+      { "id": "a", "text": "التَّعرُّف، الاختبار، الاستبدال" },
+      { "id": "b", "text": "التأمل، التذكر، التطبيق" },
+      { "id": "c", "text": "التحليل، التركيب، التقييم" },
+      { "id": "d", "text": "المحاولة، الفشل، النجاح" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "3 خطوات: (1) التَّعرُّف على المعتقد. (2) اختباره (حقيقة أم كذب). (3) استبداله. «الحياة جميلة» بدلًا من «الحياة قاسية»."
+  },
+  {
+    "id": "rf-pp-w5-1",
+    "type": "reflect",
+    "courseId": "positive-psych",
+    "conceptIds": ["w5-concept-mu3taqad"],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "ما هي الفكرة العميقة التي تَحكم حياتك؟ كيف تَختبرها؟ وكيف تستبدلها بأفكار صحيحة؟",
+    "correctAnswer": "تأمل شخصي. 3 خطوات: تعرّف ← اختبر ← استبدل.",
+    "explanation": "5 أفكار خاطئة شائعة: «الحب لازم أن يكون مثالي» / «الإصلاح صعب جدًا» / «المستحيل ممكن» / «كل شيء مقدَّر» / «أنا غير كفء»."
+  },
+  {
+    "id": "q-sa-w5-1",
+    "type": "mcq",
+    "courseId": "seerah-app",
+    "conceptIds": ["w5-concept-tadabbur"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "التدبر",
+    "prompt": "ما هي الـ 5 مستويات للتدبر بحسب المحاضرة؟",
+    "options": [
+      { "id": "a", "text": "تدبر الأحداث، الدوافع، العبر، التطبيق، المعنى الإلهي" },
+      { "id": "b", "text": "تدبر القصة، الحجة، الفكرة، الخلاصة، التطبيق" },
+      { "id": "c", "text": "تدبر السرد، الشخصيات، الأحداث، الدوافع، النهايات" },
+      { "id": "d", "text": "تدبر البداية، الوسط، النهاية، النتيجة، الدرس" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "5 مستويات: (1) تدبر الأحداث: ماذا حدث؟ (2) تدبر الدوافع: لماذا حدث؟ (3) تدبر العبر: ماذا نَستفيد؟ (4) تدبر التطبيق: كيف نُطبق؟ (5) تدبر المعنى الإلهي: ما حكمة الله؟"
+  },
+  {
+    "id": "q-sa-w5-2",
+    "type": "mcq",
+    "courseId": "seerah-app",
+    "conceptIds": ["w5-concept-harakah"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "الحركة والسكون",
+    "prompt": "ما هو التوازن بين الحركة والسكون بحسب المحاضرة؟",
+    "options": [
+      { "id": "a", "text": "الحركة بدون سكون = تشتت. السكون بدون حركة = كسل" },
+      { "id": "b", "text": "الحركة = التَّشَكِّي. السكون = العمل" },
+      { "id": "c", "text": "الحركة = العبادة. السكون = العمل" },
+      { "id": "d", "text": "الحركة = العمل. السكون = العبادة" }
+    ],
+    "correctAnswer": "a",
+    "explanation": "الحركة بدون سكون = تشتت. السكون بدون حركة = كسل. حياة محمد ﷺ: 4 سنين تشكي + 10 سنين دعوة = 24 سنة من الحركة والسكون."
+  },
+  {
+    "id": "rf-sa-w5-1",
+    "type": "reflect",
+    "courseId": "seerah-app",
+    "conceptIds": ["w5-concept-tadabbur"],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "ما هي المحطة من حياة النبي ﷺ التي استوقفتك أكثر من غيرها؟ ولماذا؟",
+    "correctAnswer": "تأمل شخصي. أمثلة: غار حراء، ليلة الهجرة، بدر، أحد، الفتح، حجة الوداع.",
+    "explanation": "5 مستويات للتدبر. 4 شروط للسعي. التدبر = استخراج دروس عملية."
+  }
+]

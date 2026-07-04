@@ -1,0 +1,22 @@
+[
+  { "id": "act-w7-pool-001", "courseId": "ihsan-soul", "type": "individual", "title": "خريطة مَحطات الشَّيطان", "prompt": "ارسم خريطة 7×7 لمحطات الشَّيطان في حياتك.", "duration": "60 دقيقة" },
+  { "id": "act-w7-pool-002", "courseId": "ihsan-soul", "type": "practical", "title": "ورد الاسْتغفار 7 أيَّام", "prompt": "100 استغفار يَومي لـ7 أيَّام مَع ذِكر المُناسبة.", "duration": "20 دقيقة × 7" },
+  { "id": "act-w7-pool-003", "courseId": "tafsir", "type": "individual", "title": "قراءة سُورة التِّين", "prompt": "اقرأ سورة التِّين بصَوت حَسَن في صَلاة العِشاء.", "duration": "15 دقيقة" },
+  { "id": "act-w7-pool-004", "courseId": "tafsir", "type": "practical", "title": "إحسان شَامل", "prompt": "في كلِّ يَوم، إحسان لِإنسان، حَيوان، نَبات، جَماد.", "duration": "7 أيام" },
+  { "id": "act-w7-pool-005", "courseId": "seerah", "type": "individual", "title": "خريطة مراحل الإيذاء", "prompt": "خريطة 5 مراحل لإيذاء قُريش.", "duration": "45 دقيقة" },
+  { "id": "act-w7-pool-006", "courseId": "seerah", "type": "reflection", "title": "أيُّ مَرحلة أُواجِهها؟", "prompt": "حدّد المرحلة الحالية في حياتك.", "duration": "30 دقيقة" },
+  { "id": "act-w7-pool-007", "courseId": "contemporary", "type": "individual", "title": "ردَّ الشُّبهات", "prompt": "خَطِّط لرَدّ 3 شُبهات.", "duration": "60 دقيقة" },
+  { "id": "act-w7-pool-008", "courseId": "contemporary", "type": "practical", "title": "قراءة سُورة التوبة في سِياقها", "prompt": "حدّد آيات السَّلم وآيات القِتال.", "duration": "90 دقيقة" },
+  { "id": "act-w7-pool-009", "courseId": "fiqh-rules", "type": "individual", "title": "خريطة العُرف", "prompt": "ارسم خَريطة العُرف في حياتك.", "duration": "60 دقيقة" },
+  { "id": "act-w7-pool-010", "courseId": "fiqh-rules", "type": "practical", "title": "تَحليل عُرف عَامّ", "prompt": "اختَر عُرفًا شائعًا وحَلِّل أَقْمَاطه الـ5.", "duration": "45 دقيقة" },
+  { "id": "act-w7-pool-011", "courseId": "seerah-app", "type": "individual", "title": "خريطة رُدود الفعل", "prompt": "حَدِّد 4 أَدوار في علاقتك الحَالية.", "duration": "45 دقيقة" },
+  { "id": "act-w7-pool-012", "courseId": "seerah-app", "type": "practical", "title": "عَزومة تَطبيقية", "prompt": "اِدْعُ شخصًا لِعَزومة خَفيفة ثُمَّ ناقِشْه.", "duration": "60 دقيقة" },
+  { "id": "act-w7-pool-013", "courseId": "soul-app", "type": "individual", "title": "خريطة اعتزل", "prompt": "اعتزل 3 فِئات لِأسبوع.", "duration": "60 دقيقة" },
+  { "id": "act-w7-pool-014", "courseId": "soul-app", "type": "practical", "title": "حفظ الجوارح", "prompt": "حفظ الجوارح 7 أيَّام.", "duration": "10 دقيقة × 7" },
+  { "id": "act-w7-pool-015", "courseId": "positive-psych", "type": "individual", "title": "جو هاري ويندو لِنَفسي", "prompt": "اِرسم جو هاري ويندو، اسأل 3 أصدقاء.", "duration": "60 دقيقة" },
+  { "id": "act-w7-pool-016", "courseId": "positive-psych", "type": "reflection", "title": "اكتشاف الإِيغو", "prompt": "5 إِيغُوها مع بَدائل.", "duration": "45 دقيقة" },
+  { "id": "act-w7-pool-017", "courseId": "positive-psych", "type": "group", "title": "مُثلث الدَّراما عَملي", "prompt": "3 علاقات مع تَحويل.", "duration": "60 دقيقة" },
+  { "id": "act-w7-pool-018", "courseId": "tafsir", "type": "individual", "title": "دعاء اللِّيلة", "prompt": " «اللهم كما حسَّنتَ خلقي فحَسِّن خُلُقي».", "duration": "10 دقيقة" },
+  { "id": "act-w7-pool-019", "courseId": "ihsan-soul", "type": "reflection", "title": "أيُّ مَنزلة اليَوم؟", "prompt": "اسْأل نفسَك أيُّ مَنزلة تَحتاجها اليَوم.", "duration": "5 دقيقة" },
+  { "id": "act-w7-pool-020", "courseId": "positive-psych", "type": "practical", "title": "يوسف فِي حياتي", "prompt": "اقرأ سُورة يُوسف وتَأمَّل.", "duration": "30 دقيقة" }
+]

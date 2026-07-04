@@ -1,0 +1,62 @@
+[
+  {
+    "id": "w7-concept-ashhur-alharam",
+    "name": "الأشهر الحُرُم",
+    "arabicName": "الأشهر الحرم",
+    "domain": "contemporary",
+    "simpleDefinition": "ذو القَعدة، ذو الحِجَّة، المُحَرَّم، رَجَب.",
+    "deepExplanation": "أَشهر ذات مَكانة خاصَّة في الإسلام، يَحْرُم فيها القِتال لِأَسباب دينيَّة وتِجاريَّة.",
+    "whyItMatters": "تشريعات الإسلام تقوم على الحِكمة، لا على النَّسبيَّة.",
+    "example": "أَشهر الحَجّ في ذو الحِجَّة تَمنع الإزْعاج للحُجَّاج.",
+    "relatedConceptIds": ["w7-concept-sariyyat-jahsh"],
+    "revisionNote": "4 أشهر حُرُم."
+  },
+  {
+    "id": "w7-concept-sariyyat-jahsh",
+    "name": "سَريَّة عَبد الله بن جَحش",
+    "arabicName": "سرية عبد الله بن جحش",
+    "domain": "contemporary",
+    "simpleDefinition": "أَوَّل سَريَّة في الإسلام، في آخِر رَجَب، بَين مَكَّة والطَّائف.",
+    "deepExplanation": "النبي ﷺ أمَر بثَمانية مِن المهاجرين بِسَريَّة استطلاعية. حَدَث قتل عَرو بن الحَضرمي في الشَّهر الحَرام بِسَبب التَّرَدُّد. النَّبي ﷺ أنكر الفعل لِكونه في الشَّهر الحَرام ورَفَض الغَنائم.",
+    "whyItMatters": "إثبات أَنَّ الإذن مِن النبي ﷺ ضَروري، والقِتال لِضرورة دِفاعيَّة.",
+    "example": "حين تَجد مَوقفًا فيه حَيرة، ارجع للنَّبي ﷺ أو الحَاكم.",
+    "relatedConceptIds": ["w7-concept-ashhur-alharam"],
+    "revisionNote": "أَوَّل سَريَّة."
+  },
+  {
+    "id": "w7-concept-fitna-kubra",
+    "name": "الفِتنة الكُبرَى",
+    "arabicName": "الفتنة الكبرى",
+    "domain": "contemporary",
+    "simpleDefinition": "تَعذيب مَن آمَن على ترك إيمانِه أو قَمع كلام الحق.",
+    "deepExplanation": "الآية: «والفتنة أَكبر من القَتل». الفِتنة في القرآن تَعْني تَكفير المؤمنين وقَمع دَعوتهم.",
+    "whyItMatters": "تَصحيح التَّفريق بين الدِّفاع والقِتال في الفِتنة.",
+    "example": "إخراج المسلمين مِن مَكَّة وحِصار بَني هاشم فِتنة.",
+    "relatedConceptIds": ["w7-concept-ashhur-alharam", "w7-concept-naskh-ul-ashhur"],
+    "revisionNote": "فِتنة > قَتل."
+  },
+  {
+    "id": "w7-concept-naskh-ul-ashhur",
+    "name": "نَسخ تَشريع الأشهر الحُرُم",
+    "arabicName": "نسخ الأشهر الحرم",
+    "domain": "contemporary",
+    "simpleDefinition": "رفع تَحريم القِتال في الأشهر الحُرُم بآيات البَراءة في سُورة التوبة.",
+    "deepExplanation": "حَدَث نَسْخ لحَالة دِفاعيَّة. فالسِّلاح ليس دَائمًا ولا مُطلَقًا.",
+    "whyItMatters": "تَعليم التَّدَرُّج في الفِقه.",
+    "example": "حين يَتَغير العُرف، يتَغير الفِقه.",
+    "relatedConceptIds": ["w7-concept-ashhur-alharam", "w7-concept-fitna-kubra"],
+    "revisionNote": "نَسخ بالدَّفاع."
+  },
+  {
+    "id": "w7-concept-urf-mujtama",
+    "name": "العُرف والمُجْتَمع",
+    "arabicName": "العرف والمجتمع",
+    "domain": "contemporary",
+    "simpleDefinition": "القَواعد التَّعَاقُدية بين النَّاس والمَقبولة شَرعًا.",
+    "deepExplanation": " «ولهن مثل الذي عليهن بالمعروف». العُرف يُحدِّد صُورة المُعاملة بِين الزوجين.",
+    "whyItMatters": "القرآن حَافَظ على العُرف الصَّحيح وذَمَّ العُرف الفَاسد.",
+    "example": "زواج بنت الفتاة بِنَفَقَة مُقدَّرَة عرفاً.",
+    "relatedConceptIds": ["w7-concept-ashhur-alharam"],
+    "revisionNote": "عُرف قُريش فَاسد."
+  }
+]

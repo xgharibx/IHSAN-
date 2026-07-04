@@ -1,0 +1,12 @@
+[
+  { "id": "week7-ach-shaytan-map", "title": "خريطة محطات الشيطان", "description": "أكمل خريطة 7 محطات × 7 منازل.", "criteria": "completed shaytan-stations map activity", "badge": "badge:shaytan-mapped" },
+  { "id": "week7-ach-teen-reader", "title": "قارئ سُورة التين", "description": "اقرأ سُورة التين بصَوت حَسَن في العِشاء لِأسبُوع.", "criteria": "read teen seven nights", "badge": "badge:teen-reader" },
+  { "id": "week7-ach-sira-stages", "title": "تَفكيك الإيذاء الخمس", "description": "حدد أيُّ مَرحلة قُريش تُهاجمك اليَوم.", "criteria": "analyzed 5 seerah stages", "badge": "badge:seerah-stage" },
+  { "id": "week7-ach-shahada", "title": "ذاكِر سَميَّة", "description": "استشهد بحديث آل يَاسر في مَوقف ظُلم.", "criteria": "shared shahada reflection", "badge": "badge:shahada-memory" },
+  { "id": "week7-ach-urf", "title": "محلِّل العُرف", "description": "حَلِّل عُرفًا شائعًا في مجتمَعك.", "criteria": "completed urf analysis", "badge": "badge:urf-analysis" },
+  { "id": "week7-ach-quraysh-rd", "title": "مُتخصِّص الأشهر الحُرُم", "description": "اجعَل شُبهة الأشهر الحُرُم تُفَكَّك.", "criteria": "completed contemporary reflection", "badge": "badge:haram-month" },
+  { "id": "week7-ach-fasd", "title": "الجَاهر", "description": "اقرأ مَراحل الدَّعوة في السِّيرة.", "criteria": "fasd study", "badge": "badge:fasd-day" },
+  { "id": "week7-ach-3-tathir", "title": "اعتزل ثَلاث", "description": "اعتزل ثَلاث فئات في حياتك.", "criteria": "3atizal completed", "badge": "badge:3atizal" },
+  { "id": "week7-ach-johari", "title": "مُكشَف جو هاري", "description": "أكمل خريطة جو هاري ويندو.", "criteria": "johari completed", "badge": "badge:johari-explorer" },
+  { "id": "week7-ach-tri-flip", "title": "مُقلِب المثلث", "description": "حوِّل مُثلثاً من المُثلث السَّلبي للقُوَّة.", "criteria": "3 drama triangles flipped", "badge": "badge:tri-flip" }
+]

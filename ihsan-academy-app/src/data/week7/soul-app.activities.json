@@ -1,0 +1,30 @@
+{
+  "id": "soul-app-activities",
+  "courseId": "soul-app",
+  "activities": [
+    {
+      "id": "act-w7-soul-app-001",
+      "courseId": "soul-app",
+      "type": "individual",
+      "title": "خريطة اعتزل ثَلاث فئات",
+      "purpose": "تَحديد الفئات الثَّلاث في حياتك، ووضْع خطَّة لاعتزالها.",
+      "instructions": "ارسم خَريطة فِئَة، فِئَة، فِئَة. حدّد لكلٍّ: مَوقف حَقيقي، العَرَض، اعتزال مُؤَقَّت لِأسبوع.",
+      "estimatedTime": "60 دقيقة",
+      "outputExpected": "خَريطة 3 فئات مع اعتزال.",
+      "relatedConcepts": "w7-concept-i3tizal-amal, w7-concept-fi'at-shilt",
+      "completionCriteria": "3 فئات مع اعتزال."
+    },
+    {
+      "id": "act-w7-soul-app-002",
+      "courseId": "soul-app",
+      "type": "practical",
+      "title": "حفظ الجوارح لِأسبوع",
+      "purpose": "تَطبيق حِفظ الجوارح أَمَانة.",
+      "instructions": "كلَّ صَباح لِأسبُوع، اقرأ «اللهم احفظ لساني، واغْدُق نُورًا في قَلْبي». في كلِّ لَيلَة، اِسْجل: ما الجَارحة الأَكثر حِفظًا؟ ما الأَقَل؟",
+      "estimatedTime": "7 أيَّام × 10 دَقائق",
+      "outputExpected": "دَفتر يَومي.",
+      "relatedConcepts": "w7-concept-jawarih-amanah, w7-concept-taqwa-dir",
+      "completionCriteria": "7 أيَّام متَتالية."
+    }
+  ]
+}

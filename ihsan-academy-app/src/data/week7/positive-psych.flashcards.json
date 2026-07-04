@@ -1,0 +1,102 @@
+{
+  "id": "positive-psych-flashcards",
+  "courseId": "positive-psych",
+  "cards": [
+    {
+      "id": "fc-w7-positive-psych-001",
+      "term": "جو هاري ويندو",
+      "front": "ما أَداة جو هاري ويندو؟",
+      "back": "أَداة لِتَربيع الذَّات: Open، Blind، Hidden، Unknown.",
+      "simpleAnswer": "أَداة 4 مربعات.",
+      "deepAnswer": "أَداة لِفَهم الذَّات: ما تَعرفه عن نَفسك ويَعرفه الآخَرون، ما يَعرفه الآخَرون دُونك، السِّرّي، مَجهول الجَمِيع.",
+      "example": "حين تَتَوسَّع في Open تَنخَفض ضُغوطك.",
+      "relatedConcept": "w7-concept-johari",
+      "difficulty": "easy",
+      "memoryHook": "Open، Blind، Hidden، Unknown."
+    },
+    {
+      "id": "fc-w7-positive-psych-002",
+      "term": "الإِيغو",
+      "front": "ما الإِيغو؟",
+      "back": "بِرْمجيَّة داخلية تَطلب البَقاء في صُورة معينة.",
+      "simpleAnswer": "بِرمجيَّة.",
+      "deepAnswer": "يَمنع التَّعلُّم ويُحطِّم العَلاقات.",
+      "example": "حين تَتَجنب الاعتذار، اسأل هل الإِيغو تَمنعك؟",
+      "relatedConcept": "w7-concept-ego",
+      "difficulty": "medium",
+      "memoryHook": "إِيغو = كِبر صَغير."
+    },
+    {
+      "id": "fc-w7-positive-psych-003",
+      "term": "الكرامة",
+      "front": "ما الفَرق بين الكرامة والإِيغو؟",
+      "back": "الكرامة عَمَل (احترام الذَّات بدون إيذاء)، الإِيغو دَعوى (أنا الأفضل).",
+      "simpleAnswer": "كرامة عمل، إِيغو دعوى.",
+      "deepAnswer": "كرامة: «أنا محترم نفسي»، إِيغو: «أنا فَوق الآخَرين».",
+      "example": "حين يَعصبك شَخص، كرامتك في رَدِّ هادِئ.",
+      "relatedConcept": "w7-concept-karama",
+      "difficulty": "medium",
+      "memoryHook": "كرامة = عَمَل."
+    },
+    {
+      "id": "fc-w7-positive-psych-004",
+      "term": "اختبار الفِتَن",
+      "front": "ما اختبار الفِتَن؟",
+      "back": "المواقف تَكشف حَقيقة القَلْب.",
+      "simpleAnswer": "مَرَآة.",
+      "deepAnswer": " «تُعرض الفِتَن على القُلوب».",
+      "example": "حين تَعْصِبك نَقد، اِسْأل ما الذي كَشفه؟",
+      "relatedConcept": "w7-concept-fitnat-qalb",
+      "difficulty": "medium",
+      "memoryHook": "فِتنة = مَرَآة."
+    },
+    {
+      "id": "fc-w7-positive-psych-005",
+      "term": "مُثلث الدَّراما",
+      "front": "ما مُثلث الدَّراما؟",
+      "back": "نَموذج ستيفن كَاربن 1968: ضحيَّة، جلاد، مُنقذ.",
+      "simpleAnswer": "3 أَضْلاع.",
+      "deepAnswer": "الضَّحية تَطلب تَعاطُفًا، الجَلاَد يَطلب سَيطرة، المُنقذ يَطلب قَيمة.",
+      "example": "حين تَشعُر بدَور، اِسْأل هل أَنت ضَحيَّة أم جَلاَد أم مُنقذ؟",
+      "relatedConcept": "w7-concept-drama-tri",
+      "difficulty": "medium",
+      "memoryHook": "مُثلث = 3 أَضْلاع."
+    },
+    {
+      "id": "fc-w7-positive-psych-006",
+      "term": "تَحويل الأدوار",
+      "front": "كيف تَتَحول الأدوار في مُثلث الدَّراما؟",
+      "back": "ضحيَّة → مُسؤول، جلاد → مُتحدٍّ، مُنقذ → مُوجِّه.",
+      "simpleAnswer": "تَحويل بِقَرار.",
+      "deepAnswer": "كلمة السِّر: المَسؤوليَّة.",
+      "example": "حين تَشعُر بِدَور، اتَّخِذ قَرار التَّحويل.",
+      "relatedConcept": "w7-concept-drama-tri",
+      "difficulty": "hard",
+      "memoryHook": "تَحويل بِقَرار."
+    },
+    {
+      "id": "fc-w7-positive-psych-007",
+      "term": "سيدنا يُوسف",
+      "front": "ما دَرس يُوسف في الإِيغو؟",
+      "back": "يُوسف تَحمَّل المُحَن بِكَوْنِه مُسؤولاً لا ضَحيَّة.",
+      "simpleAnswer": "مُسؤول، لا ضحيَّة.",
+      "deepAnswer": "يُوسف عاش في البِئر، السِّجن، النِّسيان، بنى نَفْسه ولم يَتحوَّل لِضحية.",
+      "example": "حين تَتعرَّض لِمَصيبة، اِتْبع سُنَّة يُوسف.",
+      "relatedConcept": "w7-concept-yusuf-karama",
+      "difficulty": "medium",
+      "memoryHook": "يُوسف = كَوْكَب."
+    },
+    {
+      "id": "fc-w7-positive-psych-008",
+      "term": "الصُّمود النَّفسي",
+      "front": "ما أَسلِحة الصُّمود النَّفسي الأَربعة؟",
+      "back": "الثِّقة بالنَّفس، الحَياة الهادِفة، المرونة، التَّفكير الواقعي.",
+      "simpleAnswer": "4 أَسلِحة.",
+      "deepAnswer": "الثِّقة تُمكِّن القَرار، الهَدف يُوجِّه الحَياة، المرونة تَستوعب المَصَائب، التَّفكير الواقعي يُحافظ على الواقِع.",
+      "example": "حين تَتعرَّض لِمَشكلة، اِسْأل ما المُرونة هنا؟",
+      "relatedConcept": "w7-concept-samud-4-aslihat",
+      "difficulty": "medium",
+      "memoryHook": "ثقة + هَدف + مرونة + واقعية."
+    }
+  ]
+}

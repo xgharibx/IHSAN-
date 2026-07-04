@@ -1,6 +1,7 @@
 import { Link, useParams, Navigate } from "react-router-dom";
 import { useState, useMemo, useEffect, useRef } from "react";
-import { data, getCourseBySlug, getFlashcardsForCourse, getQuestionsForCourse } from "@/data";
+import { getCourseBySlug, data } from "@/data";
+import { useWeekData } from "@/hooks/useWeekData";
 import { useStore } from "@/store/useStore";
 import { CourseIcon, Icons } from "@/components/Icons";
 import { gsap } from "gsap";
@@ -33,7 +34,22 @@ interface TabDef {
 
 export default function CourseDetail() {
   const { slug } = useParams();
-  const course = slug ? getCourseBySlug(slug) : undefined;
+  const selectedWeek = useWeekData();
+  const routeMatch = useMemo(() => {
+    if (!slug) return { week: selectedWeek, course: undefined as Course | undefined };
+    const selectedCourse = selectedWeek.courses.find((c) => c.slug === slug);
+    if (selectedCourse) return { week: selectedWeek, course: selectedCourse };
+    const owningWeek = Object.values(data.weeks).find((w) =>
+      w.courses.some((c) => c.slug === slug),
+    );
+    return {
+      week: owningWeek ?? selectedWeek,
+      course: owningWeek ? getCourseBySlug(owningWeek, slug) : undefined,
+    };
+  }, [selectedWeek, slug]);
+  const week = routeMatch.week;
+  const course = routeMatch.course;
+  const setSelectedWeek = useStore((s) => s.setSelectedWeek);
   const setRecent = useStore((s) => s.setRecent);
   const markStarted = useStore((s) => s.markStarted);
   const markSectionRead = useStore((s) => s.markSectionRead);
@@ -41,12 +57,20 @@ export default function CourseDetail() {
   const [activeTab, setActiveTab] = useState<TabId>("overview");
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // Auto-switch the selected week to the week this course belongs to,
+  // so all dependent data (flashcards / quizzes / activities / concepts) load correctly.
   useEffect(() => {
     if (course) {
+      const owningWeek = Object.values(data.weeks).find((w) =>
+        w.courses.some((c) => c.slug === course.slug),
+      );
+      if (owningWeek && owningWeek.meta.number !== useStore.getState().selectedWeek) {
+        setSelectedWeek(owningWeek.meta.number);
+      }
       markStarted(course.id);
       setRecent(course.id);
     }
-  }, [course, markStarted, setRecent]);
+  }, [course, markStarted, setRecent, setSelectedWeek]);
 
   // Reset to the overview tab whenever the visitor navigates to a different course.
   useEffect(() => {
@@ -82,12 +106,12 @@ export default function CourseDetail() {
       list.push({ id: "deep-concepts", label: "مفاهيم متعمّقة", icon: "Brain", count: course.deepConcepts.length });
     }
     if (course.longSummary) {
-      list.push({ id: "long-summary", label: "الملخّص الطويل", icon: "Scale", count: course.longSummary.sections.length });
+      list.push({ id: "long-summary", label: "الملخّص الطويل", icon: "Scale", count: course.longSummary.sections?.length ?? 0 });
     }
     if (course.deepExplanation) {
       const total =
-        course.deepExplanation.explanations.length +
-        course.deepExplanation.phases.reduce((acc, p) => acc + p.explanations.length, 0);
+        (course.deepExplanation.explanations?.length ?? 0) +
+        (course.deepExplanation.phases ?? []).reduce((acc, p) => acc + (p.explanations?.length ?? 0), 0);
       list.push({ id: "deep-dive", label: "الشرح العميق", icon: "Sparkles", count: total || undefined });
     }
     if (course.studyGuide) {
@@ -100,11 +124,11 @@ export default function CourseDetail() {
   if (!course) return <Navigate to="/courses" replace />;
 
   const relatedCourses = course.relatedCourses
-    .map((id) => data.week1.courses.find((c) => c.id === id))
-    .filter(Boolean) as typeof data.week1.courses;
+    .map((id) => week.courses.find((c) => c.id === id))
+    .filter(Boolean) as typeof week.courses;
 
-  const flashcardCount = getFlashcardsForCourse(course.id).length;
-  const questionCount = getQuestionsForCourse(course.id).length;
+  const flashcardCount = week.flashcards.filter((f) => f.courseId === course.id).length;
+  const questionCount = week.quizzes.filter((q) => q.courseId === course.id).length;
   const readSections = cp?.completedSections ?? [];
 
   return (
@@ -535,21 +559,23 @@ function LongSummaryPanel({ summary }: { summary: CourseLongSummary }) {
 }
 
 function DeepDivePanel({ deep }: { deep: CourseDeepDive }) {
+  const explanations = deep.explanations ?? [];
+  const phases = deep.phases ?? [];
   return (
     <section className="card p-6 sm:p-8">
       <h2 className="font-display text-2xl text-sand-50">{deep.title}</h2>
       {deep.introduction && <p className="mt-4 leading-loose text-sand-100/80">{deep.introduction}</p>}
-      {deep.explanations.length > 0 && (
+      {explanations.length > 0 && (
         <>
           <div className="divider-gold my-6" />
           <div className="space-y-3">
-            {deep.explanations.map((e) => (
+            {explanations.map((e) => (
               <ExplanationCard key={e.id} item={e} />
             ))}
           </div>
         </>
       )}
-      {deep.phases.map((phase) => (
+      {phases.map((phase) => (
         <div key={phase.phase}>
           <div className="divider-gold my-6" />
           <div className="flex flex-wrap items-center gap-2">
@@ -558,7 +584,7 @@ function DeepDivePanel({ deep }: { deep: CourseDeepDive }) {
             <span className="text-xs text-sand-100/40">السطور {phase.transcriptLines}</span>
           </div>
           <div className="mt-4 space-y-3">
-            {phase.explanations.map((e) => (
+            {(phase.explanations ?? []).map((e) => (
               <ExplanationCard key={e.id} item={e} />
             ))}
           </div>
@@ -789,3 +815,4 @@ function ExplanationCard({ item }: { item: DeepDiveExplanation }) {
     </details>
   );
 }
+

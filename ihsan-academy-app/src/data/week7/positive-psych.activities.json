@@ -1,0 +1,42 @@
+{
+  "id": "positive-psych-activities",
+  "courseId": "positive-psych",
+  "activities": [
+    {
+      "id": "act-w7-positive-psych-001",
+      "courseId": "positive-psych",
+      "type": "individual",
+      "title": "جو هاري ويندو لِنَفسي",
+      "purpose": "تُوسِيع وَعي الذَّات.",
+      "instructions": "اِرسم أَداة جو هاري ويندو أَرْبَع مَربعات. في كُل مَربع، 7 أَشْخاص/أَحداث/مَشاعر. اِسْأل 3 أَصدقاء عن Blind.",
+      "estimatedTime": "60 دقيقة",
+      "outputExpected": "خريطة كاملة 7 أفكار في كلِّ مربع.",
+      "relatedConcepts": "w7-concept-johari, w7-concept-samud-4-aslihat",
+      "completionCriteria": "خريطة كاملة مَع صديق واحد على الأَقل."
+    },
+    {
+      "id": "act-w7-positive-psych-002",
+      "courseId": "positive-psych",
+      "type": "reflection",
+      "title": "اكْتِشاف الإِيغو",
+      "purpose": "اِسْتِشْراف الإِيغو.",
+      "instructions": "اِكتب 5 أَشياء تُفَضِّلها حِين تَلوم غَيرك. كُلُّ عنصر منها قد يَكون إِيغو. صفه بِكَلمتين وقَدِّم بَديلاً.",
+      "estimatedTime": "45 دقيقة",
+      "outputExpected": "5 إِيغُوها مع بَدائل.",
+      "relatedConcepts": "w7-concept-ego, w7-concept-fitnat-qalb",
+      "completionCriteria": "5 إِيغُوها محدَّدة."
+    },
+    {
+      "id": "act-w7-positive-psych-003",
+      "courseId": "positive-psych",
+      "type": "group",
+      "title": "مُثلث الدَّراما عَمَلي",
+      "purpose": "تحليل الْعلاقات بطريقة مُنظَّمة.",
+      "instructions": "حدّد 3 علاقات في حياتك. ارسم مُثلث الدَّراما لكلِّ علاقة. حدّد دَورك. اِخْتر تَحويلاً. اِرسم مُثلث القُوَّة.",
+      "estimatedTime": "60 دقيقة",
+      "outputExpected": "خريطة مُثلث ل 3 عَلاقات مع تَحويل.",
+      "relatedConcepts": "w7-concept-drama-tri, w7-concept-yusuf-karama",
+      "completionCriteria": "3 مُثلثات مع تَحويل."
+    }
+  ]
+}

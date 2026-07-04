@@ -1,0 +1,30 @@
+{
+  "id": "contemporary-activities",
+  "courseId": "contemporary",
+  "activities": [
+    {
+      "id": "act-w7-contemporary-001",
+      "courseId": "contemporary",
+      "type": "individual",
+      "title": "خريطة رَدّ الشُّبهات",
+      "purpose": "تنظيم الرَّدّ على الشُّبهات في الإسلام بانتظام.",
+      "instructions": "اِخْتر ثَلاث شُبهات شائعة. اِكْتب لكلٍّ: الشُّبهة، السَّبب، المصدر، الرَّدّ بالآيات، الرَّدّ بالأَحاديث، الرَّدّ بالتَّاريخ.",
+      "estimatedTime": "60 دقيقة",
+      "outputExpected": "خَريطة 3 شُبهات مَع الرُّدود.",
+      "relatedConcepts": "w7-concept-fitna-kubra, w7-concept-ashhur-alharam",
+      "completionCriteria": "3 شُبهات مَفَنَّدة."
+    },
+    {
+      "id": "act-w7-contemporary-002",
+      "courseId": "contemporary",
+      "type": "practical",
+      "title": "قراءة سُورة التوبة في سِياقها",
+      "purpose": "رَبط آيات السِّياف بآيات السَّلم في السُّورة.",
+      "instructions": "اقرأ سُورة التوبة كاملة. حدِّد آيات السَّلم وآيات القِتال. ارجع لأَسباب النُّزول لِفَهم السِّياق.",
+      "estimatedTime": "90 دقيقة",
+      "outputExpected": "جَدول 5 أَعمدة: رقم الآية، نَصَّ الآية، السِّياق، الفِقه المستفاد.",
+      "relatedConcepts": "w7-concept-naskh-ul-ashhur, w7-concept-fitna-kubra",
+      "completionCriteria": "سُورة التوبة كاملة فَهيم القَرَاع."
+    }
+  ]
+}

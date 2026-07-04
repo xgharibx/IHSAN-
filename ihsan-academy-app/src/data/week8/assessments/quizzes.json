@@ -1,0 +1,256 @@
+[
+  {
+    "id": "q-tafsir-w8-1",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": ["w8-concept-asr-surah"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "عدد آيات سورة العصر ومكانتها",
+    "prompt": "كم عدد آيات سورة العصر، وأي السور القصار كانت محط تقدير الإمام الشافعي؟",
+    "options": [
+      { "id": "a", "text": "5 آيات" },
+      { "id": "b", "text": "3 آيات" },
+      { "id": "c", "text": "7 آيات" },
+      { "id": "d", "text": "10 آيات" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "سورة العصر 3 آيات قصيرة، وهي السورة التي قيل عنها: لو لم ينزل من القرآن إلا سورة العصر لكفت الناس."
+  },
+  {
+    "id": "q-tafsir-w8-2",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": ["w8-concept-khusr"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "معنى الخسر في السورة",
+    "prompt": "ما معنى «إن الإنسان لفي خسر» كما فسّره المحاضر؟",
+    "options": [
+      { "id": "a", "text": "خسارة المال وفقط" },
+      { "id": "b", "text": "بيع رأس المال (العمر والفراغ) في أشياء لا قيمة لها" },
+      { "id": "c", "text": "الإحجام عن العمل" },
+      { "id": "d", "text": "الحرمان من الصحة" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الخسر في السورة: بيع رأس المال (العمر، الصحة، الفراغ) في أشياء لا قيمة لها. يوم القيامة سمي «يوم التغابن» لأن فيه تكتشف خسارتك."
+  },
+  {
+    "id": "q-tafsir-w8-3",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": ["w8-concept-tawasi-haqq"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "الفرق بين الأمر والتواصي",
+    "prompt": "ما الفرق بين «الأمر» و«التواصي» كما في الآية؟",
+    "options": [
+      { "id": "a", "text": "لا فرق بينهما" },
+      { "id": "b", "text": "الأمر تثقيل من شخص على آخرين، التواصي مشاركة متبادلة" },
+      { "id": "c", "text": "الأمر فردي، التواصي جماعي فقط" },
+      { "id": "d", "text": "الأمر أحسن من التواصي" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الفرق في الروح: الأمر تثقيل من شخص واحد، التواصي تآزر بين متساويين، فيه روح الفريق."
+  },
+  {
+    "id": "tf-tafsir-w8-1",
+    "type": "tf",
+    "courseId": "tafsir",
+    "conceptIds": ["w8-concept-tawasi-sabr"],
+    "difficulty": "easy",
+    "estimatedSeconds": 45,
+    "learningObjective": "أنواع الصبر الثلاثة",
+    "prompt": "الصبر المذكور في السورة له ثلاثة أنواع: صبر على الطاعة، صبر عن المعصية، صبر على الأقدار.",
+    "options": [
+      { "id": "true", "text": "صح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswer": "true",
+    "explanation": "الصبر في الإسلام ثلاثة أنواع كما أوضح المحاضر: على الطاعة (الوضوء في البرد، صلاة الجماعة)، عن المعصية (رفض الرشوة)، على الأقدار (المرض، فقدان عزيز)."
+  },
+  {
+    "id": "rf-tafsir-w8-1",
+    "type": "reflect",
+    "courseId": "tafsir",
+    "conceptIds": ["w8-concept-bayt-al-hamd"],
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "learningObjective": "تطبيق بيت الحمد",
+    "prompt": "ما هي آخر مصيبة مرّت بك، وكيف تعاملت معها؟ لو كانت في الجنة «بيت الحمد» مبنيًا لك، فما الدور الذي لعبته استجابتك في بنائه؟",
+    "options": [],
+    "correctAnswer": null,
+    "explanation": "بيت الحمد يُبنى لمن مات له ولد فصبر واسترجع. تأمّل كيف كان يمكنك أن تقول «إنا لله وإنا إليه راجعون، اللهم أجرني في مصيبتي وأخلف لي خيرًا منها» في المصيبة الأخيرة."
+  },
+  {
+    "id": "q-contemporary-w8-1",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": ["w8-concept-asra-badr"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "عدد أسرى بدر ومصيرهم",
+    "prompt": "كم أُسر في بدر، كم أُفرج عنهم بالإحسان، وكما أُخذ بالعدل؟",
+    "options": [
+      { "id": "a", "text": "50 أُسروا، 30 أُفرجوا، 20 بالعدل" },
+      { "id": "b", "text": "70 أُسروا، 68 أُفرجوا، 2 بالعدل" },
+      { "id": "c", "text": "100 أُسروا، 80 أُفرجوا، 20 بالعدل" },
+      { "id": "d", "text": "70 قُتلوا جميعًا" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "في بدر أُسر 70، 68 أُفرج عنهم بالإحسان (فداء مالي أو علمي أو منّة)، واثنان فقط أُخذا بالعدل (النضر وعقبة)."
+  },
+  {
+    "id": "q-contemporary-w8-2",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": ["w8-concept-fida2"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "الفئات الثلاث للفداء",
+    "prompt": "ما الفئات الثلاث للفداء في أسرى بدر؟",
+    "options": [
+      { "id": "a", "text": "ذهب، فضة، نحاس" },
+      { "id": "b", "text": "مالي (4000 درهم)، علمي (تعليم 10)، إحسان (بلا مقابل)" },
+      { "id": "c", "text": "قبلي، عائلي، عشائري" },
+      { "id": "d", "text": "شباب، شيوخ، أطفال" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "النبي ﷺ قسّم الفداء: (1) من عنده مال دفع 4000 درهم، (2) من لا مال عنده علّم 10 من الصحابة وانطلق، (3) من لا مال ولا علم مُنّ عليه وأطلق."
+  },
+  {
+    "id": "q-contemporary-w8-3",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": ["w8-concept-yawm-at-talaqa"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "فتح مكة ويوم الطلقاء",
+    "prompt": "ما معنى «اذهبوا فأنتم الطلقاء» في فتح مكة؟",
+    "options": [
+      { "id": "a", "text": "تهديد بالنفي" },
+      { "id": "b", "text": "إعلان الحرية والعفو الشامل لكل من عذّب النبي ﷺ وطرده" },
+      { "id": "c", "text": "إذن بدخول الإسلام فقط" },
+      { "id": "d", "text": "نوع من الفدية المالية" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "في فتح مكة، النبي ﷺ أعلن العفو الشامل عن كل من عذّبه وطرده عشرين سنة. «من دخل دار أبي سفيان فهو آمن»."
+  },
+  {
+    "id": "tf-contemporary-w8-1",
+    "type": "tf",
+    "courseId": "contemporary",
+    "conceptIds": ["w8-concept-ihsan-asir"],
+    "difficulty": "easy",
+    "estimatedSeconds": 45,
+    "learningObjective": "وصية النبي ﷺ بالأسرى",
+    "prompt": "النبي ﷺ أوصى أصحابه بالأسرى قائلًا: «استوصوا بهم خيرًا».",
+    "options": [
+      { "id": "true", "text": "صح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswer": "true",
+    "explanation": "الحديث النبوي: «استوصوا بالأسرى خيرًا». الصحابة التزموا به عمليًا، فأطلقوا كل أسرى بني المصطلق لما تزوج النبي ﷺ جويرية."
+  },
+  {
+    "id": "sc-contemporary-w8-1",
+    "type": "scenario",
+    "courseId": "contemporary",
+    "conceptIds": ["w8-concept-amr-suhail"],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "learningObjective": "تطبيق قاعدة الإحسان في لحظة القدرة",
+    "prompt": "إنسان آذاك طوال سنوات بخطابات وكلام وراءك. اليوم أمسكتَ به في ورطة ويحتاج مساعدتك. ما قرارك؟ طبّق درس النبي ﷺ مع عمرو بن سهيل.",
+    "options": [
+      { "id": "a", "text": "أنتقم منه ولا أساعده" },
+      { "id": "b", "text": "أطلب منه اعتذارًا علنيًا كشرط للمساعدة" },
+      { "id": "c", "text": "أعطيه ما يحتاج وأقول: «لعل الله يوريك به يومًا تقرّ به عينك»" },
+      { "id": "d", "text": "أتجاهله وأكمل طريقي" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "النبي ﷺ عفا عن عمرو بن سهيل رغم خطبه، وقال: «لعل الله يوريك به يومًا تقر به عينك». الإحسان في لحظة القدرة ذروة القوة."
+  },
+  {
+    "id": "q-positive-psych-w8-1",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": ["w8-concept-iceberg"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "طبقات جبل الجليد الست",
+    "prompt": "ما الطبقات الست تحت السلوك في نموذج جبل الجليد؟",
+    "options": [
+      { "id": "a", "text": "العمل، الصحة، التعليم، المال، الجسد، الروح" },
+      { "id": "b", "text": "السلوك، الأفكار، المشاعر، القيم، المعتقدات، الاحتياج" },
+      { "id": "c", "text": "الذكر، القرآن، الصلاة، الزكاة، الصوم، الحج" },
+      { "id": "d", "text": "الحاضر، الماضي، المستقبل، الأنا، الآخر، الله" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "النموذج: السلوك قمة، تحته: أفكار، مشاعر، قيم، معتقدات، احتياج."
+  },
+  {
+    "id": "q-positive-psych-w8-2",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": ["w8-concept-five-rules"],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "خمس قواعد عملية",
+    "prompt": "ما الخمس القواعد العملية لتغيير العادات؟",
+    "options": [
+      { "id": "a", "text": "تصميم، تنفيذ، تقييم، تعديل، تكرار" },
+      { "id": "b", "text": "ابدأ صغيرًا، ابدأ بعادة واحدة، اربط بشيء ممتع، كافئ نفسك، لا تيأس" },
+      { "id": "c", "text": "تخطيط، ميزانية، جدولة، تتبع، مراجعة" },
+      { "id": "d", "text": "قراءة، كتابة، استماع، محادثة، تأمل" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "(1) ابدأ صغيرًا، (2) ابدأ بعادة واحدة، (3) اربط بشيء ممتع، (4) كافئ نفسك، (5) لا تيأس."
+  },
+  {
+    "id": "q-positive-psych-w8-3",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": ["w8-concept-resilience"],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "محاور الصمود الخمسة",
+    "prompt": "ما المحاور الخمسة لخطة الصمود النفسي؟",
+    "options": [
+      { "id": "a", "text": "الصلاة، الصوم، الزكاة، الحج، الدعاء" },
+      { "id": "b", "text": "الفهم، التواصل، العادات الصحية، القيم والمعنى، الصلابة" },
+      { "id": "c", "text": "القراءة، الكتابة، الحساب، العلوم، الفنون" },
+      { "id": "d", "text": "الذكر، القرآن، السنة، الفقه، التفسير" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "(1) الفهم (Cognitive Reframing)، (2) التواصل (Social Support)، (3) العادات الصحية، (4) القيم والمعنى، (5) الصلابة (Resilience)."
+  },
+  {
+    "id": "tf-positive-psych-w8-1",
+    "type": "tf",
+    "courseId": "positive-psych",
+    "conceptIds": ["w8-concept-emotion-labeling"],
+    "difficulty": "easy",
+    "estimatedSeconds": 45,
+    "learningObjective": "تسمية المشاعر وأثرها",
+    "prompt": "تسمية المشاعر وحدها تخلق مسافة بينها وبين السلوك وتُخفف حدّتها.",
+    "options": [
+      { "id": "true", "text": "صح" },
+      { "id": "false", "text": "خطأ" }
+    ],
+    "correctAnswer": "true",
+    "explanation": "تسمية المشاعر = 60% من إدارتها. في علم النفس الإيجابي، تسميتها تمنح الإنسان حرية الاختيار في ردّ الفعل."
+  },
+  {
+    "id": "rf-positive-psych-w8-1",
+    "type": "reflect",
+    "courseId": "positive-psych",
+    "conceptIds": ["w8-concept-cognitive-reframing"],
+    "difficulty": "medium",
+    "estimatedSeconds": 180,
+    "learningObjective": "تطبيق Cognitive Reframing",
+    "prompt": "استرجع أزمة اجتزتها بسلام. املأ ورقة الأربعة أرباع: (1) من الشخص الذي دعمك؟ (2) ما الاستراتيجية التي نجحت؟ (3) ما الآية أو المقولة التي أنارت الطريق؟ (4) ما سلوك البحث عن حل الذي فعلته؟",
+    "options": [],
+    "correctAnswer": null,
+    "explanation": "التمرين يستخرج «أدواتك» في الأزمات لتستخدمها في الأزمات القادمة. الـ Cognitive Reframing يحوّل الخسارة إلى درس."
+  }
+]

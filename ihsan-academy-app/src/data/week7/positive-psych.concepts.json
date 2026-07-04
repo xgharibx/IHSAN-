@@ -1,0 +1,86 @@
+[
+  {
+    "id": "w7-concept-johari",
+    "name": "جو هاري ويندو",
+    "arabicName": "أداة جو هاري",
+    "domain": "positive-psych",
+    "simpleDefinition": "أَداة لِتربيع الذَّات.",
+    "deepExplanation": "مربعاتها: Open، Blind، Hidden، Unknown. تَوسعة Open تُقلِّل الضُّغوط، وقَبول النَّقد يَقلِّل Blind.",
+    "whyItMatters": "تَعْليم وَعي الذَّات.",
+    "example": "اِكتب خَمس أَشياء تَعرفها عن نَفسك، وخمس يعرفها الآخَرون عنك.",
+    "relatedConceptIds": ["w7-concept-ego"],
+    "revisionNote": "4 مربعات."
+  },
+  {
+    "id": "w7-concept-ego",
+    "name": "الإِيغو",
+    "arabicName": "الإيغو - الذات الزائفة",
+    "domain": "positive-psych",
+    "simpleDefinition": "الذَّات الزَّائفة: بِرْمجيَّة تطلب البَقاء في صُورة.",
+    "deepExplanation": " «اللهم أَصْلِح لِي شَأْني ولا تَكلني إلى نَفسي». الإِيغو يمنع التَّعلُّم ويُحطِّم العلاقات.",
+    "whyItMatters": "تَعْليم المُرَاقَبة.",
+    "example": "حين تَتَجنب الاعتذار، اِسْأل هل الإِيغو تَمنعك؟",
+    "relatedConceptIds": ["w7-concept-johari", "w7-concept-fitnat-qalb"],
+    "revisionNote": "الإِيغو = كِبر صَغير."
+  },
+  {
+    "id": "w7-concept-fitnat-qalb",
+    "name": "اختبار الفِتَن",
+    "arabicName": "اختبار الفتن للقلوب",
+    "domain": "positive-psych",
+    "simpleDefinition": "تَعريض القَلْب لِمَواقف يكشف حَقيقته.",
+    "deepExplanation": " «تُعرض الفِتَن على القُلوب».",
+    "whyItMatters": "تَعْليم المُراجعة.",
+    "example": "حين تَعصِبك نَقد، اِسْأل: ما الذي كَشفه؟",
+    "relatedConceptIds": ["w7-concept-ego"],
+    "revisionNote": "فِتنة = مَرَآة."
+  },
+  {
+    "id": "w7-concept-drama-tri",
+    "name": "مُثلث الدَّراما",
+    "arabicName": "مثلث الدراما",
+    "domain": "positive-psych",
+    "simpleDefinition": "نَموذج ثَلاث أدوار: ضحيَّة، جلاد، مُنقذ.",
+    "deepExplanation": "سُتيفن كَاربن 1968. المَكسب الخَفي في كُلِّ دَور.",
+    "whyItMatters": "تَشخيص العلاقات.",
+    "example": "ارسم مُثلثك مع 3 عَلاقات.",
+    "relatedConceptIds": ["w7-concept-ego", "w7-concept-karama"],
+    "revisionNote": "3 أدوار."
+  },
+  {
+    "id": "w7-concept-karama",
+    "name": "الكرامة",
+    "arabicName": "الكرامة (احترام الذات)",
+    "domain": "positive-psych",
+    "simpleDefinition": "حُسْن التَّعامل مع الذَّات بدون إيذاء.",
+    "deepExplanation": "الكرامة تَختلف عن الإِيغو والكِبر. الكرامة عَمَل، والكِبر دعوى.",
+    "whyItMatters": "تَعْليم الحُدود.",
+    "example": "حين يَتَعرَّض لك المُؤذي، اِختر مُوَقَّفًا بِحُرمة.",
+    "relatedConceptIds": ["w7-concept-ego", "w7-concept-drama-tri"],
+    "revisionNote": "كرامة عَمَل."
+  },
+  {
+    "id": "w7-concept-samud-4-aslihat",
+    "name": "الصُّمود النَّفسي",
+    "arabicName": "الصمود النفسي",
+    "domain": "positive-psych",
+    "simpleDefinition": "قُدرة على تَحمُّل الضُّغوط.",
+    "deepExplanation": "أَربعة أَسلِحة: الثقة بالنَّفس، الحَياة الهادِفة، المرونة، التَّفكير الواقعي.",
+    "whyItMatters": "تَعليم القُوَّة.",
+    "example": "حين تَتعثر، اِسْأل: ما الْمَرونة عندي؟",
+    "relatedConceptIds": ["w7-concept-johari", "w7-concept-ego"],
+    "revisionNote": "4 أَسلِحة."
+  },
+  {
+    "id": "w7-concept-yusuf-karama",
+    "name": "يُوسف وَجه الإِيغو",
+    "arabicName": "يوسف نموذج الكرامة",
+    "domain": "positive-psych",
+    "simpleDefinition": "نموذج تَاريخي للكرامة في مَواجهة الإِيغو.",
+    "deepExplanation": "يُوسف عاش في البئر والسِّجن، لَم يَتحوَّل لِضحية. لَم يَحقد، لَم يَنتقم، بنى نَفْسه.",
+    "whyItMatters": "تَعليم المثاليَّة الإِسلامية.",
+    "example": "حين تَتعرض لِمَصيبة، اِتْبع يُوسف.",
+    "relatedConceptIds": ["w7-concept-karama", "w7-concept-drama-tri"],
+    "revisionNote": "يُوسف = كَوْكَب."
+  }
+]

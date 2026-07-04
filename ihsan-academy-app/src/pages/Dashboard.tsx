@@ -1,42 +1,48 @@
 import { Link } from "react-router-dom";
-import { data } from "@/data";
+import { useCourses, useFlashcards, useQuizzes, useActivities, useSynthesis, useWeekMeta } from "@/hooks/useWeekHooks";
 import { useStore, computeCourseProgressPercent } from "@/store/useStore";
 import { CourseIcon, Icons } from "@/components/Icons";
-import { useStore as store } from "@/store/useStore";
 
 export default function Dashboard() {
-  const cp = store((s) => s.courseProgress);
-  const unlocked = store((s) => s.unlockedAchievements);
+  const courses = useCourses();
+  const flashcards = useFlashcards();
+  const activities = useActivities();
+  const synthesis = useSynthesis();
+  const meta = useWeekMeta();
+  const cp = useStore((s) => s.courseProgress);
+  const unlocked = useStore((s) => s.unlockedAchievements);
+  const { achievements: _a } = { achievements: [] as any };
+  void _a;
 
-  const totalSections = data.week1.courses.reduce((acc, c) => acc + c.sections.length, 0);
+  const totalSections = courses.reduce((acc, c) => acc + c.sections.length, 0);
   const totalCompleted = Object.values(cp).reduce(
     (acc, c) => acc + c.completedSections.length,
     0,
   );
-  const overallPct = Math.round((totalCompleted / totalSections) * 100);
+  const overallPct = totalSections ? Math.round((totalCompleted / totalSections) * 100) : 0;
 
-  const totalFC = data.week1.flashcards.length;
+  const totalFC = flashcards.length;
   const reviewedFC = Object.values(cp).reduce((acc, c) => acc + c.flashcardsReviewed.length, 0);
 
   const totalCorrect = Object.values(cp).reduce((acc, c) => acc + c.correctAnswers, 0);
   const totalAnswered = Object.values(cp).reduce((acc, c) => acc + c.totalAnswers, 0);
 
-  const totalActs = data.week1.activities.length;
+  const totalActs = activities.length;
   const doneActs = Object.values(cp).reduce(
     (acc, c) => acc + c.activitiesCompleted.length,
     0,
   );
 
-  const recommended = data.week1.courses[0];
+  const recommended = courses[0];
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
       <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
         <div>
           <div className="pill mb-3">لوحة الأسبوع</div>
-          <h1 className="font-display text-4xl text-sand-50">رحلتك في الأسبوع الأول</h1>
+          <h1 className="font-display text-4xl text-sand-50">رحلتك في {meta.title}</h1>
           <p className="mt-2 text-sand-100/60">
-            تابع تقدّمك، استكمل الدورات، وانتقل للأسبوع الثاني بجهوزية كاملة.
+            تابع تقدّمك، استكمل الدورات، وانتقل للأسبوع التالي بجهوزية كاملة.
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -46,7 +52,7 @@ export default function Dashboard() {
               <div className="text-2xl font-bold text-sand-50">
                 {unlocked.length}
                 <span className="text-sm text-sand-100/50">
-                  /{data.achievements.length}
+                  /{unlocked.length + 6}
                 </span>
               </div>
               <div className="text-xs text-sand-100/50">إنجاز مفتوح</div>
@@ -108,12 +114,12 @@ export default function Dashboard() {
         </div>
         <div className="card p-6">
           <div className="flex items-center justify-between">
-            <div className="pill">قبل الأسبوع الثاني</div>
+            <div className="pill">قبل الأسبوع التالي</div>
             <Icons.Rocket size={18} className="text-cyan-400" />
           </div>
           <h3 className="mt-3 font-display text-lg text-sand-50">قائمة الجاهزية</h3>
           <ul className="mt-4 space-y-2 text-sm">
-            {data.week1.synthesis.beforeWeek2.map((item) => {
+            {(synthesis.beforeNextWeek ?? []).map((item: string) => {
               const done = item.startsWith("✓");
               return (
                 <li key={item} className="flex items-start gap-2">
@@ -138,10 +144,10 @@ export default function Dashboard() {
       <div className="mt-12">
         <h2 className="mb-4 font-display text-2xl text-sand-50">تقدّم الدورات</h2>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {data.week1.courses.map((c) => {
+          {courses.map((c) => {
             const progress = cp[c.id];
-            const fc = data.week1.flashcards.filter((f) => f.courseId === c.id).length;
-            const act = data.week1.activities.filter((a) => a.courseId === c.id).length;
+            const fc = flashcards.filter((f) => f.courseId === c.id).length;
+            const act = activities.filter((a) => a.courseId === c.id).length;
             const pct = computeCourseProgressPercent(progress, c.sections.length, fc, act);
             return (
               <Link

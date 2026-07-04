@@ -1,0 +1,41 @@
+{
+  "id": "week7-knowledge-map",
+  "title": "خريطة المعرفة للأسبوع السابع",
+  "description": "خريطة روابط المَفاهيم في الأسبوع السَّابع",
+  "nodes": [
+    { "id": "ihsan-soul", "label": "محطات الشيطان", "type": "course", "x": 0.5, "y": 0.10, "color": "#2f9e64" },
+    { "id": "tafsir", "label": "سورة التين", "type": "course", "x": 0.85, "y": 0.20, "color": "#1aa084" },
+    { "id": "seerah", "label": "قريش تواجه النبي", "type": "course", "x": 0.15, "y": 0.20, "color": "#e25d8d" },
+    { "id": "contemporary", "label": "الأشهر الحرم", "type": "course", "x": 0.30, "y": 0.40, "color": "#f97316" },
+    { "id": "fiqh-rules", "label": "العرف معتبر", "type": "course", "x": 0.70, "y": 0.40, "color": "#a78bfa" },
+    { "id": "seerah-app", "label": "الجهر بالدعوة", "type": "course", "x": 0.85, "y": 0.60, "color": "#60a5fa" },
+    { "id": "soul-app", "label": "اعتزل ما يؤذيك", "type": "course", "x": 0.15, "y": 0.60, "color": "#f87171" },
+    { "id": "positive-psych", "label": "الإيغو والمثلث", "type": "course", "x": 0.50, "y": 0.80, "color": "#22d3ee" },
+    { "id": "w7-concept-shaytan-stations", "label": "محطات الشيطان", "type": "concept", "x": 0.30, "y": 0.30, "color": "#2f9e64" },
+    { "id": "w7-concept-istighfar-shield", "label": "الاستغفار", "type": "concept", "x": 0.20, "y": 0.50, "color": "#2f9e64" },
+    { "id": "w7-concept-jawarih-amanah", "label": "الجوارح أمانات", "type": "concept", "x": 0.85, "y": 0.40, "color": "#1aa084" },
+    { "id": "w7-concept-shahada-ukhra", "label": "شهادة سمية", "type": "concept", "x": 0.10, "y": 0.30, "color": "#e25d8d" },
+    { "id": "w7-concept-fitna-kubra", "label": "الفتنة أكبر", "type": "concept", "x": 0.45, "y": 0.55, "color": "#f97316" },
+    { "id": "w7-concept-urf-mujtama", "label": "العرف", "type": "concept", "x": 0.65, "y": 0.55, "color": "#a78bfa" },
+    { "id": "w7-concept-fasdaa", "label": "فاصدع", "type": "concept", "x": 0.90, "y": 0.30, "color": "#60a5fa" },
+    { "id": "w7-concept-i3tizal-amal", "label": "اعتزل", "type": "concept", "x": 0.30, "y": 0.70, "color": "#f87171" },
+    { "id": "w7-concept-johari", "label": "جو هاري", "type": "concept", "x": 0.70, "y": 0.65, "color": "#22d3ee" },
+    { "id": "w7-concept-drama-tri", "label": "مثلث الدراما", "type": "concept", "x": 0.50, "y": 0.95, "color": "#22d3ee" }
+  ],
+  "edges": [
+    { "from": "ihsan-soul", "to": "w7-concept-shaytan-stations", "label": "يوضح" },
+    { "from": "ihsan-soul", "to": "w7-concept-istighfar-shield", "label": "يوضّح" },
+    { "from": "tafsir", "to": "w7-concept-jawarih-amanah", "label": "يفصّل" },
+    { "from": "seerah", "to": "w7-concept-shahada-ukhra", "label": "يحكي" },
+    { "from": "contemporary", "to": "w7-concept-fitna-kubra", "label": "يوضح" },
+    { "from": "fiqh-rules", "to": "w7-concept-urf-mujtama", "label": "يُطبّق" },
+    { "from": "seerah-app", "to": "w7-concept-fasdaa", "label": "يُحلل" },
+    { "from": "soul-app", "to": "w7-concept-i3tizal-amal", "label": "يُطبّق" },
+    { "from": "positive-psych", "to": "w7-concept-johari", "label": "يُقدّم" },
+    { "from": "positive-psych", "to": "w7-concept-drama-tri", "label": "يُحلّل" },
+    { "from": "w7-concept-shaytan-stations", "to": "w7-concept-i3tizal-amal", "label": "يكمل" },
+    { "from": "w7-concept-shahada-ukhra", "to": "w7-concept-fitna-kubra", "label": "يتقاطع" },
+    { "from": "w7-concept-jawarih-amanah", "to": "w7-concept-fasdaa", "label": "يُحضّر" },
+    { "from": "w7-concept-i3tizal-amal", "to": "w7-concept-drama-tri", "label": "يترابط" }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "week5-knowledge-map",
+  "title": "خريطة المعرفة للأسبوع الخامس",
+  "description": "روابط بين دورات الأسبوع الخامس ومفاهيمه. انقر على أي عقدة لاستكشافها.",
+  "nodes": [
+    { "id": "ihsan-soul", "label": "اختبار القيم", "type": "course", "x": 0.5, "y": 0.06, "color": "#2f9e64" },
+    { "id": "tafsir", "label": "المعوذتان", "type": "course", "x": 0.85, "y": 0.22, "color": "#1aa084" },
+    { "id": "seerah", "label": "الدعوة الانتقائية", "type": "course", "x": 0.5, "y": 0.3, "color": "#e25d8d" },
+    { "id": "sahaba", "label": "طلحة بن عبيد الله", "type": "course", "x": 0.92, "y": 0.5, "color": "#c084fc" },
+    { "id": "sahabiyyat", "label": "رملة بنت أبي سفيان", "type": "course", "x": 0.08, "y": 0.5, "color": "#ec4899" },
+    { "id": "contemporary", "label": "شبهة الغزوات", "type": "course", "x": 0.85, "y": 0.78, "color": "#f97316" },
+    { "id": "seerah-app", "label": "تدبر السيرة 4", "type": "course", "x": 0.5, "y": 0.55, "color": "#60a5fa" },
+    { "id": "fiqh-rules", "label": "لا ضرر ولا ضرار", "type": "course", "x": 0.15, "y": 0.78, "color": "#a78bfa" },
+    { "id": "soul-app", "label": "عينك على الجنة", "type": "course", "x": 0.5, "y": 0.78, "color": "#f87171" },
+    { "id": "positive-psych", "label": "تأثير الأفكار", "type": "course", "x": 0.5, "y": 0.95, "color": "#22d3ee" },
+    { "id": "w5-qiyam", "label": "القيم", "type": "concept", "x": 0.4, "y": 0.04, "color": "#ffd166" },
+    { "id": "w5-mu3a2ithat", "label": "الاستعاذة", "type": "concept", "x": 0.6, "y": 0.04, "color": "#ffd166" },
+    { "id": "w5-tashakki-c", "label": "التشكي", "type": "concept", "x": 0.4, "y": 0.45, "color": "#ffd166" }
+  ],
+  "edges": [
+    { "from": "w5-qiyam", "to": "ihsan-soul", "label": "يُؤسِّس" },
+    { "from": "w5-qiyam", "to": "soul-app", "label": "يُعَزِّز" },
+    { "from": "w5-mu3a2ithat", "to": "tafsir", "label": "يُفَصِّل" },
+    { "from": "w5-mu3a2ithat", "to": "ihsan-soul", "label": "حماية" },
+    { "from": "w5-tashakki-c", "to": "seerah", "label": "تَفصيل" },
+    { "from": "w5-tashakki-c", "to": "seerah-app", "label": "تَدَبُّر" },
+    { "from": "seerah", "to": "seerah-app", "label": "تَدَبُّر" },
+    { "from": "sahaba", "to": "sahabiyyat", "label": "صحبة" },
+    { "from": "seerah", "to": "sahabiyyat", "label": "هجرة" },
+    { "from": "contemporary", "to": "seerah", "label": "رد" },
+    { "from": "contemporary", "to": "fiqh-rules", "label": "تطبيق" },
+    { "from": "fiqh-rules", "to": "soul-app", "label": "سعي" },
+    { "from": "ihsan-soul", "to": "soul-app", "label": "تطبيق" },
+    { "from": "soul-app", "to": "positive-psych", "label": "وعي" }
+  ]
+}

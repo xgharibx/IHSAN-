@@ -1,16 +1,27 @@
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useStore } from "@/store/useStore";
 import { data } from "@/data";
+import { useWeekData, useAvailableWeeks, TOTAL_WEEKS } from "@/hooks/useWeekData";
 import { cn } from "@/lib/utils";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const recentCourseId = useStore((s) => s.recentCourseId);
   const unlocked = useStore((s) => s.unlockedAchievements.length);
+  const setSelectedWeek = useStore((s) => s.setSelectedWeek);
+  const selectedWeek = useStore((s) => s.selectedWeek);
   const loc = useLocation();
+  const week = useWeekData();
+  const available = useAvailableWeeks();
+  const [pickerOpen, setPickerOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
+  }, [loc.pathname]);
+
+  // Close the week picker when navigating
+  useEffect(() => {
+    setPickerOpen(false);
   }, [loc.pathname]);
 
   const navItems = [
@@ -23,8 +34,6 @@ export default function Layout({ children }: { children: ReactNode }) {
     { to: "/tutor", label: "المعلّم الذكي", icon: "✦" },
     { to: "/synthesis", label: "التركيب", icon: "◆" },
   ];
-  // Curated subset for the mobile floating tab bar — a bottom bar works best with
-  // ~5 destinations; the rest stay reachable via the desktop nav / Home page cards.
   const mobileTabItems = [
     { to: "/", label: "الرئيسية", icon: "◉" },
     { to: "/courses", label: "الدورات", icon: "❖" },
@@ -32,7 +41,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     { to: "/activities", label: "الأنشطة", icon: "✺" },
     { to: "/tutor", label: "المعلّم", icon: "✦" },
   ];
-  const totalCourses = data.week1.courses.length;
+  const totalCourses = week.courses.length;
 
   return (
     <div className="min-h-screen bg-cosmic">
@@ -50,7 +59,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             </div>
             <div className="hidden sm:block">
               <div className="font-display text-lg leading-none text-sand-50">أكاديمية الإحسان</div>
-              <div className="text-[11px] text-sand-100/60">الأسبوع الأول · نظام تعلّم ذكي</div>
+              <div className="text-[11px] text-sand-100/60">الأسبوع {week.meta.number} · نظام تعلّم ذكي</div>
             </div>
           </NavLink>
 
@@ -84,9 +93,57 @@ export default function Layout({ children }: { children: ReactNode }) {
               <span className="text-gold-300">★</span>
               <span>{unlocked}</span>
             </NavLink>
-            <div className="hidden md:block">
-              <div className="text-[11px] text-sand-100/60">الأسبوع</div>
-              <div className="text-sm font-bold text-gold-200">1 / 4</div>
+
+            {/* Week switcher — only weeks with loaded data are selectable; the rest are disabled as "قريبًا". */}
+            <div className="relative hidden md:block">
+              <button
+                onClick={() => setPickerOpen((o) => !o)}
+                className="pill hover:border-gold-300/40"
+                title="تبديل الأسبوع"
+              >
+                <span className="text-gold-300">▦</span>
+                <span className="text-[11px] text-sand-100/60">الأسبوع</span>
+                <span className="text-sm font-bold text-gold-200">
+                  {selectedWeek} / {TOTAL_WEEKS}
+                </span>
+              </button>
+              {pickerOpen && (
+                <div className="absolute end-0 top-full z-50 mt-2 w-64 rounded-2xl border border-white/10 bg-ink-900/95 p-2 shadow-deep backdrop-blur-md">
+                  {Array.from({ length: TOTAL_WEEKS }).map((_, i) => {
+                    const n = i + 1;
+                    const availableWeek = available.find((a) => a.number === n);
+                    const isAvailable = !!availableWeek;
+                    const isCurrent = selectedWeek === n;
+                    return (
+                      <button
+                        key={n}
+                        disabled={!isAvailable}
+                        onClick={() => {
+                          if (isAvailable) {
+                            setSelectedWeek(n);
+                            setPickerOpen(false);
+                          }
+                        }}
+                        className={cn(
+                          "flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-right text-xs transition-all",
+                          isCurrent
+                            ? "bg-gold-300/20 text-gold-200"
+                            : isAvailable
+                              ? "text-sand-100/80 hover:bg-white/5"
+                              : "cursor-not-allowed text-sand-100/30",
+                        )}
+                      >
+                        <span className="font-bold">الأسبوع {n}</span>
+                        <span className="truncate text-[11px] text-sand-100/50">
+                          {isAvailable
+                            ? (availableWeek!.title.replace(/^الأسبوع [^-]+ — /, ""))
+                            : "قريبًا"}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -147,25 +204,35 @@ export default function Layout({ children }: { children: ReactNode }) {
             <div className="mb-2 font-display text-lg text-gold-200">أكاديمية الإحسان</div>
             <p className="text-sm text-sand-100/60">
               نظام تعلّم ذكي متعدد الأسابيع لتحويل المواد التعليمية إلى تجربة معرفية حيّة.
-              الأسبوع الأول: تأسيس الخلافة بالإحسان.
+              حاليًا: {week.meta.title}.
             </p>
           </div>
           <div>
             <div className="mb-2 text-sm font-bold text-sand-50">إحصاء سريعة</div>
             <ul className="space-y-1 text-sm text-sand-100/60">
               <li>{totalCourses} دورات هذا الأسبوع</li>
-              <li>{data.week1.flashcards.length} بطاقة مراجعة</li>
-              <li>{data.week1.quizzes.length} سؤال متنوّع</li>
-              <li>{data.week1.activities.length} نشاط تطبيقي</li>
-              <li>{data.achievements?.length ?? 0} إنجاز قابل للفتح</li>
+              <li>{week.flashcards.length} بطاقة مراجعة</li>
+              <li>{week.quizzes.length} سؤال متنوّع</li>
+              <li>{week.activities.length} نشاط تطبيقي</li>
+              <li>{data.achievements.length} إنجاز قابل للفتح</li>
             </ul>
           </div>
           <div>
             <div className="mb-2 text-sm font-bold text-sand-50">قريبًا</div>
             <ul className="space-y-1 text-sm text-sand-100/60">
-              <li>الأسبوع الثاني — التطبيق</li>
-              <li>الأسبوع الثالث — التوسّع</li>
-              <li>الأسبوع الرابع — التركيب النهائي</li>
+              {Array.from({ length: TOTAL_WEEKS }).map((_, i) => {
+                const n = i + 1;
+                const availableWeek = available.find((a) => a.number === n);
+                return (
+                  <li key={n} className={availableWeek && n !== week.meta.number ? "text-sand-100/30 line-through" : ""}>
+                    {n === week.meta.number
+                      ? `الأسبوع ${n} — الحالي`
+                      : availableWeek
+                        ? `الأسبوع ${n} — متاح`
+                        : `الأسبوع ${n} — قريبًا`}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
@@ -174,7 +241,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             <div>© أكاديمية الإحسان — نظام تعلّم ذكي</div>
             {recentCourseId && (
               <div className="hidden md:block">
-                الدورة الأخيرة: {data.week1.courses.find((c) => c.id === recentCourseId)?.title}
+                الدورة الأخيرة: {week.courses.find((c) => c.id === recentCourseId)?.title}
               </div>
             )}
           </div>

@@ -1,0 +1,1481 @@
+[
+  {
+    "id": "q-is-w3-1",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": [
+      "hudur"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "المعنى الثاني للإحسان",
+    "prompt": "ما المعنى الثاني للإحسان كما قدّمه د. عمرو خالد؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "إتقان العمل"
+      },
+      {
+        "id": "b",
+        "text": "الحضور الرباني (الإحساس بالله)"
+      },
+      {
+        "id": "c",
+        "text": "الصدق في القول"
+      },
+      {
+        "id": "d",
+        "text": "الإبداع في العمل"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الإحسان في الحديث النبوي له معنيان: الأول = الإتقان، والثاني = «كانك تراه» = الحضور الرباني = الإحساس بالله."
+  },
+  {
+    "id": "q-is-w3-2",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": [
+      "hudur"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "5 أدوات الحضور اليومي",
+    "prompt": "ما هي الأدوات الخمس للحضور اليومي كما شرحها د. عمرو خالد؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "الصلاة، الصوم، الزكاة، الحج، الدعاء"
+      },
+      {
+        "id": "b",
+        "text": "الفضفضة مع الله، ذكر الله 15-20 دقيقة، 5 لقطات حضور، الدعاء بأسماء الله، قيام الليل"
+      },
+      {
+        "id": "c",
+        "text": "القراءة، الكتابة، الاستماع، التحدث، التأمل"
+      },
+      {
+        "id": "d",
+        "text": "النوم، الأكل، الشرب، المشي، الجلوس"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "5 أدوات: (1) الفضفضة مع الله. (2) ذكر الله 15-20 دقيقة. (3) 5 لقطات حضور رباني. (4) الدعاء بأسماء الله. (5) ركعتا قيام الليل."
+  },
+  {
+    "id": "q-is-w3-3",
+    "type": "mcq",
+    "courseId": "ihsan-soul",
+    "conceptIds": [
+      "ma3iyat-allah"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "معية الله في القرآن",
+    "prompt": "في أي موقف قال النبي ﷺ «لا تحزن إن الله معنا»؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "في غار ثور"
+      },
+      {
+        "id": "b",
+        "text": "في بدر"
+      },
+      {
+        "id": "c",
+        "text": "في فتح مكة"
+      },
+      {
+        "id": "d",
+        "text": "في حجة الوداع"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "في هجرة النبي ﷺ إلى المدينة، اختبأ في غار ثور مع أبي بكر. أبو بكر خائف يَقول: «لو نظر أحدهم أسفل قدميه لرآنا». النبي ﷺ يَقول: «لا تحزن إن الله معنا» (التوبة 40)."
+  },
+  {
+    "id": "q-tf-w3-1",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": [
+      "ahad"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "معنى أحد",
+    "prompt": "ما معنى «أحد» في سورة الإخلاص؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "الواحد العادي"
+      },
+      {
+        "id": "b",
+        "text": "الفرد المطلق الذي لا يَقبل القسمة"
+      },
+      {
+        "id": "c",
+        "text": "الزوج"
+      },
+      {
+        "id": "d",
+        "text": "الأول فقط"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "كلمة «أحد» في القرآن لم ترد إلا في سورة الإخلاص. «أحد» = الفرد المطلق الذي لا يَقبل القسمة. «الواحد» قد يَقبل ثانٍ، لكن «أحد» = فرد مطلق."
+  },
+  {
+    "id": "q-tf-w3-2",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": [
+      "ahad"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "فضل سورة الإخلاص",
+    "prompt": "كم مرة وردت كلمة «أحد» في القرآن؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "مرة واحدة (في سورة الإخلاص)"
+      },
+      {
+        "id": "b",
+        "text": "7 مرات"
+      },
+      {
+        "id": "c",
+        "text": "10 مرات"
+      },
+      {
+        "id": "d",
+        "text": "12 مرة"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "كلمة «أحد» لم ترد في القرآن إلا في هذا الموضع (سورة الإخلاص 1). وهذا تَفرُّد لفظي يَدلّ على مكانة السورة."
+  },
+  {
+    "id": "tf-tf-w3-1",
+    "type": "tf",
+    "courseId": "tafsir",
+    "conceptIds": [
+      "ahad"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "سورة الإخلاص تعدل ثلث القرآن.",
+    "correctAnswer": "true",
+    "explanation": "حديث: «احشدوا فإني سأقرأ عليكم ثلث القرآن» فقرأ قل هو الله أحد. القرآن ثلاثة أقسام: قصص وأحكام، معاملات، توحيد. سورة الإخلاص تَختصر القسم الثالث."
+  },
+  {
+    "id": "rf-tf-w3-1",
+    "type": "reflect",
+    "courseId": "tafsir",
+    "conceptIds": [
+      "ahad"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "متى تَستحضر «أحد» في حياتك؟ وكيف يَختلف هذا عن تَذكُّر «واحد»؟",
+    "correctAnswer": "تأمل شخصي. الفرق: «واحد» = عدد، «أحد» = فرد مطلق. في أزمة: ارجع إلى «أحد» الذي بيده كل شيء.",
+    "explanation": "التأمل في معاني «أحد» يُقوّي التوحيد."
+  },
+  {
+    "id": "q-sa-w3-1",
+    "type": "mcq",
+    "courseId": "seerah-app",
+    "conceptIds": [
+      "ard-mushtarika"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "الأرض المشتركة",
+    "prompt": "ما هي «الأرض المشتركة» بين النبي ﷺ والسيدة خديجة كما شرح المحاضر؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "كلاهما ثريّ"
+      },
+      {
+        "id": "b",
+        "text": "كلاهما لم يسجد لصنم"
+      },
+      {
+        "id": "c",
+        "text": "كلاهما من قريش"
+      },
+      {
+        "id": "d",
+        "text": "كلاهما كان يَتْجر"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "خديجة لم تَسجد لصنم، والنبي ﷺ لم يَسجد لصنم. هذه الأرض المشتركة (التوحيد) هي التي بَنَيت عليها. +25 سنة زواج."
+  },
+  {
+    "id": "q-sa-w3-2",
+    "type": "mcq",
+    "courseId": "seerah-app",
+    "conceptIds": [
+      "hub"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "أعظم قصة حب",
+    "prompt": "كم سنة استمر زواج النبي ﷺ من السيدة خديجة؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "10 سنوات"
+      },
+      {
+        "id": "b",
+        "text": "15 سنة"
+      },
+      {
+        "id": "c",
+        "text": "25 سنة"
+      },
+      {
+        "id": "d",
+        "text": "30 سنة"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "25 سنة زواج. خديجة درست النبي 3 سنوات قبل الزواج (15 قبل البعثة + 10 بعدها). ماتت قبل الهجرة بِ3 سنوات."
+  },
+  {
+    "id": "q-sa-w3-3",
+    "type": "mcq",
+    "courseId": "seerah-app",
+    "conceptIds": [
+      "khadja"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "نصيحة خديجة للنبي ﷺ",
+    "prompt": "ماذا قالت خديجة للنبي ﷺ بعد أول وحي؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "أن النبي يَستجيب"
+      },
+      {
+        "id": "b",
+        "text": "كلا والله لا يخزيك الله أبدًا"
+      },
+      {
+        "id": "c",
+        "text": "أن الله يَحميك"
+      },
+      {
+        "id": "d",
+        "text": "أنت صادق"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "حديث: «كلا والله لا يخزيك الله أبدًا. إنك لتصل الرحم، وتحمل الكل، وتكسب المعدوم، وتقرى الضيف، وتعين على نوائب الحق»."
+  },
+  {
+    "id": "q-fq-w3-1",
+    "type": "mcq",
+    "courseId": "fiqh-rules",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "قاعدة اليقين لا يزول بالشك",
+    "prompt": "ما هو المقصود ب«اليقين لا يزول بالشك»؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "اليقين يَخلق الشك"
+      },
+      {
+        "id": "b",
+        "text": "إذا كان اليقين ثابتًا، فالشك يَبقى شكًا ولا يَنتقص اليقين"
+      },
+      {
+        "id": "c",
+        "text": "اليقين يَتحول إلى شك"
+      },
+      {
+        "id": "d",
+        "text": "الشك يَتحول إلى يقين"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "القاعدة الفقهية: ما ثبت بِيقين لا يَزول بِشك. «فليقطعها» (الحديث)."
+  },
+  {
+    "id": "q-fq-w3-2",
+    "type": "mcq",
+    "courseId": "fiqh-rules",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "تطبيق قاعدة اليقين في الوضوء",
+    "prompt": "لو توضأت ثم شككت في نقض الوضوء، ماذا تفعل؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "تُعيد الوضوء"
+      },
+      {
+        "id": "b",
+        "text": "تُصلي على يقينها"
+      },
+      {
+        "id": "c",
+        "text": "تنتظر حتى تزول الشكوك"
+      },
+      {
+        "id": "d",
+        "text": "تأخذ بالأحوط"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الحديث: «لا يتوضأ من الشك حتى يتيقن». الأصل بقاء الطهارة، والشك لا يَرفع اليقين. تُصلي على يقينها."
+  },
+  {
+    "id": "tf-fq-w3-1",
+    "type": "tf",
+    "courseId": "fiqh-rules",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "لو شككت في عدد ركعات الصلاة، تبني على الأكثر ثم تسجد للسهو.",
+    "correctAnswer": "false",
+    "explanation": "الحديث: «فليقطعها» — تبني على الأقل (الأكثر يقينًا)، ثم تُكمل، ثم تسجد للسهو. هذا عند الجمهور."
+  },
+  {
+    "id": "rf-fq-w3-1",
+    "type": "reflect",
+    "courseId": "fiqh-rules",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "في آخر مرة شككت في صلاتك أو طهارتك، كيف طبّقت قاعدة «اليقين لا يزول بالشك»؟",
+    "correctAnswer": "تأمل شخصي. القاعدة تَنطبق على: الوضوء، الصلاة، الصوم، الطهارة.",
+    "explanation": "تطبيق القاعدة في الحياة اليومية يَقوّي اليقين."
+  },
+  {
+    "id": "q-sl-w3-1",
+    "type": "mcq",
+    "courseId": "soul-app",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "3 مراتب اليقين",
+    "prompt": "ما هي مراتب اليقين الثلاث؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "علم، عين، حق"
+      },
+      {
+        "id": "b",
+        "text": "ظن، يقين، حق"
+      },
+      {
+        "id": "c",
+        "text": "إيمان، إحسان، إحسان"
+      },
+      {
+        "id": "d",
+        "text": "معرفة، خوف، رجاء"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "علم اليقين (العلم بوجود الله)، عين اليقين (الرؤية بالبصيرة)، حق اليقين (التجربة الشخصية)."
+  },
+  {
+    "id": "q-sl-w3-2",
+    "type": "mcq",
+    "courseId": "soul-app",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "حديث الدعاء",
+    "prompt": "ما الحديث الذي يُرَكِّز على أهمية اليقين في الدعاء؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "أطيعوا الله."
+      },
+      {
+        "id": "b",
+        "text": "ادعوا الله وأنتم موقنون بالإجابة"
+      },
+      {
+        "id": "c",
+        "text": "اقرأوا القرآن."
+      },
+      {
+        "id": "d",
+        "text": "صلوا على النبي."
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "حديث: «ادعوا الله وأنتم موقنون بالإجابة. واعلموا أن الله لا يستجيب دعاء قلب لاهٍ»."
+  },
+  {
+    "id": "q-sh-w3-1",
+    "type": "mcq",
+    "courseId": "sahaba",
+    "conceptIds": [
+      "hub"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "زيد بن حارثة الصحابي الوحيد",
+    "prompt": "لماذا زيد بن حارثة استثنائي في القرآن؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "لأنه قَائد جَيش"
+      },
+      {
+        "id": "b",
+        "text": "لأنه الصحابي الوحيد المذكور باسمه في القرآن"
+      },
+      {
+        "id": "c",
+        "text": "لأنه ابن النبي ﷺ"
+      },
+      {
+        "id": "d",
+        "text": "لأنه من أَول مَن أَسلم"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "زيد بن حارثة الصحابي الوحيد المذكور باسمه في القرآن: «وإذ تقول للذي أنعم الله عليه وأنعمت عليه أمسك عليك زوجك» (الأحزاب 37)."
+  },
+  {
+    "id": "q-sh-w3-2",
+    "type": "mcq",
+    "courseId": "sahaba",
+    "conceptIds": [
+      "shahada"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "استشهاد زيد في مؤتة",
+    "prompt": "كيف استُشهد زيد بن حارثة في مؤتة؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "طعن بالرمح"
+      },
+      {
+        "id": "b",
+        "text": "تلقى ضَربات الروم بِجَسده حتى صار مِصفَّى من السِّهام"
+      },
+      {
+        "id": "c",
+        "text": "سقوط عن فرسه"
+      },
+      {
+        "id": "d",
+        "text": "طعنة في الظهر"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "جَسده صار مِصفَّى من السِّهام: في يَده 30، صَدره 30، وَجهه 30. قالوا: «جَسده مَصفَّى من السِّهام»."
+  },
+  {
+    "id": "q-sb-w3-1",
+    "type": "mcq",
+    "courseId": "sahabiyyat",
+    "conceptIds": [
+      "shahada"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "السيدة سمية أول شهيدة",
+    "prompt": "ماذا يعني أن السيدة سمية هي أول شهيدة في الإسلام؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "هي أول من آمنت"
+      },
+      {
+        "id": "b",
+        "text": "هي أول من استُشهدت في سبيل الله"
+      },
+      {
+        "id": "c",
+        "text": "هي أم عمار"
+      },
+      {
+        "id": "d",
+        "text": "هي من الحَواريّات"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "سمية بنت الخياط استُشهدت بِيد أبي جهل (طَعَنها بِالرُمح) في مَكَّة. هي أول شهيدة في الإسلام."
+  },
+  {
+    "id": "q-sb-w3-2",
+    "type": "mcq",
+    "courseId": "sahabiyyat",
+    "conceptIds": [
+      "sabr"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "حديث صبرًا آل ياسر",
+    "prompt": "ماذا قال النبي ﷺ لآل ياسر وهم في العذاب؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "صبرًا آل ياسر! فإن موعدكم الجنة"
+      },
+      {
+        "id": "b",
+        "text": "لا تخافوا"
+      },
+      {
+        "id": "c",
+        "text": "الله معكم"
+      },
+      {
+        "id": "d",
+        "text": "ستُنصَرون"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "حديث ابن ماجه: «صبرًا آل ياسر! فإن موعدكم الجنة». ورَآهم النبي في الجنة يَقطفون العنب."
+  },
+  {
+    "id": "q-ct-w3-1",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": [
+      "muballigh"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "الرد على شبهة بناء السلطة",
+    "prompt": "ما هي الآية التي تقول «لست عليهم بمسيطر»؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "المدثر"
+      },
+      {
+        "id": "b",
+        "text": "الغاشية"
+      },
+      {
+        "id": "c",
+        "text": "الأنعام"
+      },
+      {
+        "id": "d",
+        "text": "يونس"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "«لست عليهم بمسيطر» (الغاشية 22). والنبي ﷺ: مُبلِّغ، لا مسيطر."
+  },
+  {
+    "id": "q-ct-w3-2",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": [
+      "muballigh"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "دليل النبي ﷺ مُبلِّغ",
+    "prompt": "ما الذي يدل على أن النبي ﷺ أزهد الناس في الملك؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "ما أرسلناك إلا رحمة للعالمين"
+      },
+      {
+        "id": "b",
+        "text": "لست عليهم بمسيطر"
+      },
+      {
+        "id": "c",
+        "text": "ما أتبع إلا ما يوحى إليّ"
+      },
+      {
+        "id": "d",
+        "text": "جميع ما سبق"
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "9 آيات ترد على الشبهة: «لست عليهم بمسيطر» + «ما أرسلناك إلا رحمة» + «ما أتبع إلا ما يوحى إليّ» + «فإن تولوا فاصبر» + 5 آيات أخرى."
+  },
+  {
+    "id": "q-ps-w3-1",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": [
+      "hudur"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "الحضور Mindfulness",
+    "prompt": "ما هو الحضور (Mindfulness) كما عُرّف في المحاضرة؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "الجلوس في صمت"
+      },
+      {
+        "id": "b",
+        "text": "اليقظة الذهنية، وَعي الفرد بحالاته الداخلية وما حوله"
+      },
+      {
+        "id": "c",
+        "text": "التفكير في الماضي"
+      },
+      {
+        "id": "d",
+        "text": "التأمل في الطبيعة"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "الحضور = اليقظة الذهنية، وَعي الفرد بِحالاته الداخلية ومَا حَوله."
+  },
+  {
+    "id": "q-ps-w3-2",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": [
+      "hudur"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "معادلة الحضور المتزن",
+    "prompt": "ما هي معادلة الحضور المتزن كما شرحها كوتش كريم؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "الحضور = اليقين + الذكر + الدعاء"
+      },
+      {
+        "id": "b",
+        "text": "الحضور المتزن = مركزية الله + 6 عناصر في اتزان"
+      },
+      {
+        "id": "c",
+        "text": "الحضور = الصلاة + القرآن + الدعاء"
+      },
+      {
+        "id": "d",
+        "text": "الحضور = الإخلاص + الإيمان + الإحسان"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "معادلة الحضور المتزن: مركزية الله + 6 عناصر في اتزان: (1) الصلاة، (2) الحياة، (3) الناس، (4) الطبيعة، (5) رمضان، (6) استحضار النية."
+  },
+  {
+    "id": "q-ps-w3-3",
+    "type": "mcq",
+    "courseId": "positive-psych",
+    "conceptIds": [
+      "hudur"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "47% من الوقت شارد",
+    "prompt": "كم نسبة الوقت الذي يقضيه الإنسان شاردًا ذهنيًا بحسب دراسة هارفارد؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "20%"
+      },
+      {
+        "id": "b",
+        "text": "47%"
+      },
+      {
+        "id": "c",
+        "text": "70%"
+      },
+      {
+        "id": "d",
+        "text": "90%"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "دراسة هارفارد: الإنسان يقضي 47% من الوقت شاردًا ذهنيًا. الحضور يحرر نصف حياتك."
+  },
+  {
+    "id": "q-ct-w3-3",
+    "type": "mcq",
+    "courseId": "contemporary",
+    "conceptIds": [
+      "muballigh"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 60,
+    "learningObjective": "النبي مُبلِّغ لا مَلِك",
+    "prompt": "ما الذي دَرَسَه النبي ﷺ في الطائف؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "القتال"
+      },
+      {
+        "id": "b",
+        "text": "الصبر على الأذى والدعاء لقبيلة ثقيف"
+      },
+      {
+        "id": "c",
+        "text": "بناء حصن"
+      },
+      {
+        "id": "d",
+        "text": "الهجرة إلى الحبشة"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "في الطائف قُذف بالحجارة، لكنه دعا لقبيلة ثقيف ولم يَنتقم. هذا خُلُق النَّبي."
+  },
+  {
+    "id": "tf-ct-w3-1",
+    "type": "tf",
+    "courseId": "contemporary",
+    "conceptIds": [
+      "muballigh"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "في حجة الوداع ادَّعى النبي ﷺ الملك.",
+    "correctAnswer": "false",
+    "explanation": "في حجة الوداع (100,000 صحابي)، قال: «ألا هل بلَّغت؟» لا «أنا ملككم»."
+  },
+  {
+    "id": "tf-ct-w3-2",
+    "type": "tf",
+    "courseId": "contemporary",
+    "conceptIds": [
+      "muballigh"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "النبي ﷺ لم يقطع شجرة ولم يقتل طفلًا.",
+    "correctAnswer": "true",
+    "explanation": "النبي ﷺ: ما قطع شجرة الفواكه، ولا قتل طفلًا، ولا امرأة، ولا شيخًا."
+  },
+  {
+    "id": "rf-ct-w3-1",
+    "type": "reflect",
+    "courseId": "contemporary",
+    "conceptIds": [
+      "muballigh"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "تأمل: كيف ترد على من يدَّعي أن النبي ﷺ كان يبني إمبراطورية؟",
+    "correctAnswer": "تأمل شخصي. الأدلة: 9 آيات + درع مرهون + 3 أشهر لا نار + فتح مكة عفو.",
+    "explanation": "الرد بالشواهد القرآنية والتاريخية."
+  },
+  {
+    "id": "rf-ct-w3-2",
+    "type": "reflect",
+    "courseId": "contemporary",
+    "conceptIds": [
+      "muballigh"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "ما الذي يمنعك من الدفاع عن النبي ﷺ ضد الشبهات؟",
+    "correctAnswer": "تأمل شخصي. الرد يبدأ بالمعرفة.",
+    "explanation": "من لا يعرف النبي ﷺ، لا يستطيع الدفاع عنه."
+  },
+  {
+    "id": "q-fq-w3-3",
+    "type": "mcq",
+    "courseId": "fiqh-rules",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "تطبيق قاعدة اليقين في الصوم",
+    "prompt": "لو شككت في طلوع الفجر وأنت صائم، ماذا تفعل؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "تُفطر احتياطًا"
+      },
+      {
+        "id": "b",
+        "text": "تَبقى على صيامك (اليقين لا يزول بالشك)"
+      },
+      {
+        "id": "c",
+        "text": "تنتظر حتى يطلع الفجر"
+      },
+      {
+        "id": "d",
+        "text": "تأكل حتى لو شككت"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "القاعدة: اليقين لا يزول بالشك. ابقَ على يقينك الأصلي."
+  },
+  {
+    "id": "tf-fq-w3-2",
+    "type": "tf",
+    "courseId": "fiqh-rules",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "سجود السهو يكون دائمًا قبل السلام في كل المذاهب.",
+    "correctAnswer": "false",
+    "explanation": "الجمهور (مالك، شافعي، حنبل): بعد السلام. أبو حنيفة: قبل السلام."
+  },
+  {
+    "id": "rf-fq-w3-2",
+    "type": "reflect",
+    "courseId": "fiqh-rules",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "في أي مجال من حياتك تَشعر بالوسواس؟ كيف تَطبِّق قاعدة اليقين لا يزول بالشك؟",
+    "correctAnswer": "تأمل شخصي. القاعدة تَنطبق على: الوضوء، الصلاة، الصوم، العلاقات.",
+    "explanation": "تطبيق القاعدة في الحياة اليومية يَقوّي اليقين."
+  },
+  {
+    "id": "tf-is-w3-1",
+    "type": "tf",
+    "courseId": "ihsan-soul",
+    "conceptIds": [
+      "hudur"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "الحضور يَعني فقط الصلاة.",
+    "correctAnswer": "false",
+    "explanation": "الحضور في 3 محاور: الجسد، المشاعر، الأفكار. وفي 6 مواقف: الستريس، العادية، الصلاة، الناس، رمضان، النية."
+  },
+  {
+    "id": "tf-is-w3-2",
+    "type": "tf",
+    "courseId": "ihsan-soul",
+    "conceptIds": [
+      "ma3iyat-allah"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "المعية الإلهية مَكانية (الله في كل مكان).",
+    "correctAnswer": "false",
+    "explanation": "المعية معية علم وحب واطّلاع، لا معية مَكانية. «فأينما تولوا فثم وجه الله»."
+  },
+  {
+    "id": "rf-is-w3-1",
+    "type": "reflect",
+    "courseId": "ihsan-soul",
+    "conceptIds": [
+      "hudur"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "متى تَشعر بمعية الله في حياتك؟ وكيف تَزيد هذا الإحساس؟",
+    "correctAnswer": "تأمل شخصي. 5 أدوات: الفضفضة، الذكر، 5 لقطات، الدعاء، قيام الليل.",
+    "explanation": "الحضور يَزيد المعية."
+  },
+  {
+    "id": "q-sh-w3-3",
+    "type": "mcq",
+    "courseId": "sahaba",
+    "conceptIds": [
+      "tabanni"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "إبطال التبني",
+    "prompt": "ما الآية التي أَبطلت التبنِّي؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "الأحزاب 5"
+      },
+      {
+        "id": "b",
+        "text": "الأحزاب 40: ما كان محمدٌ أبا أحدٍ من رجالكم"
+      },
+      {
+        "id": "c",
+        "text": "البقرة 221"
+      },
+      {
+        "id": "d",
+        "text": "النساء 3"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "«ما كان محمدٌ أبا أحدٍ من رجالكم ولكن رسول الله وخاتم النبيين» (الأحزاب 40)."
+  },
+  {
+    "id": "tf-sh-w3-2",
+    "type": "tf",
+    "courseId": "sahaba",
+    "conceptIds": [
+      "hub"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "أسامة بن زيد كان حبيب النبي ﷺ.",
+    "correctAnswer": "true",
+    "explanation": "«أُسامة أَحبُّ النَّاس إليَّ». الحُبّ بن الحُبّ."
+  },
+  {
+    "id": "rf-sh-w3-2",
+    "type": "reflect",
+    "courseId": "sahaba",
+    "conceptIds": [
+      "hub"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "ما الذي تَستَلهمه من شَجاعة زيد بن حارثة في مُؤتة؟",
+    "correctAnswer": "تأمل شخصي. زيد تَلقى الضَّربات بِجَسده، صَار مِصفَّى من السِّهام.",
+    "explanation": "الشَّجاعة في المُواجهة."
+  },
+  {
+    "id": "q-sb-w3-3",
+    "type": "mcq",
+    "courseId": "sahabiyyat",
+    "conceptIds": [
+      "shahada"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "ترتيب آل ياسر",
+    "prompt": "مَن هم آل ياسر؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "ياسر وسمية وعمار"
+      },
+      {
+        "id": "b",
+        "text": "ياسر وبلال وخديجة"
+      },
+      {
+        "id": "c",
+        "text": "سمية وبلال وحمزة"
+      },
+      {
+        "id": "d",
+        "text": "عمار وعلي وحمزة"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "آل ياسر: ياسر (الأب)، سمية (الأم)، عمار (الابن)."
+  },
+  {
+    "id": "tf-sb-w3-2",
+    "type": "tf",
+    "courseId": "sahabiyyat",
+    "conceptIds": [
+      "sabr"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "النبي ﷺ قال: «صبرًا آل ياسر، فإن موعدكم الجنة».",
+    "correctAnswer": "true",
+    "explanation": "حديث ابن ماجه. آل ياسر في الجنة."
+  },
+  {
+    "id": "rf-sb-w3-2",
+    "type": "reflect",
+    "courseId": "sahabiyyat",
+    "conceptIds": [
+      "sabr"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "في حياتك، ما الذي يُشبه عذاب آل ياسر؟ كيف تَصبر؟",
+    "correctAnswer": "تأمل شخصي. آل ياسر صبر، فاستُشهدت الأم، ومات الأب، وقتل الابن أبا جهل.",
+    "explanation": "الصبر في العذاب = تَحويل العذاب إلى جَزاء."
+  },
+  {
+    "id": "q-sl-w3-3",
+    "type": "mcq",
+    "courseId": "soul-app",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "قصة يونس",
+    "prompt": "ماذا قال سيدنا يونس في بطن الحوت؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "يا رب نجني"
+      },
+      {
+        "id": "b",
+        "text": "لا إله إلا أنت سبحانك إني كنت من الظالمين"
+      },
+      {
+        "id": "c",
+        "text": "يا حي يا قيوم"
+      },
+      {
+        "id": "d",
+        "text": "يا مقلب القلوب"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "في بطن الحوت: «لا إله إلا أنت سبحانك إني كنت من الظالمين»."
+  },
+  {
+    "id": "tf-sl-w3-2",
+    "type": "tf",
+    "courseId": "soul-app",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "اليقين = ثبات + استقرار + تجربة شخصية مع الله.",
+    "correctAnswer": "true",
+    "explanation": "اليقين ليس عاطفة، بل تجربة."
+  },
+  {
+    "id": "rf-sl-w3-2",
+    "type": "reflect",
+    "courseId": "soul-app",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "ما الذي يُذكِّرك باليقين في أوقات الضيق؟",
+    "correctAnswer": "تأمل شخصي. الأدعية: يا حي يا قيوم، يا صمد، يا مقلب القلوب.",
+    "explanation": "الذكر يحفظ اليقين."
+  },
+  {
+    "id": "q-tf-w3-3",
+    "type": "mcq",
+    "courseId": "tafsir",
+    "conceptIds": [
+      "samad"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "معنى الصمد",
+    "prompt": "ما معنى «الصمد» في سورة الإخلاص؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "الأول"
+      },
+      {
+        "id": "b",
+        "text": "الذي تصمد إليه الخلائق في حوائجها"
+      },
+      {
+        "id": "c",
+        "text": "الأخير"
+      },
+      {
+        "id": "d",
+        "text": "النور"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "«الصمد» = السيد المعظم الذي تلجأ إليه الخلائق."
+  },
+  {
+    "id": "q-se-w3-1",
+    "type": "mcq",
+    "courseId": "seerah-app",
+    "conceptIds": [
+      "hub"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 60,
+    "learningObjective": "خديجة 3 سنوات دراسة",
+    "prompt": "كم سنة درست خديجة شخصية النبي ﷺ قبل الزواج؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "سنة واحدة"
+      },
+      {
+        "id": "b",
+        "text": "3 سنوات"
+      },
+      {
+        "id": "c",
+        "text": "5 سنوات"
+      },
+      {
+        "id": "d",
+        "text": "7 سنوات"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "خديجة أرسلت مَيْسَرة الغلام ليَشتغل مع النبي 3 سنوات. «ما رأيتُ في أمانته وكرمه شيئًا»."
+  },
+  {
+    "id": "rf-is-w3-2",
+    "type": "reflect",
+    "courseId": "ihsan-soul",
+    "conceptIds": [
+      "hudur"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "في أي لحظة تَشعر بِمَعِيَّة الله في حياتك؟",
+    "correctAnswer": "تأمل شخصي. الإحساس بِمَعِيَّة الله يَتجلى في: الصلاة، التَّفَكُّر، الحُضور.",
+    "explanation": "المَعِيَّة إِحساس يَتَجلى في لَحظات الحُضور."
+  },
+  {
+    "id": "tf-ps-w3-1",
+    "type": "tf",
+    "courseId": "positive-psych",
+    "conceptIds": [
+      "hudur"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "الحضور = وَعي بِاللَّحظات الحَاضرة.",
+    "correctAnswer": "true",
+    "explanation": "الحضور هو اليَقظة الذِّهنية: وَعي الفرد بِحالاته الداخلية ومَا حَوله."
+  },
+  {
+    "id": "tf-ps-w3-2",
+    "type": "tf",
+    "courseId": "positive-psych",
+    "conceptIds": [
+      "ma3adala"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "معادلة الحُضور المُتَزَن = مَركَزية الله + 6 عُنَاصر.",
+    "correctAnswer": "true",
+    "explanation": "المُعَادلة: الحُضور المُتَزَن = مَركَزية الله + 6 عُنَاصر في اتِّزان."
+  },
+  {
+    "id": "rf-ps-w3-1",
+    "type": "reflect",
+    "courseId": "positive-psych",
+    "conceptIds": [
+      "hudur"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "تأمَّل: في أي مَوقف من 6 مَواقع الحُضور تَجِد نَفْسَك أَكثر؟",
+    "correctAnswer": "تأمل شخصي. 6 مواقف: الستريس، العادية، الصلاة، الناس، رمضان، النية.",
+    "explanation": "كل مَوقف له تَدريب مُختَلف."
+  },
+  {
+    "id": "rf-ps-w3-2",
+    "type": "reflect",
+    "courseId": "positive-psych",
+    "conceptIds": [
+      "ma3adala"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "ما الذي يَمنعك من بِناء معادلة الحُضور المُتَزَن في حياتك؟",
+    "correctAnswer": "تأمل شخصي. الحل: التَّدريج. ابدأ بِمَوقِف واحد.",
+    "explanation": "البِناء يَحتاج صَبر ومُمارسة."
+  },
+  {
+    "id": "tf-sh-w3-1",
+    "type": "tf",
+    "courseId": "sahaba",
+    "conceptIds": [
+      "hub"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "زيد بن حارثة كان الصحابي الوحيد المذكور باسمه في القرآن.",
+    "correctAnswer": "true",
+    "explanation": "سورة الأحزاب 37: «وإذ تقول للذي أنعم الله عليه» = زيد."
+  },
+  {
+    "id": "rf-sh-w3-1",
+    "type": "reflect",
+    "courseId": "sahaba",
+    "conceptIds": [
+      "hub"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "ماذا تستلهم من قصة زيد بن حارثة في حياتك؟",
+    "correctAnswer": "تأمل شخصي. زيد اختار النبي ﷺ على أبيه = تَضْحِيَة.",
+    "explanation": "زيد مَثَل في الحُب والتَّضْحِيَة."
+  },
+  {
+    "id": "tf-sb-w3-1",
+    "type": "tf",
+    "courseId": "sahabiyyat",
+    "conceptIds": [
+      "sabr"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "السيدة سمية قُتلت بِيد أبي جهل.",
+    "correctAnswer": "true",
+    "explanation": "طَعَنها بِالرُمح في مَكان عَفْتها. أَوَّل شهيدة في الإسلام."
+  },
+  {
+    "id": "rf-sb-w3-1",
+    "type": "reflect",
+    "courseId": "sahabiyyat",
+    "conceptIds": [
+      "sabr"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "ماذا تَعلَّمت من صبر آل ياسر تحت العذاب؟",
+    "correctAnswer": "تأمل شخصي. آية 1: الجنة للصابرين. آية 2: الجهد بالصبر.",
+    "explanation": "الصَّبر جَزاء في الدُّنيا والآخرة."
+  },
+  {
+    "id": "q-tf-w3-3-f",
+    "type": "tf",
+    "courseId": "tafsir",
+    "conceptIds": [
+      "ahad"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "«أحد» يعني «واحد» العادي.",
+    "correctAnswer": "false",
+    "explanation": "«أحد» = الفرد المطلق، لا يَقبل القسمة. «الواحد» قد يَقبل ثانٍ."
+  },
+  {
+    "id": "rf-tf-w3-2",
+    "type": "reflect",
+    "courseId": "tafsir",
+    "conceptIds": [
+      "ahad"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "كيف يُساعدك فَهم «أحد» على تَوحيدك؟",
+    "correctAnswer": "تأمل شخصي. «أحد» = فرد مطلق. لا شريك، لا نظير. هذا يَحمي من الشرك.",
+    "explanation": "تَوحيد «أحد» = أسَاس التوحيد."
+  },
+  {
+    "id": "q-sa-w3-4",
+    "type": "mcq",
+    "courseId": "seerah-app",
+    "conceptIds": [
+      "hub"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 90,
+    "learningObjective": "صفة خديجة",
+    "prompt": "ما صِفة خديجة قبل الإسلام؟",
+    "options": [
+      {
+        "id": "a",
+        "text": "أمّة"
+      },
+      {
+        "id": "b",
+        "text": "غنية، تاجرة، مستقلة، طاهرة"
+      },
+      {
+        "id": "c",
+        "text": "فقراء"
+      },
+      {
+        "id": "d",
+        "text": "عبد مملوكة"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "خديجة: غنية، تاجرة، مستقلة، طاهرة. قبل الإسلام: «لم تسجد لصنم»."
+  },
+  {
+    "id": "tf-sa-w3-1",
+    "type": "tf",
+    "courseId": "seerah-app",
+    "conceptIds": [
+      "hub"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "خديجة اختارت النبي ﷺ بعد 3 سنوات من دراسة شخصيته.",
+    "correctAnswer": "true",
+    "explanation": "أرسلت مَيْسَرة الغلام ليَشتغل مع النبي 3 سنوات."
+  },
+  {
+    "id": "tf-sa-w3-2",
+    "type": "tf",
+    "courseId": "seerah-app",
+    "conceptIds": [
+      "hub"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "خديجة أنجبت ابنًا واحدًا للنبي ﷺ.",
+    "correctAnswer": "false",
+    "explanation": "خديجة أنجبت 4 بنات: زينب، رقية، أم كلثوم، فاطمة الزهراء."
+  },
+  {
+    "id": "rf-sa-w3-1",
+    "type": "reflect",
+    "courseId": "seerah-app",
+    "conceptIds": [
+      "hub"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "ما الذي يجعل قصة النبي ﷺ وخديجة أعظم قصة حب في التاريخ؟",
+    "correctAnswer": "تأمل شخصي. بدأت صح، مشت صح، انتهت صح.",
+    "explanation": "أعظم قصة حب لأنها بنيت على الإيمان."
+  },
+  {
+    "id": "rf-sa-w3-2",
+    "type": "reflect",
+    "courseId": "seerah-app",
+    "conceptIds": [
+      "hub"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "ما الذي تستلهمه من نصيحة خديجة «كلا والله لا يخزيك الله أبدًا»؟",
+    "correctAnswer": "تأمل شخصي. الإيمان بالرجل الصالح = طمأنينة.",
+    "explanation": "خديجة تعرف أخلاق النبي ﷺ، فتطمئنه."
+  },
+  {
+    "id": "tf-sl-w3-1",
+    "type": "tf",
+    "courseId": "soul-app",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "«الحي القيوم» = اسم الله الأعظم.",
+    "correctAnswer": "true",
+    "explanation": "الحديث: «سأل الله باسمه الأعظم الذي إذا سئل به أعطى»."
+  },
+  {
+    "id": "rf-sl-w3-1",
+    "type": "reflect",
+    "courseId": "soul-app",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "prompt": "ما الذي يمنعك من دعاء الله وأنت موقن بالإجابة؟",
+    "correctAnswer": "تأمل شخصي. القلب اللاهي = مانع.",
+    "explanation": "اليقين = الدعاء بقلب حاضر."
+  },
+  {
+    "id": "tf-tf-w3-2",
+    "type": "tf",
+    "courseId": "tafsir",
+    "conceptIds": [
+      "ahad"
+    ],
+    "difficulty": "easy",
+    "estimatedSeconds": 30,
+    "prompt": "سورة الإخلاص تعدل ثلث القرآن.",
+    "correctAnswer": "true",
+    "explanation": "حديث: «احشدوا فإني سأقرأ عليكم ثلث القرآن» = قل هو الله أحد."
+  },
+  {
+    "id": "rf-pp-w3-1",
+    "courseId": "positive-psych",
+    "type": "reflect",
+    "conceptIds": [
+      "hudur"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "learningObjective": "الحضور",
+    "prompt": "ما الذي يمنعك من الحضور؟",
+    "correctAnswer": "تأمل شخصي.",
+    "explanation": "الحضور 47% شارد."
+  },
+  {
+    "id": "rf-sah-w3-1",
+    "courseId": "sahaba",
+    "type": "reflect",
+    "conceptIds": [
+      "hub"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "learningObjective": "الصحابة",
+    "prompt": "ما الذي تَستلهمه من زيد بن حارثة؟",
+    "correctAnswer": "تأمل شخصي.",
+    "explanation": "الصحابة قدوة."
+  },
+  {
+    "id": "rf-sahb-w3-1",
+    "courseId": "sahabiyyat",
+    "type": "reflect",
+    "conceptIds": [
+      "hub"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "learningObjective": "الصحابيات",
+    "prompt": "ما الذي تَستلهمه من سمية بنت الخياط؟",
+    "correctAnswer": "تأمل شخصي.",
+    "explanation": "الصحابيات قدوة."
+  },
+  {
+    "id": "rf-seerah-w3-1",
+    "courseId": "seerah-app",
+    "type": "reflect",
+    "conceptIds": [
+      "hub"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "learningObjective": "أعظم قصة حب",
+    "prompt": "ما الذي تَستلهمه من قصة حب النبي ﷺ وخديجة؟",
+    "correctAnswer": "تأمل شخصي.",
+    "explanation": "أعظم قصة حب."
+  },
+  {
+    "id": "rf-soul-w3-1",
+    "courseId": "soul-app",
+    "type": "reflect",
+    "conceptIds": [
+      "yaqin"
+    ],
+    "difficulty": "medium",
+    "estimatedSeconds": 240,
+    "learningObjective": "اليقين",
+    "prompt": "ما الذي يمنعك من اليقين؟",
+    "correctAnswer": "تأمل شخصي.",
+    "explanation": "اليقين."
+  }
+]
