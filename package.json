@@ -1,0 +1,8 @@
+{
+  "name": "ihsan-academy-root",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm --prefix ihsan-academy-app install && npm --prefix ihsan-academy-app run build"
+  }
+}
