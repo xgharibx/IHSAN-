@@ -8,13 +8,13 @@
 //  - Smart context windowing
 //  - Arabic-first responses
 //  - Multi-modal: image input support
-//  - Rich local fallback that uses actual course content (not just hardcoded facts)
+//  - No local answer templates: failures are shown clearly instead of invented responses
 
 import {
   type Course,
 } from "@/types";
 import { chatMemory } from "./chatMemory";
-import { buildCourseContext, pickRelevantConcepts, generateSmartSuggestions } from "./smartSuggestions";
+import { generateSmartSuggestions } from "./smartSuggestions";
 
 export type TutorMode =
   | "teach"
@@ -42,7 +42,7 @@ export interface TutorMessage {
 export interface TutorResult {
   ok: boolean;
   text: string;
-  source: "gemini" | "local-fallback";
+  source: "gemini" | "error";
   citations?: { courseId: string; conceptIds?: string[] }[];
   confidence?: number;
   suggestedFollowUps?: string[];
@@ -163,7 +163,10 @@ ${persona.structure}`;
 };
 
 const buildCourseAwarenessSection = (ctx: TutorContext) => {
-  if (!ctx.courseId) return "";
+  if (!ctx.courseId) {
+    return `\n# نطاق المحادثة الحالي:
+المتعلم اختار "كل الأكاديمية". أجب باعتبارك معلماً عاماً لكل أسابيع ومحاضرات أكاديمية الإحسان. ابحث في قاعدة المعرفة كاملة، واربط بين الأسابيع والدورات عند الحاجة. لا تحصر الإجابة في أسبوع واحد إلا إذا طلب المتعلم ذلك صراحة.`;
+  }
   return `\n# الدورة المُختارة حاليًا:
 المتعلم ركّز على الدورة بمعرفتها: ${ctx.courseId}.
 استخدم المحتوى التفصيلي لهذه الدورة كمرجع أساسي. أَلحِق كل إجابة بذكر هذه الدورة عند الاقتباس منها.`;
@@ -180,7 +183,122 @@ const buildCitationInstruction = () => `
 
 هذه العلامة لن تظهر للمستخدم، بل ستُستخرَج برمجيًا. يجب أن تظهر **دائمًا** في نهاية الإجابة.`;
 
-const buildSystemPrompt = (mode: TutorMode, ctx: TutorContext) => {
+const trimText = (text: string | undefined, max = 1200): string => {
+  const clean = (text ?? "").replace(/\s+/g, " ").trim();
+  return clean.length > max ? `${clean.slice(0, max)}...` : clean;
+};
+
+const normalizeSearchText = (text: string): string =>
+  text
+    .toLowerCase()
+    .replace(/[ًٌٍَُِّْـ]/g, "")
+    .replace(/[أإآ]/g, "ا")
+    .replace(/ى/g, "ي")
+    .replace(/ة/g, "ه");
+
+const tokenizeSearch = (text: string): string[] =>
+  Array.from(
+    new Set(
+      normalizeSearchText(text)
+        .split(/[^\p{L}\p{N}]+/u)
+        .filter((token) => token.length > 2),
+    ),
+  ).slice(0, 14);
+
+const getCourseWeekNumber = (course: Course): number | null => {
+  const match = course.slug.match(/-w(\d+)$/);
+  return match ? Number(match[1]) : null;
+};
+
+const requestedWeekNumbers = (question: string): Set<number> => {
+  const q = normalizeSearchText(question);
+  const weeks = new Set<number>();
+  for (let i = 1; i <= 8; i += 1) {
+    if (q.includes(`week ${i}`) || q.includes(`الاسبوع ${i}`)) weeks.add(i);
+  }
+  const aliases: Record<number, string[]> = {
+    1: ["الاول"],
+    2: ["الثاني"],
+    3: ["الثالث"],
+    4: ["الرابع"],
+    5: ["الخامس"],
+    6: ["السادس"],
+    7: ["السابع"],
+    8: ["الثامن"],
+  };
+  for (const [week, names] of Object.entries(aliases)) {
+    if (names.some((name) => q.includes(`الاسبوع ${name}`))) weeks.add(Number(week));
+  }
+  return weeks;
+};
+
+const scoreCourseForQuestion = (course: Course, question: string, tokens: string[]): number => {
+  const week = getCourseWeekNumber(course);
+  const requestedWeeks = requestedWeekNumbers(question);
+  let score = week && requestedWeeks.has(week) ? 10 : 0;
+  const titleText = normalizeSearchText(`${course.title} ${course.subtitle} ${course.speaker ?? ""}`);
+  const summaryText = normalizeSearchText(
+    `${course.summary} ${course.tagline} ${course.keyTerms.map((term) => `${term.term} ${term.definition} ${term.deepMeaning}`).join(" ")}`,
+  );
+  const fullText = normalizeSearchText(course.knowledgeBaseText);
+  for (const token of tokens) {
+    if (titleText.includes(token)) score += 7;
+    if (summaryText.includes(token)) score += 3;
+    if (fullText.includes(token)) score += 1;
+  }
+  return score;
+};
+
+const buildCourseDigest = (course: Course): string => {
+  const week = getCourseWeekNumber(course);
+  return [
+    `## ${week ? `الأسبوع ${week} - ` : ""}${course.title} (${course.slug})`,
+    `المجال: ${course.domain}`,
+    `المتحدث: ${course.speaker ?? "غير محدد"} - المدة: ${course.duration}`,
+    `الملخص: ${trimText(course.summary, 650)}`,
+    `محاور يجب فهمها: ${course.mustUnderstand.slice(0, 5).join("؛ ")}`,
+    `مصطلحات: ${course.keyTerms.slice(0, 8).map((term) => `${term.term}: ${term.definition}`).join("؛ ")}`,
+  ].join("\n");
+};
+
+const buildDetailedCourseContext = (course: Course): string => [
+  buildCourseDigest(course),
+  `النص المعرفي التفصيلي:\n${trimText(course.knowledgeBaseText, 7000)}`,
+  course.longSummary ? `ملخص طويل:\n${trimText(course.longSummary.introduction, 1800)}` : "",
+  course.deepExplanation ? `شرح عميق:\n${trimText(course.deepExplanation.introduction, 1600)}` : "",
+].filter(Boolean).join("\n\n");
+
+const buildKnowledgeWindow = (ctx: TutorContext, latestQuestion: string): string => {
+  const tokens = tokenizeSearch(latestQuestion);
+  const catalog = ctx.courses.map(buildCourseDigest).join("\n\n");
+  const selected = ctx.courseId ? ctx.courses.find((course) => course.id === ctx.courseId) : undefined;
+  if (selected) {
+    return [
+      "# فهرس الأكاديمية الكامل:",
+      catalog,
+      "",
+      "# محتوى الدورة المختارة بالتفصيل:",
+      buildDetailedCourseContext(selected),
+    ].join("\n");
+  }
+
+  const scored = ctx.courses
+    .map((course) => ({ course, score: scoreCourseForQuestion(course, latestQuestion, tokens) }))
+    .sort((a, b) => b.score - a.score);
+  const relevant = scored.filter((entry) => entry.score > 0).slice(0, 6).map((entry) => entry.course);
+
+  return [
+    "# فهرس الأكاديمية الكامل:",
+    catalog,
+    "",
+    "# المحتوى التفصيلي الأكثر صلة بسؤال المتعلم:",
+    relevant.length > 0
+      ? relevant.map(buildDetailedCourseContext).join("\n\n---\n\n")
+      : "لم يطابق السؤال دورة محددة؛ استخدم الفهرس الكامل للإجابة العامة، واطلب توضيحاً إذا احتجت تحديد أسبوع أو محاضرة.",
+  ].join("\n");
+};
+
+const buildSystemPrompt = (mode: TutorMode, ctx: TutorContext, latestQuestion: string) => {
   return [
     BASE_SYSTEM_PROMPT,
     buildModeInstructions(mode),
@@ -188,7 +306,7 @@ const buildSystemPrompt = (mode: TutorMode, ctx: TutorContext) => {
     buildCitationInstruction(),
     "",
     "# قاعدة المعرفة — المواد الكاملة لأكاديمية الإحسان:",
-    ctx.knowledgeBase,
+    buildKnowledgeWindow(ctx, latestQuestion),
     "",
     "# سياق الدورة المُختارة:",
     ctx.courseContext,
@@ -206,95 +324,6 @@ const getProxyUrl = (): string =>
 
 export const hasApiKey = (): boolean => Boolean(getProxyUrl());
 
-// === Build a local fallback that uses actual course content ===
-const localFallback = (mode: TutorMode, history: TutorMessage[], ctx: TutorContext): string => {
-  const last = history.filter((m) => m.role === "user").slice(-1)[0]?.text ?? "";
-  const course = ctx.courses.find((c) => c.id === ctx.courseId);
-
-  // Try to find a relevant concept in the question
-  const relevantConcept = pickRelevantConcepts(last, course, 1);
-  let conceptResponse = "";
-  if (relevantConcept[0]) {
-    const c = relevantConcept[0];
-    conceptResponse = `
-
-📚 من محتوى "${c.name}":
-${c.definition}
-
-${c.deepExplanation?.substring(0, 600) ?? ""}${c.deepExplanation && c.deepExplanation.length > 600 ? "..." : ""}`;
-  }
-
-  if (mode === "quiz") {
-    return course
-      ? `سؤال تجريبي من "${course.title}":
-
-س: ما الفكرة الجوهرية في هذه الدورة؟
-أ) البناء الروحي الإيماني ✅
-ب) الخوف من الله
-ج) الثروة المادية
-د) القوة السياسية
-
-(ملاحظة: هذا رد محلي. أضف GEMINI_API_KEY في ملف .env للحصول على إجابات مولّدة بالذكاء الاصطناعي وتخصيص كامل.)${conceptResponse}`
-      : "اختر دورة أولاً. ملاحظة: أضف GEMINI_API_KEY في .env للحصول على إجابات أعمق.";
-  }
-
-  if (mode === "plan") {
-    return `خطة دراسة مقترحة:
-
-📚 الدورات في ${course ? course.title : "الأسبوع"}:
-1) ابدأ بمشاهدة الشرح العميق (45-60 دقيقة).
-2) راجع البطاقات المسردة (20-30 دقيقة).
-3) أجِب اختبارات سريعة على المفاهيم.
-4) طبّق ما تعلّمت في حياتك اليومية.
-
-💡 نصيحة: ابدأ بدورة واحدة، لا تتشتت. كرّرها حتى تشعر بالاستيعاب.
-
-(ملاحظة: هذا رد محلي. أضف GEMINI_API_KEY في .env لتوليد خطة مخصصة كاملة.)`;
-  }
-
-  if (mode === "revise") {
-    if (course) {
-      return `ملخص سريع - ${course.title}:
-
-📌 أهم 5 محاور:
-${course.mustUnderstand?.slice(0, 5).map((m, i) => `${i + 1}) ${m}`).join("\n") ?? "—"}
-
-💡 أمثلة من الحياة:
-${course.realLifeExamples?.slice(0, 2).map((e) => `• ${e.substring(0, 100)}...`).join("\n") ?? "—"}
-
-أعِدها بدون النظر.${conceptResponse}`;
-    }
-  }
-
-  if (mode === "reflect") {
-    return `تأمّل شخصي:
-${course ? `فكّر في "${course.title}".` : "فكّر في الأسبوع."}
-
-أسئلة تأملية:
-1) ما المفهوم الذي يَترك أثرًا في حياتك الآن؟
-2) كيف تَطبّقه هذا الأسبوع؟
-3) ما الذي يمنعك من تطبيقه فعليًا؟
-
-في الإسلام، العلم بلا عمل وبال، والعمل بغير علم ضلال. التزم بالعلم والعمل معًا.${conceptResponse}`;
-  }
-
-  // Default response for ask / teach / deep / simple
-  if (course) {
-    return `شكرًا لسؤالك.
-
-📚 من "${course.title}":
-${course.summary}
-
-${conceptResponse || (course.keyTerms?.slice(0, 3).map((t) => `• ${t.term}: ${t.definition}`).join("\n") || "")}
-
-(ملاحظة: هذا رد محلي بدون API. أضف GEMINI_API_KEY في .env للحصول على إجابات مولّدة بالذكاء الاصطناعي ومخصّصة لكل سؤال.)`;
-  }
-
-  return `للسؤال: "${last.slice(0, 200)}"
-
-بدون مفتاح API، يمكنني تقديم محتوى محدود. أضف GEMINI_API_KEY في .env للحصول على إجابات مولّدة بالذكاء الاصطناعي.`;
-};
-
 // === Main API call to Gemini ===
 const callGemini = async (
   history: TutorMessage[],
@@ -305,7 +334,8 @@ const callGemini = async (
 ): Promise<{ text: string; citations?: { courseId: string; conceptIds?: string[] }[]; confidence?: number; suggestedFollowUps?: string[] }> => {
   const model = getModel();
 
-  const systemPrompt = buildSystemPrompt(mode, ctx);
+  const latestUserText = history.filter((message) => message.role === "user").slice(-1)[0]?.text ?? "";
+  const systemPrompt = buildSystemPrompt(mode, ctx, latestUserText);
 
   // Build Gemini contents array
   const contents: any[] = [
@@ -314,25 +344,22 @@ const callGemini = async (
   ];
 
   // Add history (with optional images)
-  for (const m of history) {
-    const parts: any[] = [{ text: m.text }];
+  for (const [index, m] of history.entries()) {
+    const isLatestLearnerMessage = index === history.length - 1 && m.role === "user";
+    const text = isLatestLearnerMessage
+      ? `سؤال المتعلم الحالي:\n${m.text}\n\nأجب عن سؤال المتعلم الحالي مباشرة، واستعمل قاعدة المعرفة فقط عندما تساعد على الإجابة. لا تنتقل إلى موضوع آخر، ولا تكرر إجابة سابقة.`
+      : m.text;
+    const parts: any[] = [{ text }];
     if (m.imageDataUrl) {
       parts.push({ inline_data: { mime_type: "image/jpeg", data: m.imageDataUrl.split(",")[1] || m.imageDataUrl } });
     }
     contents.push({ role: m.role === "user" ? "user" : "model", parts });
   }
 
-  // Add current user message (with optional image)
-  const userParts: any[] = [{ text: history[history.length - 1]?.text || "" }];
-  if (imageDataUrl) {
-    userParts.push({ inline_data: { mime_type: "image/jpeg", data: imageDataUrl.split(",")[1] || imageDataUrl } });
-  }
-  contents.push({ role: "user", parts: userParts });
-
   const generationConfig = {
-    temperature: 0.7,
+    temperature: 0.65,
+    topP: 0.95,
     maxOutputTokens: 4096,
-    thinkingConfig: { thinkingBudget: 0 },
   };
 
   const proxyUrl = getProxyUrl();
@@ -446,15 +473,10 @@ export const sendToTutor = async (
     };
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown error";
-    if (message === "NO_API_KEY") {
-      const text = localFallback(mode, history, ctx);
-      onChunk?.(text);
-      return { ok: true, text, source: "local-fallback", error: "NO_API_KEY" };
-    }
-    // Network error — use local fallback
-    const text = localFallback(mode, history, ctx) + `\n\n(تعذّر الوصول إلى Gemini: ${message})`;
+    const text =
+      "تعذّر الاتصال بالذكاء الاصطناعي الآن. لم أقدّم إجابة محلية أو قالباً بديلاً حتى لا تظهر إجابات غير مولّدة من Gemini. راجع إعداد GEMINI_API_KEY على الخادم ثم أعد المحاولة.";
     onChunk?.(text);
-    return { ok: true, text, source: "local-fallback", error: message };
+    return { ok: false, text, source: "error", error: message };
   }
 };
 

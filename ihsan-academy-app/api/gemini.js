@@ -1,13 +1,21 @@
 const DEFAULT_ENDPOINT = "https://generativelanguage.googleapis.com";
 const DEFAULT_MODEL = "gemini-2.5-flash";
 
+function toSsePayload(text) {
+  try {
+    return JSON.stringify(JSON.parse(text));
+  } catch {
+    return JSON.stringify({ error: text || "Empty response from Gemini" });
+  }
+}
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const apiKey = process.env.GEMINI_API_KEY || process.env.VITE_GEMINI_API_KEY;
+  const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     return res.status(500).json({ error: "GEMINI_API_KEY is not configured" });
   }
@@ -17,8 +25,8 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "contents must be an array" });
   }
 
-  const selectedModel = model || process.env.GEMINI_MODEL || process.env.VITE_GEMINI_MODEL || DEFAULT_MODEL;
-  const baseEndpoint = process.env.GEMINI_ENDPOINT || process.env.VITE_GEMINI_ENDPOINT || DEFAULT_ENDPOINT;
+  const selectedModel = model || process.env.GEMINI_MODEL || DEFAULT_MODEL;
+  const baseEndpoint = process.env.GEMINI_ENDPOINT || DEFAULT_ENDPOINT;
   const models = Array.from(new Set([selectedModel, "gemini-2.5-flash-lite", "gemini-2.0-flash"]));
   let upstream;
   let text = "";
@@ -33,7 +41,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({ contents, generationConfig }),
     });
     text = await upstream.text();
-    if (upstream.ok || ![429, 503].includes(upstream.status)) break;
+    if (upstream.ok || ![400, 404, 429, 503].includes(upstream.status)) break;
   }
 
   res.statusCode = upstream?.status ?? 502;
@@ -45,5 +53,5 @@ export default async function handler(req, res) {
     return res.end(`data: ${JSON.stringify({ error: text })}\n\n`);
   }
 
-  return res.end(`data: ${text}\n\n`);
+  return res.end(`data: ${toSsePayload(text)}\n\n`);
 }

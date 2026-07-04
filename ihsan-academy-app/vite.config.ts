@@ -5,11 +5,19 @@ import path from "node:path";
 const DEFAULT_GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com";
 const DEFAULT_GEMINI_MODEL = "gemini-2.5-flash";
 
+function toSsePayload(text: string): string {
+  try {
+    return JSON.stringify(JSON.parse(text));
+  } catch {
+    return JSON.stringify({ error: text || "Empty response from Gemini" });
+  }
+}
+
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
-  const geminiApiKey = env.GEMINI_API_KEY || env.VITE_GEMINI_API_KEY;
-  const geminiEndpoint = env.GEMINI_ENDPOINT || env.VITE_GEMINI_ENDPOINT || DEFAULT_GEMINI_ENDPOINT;
-  const geminiModel = env.GEMINI_MODEL || env.VITE_GEMINI_MODEL || DEFAULT_GEMINI_MODEL;
+  const geminiApiKey = env.GEMINI_API_KEY;
+  const geminiEndpoint = env.GEMINI_ENDPOINT || DEFAULT_GEMINI_ENDPOINT;
+  const geminiModel = env.GEMINI_MODEL || DEFAULT_GEMINI_MODEL;
 
   return {
     plugins: [
@@ -55,14 +63,14 @@ export default defineConfig(({ mode }) => {
                 }),
               });
               text = await upstream.text();
-              if (upstream.ok || ![429, 503].includes(upstream.status)) break;
+              if (upstream.ok || ![400, 404, 429, 503].includes(upstream.status)) break;
             }
 
             res.statusCode = upstream?.status ?? 502;
             res.setHeader("Content-Type", "text/event-stream; charset=utf-8");
             res.setHeader("Cache-Control", "no-cache, no-transform");
             res.setHeader("X-Gemini-Model", usedModel);
-            res.end(upstream?.ok ? `data: ${text}\n\n` : `data: ${JSON.stringify({ error: text })}\n\n`);
+            res.end(upstream?.ok ? `data: ${toSsePayload(text)}\n\n` : `data: ${JSON.stringify({ error: text })}\n\n`);
           });
         },
       },

@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { useWeekData } from "@/hooks/useWeekData";
 import { useStore } from "@/store/useStore";
 import { useCourses } from "@/hooks/useWeekHooks";
 import { sendToTutor, hasApiKey, TUTOR_MODES, type TutorMode, type TutorMessage } from "@/services/aiTutor";
 import { buildCourseContext } from "@/services/smartSuggestions";
 import { chatMemory } from "@/services/chatMemory";
+import { data } from "@/data";
 import { Icons } from "@/components/Icons";
 import { ChatMessage, ImagePreview } from "@/components/ChatMessage";
 import { VoiceInput } from "@/components/VoiceInput";
@@ -13,15 +13,32 @@ import { ChatSessionList } from "@/components/ChatSessionList";
 import { renderMarkdown } from "@/services/markdownRenderer";
 
 const SESSION_PREFIX = "ai-tutor-";
+const ACADEMY_SCOPE = "__academy_all__";
 
 export default function AiTutor() {
   const [params] = useSearchParams();
   const initialCourse = params.get("course");
   const navigate = useNavigate();
-  const week = useWeekData();
-  const courses = useCourses();
+  const currentWeekCourses = useCourses();
+  const courseEntries = useMemo(
+    () =>
+      Object.values(data.weeks).flatMap((bundle) =>
+        bundle.courses.map((course) => ({
+          course,
+          weekNumber: bundle.meta.number,
+          weekTitle: bundle.meta.title,
+        })),
+      ),
+    [],
+  );
+  const courses = useMemo(() => courseEntries.map((entry) => entry.course), [courseEntries]);
+  const initialCourseValue =
+    (initialCourse &&
+      (currentWeekCourses.find((c) => c.id === initialCourse || c.slug === initialCourse)?.slug ??
+        courseEntries.find((entry) => entry.course.id === initialCourse || entry.course.slug === initialCourse)?.course.slug)) ||
+    ACADEMY_SCOPE;
   const [mode, setMode] = useState<TutorMode>("teach");
-  const [courseId, setCourseId] = useState<string>(initialCourse ?? courses[0]?.id ?? "");
+  const [courseId, setCourseId] = useState<string>(initialCourseValue);
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
   const [streamingText, setStreamingText] = useState<string | null>(null);
@@ -63,12 +80,13 @@ export default function AiTutor() {
   }, [history.length, streamingText]);
 
   // Build course context once per render
-  const course = courses.find((c) => c.id === courseId);
+  const selectedCourseEntry = courseEntries.find((entry) => entry.course.slug === courseId);
+  const course = selectedCourseEntry?.course;
   const ctx = {
-    weekId: week.meta.number,
+    weekId: selectedCourseEntry?.weekNumber ?? 0,
     courses,
-    courseId: courseId || null,
-    knowledgeBase: week.courses.map(c => c.knowledgeBaseText).join("\n\n"),
+    courseId: course?.id ?? null,
+    knowledgeBase: "",
     courseContext: buildCourseContext(course),
     relevantConceptIds: course?.relatedConcepts ?? [],
   };
@@ -84,7 +102,7 @@ export default function AiTutor() {
     // Ensure there's a session
     let sid = effectiveSessionId;
     if (!chatSessions.some(s => s.id === sid)) {
-      sid = createChatSession(courseId, mode);
+      sid = createChatSession(course?.id ?? null, mode);
     }
 
     const userMsg: TutorMessage = { role: "user", text, imageDataUrl: img };
@@ -106,8 +124,8 @@ export default function AiTutor() {
       if (res.citations) setStreamingCitations(res.citations);
       if (res.confidence !== undefined) setStreamingConfidence(res.confidence);
       if (res.suggestedFollowUps) setStreamingFollowUps(res.suggestedFollowUps);
-      if (courseId) chatMemory.recordCourseVisit(courseId);
-      chatMemory.recordWeekVisit(week.meta.number);
+      if (course) chatMemory.recordCourseVisit(course.id);
+      if (selectedCourseEntry) chatMemory.recordWeekVisit(selectedCourseEntry.weekNumber);
     } catch (e) {
       appendAi(sid, {
         role: "model",
@@ -188,7 +206,7 @@ export default function AiTutor() {
             <div className="mb-2 flex items-center justify-between text-xs text-sand-100/50">
               <span>المحادثات</span>
               <button
-                onClick={() => createChatSession(courseId, mode, "محادثة جديدة")}
+                onClick={() => createChatSession(course?.id ?? null, mode, "محادثة جديدة")}
                 className="rounded p-1 text-gold-300 hover:bg-gold-300/10"
                 title="محادثة جديدة"
               >
@@ -241,7 +259,7 @@ export default function AiTutor() {
                 courseColor={courseColor}
                 courseTitle={m.role === "model" ? course?.title : undefined}
                 onFollowUpClick={(q) => send(q)}
-                onCitationClick={(cid) => navigate(`/course/${courses.find(c => c.id === cid)?.slug ?? cid}`)}
+                onCitationClick={(cid) => navigate(`/course/${courseEntries.find(entry => entry.course.id === cid)?.course.slug ?? cid}`)}
                 onImagePreview={(d) => setPreviewImage(d)}
                 imageDataUrl={m.imageDataUrl}
               />
@@ -257,7 +275,7 @@ export default function AiTutor() {
                 courseColor={courseColor}
                 courseTitle={course?.title}
                 onFollowUpClick={(q) => send(q)}
-                onCitationClick={(cid) => navigate(`/course/${courses.find(c => c.id === cid)?.slug ?? cid}`)}
+                onCitationClick={(cid) => navigate(`/course/${courseEntries.find(entry => entry.course.id === cid)?.course.slug ?? cid}`)}
                 onImagePreview={(d) => setPreviewImage(d)}
               />
             )}
@@ -344,9 +362,10 @@ export default function AiTutor() {
               onChange={(e) => setCourseId(e.target.value)}
               className="mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-2 py-1.5 text-xs text-sand-100"
             >
-              {courses.map((c) => (
-                <option key={c.id} value={c.id}>
-                  {c.title}
+              <option value={ACADEMY_SCOPE}>كل الأكاديمية - كل الأسابيع والمحاضرات</option>
+              {courseEntries.map(({ course: c, weekNumber }) => (
+                <option key={`${weekNumber}-${c.slug}`} value={c.slug}>
+                  {`الأسبوع ${weekNumber} - ${c.title}`}
                 </option>
               ))}
             </select>
