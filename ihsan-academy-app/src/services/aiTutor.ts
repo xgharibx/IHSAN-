@@ -198,21 +198,13 @@ const buildSystemPrompt = (mode: TutorMode, ctx: TutorContext) => {
   ].join("\n");
 };
 
-const getBrowserKey = (): string | undefined => {
-  return (import.meta.env.VITE_GEMINI_API_KEY as string | undefined) || undefined;
-};
-
 const getModel = (): string =>
   (import.meta.env.VITE_GEMINI_MODEL as string | undefined) || "gemini-2.5-flash";
-
-const getEndpoint = (): string =>
-  (import.meta.env.VITE_GEMINI_ENDPOINT as string | undefined) ||
-  "https://generativelanguage.googleapis.com";
 
 const getProxyUrl = (): string =>
   (import.meta.env.VITE_GEMINI_PROXY_URL as string | undefined) || "/api/gemini";
 
-export const hasApiKey = (): boolean => Boolean(getBrowserKey()) || Boolean(getProxyUrl());
+export const hasApiKey = (): boolean => Boolean(getProxyUrl());
 
 // === Build a local fallback that uses actual course content ===
 const localFallback = (mode: TutorMode, history: TutorMessage[], ctx: TutorContext): string => {
@@ -242,8 +234,8 @@ ${c.deepExplanation?.substring(0, 600) ?? ""}${c.deepExplanation && c.deepExplan
 ج) الثروة المادية
 د) القوة السياسية
 
-(ملاحظة: هذا رد محلي. أضف VITE_GEMINI_API_KEY في ملف .env للحصول على إجابات مولّدة بالذكاء الاصطناعي وتخصيص كامل.)${conceptResponse}`
-      : "اختر دورة أولاً. ملاحظة: أضف VITE_GEMINI_API_KEY في .env للحصول على إجابات أعمق.";
+(ملاحظة: هذا رد محلي. أضف GEMINI_API_KEY في ملف .env للحصول على إجابات مولّدة بالذكاء الاصطناعي وتخصيص كامل.)${conceptResponse}`
+      : "اختر دورة أولاً. ملاحظة: أضف GEMINI_API_KEY في .env للحصول على إجابات أعمق.";
   }
 
   if (mode === "plan") {
@@ -257,7 +249,7 @@ ${c.deepExplanation?.substring(0, 600) ?? ""}${c.deepExplanation && c.deepExplan
 
 💡 نصيحة: ابدأ بدورة واحدة، لا تتشتت. كرّرها حتى تشعر بالاستيعاب.
 
-(ملاحظة: هذا رد محلي. أضف VITE_GEMINI_API_KEY في .env لتوليد خطة مخصصة كاملة.)`;
+(ملاحظة: هذا رد محلي. أضف GEMINI_API_KEY في .env لتوليد خطة مخصصة كاملة.)`;
   }
 
   if (mode === "revise") {
@@ -295,12 +287,12 @@ ${course.summary}
 
 ${conceptResponse || (course.keyTerms?.slice(0, 3).map((t) => `• ${t.term}: ${t.definition}`).join("\n") || "")}
 
-(ملاحظة: هذا رد محلي بدون API. أضف VITE_GEMINI_API_KEY في .env للحصول على إجابات مولّدة بالذكاء الاصطناعي ومخصّصة لكل سؤال.)`;
+(ملاحظة: هذا رد محلي بدون API. أضف GEMINI_API_KEY في .env للحصول على إجابات مولّدة بالذكاء الاصطناعي ومخصّصة لكل سؤال.)`;
   }
 
   return `للسؤال: "${last.slice(0, 200)}"
 
-بدون مفتاح API، يمكنني تقديم محتوى محدود. أضف VITE_GEMINI_API_KEY في .env للحصول على إجابات مولّدة بالذكاء الاصطناعي.`;
+بدون مفتاح API، يمكنني تقديم محتوى محدود. أضف GEMINI_API_KEY في .env للحصول على إجابات مولّدة بالذكاء الاصطناعي.`;
 };
 
 // === Main API call to Gemini ===
@@ -312,7 +304,6 @@ const callGemini = async (
   imageDataUrl?: string,
 ): Promise<{ text: string; citations?: { courseId: string; conceptIds?: string[] }[]; confidence?: number; suggestedFollowUps?: string[] }> => {
   const model = getModel();
-  const endpoint = getEndpoint();
 
   const systemPrompt = buildSystemPrompt(mode, ctx);
 
@@ -345,7 +336,6 @@ const callGemini = async (
   };
 
   const proxyUrl = getProxyUrl();
-  const browserKey = getBrowserKey();
   let res: Response;
 
   const proxyBody = JSON.stringify({
@@ -354,29 +344,11 @@ const callGemini = async (
     model,
   });
 
-  const useLocalDirect = Boolean(browserKey && import.meta.env.DEV && !import.meta.env.VITE_GEMINI_PROXY_URL);
-
-  if (useLocalDirect && browserKey) {
-    const directBody = JSON.stringify({ contents, generationConfig });
-    const url = `${endpoint}/v1beta/models/${model}:streamGenerateContent?alt=sse&key=${browserKey}`;
-    res = await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: directBody,
-    });
-  } else if (proxyUrl) {
+  if (proxyUrl) {
     res = await fetch(proxyUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: proxyBody,
-    });
-  } else if (browserKey) {
-    const directBody = JSON.stringify({ contents, generationConfig });
-    const url = `${endpoint}/v1beta/models/${model}:streamGenerateContent?alt=sse&key=${browserKey}`;
-    res = await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: directBody,
     });
   } else {
     throw new Error("NO_API_KEY");

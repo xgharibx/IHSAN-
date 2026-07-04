@@ -174,7 +174,7 @@ export default function AiTutor() {
             <div>
               <div className="font-medium text-gold-200">وضع المحادثة المحلية مفعّل</div>
               <p className="mt-0.5 text-sand-100/60">
-                لم يتم العثور على مفتاح Gemini. أضف <code className="mx-1 rounded bg-white/10 px-1.5 py-0.5 text-xs">VITE_GEMINI_API_KEY</code> في <code className="rounded bg-white/10 px-1.5 py-0.5 text-xs">.env</code> للحصول على إجابات مولّدة بالذكاء الاصطناعي.
+                لم يتم العثور على مفتاح Gemini. أضف <code className="mx-1 rounded bg-white/10 px-1.5 py-0.5 text-xs">GEMINI_API_KEY</code> في <code className="rounded bg-white/10 px-1.5 py-0.5 text-xs">.env</code> للحصول على إجابات مولّدة بالذكاء الاصطناعي.
               </p>
             </div>
           </div>
