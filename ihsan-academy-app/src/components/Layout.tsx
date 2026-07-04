@@ -52,7 +52,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 
       {/* Top header */}
       <header className="sticky top-0 z-40 border-b border-white/5 backdrop-blur-md bg-ink-950/60">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-2.5 sm:gap-4 sm:px-6 sm:py-3">
           <NavLink to="/" className="group flex items-center gap-3">
             <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-gold-300 to-gold-700 shadow-glow">
               <span className="font-display text-xl font-bold text-ink-950">إ</span>
@@ -84,10 +84,10 @@ export default function Layout({ children }: { children: ReactNode }) {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2">
             <NavLink
               to="/achievements"
-              className="pill hover:border-gold-300/40"
+              className="pill px-2 py-1 hover:border-gold-300/40 sm:px-3"
               title="الإنجازات"
             >
               <span className="text-gold-300">★</span>
@@ -95,20 +95,22 @@ export default function Layout({ children }: { children: ReactNode }) {
             </NavLink>
 
             {/* Week switcher — only weeks with loaded data are selectable; the rest are disabled as "قريبًا". */}
-            <div className="relative hidden md:block">
+            <div className="relative">
               <button
                 onClick={() => setPickerOpen((o) => !o)}
-                className="pill hover:border-gold-300/40"
+                className="pill px-2 py-1 hover:border-gold-300/40 sm:px-3"
                 title="تبديل الأسبوع"
+                aria-expanded={pickerOpen}
+                aria-haspopup="menu"
               >
                 <span className="text-gold-300">▦</span>
-                <span className="text-[11px] text-sand-100/60">الأسبوع</span>
+                <span className="hidden text-[11px] text-sand-100/60 sm:inline">الأسبوع</span>
                 <span className="text-sm font-bold text-gold-200">
                   {selectedWeek} / {TOTAL_WEEKS}
                 </span>
               </button>
               {pickerOpen && (
-                <div className="absolute end-0 top-full z-50 mt-2 w-64 rounded-2xl border border-white/10 bg-ink-900/95 p-2 shadow-deep backdrop-blur-md">
+                <div className="absolute end-0 top-full z-50 mt-2 w-[min(18rem,calc(100vw-1.5rem))] rounded-2xl border border-white/10 bg-ink-900/95 p-2 shadow-deep backdrop-blur-md">
                   {Array.from({ length: TOTAL_WEEKS }).map((_, i) => {
                     const n = i + 1;
                     const availableWeek = available.find((a) => a.number === n);
