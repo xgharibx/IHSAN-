@@ -13,6 +13,25 @@ function toSsePayload(text: string): string {
   }
 }
 
+async function postToGemini(url: string, body: string): Promise<Response> {
+  let lastError: unknown;
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    try {
+      return await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body,
+      });
+    } catch (error) {
+      lastError = error;
+      if (attempt < 2) {
+        await new Promise((resolve) => setTimeout(resolve, 700));
+      }
+    }
+  }
+  throw lastError;
+}
+
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
   const geminiApiKey = env.GEMINI_API_KEY;
@@ -50,19 +69,26 @@ export default defineConfig(({ mode }) => {
             let upstream: Response | undefined;
             let text = "";
             let usedModel = selectedModel;
+            let lastNetworkError = "";
 
             for (const candidateModel of models) {
               usedModel = candidateModel;
               const url = `${geminiEndpoint.replace(/\/$/, "")}/v1beta/models/${candidateModel}:generateContent?key=${geminiApiKey}`;
-              upstream = await fetch(url, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                  contents: body.contents,
-                  generationConfig: body.generationConfig,
-                }),
-              });
-              text = await upstream.text();
+              try {
+                upstream = await postToGemini(
+                  url,
+                  JSON.stringify({
+                    contents: body.contents,
+                    generationConfig: body.generationConfig,
+                  }),
+                );
+                text = await upstream.text();
+              } catch (error) {
+                lastNetworkError = error instanceof Error ? error.message : String(error);
+                upstream = undefined;
+                text = "";
+                continue;
+              }
               if (upstream.ok || ![400, 404, 429, 503].includes(upstream.status)) break;
             }
 
@@ -70,7 +96,11 @@ export default defineConfig(({ mode }) => {
             res.setHeader("Content-Type", "text/event-stream; charset=utf-8");
             res.setHeader("Cache-Control", "no-cache, no-transform");
             res.setHeader("X-Gemini-Model", usedModel);
-            res.end(upstream?.ok ? `data: ${toSsePayload(text)}\n\n` : `data: ${JSON.stringify({ error: text })}\n\n`);
+            if (!upstream) {
+              res.end(`data: ${JSON.stringify({ error: `Gemini network error: ${lastNetworkError || "unknown"}` })}\n\n`);
+              return;
+            }
+            res.end(upstream.ok ? `data: ${toSsePayload(text)}\n\n` : `data: ${JSON.stringify({ error: text })}\n\n`);
           });
         },
       },

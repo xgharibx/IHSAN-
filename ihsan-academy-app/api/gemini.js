@@ -9,6 +9,25 @@ function toSsePayload(text) {
   }
 }
 
+async function postToGemini(url, body) {
+  let lastError;
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    try {
+      return await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body,
+      });
+    } catch (error) {
+      lastError = error;
+      if (attempt < 2) {
+        await new Promise((resolve) => setTimeout(resolve, 700));
+      }
+    }
+  }
+  throw lastError;
+}
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -31,16 +50,20 @@ export default async function handler(req, res) {
   let upstream;
   let text = "";
   let usedModel = selectedModel;
+  let lastNetworkError = "";
 
   for (const candidateModel of models) {
     usedModel = candidateModel;
     const url = `${String(baseEndpoint).replace(/\/$/, "")}/v1beta/models/${candidateModel}:generateContent?key=${apiKey}`;
-    upstream = await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ contents, generationConfig }),
-    });
-    text = await upstream.text();
+    try {
+      upstream = await postToGemini(url, JSON.stringify({ contents, generationConfig }));
+      text = await upstream.text();
+    } catch (error) {
+      lastNetworkError = error instanceof Error ? error.message : String(error);
+      upstream = undefined;
+      text = "";
+      continue;
+    }
     if (upstream.ok || ![400, 404, 429, 503].includes(upstream.status)) break;
   }
 
@@ -48,6 +71,10 @@ export default async function handler(req, res) {
   res.setHeader("Content-Type", "text/event-stream; charset=utf-8");
   res.setHeader("Cache-Control", "no-cache, no-transform");
   res.setHeader("X-Gemini-Model", usedModel);
+
+  if (!upstream) {
+    return res.end(`data: ${JSON.stringify({ error: `Gemini network error: ${lastNetworkError || "unknown"}` })}\n\n`);
+  }
 
   if (!upstream?.ok) {
     return res.end(`data: ${JSON.stringify({ error: text })}\n\n`);

@@ -396,6 +396,7 @@ const callGemini = async (
   const decoder = new TextDecoder("utf-8");
   let buffer = "";
   let fullText = "";
+  let streamError = "";
 
   while (true) {
     const { value, done } = await reader.read();
@@ -410,8 +411,13 @@ const callGemini = async (
       if (!jsonStr) continue;
       try {
         const parsed = JSON.parse(jsonStr) as {
+          error?: string;
           candidates?: { content?: { parts?: { text?: string }[] } }[];
         };
+        if (parsed.error) {
+          streamError = parsed.error;
+          continue;
+        }
         const chunkText = parsed.candidates?.[0]?.content?.parts?.[0]?.text;
         if (chunkText) {
           fullText += chunkText;
@@ -423,7 +429,7 @@ const callGemini = async (
     }
   }
 
-  if (!fullText) throw new Error("Empty response from Gemini");
+  if (!fullText) throw new Error(streamError || "Empty response from Gemini");
 
   // Strip any legacy/accidental hidden citation block from visible text.
   const citationJson = extractCitationJson(fullText);
